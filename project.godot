@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="DrawPanelContainer"
+run/main_scene="res://draw_panel_example.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+run/max_fps=30
+run/low_processor_mode=true
+run/delta_smoothing=false
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=450
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
