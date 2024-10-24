@@ -1,10 +1,10 @@
 extends PanelContainer
 
-# Kanji Canvas is a Node2D that allows for drawing (with mouse or touch) and 
-# designed for detecting when kanji characters are written. For each stroke,
-# an "DrawSingleStroke" event is fired. Within this, a game can detect whether
-# a complete Kanji has been drawn. When the event is fired, it will also pass
-# along the directional type of stroke as follows:
+# DrawPanelContainer is a PanelContainer that allows for drawing (with mouse
+# or touch) and originally designed for detecting when kanji characters are 
+# written. For each stroke, a stroke_drawn signal is emitted.
+# When the event is fired, it will also pass along the directional type of 
+# stroke as follows:
 #   DR = Down Right      DL = Down Left     UR = Up Right     UL = Up Left
 #   DD = Down (Straight)                    UU = Up (Straight)
 #   RD = Right Down      RU = Right Up      LD = Left Down    LU = Left Up
