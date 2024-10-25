@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwo11vv1wiet"
+path="res://.godot/imported/wind up 1.wav-a2f12dcc8473449bde6660b37a724512.sample"
+
+[deps]
+
+source_file="res://sound_fx/wind up 1.wav"
+dest_files=["res://.godot/imported/wind up 1.wav-a2f12dcc8473449bde6660b37a724512.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
