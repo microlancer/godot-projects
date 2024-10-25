@@ -13,6 +13,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="KanjiDrawPanel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 7.2
+anchor_right = 10.625
+anchor_bottom = 16.8
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+script = ExtResource("2_8umj3")
+metadata/_edit_use_anchors_ = true
+
 [node name="InstructionsLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_top = 32.0
@@ -41,10 +54,10 @@ text = "[center]AAA[/center]"
 
 [node name="ClearButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 365.0
-offset_top = 673.0
-offset_right = 414.0
-offset_bottom = 704.0
+offset_left = 376.0
+offset_top = 680.0
+offset_right = 425.0
+offset_bottom = 711.0
 text = "Clear"
 
 [node name="TryAgainButton" type="Button" parent="Control"]
@@ -54,14 +67,6 @@ offset_top = 240.0
 offset_right = 265.0
 offset_bottom = 271.0
 text = "Try Again"
-
-[node name="KanjiDrawPanel" type="PanelContainer" parent="Control"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 288.0
-offset_right = 428.0
-offset_bottom = 654.0
-script = ExtResource("2_8umj3")
 
 [connection signal="button_down" from="Control/ClearButton" to="Control/KanjiDrawPanel" method="_on_clear_button_button_down"]
 [connection signal="button_down" from="Control/TryAgainButton" to="Control/KanjiDrawPanel" method="_on_try_again_button_button_down"]

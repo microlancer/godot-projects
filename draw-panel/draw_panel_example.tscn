@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://p1onvqcjv8ce"]
 
-[ext_resource type="Script" path="res://draw_panel_container.gd" id="1_tu6qt"]
+[ext_resource type="Script" path="res://draw_panel.gd" id="1_tu6qt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6sro"]
 bg_color = Color(0, 0, 0, 1)
@@ -13,14 +13,18 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="DrawPanelContainer" type="PanelContainer" parent="Control"]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 252.0
-offset_right = 428.0
-offset_bottom = 691.0
+[node name="DrawPanel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 6.4
+anchor_right = 0.6
+anchor_bottom = 6.4
+offset_right = 405.0
+offset_bottom = 439.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_y6sro")
 script = ExtResource("1_tu6qt")
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
@@ -28,9 +32,9 @@ offset_left = 31.0
 offset_top = 36.0
 offset_right = 422.0
 offset_bottom = 226.0
-text = "How the DrawPanelContainer works:
+text = "How the DrawPanel works:
 
-* Add the DrawPanelContainer to your Control node.
+* Add the DrawPanel to your Control node.
 * Set the dimensions to the area that should be drawable.
 * Handle the stroke_drawn signal which will contain the direction of the stroke."
 
@@ -42,5 +46,5 @@ offset_right = 409.0
 offset_bottom = 241.0
 text = "Clear"
 
-[connection signal="mouse_exited" from="Control/DrawPanelContainer" to="Control/DrawPanelContainer" method="_on_mouse_exited"]
-[connection signal="button_down" from="Control/Button" to="Control/DrawPanelContainer" method="_on_button_button_down"]
+[connection signal="mouse_exited" from="Control/DrawPanel" to="Control/DrawPanel" method="_on_mouse_exited"]
+[connection signal="button_down" from="Control/Button" to="Control/DrawPanel" method="_on_button_button_down"]

@@ -1,6 +1,6 @@
-extends PanelContainer
+extends Panel
 
-# DrawPanelContainer is a PanelContainer that allows for drawing (with mouse
+# DrawPanel is a Panel that allows for drawing (with mouse
 # or touch) and originally designed for detecting when kanji characters are 
 # written. For each stroke, a stroke_drawn signal is emitted.
 # When the event is fired, it will also pass along the directional type of 

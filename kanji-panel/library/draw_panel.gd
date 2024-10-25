@@ -1,6 +1,6 @@
-extends PanelContainer
+extends Panel
 
-# DrawPanelContainer is a PanelContainer that allows for drawing (with mouse
+# DrawPanel is a Panel that allows for drawing (with mouse
 # or touch) and originally designed for detecting when kanji characters are 
 # written. For each stroke, a stroke_drawn signal is emitted.
 # When the event is fired, it will also pass along the directional type of 
@@ -27,6 +27,7 @@ var antialiasing = true
 var brush_color = Color.WHITE_SMOKE #Color.GOLDENROD
 var brush_width = 5
 var minimum_point_distance = 3
+var enabled = true
 	
 signal stroke_drawn(direction)
 
@@ -40,13 +41,17 @@ func end_stroke():
 		return
 	queue_redraw()
 	var direction = calculate_stroke(strokes[strokeIndex])
-	print(direction)
-	stroke_drawn.emit(direction)
+	#print(direction)
+	stroke_drawn.emit(strokeIndex, direction)
 	# start a new stroke
 	strokeIndex += 1
 	strokes.append([])
-
+	
 func _gui_input(event):
+	
+	if !enabled:
+		#print("disabled")
+		return
 	
 	if is_out_of_bounds(event.position):
 		# skip events happening outside of the drawing area
@@ -157,7 +162,7 @@ func _on_mouse_exited() -> void:
 	#print("exit")
 	end_stroke()
 	
-func clear_draw_panel():
+func clear():
 	strokeIndex = 0
 	strokes = [[]]
 	alreadyDrawnIndex = -1	
@@ -165,4 +170,10 @@ func clear_draw_panel():
 
 # this is just an example of how to clear the draw panel
 func _on_button_button_down() -> void:
-	clear_draw_panel()
+	clear()
+	
+func disable():
+	enabled = false
+	
+func enable():
+	enabled = true

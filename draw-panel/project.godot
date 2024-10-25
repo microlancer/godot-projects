@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="DrawPanelContainer"
+config/name="DrawPanel"
 run/main_scene="res://draw_panel_example.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=30
