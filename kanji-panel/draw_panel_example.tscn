@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://p1onvqcjv8ce"]
+
+[ext_resource type="Script" path="res://kanji_draw_panel.gd" id="2_8umj3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InstructionsLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 448.0
+offset_bottom = 65.0
+bbcode_enabled = true
+text = "[center]Draw the kanji[/center]"
+
+[node name="ResultLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_top = 184.0
+offset_right = 448.0
+offset_bottom = 232.0
+theme_override_font_sizes/normal_font_size = 33
+bbcode_enabled = true
+text = "[center]Correct![/center]"
+
+[node name="KanjiLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 448.0
+offset_bottom = 190.0
+theme_override_font_sizes/normal_font_size = 88
+bbcode_enabled = true
+text = "[center]AAA[/center]"
+
+[node name="ClearButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 673.0
+offset_right = 414.0
+offset_bottom = 704.0
+text = "Clear"
+
+[node name="TryAgainButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 240.0
+offset_right = 265.0
+offset_bottom = 271.0
+text = "Try Again"
+
+[node name="KanjiDrawPanel" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 288.0
+offset_right = 428.0
+offset_bottom = 654.0
+script = ExtResource("2_8umj3")
+
+[connection signal="button_down" from="Control/ClearButton" to="Control/KanjiDrawPanel" method="_on_clear_button_button_down"]
+[connection signal="button_down" from="Control/TryAgainButton" to="Control/KanjiDrawPanel" method="_on_try_again_button_button_down"]
