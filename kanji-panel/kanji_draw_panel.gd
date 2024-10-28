@@ -9,37 +9,8 @@ var fx_correct: AudioStream = preload("res://sound_fx/wind up 1.wav")
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
 
 var draw_panel: Panel
-var kanji_characters = {
-	"十": {
-		"reading": "とお・じゅう",
-		"strokes": [["R"], ["D"]]
-	},
-	"口": {
-		"reading": "くち",
-		"strokes": [["DR", "D"],["DR","R", "D"],["R"]]
-	},
-	"言": {
-		"reading": "いう・こと",
-		"strokes": [["R","DR", "D"],["R"],["R"],["R"],"口"]
-	},
-	"刀": {
-		"reading": "かたな",
-		"strokes": [["DR"],["DL","D"]]
-	},
-	"刃": {
-		"reading": "みと",
-		"strokes": ["刀",["DR","D","R"]]
-	},
-	"心": {
-		"reading": "みと",
-		"strokes": [["DL","D"],["DR","D"],["DR","D"], ["DR","D"]]
-	},
-	"認": {
-		"reading": "みと",
-		"strokes": ["言","刃","心"]
-	}
-}
 
+var kanji_characters = {}
 var kanji_keys
 var kanji_to_draw
 
@@ -49,6 +20,9 @@ func _ready() -> void:
 	$"../TryAgainButton".hide()
 	
 	#expand_strokes()
+	var file_path = "res://kanji_characters.json"
+	var json_as_text = FileAccess.get_file_as_string(file_path)
+	kanji_characters = JSON.parse_string(json_as_text)
 	
 	kanji_keys= kanji_characters.keys()
 	
