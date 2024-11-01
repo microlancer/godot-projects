@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crfgrdtcjhaio"
+path="res://.godot/imported/Sword Parry 2.ogg-762b3d6c8dff8da9ecfbec5b1d3c78d1.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/OGG Files/SFX/Attacks/Sword Attacks Hits and Blocks/Sword Parry 2.ogg"
+dest_files=["res://.godot/imported/Sword Parry 2.ogg-762b3d6c8dff8da9ecfbec5b1d3c78d1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

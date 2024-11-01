@@ -1,0 +1,28 @@
+{
+	"quiz_level_01": [
+		{
+			"sentence": "しゃっきん指で・十十・まで数えてください。",
+			"translation": "I can count to [u]ten[/u] with my fingers.",
+			"furigana": ["ゆび","じゅう","かぞ"],
+			
+		}
+	],
+	"refs": {
+		"じ": {
+			"small": false,
+			"strokes": [["D","DR"], ["D","DR"], ["D","DR"]]
+		},
+		"ゅ": {
+			"small": true,
+			"strokes": [["D","DR"], ["D","DL"]]
+		},
+		"う": {
+			"small": false,
+			"strokes": [["R","DR"], ["D","DR"]]
+		},
+		"十": {
+			"readings": ["とお","じゅう"],
+			"strokes": [["R"], ["D"]]
+		}
+	}
+}

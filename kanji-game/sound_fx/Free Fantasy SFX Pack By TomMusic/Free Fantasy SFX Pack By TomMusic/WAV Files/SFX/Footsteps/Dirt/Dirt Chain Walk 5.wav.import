@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://byi2045bvhjq2"
+path="res://.godot/imported/Dirt Chain Walk 5.wav-a9dc7195c116f57cfe8005898ddb7b77.sample"
+
+[deps]
+
+source_file="res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Footsteps/Dirt/Dirt Chain Walk 5.wav"
+dest_files=["res://.godot/imported/Dirt Chain Walk 5.wav-a9dc7195c116f57cfe8005898ddb7b77.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="KanjiGame"
+config/version="1.0.0"
+run/main_scene="res://kanji_panel_example.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+run/max_fps=30
+run/low_processor_mode=true
+run/delta_smoothing=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://globals.gd"
+
+[display]
+
+window/size/viewport_width=450
+window/size/viewport_height=720
+window/energy_saving/keep_screen_on=false
+window/stretch/mode="canvas_items"
+window/stretch/scale=3.0
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
+
+[gui]
+
+theme/default_theme_scale=3.0
+theme/custom="res://default_theme.tres"
+theme/custom_font="res://fonts/KleeOne-Regular.ttf"
+theme/default_font_antialiasing=0
+theme/default_font_subpixel_positioning=0
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

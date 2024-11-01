@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b50mt7wvake3b"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_61aoc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5abtk"]
+line_spacing = -4.0
+font_size = 7
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_61aoc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 12.0
+text = "ABC"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 2.0
+offset_bottom = 92.0
+text = "AAA
+BBB
+CCC"
+label_settings = SubResource("LabelSettings_5abtk")
+autowrap_mode = 1

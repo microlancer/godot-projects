@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkknupk0n8s1h"
+path="res://.godot/imported/Ice Wall 1.wav-064556909e0518e497f91a29c4cfd380.sample"
+
+[deps]
+
+source_file="res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Spells/Ice Wall 1.wav"
+dest_files=["res://.godot/imported/Ice Wall 1.wav-064556909e0518e497f91a29c4cfd380.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
