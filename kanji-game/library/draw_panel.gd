@@ -42,15 +42,15 @@ func end_stroke():
 	queue_redraw()
 	var direction = calculate_stroke(strokes[stroke_index])
 	#print(direction)
-	print("emiting stroke_index=" + str(stroke_index))
+	#print("emiting stroke_index=" + str(stroke_index))
 	stroke_drawn.emit(stroke_index, direction)
 	# start a new stroke
-	print("starting a new stroke: " + str(stroke_index))
+	#print("starting a new stroke: " + str(stroke_index))
 	
 	# check this again after emit, since emit can reset the strokes
 	if strokes[stroke_index].size() == 0:
 		# Skip this function if there's no stroke in progress.
-		print("no stroke in progress")
+		#print("no stroke in progress")
 		return
 	
 	stroke_index += 1
@@ -172,7 +172,7 @@ func _on_mouse_exited() -> void:
 	end_stroke()
 	
 func clear():
-	print("clearing stroke index")
+	#print("clearing stroke index")
 	stroke_index = 0
 	strokes = [[]]
 	alreadyDrawnIndex = -1	

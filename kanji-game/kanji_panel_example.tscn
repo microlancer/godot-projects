@@ -1,12 +1,16 @@
-[gd_scene load_steps=76 format=3 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=83 format=4 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_popjc"]
 [ext_resource type="Script" path="res://kanji_draw_panel.gd" id="2_8umj3"]
 [ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://music/Action 1.mp3" id="2_gbmdn"]
 [ext_resource type="FontFile" uid="uid://47731eqvwht3" path="res://fonts/KleeOne-Regular.ttf" id="2_o8vpi"]
+[ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="3_s2vua"]
 [ext_resource type="Texture2D" uid="uid://cp3wrukd1n33i" path="res://animated-pixel-adventurer/Adventurer-1.5/adventurer-v1.5-Sheet.png" id="3_s8kje"]
+[ext_resource type="Texture2D" uid="uid://bfv7i6nwi3b2u" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG2.png" id="4_83gtl"]
 [ext_resource type="Script" path="res://vertical_text_label.gd" id="5_1gfci"]
+[ext_resource type="Texture2D" uid="uid://jo1b80rhwlc6" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG3.png" id="5_qqsle"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="5_u0355"]
+[ext_resource type="Texture2D" uid="uid://bw08o7bpatien" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/Decors.png" id="6_16u0o"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="6_y1h0t"]
 [ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="7_hobb5"]
 [ext_resource type="Texture2D" uid="uid://3pe5tfqfu1s0" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-03.png" id="8_bgnor"]
@@ -66,6 +70,55 @@
 [ext_resource type="Texture2D" uid="uid://olq8xxamcn2b" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-01.png" id="55_g7km4"]
 [ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="56_46vu6"]
 [ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="57_6i6ji"]
+[ext_resource type="Texture2D" uid="uid://dlkni6tdcdruh" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/Tileset.png" id="71_43fyq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5yhu"]
+texture = ExtResource("71_43fyq")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f6huk"]
+sources/0 = SubResource("TileSetAtlasSource_s5yhu")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qm0hu"]
 
@@ -375,11 +428,43 @@ script = ExtResource("1_popjc")
 [node name="AudioStreamPlayerBgMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_gbmdn")
 volume_db = -0.675
+autoplay = true
 parameters/looping = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 volume_db = 3.377
+
+[node name="Bg1" type="Sprite2D" parent="."]
+position = Vector2(84, 36)
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("3_s2vua")
+
+[node name="Bg2" type="Sprite2D" parent="."]
+position = Vector2(92, 26)
+scale = Vector2(0.802083, 0.802083)
+texture = ExtResource("4_83gtl")
+
+[node name="Bg3" type="Sprite2D" parent="."]
+position = Vector2(90, 14)
+scale = Vector2(0.854167, 0.854167)
+texture = ExtResource("5_qqsle")
+
+[node name="Decors" type="Sprite2D" parent="."]
+position = Vector2(82.3271, 20.8081)
+scale = Vector2(0.410714, 0.410714)
+texture = ExtResource("6_16u0o")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(89.1725, 59.8073)
+tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAA=")
+tile_set = SubResource("TileSet_f6huk")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-131.871, 25.0127)
+scale = Vector2(6.60848, 1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(9.169, 23, 60.755, 23, 60.8387, 78.7043, 9.20376, 78.7043)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -400,7 +485,7 @@ texture = SubResource("CanvasTexture_qm0hu")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
-modulate = Color(0, 0.0510198, 0, 1)
+visible = false
 z_index = -5
 z_as_relative = false
 layout_mode = 0
@@ -412,10 +497,10 @@ metadata/_edit_lock_ = true
 [node name="KanjiDrawPanel" type="Panel" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.85
-anchor_top = 3.9
-anchor_right = 0.85
-anchor_bottom = 3.9
+anchor_left = 0.869865
+anchor_top = 4.03905
+anchor_right = 0.869865
+anchor_bottom = 4.03905
 offset_right = 88.0
 offset_bottom = 78.0
 grow_horizontal = 2
@@ -473,10 +558,10 @@ offset_bottom = 238.0
 
 [node name="VerticalTextLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 44.0
-offset_right = 150.0
-offset_bottom = 152.0
+offset_left = 3.66858
+offset_top = 49.639
+offset_right = 151.669
+offset_bottom = 157.639
 text = "世界の繁栄を目指す"
 text_direction = 2
 language = "ja_JP"

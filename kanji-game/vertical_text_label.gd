@@ -79,7 +79,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 	var kanji_word_length: int = 0
 	
 	for letter in actual_text:
-		print({"furigana_index":furigana_index})
+		#print({"furigana_index":furigana_index})
 		var block: Label = Label.new()
 		
 		var is_kanji = letter not in kana_array and \
@@ -87,7 +87,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			letter not in other_array
 			
 		#print("letter: " + letter)
-		print({"letter":letter,"is_kanji":is_kanji})
+		#print({"letter":letter,"is_kanji":is_kanji})
 		#print("block_index: " + str(block_index))
 		#print("letter_index: " + str(letter_index))
 		var previous_is_kanji = letter_index >= 1 and \
@@ -96,7 +96,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			actual_text_array[letter_index-1] not in other_array
 			
 		if is_kanji and (letter_index == 0 or not previous_is_kanji):
-			print({"letter":letter,"previous_is_kanji":previous_is_kanji})
+			#print({"letter":letter,"previous_is_kanji":previous_is_kanji})
 			kanji_word_started = true
 			kanji_word_length = 0
 			# look ahead to see how many kanji characters the word is
@@ -125,7 +125,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 				#print("enough space")
 				pass
 		
-		print({"kanji_word_started":kanji_word_started})
+		#print({"kanji_word_started":kanji_word_started})
 		
 		block.text = letter
 		block.label_settings = block_label_settings
@@ -150,7 +150,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 		if letter == "・":
 			kanji_replacement_word_started = !kanji_replacement_word_started
 			letter_index += 1
-			print("continue")
+			#print("continue")
 			continue	
 			
 		if letter in Globals.KANA_SMALL:
@@ -158,7 +158,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 		
 		self.add_child(block)
 		
-		print({"kanji_word_started":kanji_word_started})
+		#print({"kanji_word_started":kanji_word_started})
 		
 		if is_kanji and kanji_replacement_word_started:
 			
@@ -167,8 +167,8 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 				kanji_replacement_word_started and \
 				kanji_replacement_word_index >= done_chars:
 				# enter the kanji
-				print("not showing the kanji since it's > than done_chars")
-				print({"letter_index":letter_index,"kanji_replacement_word_index":kanji_replacement_word_index,"done_chars":done_chars})
+				#print("not showing the kanji since it's > than done_chars")
+				#print({"letter_index":letter_index,"kanji_replacement_word_index":kanji_replacement_word_index,"done_chars":done_chars})
 				block.text = ""
 			#elif !show_answer and kanji_replacement_word_started and \
 					#replacement_type == Globals.REPLACE_TYPE_KANJI and \
@@ -197,11 +197,11 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			actual_text_array[letter_index+1] not in other_array
 					
 					
-		print({"kanji_word_started":kanji_word_started,"ahead_is_kanji":ahead_is_kanji})
+		#print({"kanji_word_started":kanji_word_started,"ahead_is_kanji":ahead_is_kanji})
 		if kanji_word_started and not ahead_is_kanji:
 			kanji_word_started = false
-			print("end of kanji word, create furigana")
-			print(furigana, furigana_index)
+			#print("end of kanji word, create furigana")
+			#print(furigana, furigana_index)
 			# create furigana label
 			var furigana_label = Label.new()
 			
@@ -227,10 +227,10 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			var f = 0
 			
 			for furigana_letter in furigana[furigana_index]:
-				print(furigana_letter)
+				#print(furigana_letter)
 				label_with_newlines += furigana_letter
 				f += 1
-				print("done_chars: " + str(done_chars))
+				#print("done_chars: " + str(done_chars))
 				if !show_answer and kanji_replacement_word_started and \
 					replacement_type == Globals.REPLACE_TYPE_HIRAGANA and \
 					f >= done_chars:

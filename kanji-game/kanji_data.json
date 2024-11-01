@@ -1,13 +1,29 @@
 {
 	"quiz_level_01": [
 		{
-			"sentence": "しゃっきん指で・十十・まで数えてください。",
+			"sentence": "指で・十・まで数えてください。",
 			"translation": "I can count to [u]ten[/u] with my fingers.",
 			"furigana": ["ゆび","じゅう","かぞ"],
+		},
+		{
+			"sentence": "母はのんきで・朗・らかでお人好しです。",
+			"furigana": ["はは","ほが","ひとよし"],
 			
 		}
 	],
 	"refs": {
+		"ほ": {
+			"small": false,
+			"strokes": [["D"],["R"],["R"],["DR","D"]]
+		},
+		"か": {
+			"small": false,
+			"strokes": [["DR","R"],["D","DL"],["DR"]]
+		},
+		"が": {
+			"small": false,
+			"strokes": ["か",["DR"],["DR"]]
+		},
 		"じ": {
 			"small": false,
 			"strokes": [["D","DR"], ["D","DR"], ["D","DR"]]
@@ -23,6 +39,18 @@
 		"十": {
 			"readings": ["とお","じゅう"],
 			"strokes": [["R"], ["D"]]
+		},
+		"良": {
+			"readings": ["よ"],
+			"strokes": [["D"], ["DR","R"],["R"],["R"],["D"],["DL"],["DR"]]
+		},
+		"月": {
+			"readings": ["つき"],
+			"strokes": [["DL","D"], ["DR","D"],["R"],["R"]]
+		},
+		"朗": {
+			"readings": ["ほが"],
+			"strokes": ["良", "月"]
 		}
 	}
 }

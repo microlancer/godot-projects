@@ -41,6 +41,7 @@ func set_kanji_to_expect(kanji: String):
 
 func expand_strokes(ref_kanji):
 	
+	print("expand_strokes")
 	var done = false
 	var i = 0
 	var expansion = false
@@ -49,12 +50,12 @@ func expand_strokes(ref_kanji):
 		var stroke = ref_kanji.strokes[i]
 		if stroke is String:
 			expansion = true
-			#print("Convert " + stroke)
+			print("Convert " + stroke)
 			var reference_strokes = kanji_refs[stroke].strokes
 			ref_kanji.strokes.remove_at(i) # remove the reference kanji
 			for j in range(reference_strokes.size()-1, -1, -1):
 				ref_kanji.strokes.insert(i, reference_strokes[j])
-			#print(kanji.strokes)
+			print({"kanji.strokes":ref_kanji.strokes})
 			i = 0 # start over to search for recursive expansions
 		else:
 			i = i + 1
@@ -78,12 +79,12 @@ func _on_stroke_drawn(stroke_index, direction):
 		
 		draw_panel.disable()
 		return
-	print(kanji_to_draw)
+	#print(kanji_to_draw)
 	var size_valid = not kanji_to_draw.has("small") or \
 		(kanji_to_draw.small and $"../KomojiButton".button_pressed) \
 		or (not kanji_to_draw.small and not $"../KomojiButton".button_pressed)
 	
-	print({"size valid?":size_valid})
+	#print({"size valid?":size_valid})
 	if stroke_index == kanji_to_draw.strokes.size()-1:
 		#$"../ResultLabel".text = "[center][color=green]Correct![/color][/center]"
 		

@@ -56,6 +56,12 @@ func pick_random_sentence():
 	print("picking random sentence")
 	sentence_obj = kanji_sentences.pick_random()
 	replacement_type = Globals.REPLACE_TYPES.pick_random()
+	
+	if 0:
+		sentence_obj = kanji_sentences[1]
+		replacement_type = Globals.REPLACE_TYPE_HIRAGANA
+	
+	print("replacement_type: " + str(replacement_type))
 	current_draw_character_index = 0
 	current_draw_total_characters = 0
 		
@@ -92,8 +98,8 @@ func set_kanji_to_draw(sentence_obj):
 			
 		if start_word_search and letter_is_kanji:
 			draw_word.push_back(letter)
-		print(letter)
-		print(draw_word)	
+		#print(letter)
+		#print(draw_word)	
 		
 	current_draw_total_characters = draw_word.size()	
 	
@@ -113,7 +119,7 @@ func set_furigana_to_draw(sentence_obj):
 	# find kanji word that needs to be drawn
 	
 	var prev_is_kanji = false
-	var flip_count = 0
+	var kanji_word_count_index = 0
 	var furigana_index = 0
 	
 	for i in range(0, sentence.size()):
@@ -126,14 +132,16 @@ func set_furigana_to_draw(sentence_obj):
 		if i != 0 and prev_is_kanji == letter_is_kanji:
 			print("Non-FLIP")
 		elif i == 0 and letter_is_kanji:
-			print("Non-FLIP first kanji")
+			print("FLIP first kanji")
+			kanji_word_count_index += 1
 		elif i != 0 and not prev_is_kanji and letter_is_kanji:
-			flip_count += 1
-			print("FLIPPED ONE (started kanji), total flips=" + str(flip_count))
+			kanji_word_count_index += 1
+			print("FLIPPED ONE (started kanji), total kanji_word_count_index=" + str(kanji_word_count_index))
 			
 		if letter == "・":
 			# found the furigana index we need
-			furigana_index = flip_count
+			#kanji_word_count_index += 1
+			furigana_index = kanji_word_count_index
 			break
 			
 		prev_is_kanji = letter_is_kanji
@@ -210,9 +218,9 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 	
 	if current_draw_character_index >= current_draw_total_characters:
 		
-		print("end of word")
+		#print("end of word")
 		#pick_random_sentence()
-		print("attack")
+		#print("attack")
 		audio_player.stream = fx_sword_attack1
 		audio_player.play()
 		
@@ -231,12 +239,12 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		audio_player.stream = fx_fantasy_ui4
 		audio_player.play()
 		# more letters to be drawn
-		print("more letters")
+		#print("more letters")
 		$Control/KanjiDrawPanel.reset_draw_panel()
 		#var kanji_key = furigana_array[current_draw_character_index]
 		#$Control/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
 		set_char_to_draw(sentence_obj, replacement_type)
-		print("current_draw_character_index: " + str(current_draw_character_index))
+		#print("current_draw_character_index: " + str(current_draw_character_index))
 		$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
 	
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
