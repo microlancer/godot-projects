@@ -10,19 +10,6 @@ var current_draw_total_characters = 0
 var replacement_type
 var sentence_obj
 #@export var replacement_type = Globals.REPLACE_TYPE_HIRAGANA
-# From https://drtwelele.itch.io/casual-game-fx-one-shot
-var fx_incorrect: AudioStream = preload("res://sound_fx/wind down 1.wav")
-var fx_correct: AudioStream = preload("res://sound_fx/wind up 1.wav")
-var fx_chop1: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Chopping and Mining/chop 1.wav")
-var fx_chop2: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Chopping and Mining/chop 2.wav")
-var fx_mine4: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Chopping and Mining/mine 4.wav")
-var fx_sword_unsheath1: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Attacks/Sword Attacks Hits and Blocks/Sword Unsheath 1.wav")
-var fx_fantasy_ui4: AudioStream = preload("res://sound_fx/Fantasy UI SFX/Fantasy UI SFX/Fantasy/Fantasy_UI (4).wav")
-var fx_fantasy_ui8: AudioStream = preload("res://sound_fx/Fantasy UI SFX/Fantasy UI SFX/Fantasy/Fantasy_UI (8).wav")
-var fx_light_torch1: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Torch/Light Torch 1.wav")
-var fx_sword_attack1: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Attacks/Sword Attacks Hits and Blocks/Sword Attack 1.wav")
-var fx_sword_attack2: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Attacks/Sword Attacks Hits and Blocks/Sword Attack 2.wav")
-var fx_sword_attack3: AudioStream = preload("res://sound_fx/Free Fantasy SFX Pack By TomMusic/Free Fantasy SFX Pack By TomMusic/WAV Files/SFX/Attacks/Sword Attacks Hits and Blocks/Sword Attack 3.wav")
 
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
 
@@ -98,8 +85,8 @@ func set_kanji_to_draw(sentence_obj):
 			
 		if start_word_search and letter_is_kanji:
 			draw_word.push_back(letter)
-		#print(letter)
-		#print(draw_word)	
+		print(letter)
+		print(draw_word)	
 		
 	current_draw_total_characters = draw_word.size()	
 	
@@ -183,11 +170,13 @@ func _animation_finished():
 		#$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 		#replacement_type = Globals.REPLACE_TYPES.pick_random()
 		#$Control/VerticalTextLabel.build_sentence(replacement_type)
+		$Control/KanjiDrawPanel.enable()
 	elif $AnimatedSprite2D.animation in ["hurt"]:
 		$AnimatedSprite2D.animation = "idle_sword"
 		$AnimatedSprite2D.play()
 		$Control/KanjiDrawPanel.reset_draw_panel()
 		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+		$Control/KanjiDrawPanel.enable()
 	elif $AnimatedSprite2D.animation == "sword_draw":
 		$AnimatedSprite2D.animation = "idle_sword"
 		$AnimatedSprite2D.play()
@@ -198,14 +187,14 @@ func _animation_finished():
 func _process(delta: float) -> void:
 	pass
 
-func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, direction: Variant) -> void:
+func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, stroke: Variant) -> void:
 	if strokeIndex == 0 and $AnimatedSprite2D.animation != "idle_sword":
 		$AnimatedSprite2D.animation = "sword_draw"
 		$AnimatedSprite2D.play()
-		audio_player.stream = fx_sword_unsheath1
+		audio_player.stream = Globals.fx_sword_unsheath1
 		audio_player.play()
 	else:
-		audio_player.stream = fx_light_torch1
+		audio_player.stream = Globals.fx_light_torch1
 		audio_player.play()
 
 #func _after_correct_sound():
@@ -221,7 +210,7 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		#print("end of word")
 		#pick_random_sentence()
 		#print("attack")
-		audio_player.stream = fx_sword_attack1
+		audio_player.stream = Globals.fx_sword_attack1
 		audio_player.play()
 		
 		#audio_player.connect("", Callable(self, "_after_correct_sound"))
@@ -232,11 +221,13 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		$AnimatedSprite2D.animation = attacks.pick_random()
 		$AnimatedSprite2D.play()
 		
+		$Control/KanjiDrawPanel.disable()
+		
 		current_draw_character_index = 0
 		current_draw_total_characters = 0
 		
 	else:
-		audio_player.stream = fx_fantasy_ui4
+		audio_player.stream = Globals.fx_fantasy_ui4
 		audio_player.play()
 		# more letters to be drawn
 		#print("more letters")
@@ -250,7 +241,7 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	$AnimatedSprite2D.animation = "hurt"
 	$AnimatedSprite2D.play()
-	audio_player.stream = fx_incorrect
+	audio_player.stream = Globals.fx_incorrect
 	audio_player.play()
 	$Control/KanjiDrawPanel.redraw_with_color(Color.RED)
 
@@ -266,10 +257,10 @@ func _on_try_again_button_gui_input(event: InputEvent) -> void:
 
 func _on_komoji_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
-		audio_player.stream = fx_chop1
+		audio_player.stream = Globals.fx_chop1
 		audio_player.play(0.3)
 		$Control/KomojiLabel.show()
 	else:
-		audio_player.stream = fx_mine4
+		audio_player.stream = Globals.fx_mine4
 		audio_player.play(0.1)
 		$Control/KomojiLabel.hide()

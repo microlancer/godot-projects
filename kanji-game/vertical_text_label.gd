@@ -146,6 +146,11 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			block.rotation_degrees = 270
 			block.position.x -= 4
 			block.position.y += 8
+			
+		if letter == "ー":
+			block.rotation_degrees = 270
+			block.position.x -= 4
+			block.position.y += 16
 		
 		if letter == "・":
 			kanji_replacement_word_started = !kanji_replacement_word_started

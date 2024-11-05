@@ -1,14 +1,15 @@
-extends Panel
+extends TextureRect
 
 var DrawPanel = preload("res://library/draw_panel.gd")
 
 
-var draw_panel: Panel
+var draw_panel: Control
 
 #var kanji_characters = {}
 #var kanji_keys
 var kanji_to_draw
 var replacement_type
+var all_small = false
 
 @export var kanji_refs = {}
 
@@ -68,9 +69,12 @@ func expand_strokes(ref_kanji):
 func _process(delta: float) -> void:
 	pass
 
-func _on_stroke_drawn(stroke_index, direction):
+func _on_stroke_drawn(stroke_index, stroke):
 	
-	print([stroke_index, direction, kanji_to_draw.strokes])
+	var direction = stroke.direction
+	var is_corner = stroke.is_corner 
+	
+	print([stroke_index, direction, is_corner, kanji_to_draw.strokes])
 	
 	if direction not in kanji_to_draw.strokes[stroke_index]:
 		kanji_incorrect.emit()
@@ -80,19 +84,39 @@ func _on_stroke_drawn(stroke_index, direction):
 		draw_panel.disable()
 		return
 	#print(kanji_to_draw)
-	var size_valid = not kanji_to_draw.has("small") or \
-		(kanji_to_draw.small and $"../KomojiButton".button_pressed) \
-		or (not kanji_to_draw.small and not $"../KomojiButton".button_pressed)
+	#var size_valid = not kanji_to_draw.has("small") or \
+		#(kanji_to_draw.small and $"../KomojiButton".button_pressed) \
+		#or (not kanji_to_draw.small and not $"../KomojiButton".button_pressed)
 	
+	#var size_valid = not kanji_to_draw.has("small") or \
+		#(kanji_to_draw.small and is_corner) \
+		#or (not kanji_to_draw.small and not is_corner)
+		
+	print({"has_small":kanji_to_draw.has("small")})
+	
+	if kanji_to_draw.has("small"):
+		print({"small": kanji_to_draw.small})
+		
 	#print({"size valid?":size_valid})
+	
+	var expect_small = (kanji_to_draw.has("small") and kanji_to_draw.small)
+	
+	if stroke_index == 0:
+		all_small = is_corner
+	else:
+		all_small = all_small and is_corner
+	
 	if stroke_index == kanji_to_draw.strokes.size()-1:
 		#$"../ResultLabel".text = "[center][color=green]Correct![/color][/center]"
 		
+		var size_valid = (expect_small and all_small) or \
+			(not expect_small and not all_small)
+			
 		if not size_valid:
 			kanji_incorrect.emit()
 			draw_panel.disable()
 		else:
-			$"../KomojiButton".button_pressed = false # reset
+			#$"../KomojiButton".button_pressed = false # reset
 			kanji_correct.emit()
 		
 		#draw_panel.disable()
@@ -128,6 +152,12 @@ func _on_clear_button_button_down() -> void:
 func reset_draw_panel():
 	draw_panel.brush_color = Color.WHITE_SMOKE
 	draw_panel.clear()
+	draw_panel.enable()
+	
+func disable():
+	draw_panel.disable()
+	
+func enable():
 	draw_panel.enable()
 	
 func _on_try_again_button_button_down() -> void:

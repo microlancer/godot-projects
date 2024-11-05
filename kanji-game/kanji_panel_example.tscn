@@ -1,75 +1,77 @@
-[gd_scene load_steps=83 format=4 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=85 format=4 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_popjc"]
 [ext_resource type="Script" path="res://kanji_draw_panel.gd" id="2_8umj3"]
 [ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://music/Action 1.mp3" id="2_gbmdn"]
 [ext_resource type="FontFile" uid="uid://47731eqvwht3" path="res://fonts/KleeOne-Regular.ttf" id="2_o8vpi"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="3_s2vua"]
-[ext_resource type="Texture2D" uid="uid://cp3wrukd1n33i" path="res://animated-pixel-adventurer/Adventurer-1.5/adventurer-v1.5-Sheet.png" id="3_s8kje"]
+[ext_resource type="Texture2D" uid="uid://cp3wrukd1n33i" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/adventurer-v1.5-Sheet.png" id="3_s8kje"]
 [ext_resource type="Texture2D" uid="uid://bfv7i6nwi3b2u" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG2.png" id="4_83gtl"]
 [ext_resource type="Script" path="res://vertical_text_label.gd" id="5_1gfci"]
 [ext_resource type="Texture2D" uid="uid://jo1b80rhwlc6" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG3.png" id="5_qqsle"]
-[ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="5_u0355"]
+[ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="5_u0355"]
 [ext_resource type="Texture2D" uid="uid://bw08o7bpatien" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/Decors.png" id="6_16u0o"]
-[ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="6_y1h0t"]
-[ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="7_hobb5"]
-[ext_resource type="Texture2D" uid="uid://3pe5tfqfu1s0" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-03.png" id="8_bgnor"]
-[ext_resource type="Texture2D" uid="uid://b0rky0svkn6rr" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-04.png" id="9_q3fbc"]
-[ext_resource type="Texture2D" uid="uid://cc3b6daas0y4j" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-05.png" id="10_tk4cy"]
-[ext_resource type="Texture2D" uid="uid://w0cf8qurerav" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-00.png" id="11_k0qcm"]
-[ext_resource type="Texture2D" uid="uid://brv2qvmm2o40c" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-01.png" id="12_lg7tp"]
-[ext_resource type="Texture2D" uid="uid://mmkdjsqet1it" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-02.png" id="13_q4bcf"]
-[ext_resource type="Texture2D" uid="uid://bsf8t4ix3hk88" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-03.png" id="14_ene4x"]
-[ext_resource type="Texture2D" uid="uid://6fru1mwh7ivq" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-04.png" id="15_5u2cx"]
-[ext_resource type="Texture2D" uid="uid://by8msk11kj0fn" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-05.png" id="16_sw8be"]
-[ext_resource type="Texture2D" uid="uid://cvunuhj2oi0j2" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-00.png" id="17_0eaat"]
-[ext_resource type="Texture2D" uid="uid://cjbadgg8pmdnb" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-01.png" id="18_dkpoy"]
-[ext_resource type="Texture2D" uid="uid://bd5bxcc2m384x" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-02.png" id="19_6dso4"]
-[ext_resource type="Texture2D" uid="uid://c7oodoojgm1os" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-03.png" id="20_m6yj5"]
-[ext_resource type="Texture2D" uid="uid://codxp6yunlu0o" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-04.png" id="21_u1krs"]
-[ext_resource type="Texture2D" uid="uid://csmfh06rgwab" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-00.png" id="22_1qaw2"]
-[ext_resource type="Texture2D" uid="uid://dcp16fbocwlq0" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-00.png" id="22_ho2pm"]
-[ext_resource type="Texture2D" uid="uid://crepksk5tabr7" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-01.png" id="23_p6s26"]
-[ext_resource type="Texture2D" uid="uid://dqwjuamtveia8" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-01.png" id="23_re7u7"]
-[ext_resource type="Texture2D" uid="uid://byq14254njduy" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-02.png" id="24_04pg5"]
-[ext_resource type="Texture2D" uid="uid://c8ypw85jw48v0" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-02.png" id="24_hc74g"]
-[ext_resource type="Texture2D" uid="uid://h1rkor3afxsy" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-03.png" id="25_h4s2g"]
-[ext_resource type="Texture2D" uid="uid://roh40fswduwd" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-03.png" id="25_ukkus"]
-[ext_resource type="Texture2D" uid="uid://dlk6vqfor7q2y" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-04.png" id="26_ii044"]
-[ext_resource type="Texture2D" uid="uid://b8k57derdjkw1" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-00.png" id="26_ky7dk"]
-[ext_resource type="Texture2D" uid="uid://c5tywfpte6jbo" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-05.png" id="27_3dntu"]
-[ext_resource type="Texture2D" uid="uid://cknvq7xbvb0ux" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-01.png" id="27_otvuq"]
-[ext_resource type="Texture2D" uid="uid://cms8ilp3e3sv2" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-02.png" id="28_bf7b0"]
-[ext_resource type="Texture2D" uid="uid://gd1eolyv2ng5" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-06.png" id="28_yam7b"]
-[ext_resource type="Texture2D" uid="uid://dhgnx0fp74ntb" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-hurt-00.png" id="29_hwo5q"]
-[ext_resource type="Texture2D" uid="uid://b8xahegote6ut" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-03.png" id="29_mi160"]
-[ext_resource type="Texture2D" uid="uid://dqvf4j8xa7ia" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-hurt-01.png" id="30_7s3i0"]
-[ext_resource type="Texture2D" uid="uid://bu4c4uqud8pma" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-hurt-02.png" id="31_i03ar"]
-[ext_resource type="Texture2D" uid="uid://bg1m0taagak10" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-00.png" id="33_ha0g2"]
-[ext_resource type="Texture2D" uid="uid://vpme51fu83pf" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-01.png" id="34_e3262"]
-[ext_resource type="Texture2D" uid="uid://cobhyeldt2kl4" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-02.png" id="35_daihr"]
-[ext_resource type="Texture2D" uid="uid://brjmghhwk8wh4" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-03.png" id="36_2spok"]
-[ext_resource type="Texture2D" uid="uid://bnxj76pgxcnxq" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-items-00.png" id="37_ykgc8"]
-[ext_resource type="Texture2D" uid="uid://bg8164r5t82dn" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-items-01.png" id="38_tfjv0"]
-[ext_resource type="Texture2D" uid="uid://5dwjm7rk0iga" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-items-02.png" id="39_hd1y1"]
-[ext_resource type="Texture2D" uid="uid://cara2nfugq1os" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-00.png" id="40_e1j6y"]
-[ext_resource type="Texture2D" uid="uid://bbdjjaxd25nad" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-01.png" id="41_3h0xr"]
-[ext_resource type="Texture2D" uid="uid://bxjivvjgtj4ds" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-02.png" id="42_gegtr"]
-[ext_resource type="Texture2D" uid="uid://8wwcs67ey8y4" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-03.png" id="43_f1gs3"]
-[ext_resource type="Texture2D" uid="uid://d27gg1y54wxgt" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-00.png" id="44_7enwg"]
-[ext_resource type="Texture2D" uid="uid://ddvhrq0q8gh1s" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-01.png" id="45_autfu"]
-[ext_resource type="Texture2D" uid="uid://bwi45g564f3ca" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-02.png" id="46_nm5rq"]
-[ext_resource type="Texture2D" uid="uid://cavqnhcxjjfae" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-03.png" id="47_tjlge"]
-[ext_resource type="Texture2D" uid="uid://xmgcya1m3tg1" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-04.png" id="48_g2xv8"]
-[ext_resource type="Texture2D" uid="uid://cfsxthnd2fcrc" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-05.png" id="49_s7hci"]
-[ext_resource type="Texture2D" uid="uid://d3u3ntbgf6b2c" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-00.png" id="50_iuwln"]
-[ext_resource type="Texture2D" uid="uid://4424xvsxt6gs" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-01.png" id="51_4ih8b"]
-[ext_resource type="Texture2D" uid="uid://bxwhbcqt521c8" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-02.png" id="52_7xau6"]
-[ext_resource type="Texture2D" uid="uid://6f1b1jmly2dy" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-03.png" id="53_05m8c"]
-[ext_resource type="Texture2D" uid="uid://cuwwy2yksckda" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-00.png" id="54_nd6ql"]
-[ext_resource type="Texture2D" uid="uid://olq8xxamcn2b" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-01.png" id="55_g7km4"]
-[ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="56_46vu6"]
-[ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="57_6i6ji"]
+[ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="6_y1h0t"]
+[ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="7_hobb5"]
+[ext_resource type="Texture2D" uid="uid://3pe5tfqfu1s0" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-03.png" id="8_bgnor"]
+[ext_resource type="Texture2D" uid="uid://b0rky0svkn6rr" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-04.png" id="9_q3fbc"]
+[ext_resource type="Texture2D" uid="uid://d1sic1jsrgotf" path="res://graphics/kanji-block2.png" id="9_t8eaj"]
+[ext_resource type="Texture2D" uid="uid://cw48ik3c011jc" path="res://graphics/kanji-block.png" id="10_6b0as"]
+[ext_resource type="Texture2D" uid="uid://cc3b6daas0y4j" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-05.png" id="10_tk4cy"]
+[ext_resource type="Texture2D" uid="uid://w0cf8qurerav" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-00.png" id="11_k0qcm"]
+[ext_resource type="Texture2D" uid="uid://brv2qvmm2o40c" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-01.png" id="12_lg7tp"]
+[ext_resource type="Texture2D" uid="uid://mmkdjsqet1it" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-02.png" id="13_q4bcf"]
+[ext_resource type="Texture2D" uid="uid://bsf8t4ix3hk88" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-03.png" id="14_ene4x"]
+[ext_resource type="Texture2D" uid="uid://6fru1mwh7ivq" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-04.png" id="15_5u2cx"]
+[ext_resource type="Texture2D" uid="uid://by8msk11kj0fn" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack3-05.png" id="16_sw8be"]
+[ext_resource type="Texture2D" uid="uid://cvunuhj2oi0j2" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-00.png" id="17_0eaat"]
+[ext_resource type="Texture2D" uid="uid://cjbadgg8pmdnb" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-01.png" id="18_dkpoy"]
+[ext_resource type="Texture2D" uid="uid://bd5bxcc2m384x" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-02.png" id="19_6dso4"]
+[ext_resource type="Texture2D" uid="uid://c7oodoojgm1os" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-03.png" id="20_m6yj5"]
+[ext_resource type="Texture2D" uid="uid://codxp6yunlu0o" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack1-04.png" id="21_u1krs"]
+[ext_resource type="Texture2D" uid="uid://csmfh06rgwab" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-00.png" id="22_1qaw2"]
+[ext_resource type="Texture2D" uid="uid://dcp16fbocwlq0" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-00.png" id="22_ho2pm"]
+[ext_resource type="Texture2D" uid="uid://crepksk5tabr7" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-01.png" id="23_p6s26"]
+[ext_resource type="Texture2D" uid="uid://dqwjuamtveia8" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-01.png" id="23_re7u7"]
+[ext_resource type="Texture2D" uid="uid://byq14254njduy" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-02.png" id="24_04pg5"]
+[ext_resource type="Texture2D" uid="uid://c8ypw85jw48v0" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-02.png" id="24_hc74g"]
+[ext_resource type="Texture2D" uid="uid://h1rkor3afxsy" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-03.png" id="25_h4s2g"]
+[ext_resource type="Texture2D" uid="uid://roh40fswduwd" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-03.png" id="25_ukkus"]
+[ext_resource type="Texture2D" uid="uid://dlk6vqfor7q2y" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-04.png" id="26_ii044"]
+[ext_resource type="Texture2D" uid="uid://b8k57derdjkw1" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-00.png" id="26_ky7dk"]
+[ext_resource type="Texture2D" uid="uid://c5tywfpte6jbo" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-05.png" id="27_3dntu"]
+[ext_resource type="Texture2D" uid="uid://cknvq7xbvb0ux" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-01.png" id="27_otvuq"]
+[ext_resource type="Texture2D" uid="uid://cms8ilp3e3sv2" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-02.png" id="28_bf7b0"]
+[ext_resource type="Texture2D" uid="uid://gd1eolyv2ng5" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-die-06.png" id="28_yam7b"]
+[ext_resource type="Texture2D" uid="uid://dhgnx0fp74ntb" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-hurt-00.png" id="29_hwo5q"]
+[ext_resource type="Texture2D" uid="uid://b8xahegote6ut" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-cast-loop-03.png" id="29_mi160"]
+[ext_resource type="Texture2D" uid="uid://dqvf4j8xa7ia" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-hurt-01.png" id="30_7s3i0"]
+[ext_resource type="Texture2D" uid="uid://bu4c4uqud8pma" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-hurt-02.png" id="31_i03ar"]
+[ext_resource type="Texture2D" uid="uid://bg1m0taagak10" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-00.png" id="33_ha0g2"]
+[ext_resource type="Texture2D" uid="uid://vpme51fu83pf" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-01.png" id="34_e3262"]
+[ext_resource type="Texture2D" uid="uid://cobhyeldt2kl4" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-02.png" id="35_daihr"]
+[ext_resource type="Texture2D" uid="uid://brjmghhwk8wh4" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-2-03.png" id="36_2spok"]
+[ext_resource type="Texture2D" uid="uid://bnxj76pgxcnxq" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-items-00.png" id="37_ykgc8"]
+[ext_resource type="Texture2D" uid="uid://bg8164r5t82dn" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-items-01.png" id="38_tfjv0"]
+[ext_resource type="Texture2D" uid="uid://5dwjm7rk0iga" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-items-02.png" id="39_hd1y1"]
+[ext_resource type="Texture2D" uid="uid://cara2nfugq1os" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-00.png" id="40_e1j6y"]
+[ext_resource type="Texture2D" uid="uid://bbdjjaxd25nad" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-01.png" id="41_3h0xr"]
+[ext_resource type="Texture2D" uid="uid://bxjivvjgtj4ds" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-02.png" id="42_gegtr"]
+[ext_resource type="Texture2D" uid="uid://8wwcs67ey8y4" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-03.png" id="43_f1gs3"]
+[ext_resource type="Texture2D" uid="uid://d27gg1y54wxgt" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-00.png" id="44_7enwg"]
+[ext_resource type="Texture2D" uid="uid://ddvhrq0q8gh1s" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-01.png" id="45_autfu"]
+[ext_resource type="Texture2D" uid="uid://bwi45g564f3ca" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-02.png" id="46_nm5rq"]
+[ext_resource type="Texture2D" uid="uid://cavqnhcxjjfae" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-03.png" id="47_tjlge"]
+[ext_resource type="Texture2D" uid="uid://xmgcya1m3tg1" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-04.png" id="48_g2xv8"]
+[ext_resource type="Texture2D" uid="uid://cfsxthnd2fcrc" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-05.png" id="49_s7hci"]
+[ext_resource type="Texture2D" uid="uid://d3u3ntbgf6b2c" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-00.png" id="50_iuwln"]
+[ext_resource type="Texture2D" uid="uid://4424xvsxt6gs" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-01.png" id="51_4ih8b"]
+[ext_resource type="Texture2D" uid="uid://bxwhbcqt521c8" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-02.png" id="52_7xau6"]
+[ext_resource type="Texture2D" uid="uid://6f1b1jmly2dy" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-03.png" id="53_05m8c"]
+[ext_resource type="Texture2D" uid="uid://cuwwy2yksckda" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-00.png" id="54_nd6ql"]
+[ext_resource type="Texture2D" uid="uid://olq8xxamcn2b" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-01.png" id="55_g7km4"]
+[ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="56_46vu6"]
+[ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="57_6i6ji"]
 [ext_resource type="Texture2D" uid="uid://dlkni6tdcdruh" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/Tileset.png" id="71_43fyq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5yhu"]
@@ -486,6 +488,7 @@ metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
 visible = false
+modulate = Color(0.2, 1, 1, 1)
 z_index = -5
 z_as_relative = false
 layout_mode = 0
@@ -494,20 +497,24 @@ offset_bottom = 240.0
 texture = SubResource("CanvasTexture_qm0hu")
 metadata/_edit_lock_ = true
 
-[node name="KanjiDrawPanel" type="Panel" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.869865
-anchor_top = 4.03905
-anchor_right = 0.869865
-anchor_bottom = 4.03905
-offset_right = 88.0
-offset_bottom = 78.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 322.0
+offset_top = -58.3761
+offset_right = 397.0
+offset_bottom = 16.6239
+texture = ExtResource("10_6b0as")
+
+[node name="KanjiDrawPanel" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 164.0
+offset_right = 115.0
+offset_bottom = 239.0
 mouse_force_pass_scroll_events = false
+texture = ExtResource("9_t8eaj")
 script = ExtResource("2_8umj3")
-metadata/_edit_use_anchors_ = true
 
 [node name="SentenceLabel" type="RichTextLabel" parent="Control"]
 visible = false
@@ -517,6 +524,7 @@ offset_right = 152.0
 offset_bottom = 64.0
 bbcode_enabled = true
 text = "[center]世界の[color=red]繁栄[/color]を目指す[/center]"
+metadata/_edit_lock_ = true
 
 [node name="ResultLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
@@ -526,6 +534,7 @@ offset_right = 322.0
 offset_bottom = 96.0
 bbcode_enabled = true
 text = "[center]Correct![/center]"
+metadata/_edit_lock_ = true
 
 [node name="KanjiLabel" type="RichTextLabel" parent="Control"]
 visible = false
@@ -537,6 +546,7 @@ theme_override_fonts/normal_font = ExtResource("2_o8vpi")
 theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "[center]AAA[/center]"
+metadata/_edit_lock_ = true
 
 [node name="ClearButton" type="Button" parent="Control"]
 visible = false
@@ -547,6 +557,7 @@ offset_right = 150.0
 offset_bottom = 238.0
 rotation = 0.00226829
 text = "Clear"
+metadata/_edit_lock_ = true
 
 [node name="TryAgainButtonX" type="Control" parent="Control"]
 visible = false
@@ -555,6 +566,7 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 148.0
 offset_bottom = 238.0
+metadata/_edit_lock_ = true
 
 [node name="VerticalTextLabel" type="Label" parent="Control"]
 layout_mode = 0
@@ -566,6 +578,7 @@ text = "世界の繁栄を目指す"
 text_direction = 2
 language = "ja_JP"
 script = ExtResource("5_1gfci")
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
@@ -580,6 +593,7 @@ text = "ゆ
 label_settings = SubResource("LabelSettings_8byi6")
 vertical_alignment = 1
 autowrap_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
@@ -588,15 +602,17 @@ offset_top = 18.0
 offset_right = 246.0
 offset_bottom = 58.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_p27sb")
+metadata/_edit_lock_ = true
 
 [node name="KomojiButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 212.0
-offset_right = 30.0
-offset_bottom = 226.0
+offset_left = -36.0
+offset_top = 210.0
+offset_right = -12.0
+offset_bottom = 224.0
 toggle_mode = true
 text = "小字"
+metadata/_edit_lock_ = true
 
 [node name="KomojiLabel" type="Label" parent="Control"]
 visible = false
@@ -608,6 +624,7 @@ offset_bottom = 180.0
 text = "小文字"
 label_settings = SubResource("LabelSettings_423xv")
 horizontal_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

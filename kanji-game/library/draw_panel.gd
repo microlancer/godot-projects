@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 
 # DrawPanel is a Panel that allows for drawing (with mouse
 # or touch) and originally designed for detecting when kanji characters are 
@@ -40,10 +40,10 @@ func end_stroke():
 		# Skip this function if there's no stroke in progress.
 		return
 	queue_redraw()
-	var direction = calculate_stroke(strokes[stroke_index])
+	var stroke = calculate_stroke(strokes[stroke_index])
 	#print(direction)
 	#print("emiting stroke_index=" + str(stroke_index))
-	stroke_drawn.emit(stroke_index, direction)
+	stroke_drawn.emit(stroke_index, stroke)
 	# start a new stroke
 	#print("starting a new stroke: " + str(stroke_index))
 	
@@ -164,7 +164,14 @@ func calculate_stroke(points):
 	else:
 		direction = "U"
 		
-	return direction
+	var is_corner = true
+	
+	for p in points:
+		if p.x < 35 or p.y < 35:
+			is_corner = false
+			break
+		
+	return {"direction": direction, "is_corner": is_corner}
 	
 func _on_mouse_exited() -> void:
 	# If the user swipes beyond the drawing area, just end the stroke.
