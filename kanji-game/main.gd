@@ -12,14 +12,19 @@ var sentence_obj
 #@export var replacement_type = Globals.REPLACE_TYPE_HIRAGANA
 
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
+@onready var audio_player2: AudioStreamPlayer2D = %AudioStreamPlayer2D2  # Adjust the path if necessary
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2D.connect("animation_changed", Callable(self, "_animation_changed"))
-	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_animation_finished"))
-	$AnimatedSprite2D.animation = "idle"
-	$AnimatedSprite2D.play()
+	$AnimatedSprite2DPlayer.connect("animation_changed", Callable(self, "_animation_changed"))
+	$AnimatedSprite2DPlayer.connect("animation_finished", Callable(self, "_animation_finished"))
+	$AnimatedSprite2DPlayer.animation = "idle"
+	$AnimatedSprite2DPlayer.play()
+	
+	$AnimatedSprite2DEnemy.connect("animation_finished", Callable(self, "_animation_finished_enemy"))
+	$AnimatedSprite2DEnemy.animation = "enemy_idle"
+	$AnimatedSprite2DEnemy.play()
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
 	
@@ -155,15 +160,12 @@ func _animation_changed():
 		"attack_spin": 0,
 		"hurt": 0,
 	}
-	$AnimatedSprite2D.offset.y = y_offsets[$AnimatedSprite2D.animation]
+	$AnimatedSprite2DPlayer.offset.y = y_offsets[$AnimatedSprite2DPlayer.animation]
 			
 func _animation_finished():
-	
-	
-	
-	if $AnimatedSprite2D.animation in attacks:
-		$AnimatedSprite2D.animation = "idle_sword"
-		$AnimatedSprite2D.play()
+	if $AnimatedSprite2DPlayer.animation in attacks:
+		$AnimatedSprite2DPlayer.animation = "idle_sword"
+		$AnimatedSprite2DPlayer.play()
 		pick_random_sentence()
 		#pick_random_sentence()
 		#$Control/KanjiDrawPanel.reset_draw_panel()
@@ -171,26 +173,35 @@ func _animation_finished():
 		#replacement_type = Globals.REPLACE_TYPES.pick_random()
 		#$Control/VerticalTextLabel.build_sentence(replacement_type)
 		$Control/KanjiDrawPanel.enable()
-	elif $AnimatedSprite2D.animation in ["hurt"]:
-		$AnimatedSprite2D.animation = "idle_sword"
-		$AnimatedSprite2D.play()
+	elif $AnimatedSprite2DPlayer.animation in ["hurt"]:
+		$AnimatedSprite2DPlayer.animation = "idle_sword"
+		$AnimatedSprite2DPlayer.play()
 		$Control/KanjiDrawPanel.reset_draw_panel()
 		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 		$Control/KanjiDrawPanel.enable()
-	elif $AnimatedSprite2D.animation == "sword_draw":
-		$AnimatedSprite2D.animation = "idle_sword"
-		$AnimatedSprite2D.play()
+	elif $AnimatedSprite2DPlayer.animation == "sword_draw":
+		$AnimatedSprite2DPlayer.animation = "idle_sword"
+		$AnimatedSprite2DPlayer.play()
 		
-	
-
+func _animation_finished_enemy():
+	if $AnimatedSprite2DEnemy.animation == "enemy_hurt":
+		$AnimatedSprite2DEnemy.animation = "enemy_idle"
+		$AnimatedSprite2DEnemy.play()
+		
+	if $AnimatedSprite2DEnemy.animation == "enemy_attack":
+		$AnimatedSprite2DEnemy.animation = "enemy_idle"
+		$AnimatedSprite2DEnemy.offset.x = 0
+		$AnimatedSprite2DEnemy.offset.y = 0
+		$AnimatedSprite2DEnemy.play()
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, stroke: Variant) -> void:
-	if strokeIndex == 0 and $AnimatedSprite2D.animation != "idle_sword":
-		$AnimatedSprite2D.animation = "sword_draw"
-		$AnimatedSprite2D.play()
+	if strokeIndex == 0 and $AnimatedSprite2DPlayer.animation != "idle_sword":
+		$AnimatedSprite2DPlayer.animation = "sword_draw"
+		$AnimatedSprite2DPlayer.play()
 		audio_player.stream = Globals.fx_sword_unsheath1
 		audio_player.play()
 	else:
@@ -218,8 +229,18 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		#$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
 	
 		$Control/VerticalTextLabel.show_answer()
-		$AnimatedSprite2D.animation = attacks.pick_random()
-		$AnimatedSprite2D.play()
+		$AnimatedSprite2DPlayer.animation = attacks.pick_random()
+		$AnimatedSprite2DPlayer.play()
+		
+		$Control/KanjiLabel.text = ""
+		
+		# Create a timer to delay the enemy animation
+		var timer = Timer.new()
+		timer.wait_time = 0.2
+		timer.one_shot = true  # Makes the timer run only once
+		add_child(timer)
+		timer.timeout.connect(Callable(self, "play_enemy_hurt"))
+		timer.start()
 		
 		$Control/KanjiDrawPanel.disable()
 		
@@ -238,13 +259,41 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		#print("current_draw_character_index: " + str(current_draw_character_index))
 		$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
 	
+func play_enemy_hurt():
+	print("enemy_hurt")
+	$AnimatedSprite2DEnemy.animation = "enemy_hurt"
+	#$AnimatedSprite2DEnemy.offset.x = 3
+	$AnimatedSprite2DEnemy.play()
+	audio_player2.stream = Globals.fx_sword_impact2
+	#audio_player2.volume_db = 8
+	audio_player2.play()
+	
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
-	$AnimatedSprite2D.animation = "hurt"
-	$AnimatedSprite2D.play()
+	$AnimatedSprite2DEnemy.animation = "enemy_attack"
+	$AnimatedSprite2DEnemy.offset.x = -16
+	$AnimatedSprite2DEnemy.offset.y = -5
+	$AnimatedSprite2DEnemy.play()
+	
+	
+	
+	var timer = Timer.new()
+	timer.wait_time = 0.7
+	timer.one_shot = true  # Makes the timer run only once
+	add_child(timer)
+	timer.timeout.connect(Callable(self, "play_player_hurt"))
+	timer.start()
+	
 	audio_player.stream = Globals.fx_incorrect
 	audio_player.play()
 	$Control/KanjiDrawPanel.redraw_with_color(Color.RED)
 
+func play_player_hurt():
+	$AnimatedSprite2DPlayer.animation = "hurt"
+	$AnimatedSprite2DPlayer.play()
+	
+	audio_player2.stream = Globals.fx_sword_impact2
+	#audio_player2.volume_db = 8
+	audio_player2.play()
 
 func _on_try_again_button_gui_input(event: InputEvent) -> void:
 	#print(event)

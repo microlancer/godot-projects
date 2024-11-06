@@ -13,6 +13,7 @@ var all_small = false
 
 @export var kanji_refs = {}
 
+var small_kanji_default_position: Vector2i
 
 signal correct_stroke(strokeIndex, direction)
 signal kanji_correct()
@@ -27,6 +28,8 @@ func _ready() -> void:
 	
 	#kanji_keys = kanji_characters.keys()
 	
+	small_kanji_default_position = $"../KanjiLabel".position
+	
 	draw_panel = DrawPanel.new()
 	draw_panel.connect("stroke_drawn", Callable(self, "_on_stroke_drawn"))
 
@@ -36,6 +39,15 @@ func _ready() -> void:
 func set_kanji_to_expect(kanji: String):
 	print("Setting kanji to expect: " + kanji)
 	kanji_to_draw = kanji_refs[kanji]
+	$"../KanjiLabel".text = "[center]" + kanji + "[/center]"
+	
+	if kanji in Globals.KANA_SMALL:
+		$"../KanjiLabel".scale = Vector2(0.7, 0.7)
+		$"../KanjiLabel".position = Vector2i(27, 183)
+	else:
+		$"../KanjiLabel".scale = Vector2(1, 1)
+		$"../KanjiLabel".position = small_kanji_default_position
+		
 	#print(kanji_to_draw)
 	draw_panel.clear()
 	expand_strokes(kanji_to_draw)

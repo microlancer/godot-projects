@@ -1,62 +1,227 @@
 {
 	"quiz_level_00": [
 		{
-			"sentence": "指で・十・まで数えてください。",
-			"translation": "I can count to [u]ten[/u] with my fingers.",
-			"furigana": ["ゆび","じゅう","かぞ"],
-		},
-		{
 			"sentence": "母はのんきで・朗・らかでお人好しです。",
-			"furigana": ["はは","ほが","ひとよし"],
-			
+			"furigana": ["はは","ほが","ひとよし"]
 		}
 	],
 	"quiz_level_01": [
 		{
 			"sentence": "このラーメンは・一・番です。",
-			"furigana": ["いち","ばん"],
+			"furigana": ["いち","ばん"]
 		},
 		{
 			"sentence": "私の部屋は・二・階です。",
-			"furigana": ["わたし","へや","に","かい"],
+			"furigana": ["わたし","へや","に","かい"]
 		},
+		{
+			"sentence": "お米を・三・回｜洗ってください。",
+			"furigana": ["こめ","さん","かい","あら"]
+		},
+		{
+			"sentence": "かごの中に子犬が・四・匹います。",
+			"furigana": ["なか","こいぬ","よん","びき"]
+		},
+		{
+			"sentence": "この椅子は・五・本｜足です。",
+			"furigana": ["いす","ご","ほん","あし"]
+		},
+		{
+			"sentence": "仕事は・六・時に終わります。",
+			"furigana": ["しごと","ろく","じ","お"]
+		},
+		{
+			"sentence": "うどんに・七・味スパイスを掛けますか？",
+			"furigana": ["しち","み","か"]
+		},
+		{
+			"sentence": "学校は・八・月に入学式が行います。",
+			"furigana": ["がっこう","はち","がつ","にゅうがくしき","おこな"]
+		},
+		{
+			"sentence": "野球の選手は・九・回の裏にホームランを打ちました。",
+			"furigana": ["やきゅう","せんしゅ","きゅう","かい","うら","う"]
+		},
+		{
+			"sentence": "指で・十・まで数えてください。",
+			"translation": "I can count to [u]ten[/u] with my fingers.",
+			"furigana": ["ゆび","じゅう","かぞ"]
+		}
+	],
+	"quiz_level_02": [
 	],
 	"refs": {
+		"てんてん": {
+			"strokes": [["DR","D","R"],["DR","D","R"]]
+		},
+		"あ": {
+			"strokes": []
+		},
 		"い": {
-			"small": false,
 			"strokes": [["D","DR"],["D","DR"]]
+		},
+		"う": {
+			"strokes": [["R","DR","D"], ["D","DR"]]
+		},
+		"え": {
+			"strokes": []
+		},
+		"お": {
+			"strokes": []
+		},
+		"か": {
+			"strokes": [["DR","R"],["D","DL"],["DR","D"]]
+		},
+		"き": {
+			"strokes": [["R","RU"],["R","RU"],["D","DR"],["R","DR"]]
+		},
+		"く": {
+			"strokes": [["D","DR"]]
+		},
+		"け": {
+			"strokes": []
+		},
+		"こ": {
+			"strokes": [["R","DR"],["R","DR"]]
+		},
+		"が": {
+			"small": false,
+			"strokes": ["か","てんてん"]
+		},
+		"ぎ": {
+			"strokes": []
+		},
+		"ぐ": {
+			"strokes": []
+		},
+		"げ": {
+			"strokes": []
+		},
+		"ご": {
+			"strokes": ["こ","てんてん"]
+		},
+		"さ": {
+			"strokes": [["R","UR"],["D","DR"],["DR","R"]]
+		},
+		"し": {
+			"strokes": [["D","DR"]]
+		},
+		"す": {
+			"strokes": []
+		},
+		"せ": {
+			"strokes": []
+		},
+		"そ": {
+			"strokes": []
+		},
+		"ざ": {
+			"strokes": []
+		},
+		"じ": {
+			"strokes": [["D","DR"], ["D","DR"], ["D","DR"]]
+		},
+		"ず": {
+			"strokes": []
+		},
+		"ぜ": {
+			"strokes": []
+		},
+		"ぞ": {
+			"strokes": []
+		},
+		"た": {
+			"strokes": []
+		},
+		"ち": {
+			"strokes": [["R","UR"],["D"]]
+		},
+		"つ": {
+			"strokes": []
+		},
+		"て": {
+			"strokes": []
+		},
+		"と": {
+			"strokes": []
+		},
+		"な": {
+			"strokes": []
+		},
+		"に": {
+			"small": false,
+			"strokes": [["D"], ["R","UR"], ["R","DR"]]
+		},
+		"ぬ": {
+			"strokes": []
+		},
+		"ね": {
+			"strokes": []
+		},
+		"の": {
+			"strokes": []
+		},
+		"は": {
+			"strokes": [["D"],["R","UR"],["D","DR"]]
+		},
+		"ひ": {
+			"strokes": []
+		},
+		"ふ": {
+			"strokes": []
+		},
+		"へ": {
+			"strokes": []
 		},
 		"ほ": {
 			"small": false,
 			"strokes": [["D"],["R","UR"],["R","UR"],["DR","D"]]
 		},
-		"か": {
-			"small": false,
-			"strokes": [["DR","R"],["D","DL"],["DR","D"]]
+		"ま": {
+			"strokes": []
 		},
-		"が": {
-			"small": false,
-			"strokes": ["か",["DR","D","R"],["DR","D","R"]]
+		"み": {
+			"strokes": []
 		},
-		"ち": {
-			"small": false,
-			"strokes": [["R","UR"],["D"]]
+		"む": {
+			"strokes": []
 		},
-		"じ": {
-			"small": false,
-			"strokes": [["D","DR"], ["D","DR"], ["D","DR"]]
+		"め": {
+			"strokes": []
 		},
-		"に": {
-			"small": false,
-			"strokes": [["D"], ["R","RU"], ["R","DR"]]
+		"も": {
+			"strokes": []
+		},
+		"ら": {
+			"strokes": []
+		},
+		"り": {
+			"strokes": []
+		},
+		"る": {
+			"strokes": []
+		},
+		"れ": {
+			"strokes": []
+		},
+		"ろ": {
+			"strokes": [["D","DR","DL"]]
+		},
+		"や": {
+			"strokes": []
+		},
+		"ゆ": {
+			"strokes": []
+		},
+		"よ": {
+			"strokes": [["R","UR"],["D","DR"]]
 		},
 		"ゅ": {
 			"small": true,
 			"strokes": [["D","DR"], ["D","DL"]]
 		},
-		"う": {
-			"small": false,
-			"strokes": [["R","DR","D"], ["D","DR"]]
+		"ん": {
+			"strokes": [["D","DR"]]
 		},
 		"一": {
 			"readings": ["いち"],
@@ -65,6 +230,34 @@
 		"二": {
 			"readings": ["に"],
 			"strokes": [["R","UR"],["R","UR"]]
+		},
+		"三": {
+			"readings": ["さん"],
+			"strokes": [["R","UR"],["R","UR"],["R","DR"]]
+		},
+		"四": {
+			"readings": ["よん"],
+			"strokes": [["D"],["DR","R"],["DL","D"],["D","DR"],["R","UR"]]
+		},
+		"五": {
+			"readings": ["ご"],
+			"strokes": [["R","UR"],["DL","D"],["DR","R"],["R","DR"]]
+		},
+		"六": {
+			"readings": ["ろく"],
+			"strokes": [["D","DR"],["R","UR"],["DL"],["DR"]]
+		},
+		"七": {
+			"readings": ["しち"],
+			"strokes": [["R","UR"],["DR","D"]]
+		},
+		"八": {
+			"readings": ["はち"],
+			"strokes": [["L","DL"],["DR","R"]]
+		},
+		"九": {
+			"readings": ["きゅう"],
+			"strokes": [["DL","D"],["DR","R"]]
 		},
 		"十": {
 			"readings": ["とお","じゅう"],

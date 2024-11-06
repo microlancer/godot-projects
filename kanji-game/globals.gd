@@ -9,24 +9,35 @@ var KANA_REGULAR = \
 	"あいうえお" + \
 	"アイウエオ" + \
 	"かきくけこ" + \
+	"がぎぐげご" + \
+	"カキクケコ" + \
+	"ガギグゲゴ" + \
 	"さしすせそ" + \
+	"ざじずぜぞ" + \
+	"サシスセソ" + \
+	"ザジズゼゾ" + \
 	"たちつてと" + \
+	"だぢづでど" + \
+	"タチツテト" + \
+	"ダヂヅデド" + \
 	"なにぬねの" + \
+	"ナニヌネノ" + \
 	"はひふへほ" + \
+	"ばびぶべぼ" + \
+	"ぱぴぷぺぽ" + \
+	"ハヒフヘホ" + \
+	"バビブベボ" + \
+	"パピプペポ" + \
 	"まみむめも" + \
 	"マミムメモ" + \
 	"やゆよ" + \
+	"ヤユヨ" + \
 	"らりるれろ" + \
 	"ラリルレロ" + \
 	"わをん" + \
-	"ワヲン" + \
-	"がぎぐげご" + \
-	"ざじずぜぞ" + \
-	"だぢづでど" + \
-	"ぱぴぷぺぽ" + \
-	"ばびぶべぼ"
-var KANA_SMALL = "ゃっ"
-var KANA_SYMBOLS = "ー。！？、「」　・"
+	"ワヲン"
+var KANA_SMALL = "ぁぃぅぇぉっゃゅょァィゥェォッャュョ"
+var KANA_SYMBOLS = "ー。！？、「」　・｜"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,3 +57,4 @@ var fx_light_torch1: AudioStream = preload("res://sound_fx/Light Torch 1.wav")
 var fx_sword_attack1: AudioStream = preload("res://sound_fx/Sword Attack 1.wav")
 var fx_sword_attack2: AudioStream = preload("res://sound_fx/Sword Attack 2.wav")
 var fx_sword_attack3: AudioStream = preload("res://sound_fx/Sword Attack 3.wav")
+var fx_sword_impact2: AudioStream = preload("res://sound_fx/Sword Impact Hit 2.wav")

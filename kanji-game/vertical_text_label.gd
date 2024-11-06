@@ -79,15 +79,15 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 	var kanji_word_length: int = 0
 	
 	for letter in actual_text:
-		#print({"furigana_index":furigana_index})
+		print({"furigana_index":furigana_index})
 		var block: Label = Label.new()
 		
 		var is_kanji = letter not in kana_array and \
 			letter not in kana_small_array and \
 			letter not in other_array
 			
-		#print("letter: " + letter)
-		#print({"letter":letter,"is_kanji":is_kanji})
+		print("letter: " + letter)
+		print({"letter":letter,"is_kanji":is_kanji})
 		#print("block_index: " + str(block_index))
 		#print("letter_index: " + str(letter_index))
 		var previous_is_kanji = letter_index >= 1 and \
@@ -133,7 +133,7 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			block_size.y + block_margin.y
 		
 		# We will center the x position based on number of columns
-		var total_columns = ceili(actual_text.length() / float(block_grid.y))
+		var total_columns = floori(actual_text.length() / float(block_grid.y))
 		var centering_offset = 0.5 * self.size.x #+ 
 		var columns_width_offset = 0.5 * total_columns * block_size.x
 		
@@ -141,6 +141,14 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			 ((1 + (floor(block_index / roundi(block_grid.y)))) * block_size.x) \
 			 - centering_offset \
 			 + columns_width_offset
+			
+	
+		print({
+			"total_columns":total_columns,
+			"centering_offset":centering_offset,
+			"columns_width_offset":columns_width_offset,
+			"block.position.x":block.position.x
+		})
 		
 		if letter == "。":
 			block.rotation_degrees = 270
@@ -156,12 +164,16 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			kanji_replacement_word_started = !kanji_replacement_word_started
 			letter_index += 1
 			#print("continue")
-			continue	
+			continue
+			
+		if letter == "｜":
+			block_index -= 1
 			
 		if letter in Globals.KANA_SMALL:
 			block.position.x += 2
 		
-		self.add_child(block)
+		if letter != "｜":
+			self.add_child(block)
 		
 		#print({"kanji_word_started":kanji_word_started})
 		
@@ -202,11 +214,11 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			actual_text_array[letter_index+1] not in other_array
 					
 					
-		#print({"kanji_word_started":kanji_word_started,"ahead_is_kanji":ahead_is_kanji})
+		print({"kanji_word_started":kanji_word_started,"ahead_is_kanji":ahead_is_kanji})
 		if kanji_word_started and not ahead_is_kanji:
 			kanji_word_started = false
-			#print("end of kanji word, create furigana")
-			#print(furigana, furigana_index)
+			print("end of kanji word, create furigana")
+			print(furigana, furigana_index)
 			# create furigana label
 			var furigana_label = Label.new()
 			
