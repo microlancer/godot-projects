@@ -65,6 +65,7 @@ func _gui_input(event):
 	if is_out_of_bounds(event.position):
 		# skip events happening outside of the drawing area
 		#print("out of bounds")
+		end_stroke()
 		return
 				
 	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -87,7 +88,7 @@ func _gui_input(event):
 	queue_redraw()
 	
 func is_out_of_bounds(point):
-	var margin = 4
+	var margin = 0
 	var out_of_bounds = point.x < margin or point.y < margin \
 		or point.x > self.size.x - margin or point.y > self.size.y - margin		
 	return out_of_bounds

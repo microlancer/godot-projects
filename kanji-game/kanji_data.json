@@ -73,7 +73,7 @@
 			"strokes": [["DR","R"],["D","DL"],["DR","D"]]
 		},
 		"き": {
-			"strokes": [["R","RU"],["R","RU"],["D","DR"],["R","DR"]]
+			"strokes": [["R","UR"],["R","UR"],["D","DR"],["R","DR"]]
 		},
 		"く": {
 			"strokes": [["D","DR"]]
@@ -253,7 +253,7 @@
 		},
 		"八": {
 			"readings": ["はち"],
-			"strokes": [["L","DL"],["DR","R"]]
+			"strokes": [["L","DL","D"],["DR","R","D"]]
 		},
 		"九": {
 			"readings": ["きゅう"],

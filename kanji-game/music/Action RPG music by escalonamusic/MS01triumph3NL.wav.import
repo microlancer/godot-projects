@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://uwm44hhp3rkk"
+path="res://.godot/imported/MS01triumph3NL.wav-35cef3889d3df4d9d8cbecde25aee939.sample"
+
+[deps]
+
+source_file="res://music/Action RPG music by escalonamusic/MS01triumph3NL.wav"
+dest_files=["res://.godot/imported/MS01triumph3NL.wav-35cef3889d3df4d9d8cbecde25aee939.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

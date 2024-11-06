@@ -14,6 +14,25 @@ var sentence_obj
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
 @onready var audio_player2: AudioStreamPlayer2D = %AudioStreamPlayer2D2  # Adjust the path if necessary
 
+var default_damage_label_y = 0
+var default_damage_label_color
+
+var player_hp_max = 5
+var player_hp = 5
+var enemy_hp_max = 5
+var enemy_hp = 5
+
+var player_dmg_min = 1
+var player_dmg_max = 5
+
+var enemy_dmg_min = 1
+var enemy_dmg_max = 5
+
+var player_level = 1
+var enemy_level = 1
+var enemy_name = "Skeleton"
+var player_name = "Player"
+var player_kp = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,6 +47,21 @@ func _ready() -> void:
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
 	
+	default_damage_label_y = $Control2/EnemyDamageLabel.position.y
+	default_damage_label_color = $Control2/EnemyDamageLabel.modulate
+	$Control2/EnemyDamageLabel.hide()
+	$Control2/PlayerDamageLabel.hide()
+	
+	player_hp = player_hp_max
+	enemy_hp = enemy_hp_max
+	update_hp()
+	
+	#$Control2/HealthBarPlayer.max_value = player_hp_max
+	#$Control2/HealthBarPlayer.value = player_hp
+	#
+	#$Control2/HealthBarEnemy.max_value = enemy_hp_max
+	#$Control2/HealthBarEnemy.value = enemy_hp
+	
 	var file_path = "res://kanji_data.json"
 	var json_as_text = FileAccess.get_file_as_string(file_path)
 	var kanji_data = JSON.parse_string(json_as_text)
@@ -37,6 +71,8 @@ func _ready() -> void:
 	$Control/KanjiDrawPanel.kanji_refs = kanji_data.refs
 	
 	pick_random_sentence()
+	
+	$Control2/NextBattleButton.hide()
 	
 	#replacement_type = Globals.REPLACE_TYPES.pick_random()
 	
@@ -159,14 +195,24 @@ func _animation_changed():
 		"attack_down": 0,
 		"attack_spin": 0,
 		"hurt": 0,
+		"die": 0,
 	}
 	$AnimatedSprite2DPlayer.offset.y = y_offsets[$AnimatedSprite2DPlayer.animation]
 			
 func _animation_finished():
+	
+	if $AnimatedSprite2DPlayer.animation == "sword_away":
+		$AnimatedSprite2DPlayer.animation = "idle"
+		$AnimatedSprite2DPlayer.offset.y = 0
+		$AnimatedSprite2DPlayer.play()
+		
 	if $AnimatedSprite2DPlayer.animation in attacks:
 		$AnimatedSprite2DPlayer.animation = "idle_sword"
 		$AnimatedSprite2DPlayer.play()
-		pick_random_sentence()
+		
+		if enemy_hp > 0:
+			print("battle continues, enemy_hp: " + str(enemy_hp))
+			pick_random_sentence()
 		#pick_random_sentence()
 		#$Control/KanjiDrawPanel.reset_draw_panel()
 		#$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
@@ -174,17 +220,47 @@ func _animation_finished():
 		#$Control/VerticalTextLabel.build_sentence(replacement_type)
 		$Control/KanjiDrawPanel.enable()
 	elif $AnimatedSprite2DPlayer.animation in ["hurt"]:
+		
+		if player_hp <= 0:
+			$AnimatedSprite2DPlayer.animation = "die"
+			$AnimatedSprite2DPlayer.play()
+			return
+		
 		$AnimatedSprite2DPlayer.animation = "idle_sword"
 		$AnimatedSprite2DPlayer.play()
 		$Control/KanjiDrawPanel.reset_draw_panel()
 		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 		$Control/KanjiDrawPanel.enable()
+		
+		
+		
+		
 	elif $AnimatedSprite2DPlayer.animation == "sword_draw":
 		$AnimatedSprite2DPlayer.animation = "idle_sword"
 		$AnimatedSprite2DPlayer.play()
 		
+	if $AnimatedSprite2DPlayer.animation == "die":
+		$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
+		$AudioStreamPlayerBgMusic.play()
+		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
+		$AudioStreamPlayer2D.play()
+		player_hp = player_hp_max
+		$Control2/HealthBarPlayer.hide()
+		$Control2/NextBattleButton.text = "Try again"
+		$Control2/NextBattleButton.show()
+		$Control/KanjiDrawPanel.hide()
+		$Control/KanjiLabel.hide()
+		
 func _animation_finished_enemy():
 	if $AnimatedSprite2DEnemy.animation == "enemy_hurt":
+		
+		print({"enemy_hp":enemy_hp})
+		if enemy_hp <= 0:
+			$AnimatedSprite2DEnemy.animation = "enemy_die"
+			#$AnimatedSprite2DEnemy.offset.x = 3
+			$AnimatedSprite2DEnemy.play()
+			return
+		
 		$AnimatedSprite2DEnemy.animation = "enemy_idle"
 		$AnimatedSprite2DEnemy.play()
 		
@@ -193,6 +269,23 @@ func _animation_finished_enemy():
 		$AnimatedSprite2DEnemy.offset.x = 0
 		$AnimatedSprite2DEnemy.offset.y = 0
 		$AnimatedSprite2DEnemy.play()
+		
+	if $AnimatedSprite2DEnemy.animation == "enemy_die":
+		$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
+		$AudioStreamPlayerBgMusic.play()
+		$AudioStreamPlayer2D.stream = Globals.fx_battle_win2
+		$AudioStreamPlayer2D.play()
+		$Control2/HealthBarEnemy.hide()
+		$AnimatedSprite2DEnemy.hide()
+		$Control2/HealthBarPlayer.hide()
+		$Control2/NextBattleButton.text = "Next battle"
+		$Control2/NextBattleButton.show()
+		$Control/KanjiDrawPanel.hide()
+		$Control/KanjiLabel.hide()
+		#$Control/VerticalTextLabel.hide()
+		$AnimatedSprite2DPlayer.animation = "sword_away"
+		$AnimatedSprite2DPlayer.play()
+		
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -236,7 +329,7 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		
 		# Create a timer to delay the enemy animation
 		var timer = Timer.new()
-		timer.wait_time = 0.2
+		timer.wait_time = 0.35
 		timer.one_shot = true  # Makes the timer run only once
 		add_child(timer)
 		timer.timeout.connect(Callable(self, "play_enemy_hurt"))
@@ -261,20 +354,52 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 	
 func play_enemy_hurt():
 	print("enemy_hurt")
-	$AnimatedSprite2DEnemy.animation = "enemy_hurt"
-	#$AnimatedSprite2DEnemy.offset.x = 3
-	$AnimatedSprite2DEnemy.play()
+	
 	audio_player2.stream = Globals.fx_sword_impact2
 	#audio_player2.volume_db = 8
 	audio_player2.play()
+	
+	var damage_points = randi_range(player_dmg_min, player_dmg_max)
+	
+	enemy_hp -= damage_points
+	update_hp()
+	
+	print({"enemy_hp":enemy_hp})
+	if enemy_hp <= 0:
+		$AnimatedSprite2DEnemy.animation = "enemy_die"
+		$AnimatedSprite2DEnemy.play()
+	else:
+		$AnimatedSprite2DEnemy.animation = "enemy_hurt"
+		$AnimatedSprite2DEnemy.play()
+	
+	var tween = create_tween()
+	$Control2/EnemyDamageLabel.show()
+	$Control2/EnemyDamageLabel.text = str(damage_points)
+	$Control2/EnemyDamageLabel.position.y = default_damage_label_y
+	$Control2/EnemyDamageLabel.modulate = default_damage_label_color
+	tween.parallel().tween_property($Control2/EnemyDamageLabel, "position:y", default_damage_label_y - 20, 1)
+	tween.parallel().tween_property($Control2/EnemyDamageLabel, "modulate", Color(0, 0, 0, 0), 1)
+	
+	if false and enemy_hp <= 0:
+		# Create a timer to delay the enemy animation
+		var timer = Timer.new()
+		timer.wait_time = 1
+		timer.one_shot = true  # Makes the timer run only once
+		add_child(timer)
+		timer.timeout.connect(Callable(self, "play_enemy_dead"))
+		timer.start()
+	
+func xxxplay_enemy_dead():
+	$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
+	$AudioStreamPlayerBgMusic.play()
+	$AudioStreamPlayer2D.stream = Globals.fx_battle_win2
+	$AudioStreamPlayer2D.play()
 	
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	$AnimatedSprite2DEnemy.animation = "enemy_attack"
 	$AnimatedSprite2DEnemy.offset.x = -16
 	$AnimatedSprite2DEnemy.offset.y = -5
 	$AnimatedSprite2DEnemy.play()
-	
-	
 	
 	var timer = Timer.new()
 	timer.wait_time = 0.7
@@ -294,6 +419,41 @@ func play_player_hurt():
 	audio_player2.stream = Globals.fx_sword_impact2
 	#audio_player2.volume_db = 8
 	audio_player2.play()
+	
+	var damage_points = randi_range(enemy_dmg_min, enemy_dmg_max)
+	player_hp -= damage_points
+	update_hp()
+	
+	var tween = create_tween()
+	$Control2/PlayerDamageLabel.show()
+	$Control2/PlayerDamageLabel.text = str(damage_points)
+	$Control2/PlayerDamageLabel.position.y = default_damage_label_y
+	$Control2/PlayerDamageLabel.modulate = default_damage_label_color
+	tween.parallel().tween_property($Control2/PlayerDamageLabel, "position:y", default_damage_label_y - 20, 1)
+	tween.parallel().tween_property($Control2/PlayerDamageLabel, "modulate", Color(0, 0, 0, 0), 1)
+	
+func update_hp():
+	
+	if player_hp < 0:
+		player_hp = 0
+	
+	$Control2/HealthBarPlayer.value = player_hp
+	$Control2/HealthBarEnemy.value = enemy_hp
+	
+	$Control2/HealthBarEnemy.max_value = enemy_hp_max
+	$Control2/HealthBarPlayer.max_value = player_hp_max
+	
+	$Control2/PlayerStats.text = player_name + "\n" +\
+		"Lv: " + str(player_level) + "\n" +\
+		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
+		"KP: " + str(player_kp)
+		
+	if enemy_hp > 0:
+		$Control2/EnemyStats.text = enemy_name + "\n" +\
+			"Lv: " + str(enemy_level)
+	else:
+		$Control2/EnemyStats.text = ""
+		
 
 func _on_try_again_button_gui_input(event: InputEvent) -> void:
 	#print(event)
@@ -313,3 +473,42 @@ func _on_komoji_button_toggled(toggled_on: bool) -> void:
 		audio_player.stream = Globals.fx_mine4
 		audio_player.play(0.1)
 		$Control/KomojiLabel.hide()
+
+func _on_next_battle_button_button_up() -> void:
+	audio_player.stream = Globals.fx_mine4
+	audio_player.play(0.1)
+	
+	$Control2/NextBattleButton.hide()
+	$Control/KanjiDrawPanel.show()
+	$Control/KanjiDrawPanel.enable()
+	$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+
+	$Control/VerticalTextLabel.show()
+	$Control/KanjiLabel.show()
+	
+	enemy_hp = enemy_hp_max
+	
+	if player_hp <= 0:
+		player_hp = player_hp_max
+	
+	update_hp()
+	
+	pick_random_sentence()
+	$AnimatedSprite2DEnemy.show()
+	$AnimatedSprite2DEnemy.animation = "enemy_idle"
+	$AnimatedSprite2DEnemy.play()
+	
+	$AnimatedSprite2DPlayer.animation = "idle"
+	$AnimatedSprite2DPlayer.offset.y = 0
+	$AnimatedSprite2DEnemy.play()
+	
+	$Control2/HealthBarPlayer.show()
+	$Control2/HealthBarEnemy.show()
+
+	$AudioStreamPlayerBgMusic.stream = Globals.music_action1
+	$AudioStreamPlayerBgMusic.play()
+	
+	
+		
+	
+	
