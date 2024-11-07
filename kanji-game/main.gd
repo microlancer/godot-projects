@@ -9,6 +9,7 @@ var current_draw_character_index = 0
 var current_draw_total_characters = 0
 var replacement_type
 var sentence_obj
+var draw_word
 #@export var replacement_type = Globals.REPLACE_TYPE_HIRAGANA
 
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
@@ -34,6 +35,12 @@ var enemy_name = "Skeleton"
 var player_name = "Player"
 var player_kp = 0
 
+var complete_pool = []
+var progress = {"一":{"r": 0,"w": 0}}
+var known_pool_index = 0
+
+var target_word: String = ""
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2DPlayer.connect("animation_changed", Callable(self, "_animation_changed"))
@@ -46,6 +53,8 @@ func _ready() -> void:
 	$AnimatedSprite2DEnemy.play()
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
+	
+	load_game()
 	
 	default_damage_label_y = $Control2/EnemyDamageLabel.position.y
 	default_damage_label_color = $Control2/EnemyDamageLabel.modulate
@@ -65,12 +74,18 @@ func _ready() -> void:
 	var file_path = "res://kanji_data.json"
 	var json_as_text = FileAccess.get_file_as_string(file_path)
 	var kanji_data = JSON.parse_string(json_as_text)
-	kanji_sentences = kanji_data.quiz_level_01
+	kanji_sentences = kanji_data.sentences
+	complete_pool = kanji_data.pool
 	#kanji_refs = kanji_data.refs
 	
 	$Control/KanjiDrawPanel.kanji_refs = kanji_data.refs
 	
 	pick_random_sentence()
+	
+	
+	
+	save_game()
+	
 	
 	$Control2/NextBattleButton.hide()
 	
@@ -78,16 +93,108 @@ func _ready() -> void:
 	
 	return
 	
+func load_game():
+	var file_path_save = "user://save_game.json"
+	var save_json_as_text = FileAccess.get_file_as_string(file_path_save)
+	var save_data = JSON.parse_string(save_json_as_text)
+	
+	if not save_data or save_data.size() == 0 or not save_data.has("slot0"):
+		# try to create it
+		save_game()
+		load_game()
+		return
+	
+	known_pool_index = save_data.slot0.known_pool_index
+	player_kp = save_data.slot0.kp
+	player_level = save_data.slot0.level
+	progress = save_data.slot0.progress
+	print({"save_data":save_data})
+	
+func pick_random_based_on_value(options):
+	var weights = []
+	var total_weight = 0.0
+	
+	var zero_value_items = []
+	for item in options:
+		if item.value == 0:
+			zero_value_items.append(item)
+
+	# If there are any items with zero value, choose from them at random
+	if zero_value_items.size() > 0:
+		return zero_value_items[randi() % zero_value_items.size()]
+
+	# Calculate inverse weight for each item
+	for option in options:
+		var weight = 1.0 / float(option["value"])
+		weights.append(weight)
+		total_weight += weight
+
+	# Normalize weights to create cumulative probabilities
+	var cumulative_probabilities = []
+	var cumulative = 0.0
+	for weight in weights:
+		cumulative += weight / total_weight
+		cumulative_probabilities.append(cumulative)
+
+	# Pick a random number between 0 and 1
+	var random_choice = randf()
+
+	# Select item based on cumulative probabilities
+	for i in range(options.size()):
+		if random_choice < cumulative_probabilities[i]:
+			return options[i]
+
+
+	
+func save_game():
+	
+	
+	var file = FileAccess.open("user://save_game.json", FileAccess.WRITE)
+	var save_data = {
+		"slot0": {
+			"name": "Player",
+			"level": player_level,
+			"kp": player_kp,
+			"known_pool_index": known_pool_index,
+			"progress": progress
+		}
+	}
+	print({"save_data":save_data})
+	file.store_string(JSON.stringify(save_data))
+	
+	
 func pick_random_sentence():
 	
+	var items: Array = []
+	
+	for item_key in progress:
+		items.push_back({
+			"name": item_key,
+			"replacement_type": Globals.REPLACE_TYPE_HIRAGANA,
+			"value": int(progress[item_key].r)
+		})
+		items.push_back({
+			"name": item_key,
+			"replacement_type": Globals.REPLACE_TYPE_KANJI,
+			"value": int(progress[item_key].w)
+		})
+		
+	print({"items":items,"kanji_sentences":kanji_sentences})
+	
+	# Example usage
+	var randomly_selected_option = pick_random_based_on_value(items)
+	#var word: String = selected_option.split("+")[0]
+	#replacement_type = selected_option.split("+")[1]
+	
+	print("Selected item:", randomly_selected_option)
 	
 	print("picking random sentence")
-	sentence_obj = kanji_sentences.pick_random()
-	replacement_type = Globals.REPLACE_TYPES.pick_random()
+	#sentence_obj = kanji_sentences.pick_random()
 	
-	if 0:
-		sentence_obj = kanji_sentences[1]
-		replacement_type = Globals.REPLACE_TYPE_HIRAGANA
+	sentence_obj = kanji_sentences[randomly_selected_option.name]
+	
+	#replacement_type = Globals.REPLACE_TYPES.pick_random()
+	replacement_type = randomly_selected_option.replacement_type
 	
 	print("replacement_type: " + str(replacement_type))
 	current_draw_character_index = 0
@@ -102,12 +209,29 @@ func pick_random_sentence():
 	
 func set_char_to_draw(sentence_obj, replacement_type):
 	
+	draw_word = get_draw_word(sentence_obj)
+	target_word = "".join(draw_word)
+	
+	print({"progress":progress,"target_word":target_word})
+	
+	$Control/KanjiLabel.show()
+	
+	if progress.has(target_word):
+		if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
+			if progress[target_word].has("r") and progress[target_word].r >= 5:
+				print("hiding")
+				$Control/KanjiLabel.hide()
+		if replacement_type == Globals.REPLACE_TYPE_KANJI:
+			if progress[target_word].has("w") and progress[target_word].w >= 5:
+				print("hiding")
+				$Control/KanjiLabel.hide()
+	
 	if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
 		set_furigana_to_draw(sentence_obj)
 	else:
 		set_kanji_to_draw(sentence_obj)
 		
-func set_kanji_to_draw(sentence_obj):
+func get_draw_word(sentence_obj):
 	var sentence = sentence_obj.sentence.split()
 	var start_word_search = false
 	var draw_word = []
@@ -131,6 +255,39 @@ func set_kanji_to_draw(sentence_obj):
 		
 	current_draw_total_characters = draw_word.size()	
 	
+	print({"draw_word":draw_word})
+	
+	return draw_word
+	
+	
+func set_kanji_to_draw(sentence_obj):
+	#var sentence = sentence_obj.sentence.split()
+	#var start_word_search = false
+	#var draw_word = []
+	#var kana_array = Globals.KANA_REGULAR.split()
+	#var kana_small_array = Globals.KANA_SMALL.split()
+	#var other_array = Globals.KANA_SYMBOLS.split()
+	## find kanji word that needs to be drawn
+	#for i in range(0, sentence.size()):
+		#var letter = sentence[i]
+		#if letter == "・":
+			#start_word_search = !start_word_search
+			#
+		#var letter_is_kanji = letter not in kana_array and \
+			#letter not in kana_small_array and \
+			#letter not in other_array
+			#
+		#if start_word_search and letter_is_kanji:
+			#draw_word.push_back(letter)
+		#print(letter)
+		#print(draw_word)	
+		
+	current_draw_total_characters = draw_word.size()	
+	
+	print({"draw_word":draw_word})
+	
+	target_word = "".join(draw_word)
+	
 	var kanji_key = draw_word[current_draw_character_index]
 	$Control/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
 	#kanji_to_draw = kanji_refs[kanji_key]
@@ -149,6 +306,7 @@ func set_furigana_to_draw(sentence_obj):
 	var prev_is_kanji = false
 	var kanji_word_count_index = 0
 	var furigana_index = 0
+	var kanji_word = []
 	
 	for i in range(0, sentence.size()):
 		var letter = sentence[i]
@@ -176,6 +334,8 @@ func set_furigana_to_draw(sentence_obj):
 		
 	print("furigana index="+str(furigana_index))	
 		
+	print({"draw_word":draw_word})
+	
 	var furigana_array = sentence_obj.furigana[furigana_index].split()
 	current_draw_total_characters = furigana_array.size()
 	var kanji_key = furigana_array[current_draw_character_index]
@@ -278,7 +438,7 @@ func _animation_finished_enemy():
 		$Control2/HealthBarEnemy.hide()
 		$AnimatedSprite2DEnemy.hide()
 		$Control2/HealthBarPlayer.hide()
-		$Control2/NextBattleButton.text = "Next battle"
+		$Control2/NextBattleButton.text = "次 (Next)"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
 		$Control/KanjiLabel.hide()
@@ -340,6 +500,12 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		current_draw_character_index = 0
 		current_draw_total_characters = 0
 		
+		print({"progress":progress,"target_word":target_word})
+	
+		increment_progress()
+			
+		print({"progress":progress})
+		
 	else:
 		audio_player.stream = Globals.fx_fantasy_ui4
 		audio_player.play()
@@ -351,6 +517,91 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		set_char_to_draw(sentence_obj, replacement_type)
 		#print("current_draw_character_index: " + str(current_draw_character_index))
 		$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
+
+func calculate_kp():
+	var total = 0
+	
+	for item in progress:
+		if progress[item].r >=5 and progress[item].w >= 5:
+			total += 1
+	
+	player_kp = total
+	update_hp()	
+
+func reset_progress():
+	if not progress.has(target_word):
+		progress[target_word] = {
+			"r": 0,
+			"w": 0
+		}
+	
+	if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
+		progress[target_word].r = 0
+	else:
+		progress[target_word].w = 0
+		
+	calculate_kp()
+	
+	save_game()
+
+func increment_progress():
+	
+	calculate_kp()
+	
+	var before_increment_kp = player_kp
+	
+	if not progress.has(target_word):
+		progress[target_word] = {
+			"r": 0,
+			"w": 0
+		}
+	
+	if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
+		if not progress[target_word].has("r"):
+			progress[target_word].r = 1
+		else:
+			progress[target_word].r += 1
+	else:
+		if not progress[target_word].has("r"):
+			progress[target_word].w = 1
+		else:
+			progress[target_word].w += 1
+	
+	calculate_kp()
+	
+	
+	if known_pool_index >= complete_pool.size():
+		print("no more kanji left in the pool to learn")
+		print({"progress":progress})
+		save_game()
+		return
+		
+	# if all known pool kanji are mastered (+5/+5) then add a new
+	# word to the pool
+	
+	var all_mastered = true
+	
+	for item in progress:
+		if progress[item].r < 10 or progress[item].w < 10:
+			all_mastered = false
+			break
+			
+	if all_mastered:
+		print("adding new word to the pool")
+		progress[complete_pool[known_pool_index]] = {
+			"r": 0,
+			"w": 0,
+		}
+		known_pool_index += 1
+		
+	
+		
+	print({"progress":progress})
+	
+	#if player_kp > before_increment_kp:
+	#	for i in range(0, player_kp - before_increment_kp):
+	
+	save_game()
 	
 func play_enemy_hurt():
 	print("enemy_hurt")
@@ -411,6 +662,8 @@ func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	audio_player.stream = Globals.fx_incorrect
 	audio_player.play()
 	$Control/KanjiDrawPanel.redraw_with_color(Color.RED)
+	
+	reset_progress()
 
 func play_player_hurt():
 	$AnimatedSprite2DPlayer.animation = "hurt"
@@ -446,7 +699,7 @@ func update_hp():
 	$Control2/PlayerStats.text = player_name + "\n" +\
 		"Lv: " + str(player_level) + "\n" +\
 		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
-		"KP: " + str(player_kp)
+		"EXP: " + str(known_pool_index)
 		
 	if enemy_hp > 0:
 		$Control2/EnemyStats.text = enemy_name + "\n" +\

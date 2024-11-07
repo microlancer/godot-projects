@@ -1111,7 +1111,8 @@ offset_bottom = 97.0
 text = "Player
 Lv: 1
 HP: 20/20
-KP: 0"
+KP: 0
+Gold: 0"
 label_settings = SubResource("LabelSettings_cyab5")
 
 [node name="EnemyStats" type="Label" parent="Control2"]
