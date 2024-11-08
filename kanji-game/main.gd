@@ -45,16 +45,20 @@ var player_kp = 0 # kanji points
 var player_bp = 0 # battle points
 
 var complete_pool = []
-var progress = {"一":{"r":0,"w":0}}
 var known_pool_index = 0
 
-var start_fresh = false
-
 var target_word: String = ""
-
-var skilled_threshold = 1 # correct answers to no hints
-var mastery_threshold = 2 # correct answers to next kanji
 var mastery_max = 99
+
+# These parameters are tweaked during debugging
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+var skilled_threshold = 3 # correct answers to no hints
+var mastery_threshold = 6 # correct answers to next kanji
+var start_fresh = 0
+var progress = {"一":{"r":0,"w":0}}
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -652,19 +656,23 @@ func increment_progress():
 		
 		known_pool_index += 1
 		
-		print("adding new word to the pool: " + complete_pool[known_pool_index])
-		progress[complete_pool[known_pool_index]] = {
-			"r": 0,
-			"w": 0,
-		}
+		if known_pool_index >= complete_pool.size():
+			print("no more new words available")
+		else:
 		
-		if true or known_pool_index % 10 == 0:
-			
-			
-			# there is a bug here where if you level up twice
-			# during the same battle, you only get credit once
-			# but it's rare, so i'm ignoring it
-			level_up_during_battle = true
+			print("adding new word to the pool: " + complete_pool[known_pool_index])
+			progress[complete_pool[known_pool_index]] = {
+				"r": 0,
+				"w": 0,
+			}
+		
+			if true or known_pool_index % 10 == 0:
+				
+				
+				# there is a bug here where if you level up twice
+				# during the same battle, you only get credit once
+				# but it's rare, so i'm ignoring it
+				level_up_during_battle = true
 			
 			
 		

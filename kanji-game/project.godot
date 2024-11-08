@@ -14,10 +14,7 @@ config/name="KanjiGame"
 config/version="1.0.0"
 run/main_scene="res://kanji_panel_example.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-run/max_fps=10
-run/low_processor_mode=true
-run/low_processor_mode_sleep_usec=16900
-run/delta_smoothing=false
+run/max_fps=30
 config/icon="res://icon.svg"
 
 [autoload]

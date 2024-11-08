@@ -13,6 +13,10 @@
 		"八",
 		"九",
 		"十",
+		"日",
+		"王",
+		"玉",
+		"国",
 		"距離",
 		"朗"
 	],
@@ -57,6 +61,22 @@
 			"sentence": "・十・まで指で数えてください。",
 			"translation": "I can count to [u]ten[/u] with my fingers.",
 			"furigana": ["じゅう","ゆび","かぞ"]
+		},
+		"日": {
+			"sentence": "今日はあたたかい・日・だ。",
+			"furigana": ["きょう","ひ"]
+		},
+		"王": {
+			"sentence": "その・王・は国を治めた。",
+			"furigana": ["おう","くに","おさ"]
+		},
+		"玉": {
+			"sentence": "走って額は・玉・の汗だった。",
+			"furigana": ["はし","ひたい","たま","あせ"]
+		},
+		"国": {
+			"sentence": "その歌手は・国・の内外で有名である。",
+			"furigana": ["かしゅ","くに","ないがい","ゆうめい"]
 		},
 		"距離": {
 			"sentence": "京都までの・距離・は百五十キロです。",
@@ -127,7 +147,7 @@
 			"strokes": []
 		},
 		"お": {
-			"strokes": []
+			"strokes": [["R","UR"],["D","DR"],["R","D","DR"]]
 		},
 		"か": {
 			"strokes": [["DR","R"],["D","DL"],["DR","D"]]
@@ -191,7 +211,7 @@
 			"strokes": []
 		},
 		"た": {
-			"strokes": []
+			"strokes": [["R","UR"],["D","DL"],"こ"]
 		},
 		"ち": {
 			"strokes": [["R","UR"],["D"]]
@@ -225,7 +245,7 @@
 			"strokes": [["D"],["R","UR"],["D","DR"]]
 		},
 		"ひ": {
-			"strokes": []
+			"strokes": [["R","DR"]]
 		},
 		"ふ": {
 			"strokes": []
@@ -238,7 +258,7 @@
 			"strokes": [["D"],["R","UR"],["R","UR"],["DR","D"]]
 		},
 		"ま": {
-			"strokes": []
+			"strokes": [["R","UR"],["R","UR"],["D","DR"]]
 		},
 		"み": {
 			"strokes": []
@@ -288,44 +308,77 @@
 			"strokes": [["D","DR"]]
 		},
 		"一": {
+			"unicode": 19968,
 			"readings": ["いち"],
 			"strokes": [["R","UR"]]
 		},
 		"二": {
+			"unicode": 20108,
 			"readings": ["に"],
 			"strokes": [["R","UR"],["R","UR"]]
 		},
 		"三": {
+			"unicode": 0,
 			"readings": ["さん"],
 			"strokes": [["R","UR"],["R","UR"],["R","DR"]]
 		},
 		"四": {
+			"unicode": 0,
 			"readings": ["よん"],
 			"strokes": [["D"],["DR","R"],["DL","D"],["D","DR"],["R","UR"]]
 		},
 		"五": {
+			"unicode": 0,
 			"readings": ["ご"],
 			"strokes": [["R","UR"],["DL","D"],["DR","R"],["R","DR"]]
 		},
 		"六": {
+			"unicode": 0,
 			"readings": ["ろく"],
 			"strokes": [["D","DR"],["R","UR"],["DL"],["DR"]]
 		},
 		"七": {
+			"unicode": 0,
 			"readings": ["しち"],
 			"strokes": [["R","UR"],["DR","D"]]
 		},
 		"八": {
+			"unicode": 0,
 			"readings": ["はち"],
 			"strokes": [["L","DL","D"],["DR","R","D"]]
 		},
 		"九": {
+			"unicode": 0,
 			"readings": ["きゅう"],
 			"strokes": [["DL","D"],["DR","R"]]
 		},
 		"十": {
+			"unicode": 0,
 			"readings": ["とお","じゅう"],
 			"strokes": [["R","UR"], ["D"]]
+		},
+		"日": {
+			"unicode": 0,
+			"JLPT": "N5",
+			"strokes": [["D"],["DR","D","R"], ["R","UR"],["R","UR"]]
+		},
+		"王": {
+			"unicode": 0,
+			"JLPT": "N2",
+			"adjusted_JLPT": "N5",
+			"strokes": [["R","UR"],["D"], ["R","UR"],["R"]]
+		},
+		"玉": {
+			"unicode": 0,
+			"JLPT": "N2",
+			"adjusted_JLPT": "N5",
+			"strokes": ["王", ["DR","R", "D"]]
+		},
+		"国": {
+			"unicode": 0,
+			"JLPT": "N5",
+			"adjusted_JLPT": "N5",
+			"strokes": [["D"],["DR"],"玉",["R","UR"]]
 		},
 		"ろうへん": {
 			"readings": ["ろう"],
@@ -334,10 +387,12 @@
 		"艮": {
 		},
 		"月": {
+			"unicode": 0,
 			"readings": ["つき"],
 			"strokes": [["DL","D"], ["DR","D"],["R","UR"],["R","UR"]]
 		},
 		"朗": {
+			"unicode": 0,
 			"readings": ["ほが"],
 			"strokes": ["ろうへん", "月"]
 		},
@@ -352,12 +407,15 @@
 			"strokes": ["口", ["D"],["R","UR"],["DL","D"],["R","DR","UR"]]
 		},
 		"巨": {
+			"unicode": 0,
 			"strokes": [["D"],["R","UR"],["R","DR"],["R","UR"],["R","UR"]]
 		},
 		"臣": {
+			"unicode": 0,
 			"strokes": [["D"],["R","UR"],["D"],["R","DR"],["R","UR"],["D"],["R","UR"]]
 		},
 		"距": {
+			"unicode": 0,
 			"strokes": ["足","巨"]
 		},
 		"なべぶた": {
@@ -367,6 +425,7 @@
 			"strokes": [["DL","D"],["R","DR"]]
 		},
 		"凶": {
+			"unicode": 0,
 			"strokes": ["メ",["DR","D","R"],["D"]]
 		},
 		"ム": {
@@ -382,6 +441,7 @@
 			"strokes": [["DL","D"],["D"],["DL","D"],["R","UR"],["D"],["R","UR"],["R","UR"],["R","UR"]]
 		},
 		"離": {
+			"unicode": 38626,
 			"strokes": ["きょりへん","さいづくり"]
 		}
 	}
