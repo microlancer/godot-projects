@@ -19,8 +19,8 @@ var level_up_during_battle = false
 var default_damage_label_y = 0
 var default_damage_label_color
 
-var player_hp_max = 4
-var player_hp = 4
+var player_hp_max = 5
+var player_hp = 5
 var enemy_hp_min = 5
 var enemy_hp_max = 5
 var enemy_hp = 8
@@ -967,3 +967,7 @@ func _on_level_up_button_button_up() -> void:
 	audio_player.stream = Globals.fx_chop1
 	audio_player.play(0.3)
 	$Control2/LevelUpButton.hide()
+
+
+func _on_menu_menu_button_button_up() -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")

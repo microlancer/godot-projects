@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b50mt7wvake3b"]
+[gd_scene load_steps=13 format=3 uid="uid://dn4epyc67l5dv"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_c45ad"]
-[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://graphics/village.jpg" id="2_oo4y4"]
-[ext_resource type="AudioStream" uid="uid://61l50xomuxqa" path="res://music/Ambient 1.mp3" id="3_7vxgx"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_xpt8h"]
+[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://graphics/village.jpg" id="2_a8duo"]
+[ext_resource type="AudioStream" uid="uid://61l50xomuxqa" path="res://music/Ambient 1.mp3" id="3_8n42m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4g1xm"]
 font_size = 22
@@ -32,8 +32,26 @@ fill = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73db0"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e5cu"]
+bg_color = Color(0.13, 0.13, 0.13, 0.898039)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_nmewt"]
+line_spacing = 0.0
+font_size = 10
+font_color = Color(1, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
 [node name="MainMenu" type="Node2D"]
-script = ExtResource("1_c45ad")
+script = ExtResource("1_xpt8h")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -47,7 +65,7 @@ offset_left = -8.33484
 offset_top = -7.32581
 offset_right = 205.665
 offset_bottom = 269.674
-texture = ExtResource("2_oo4y4")
+texture = ExtResource("2_a8duo")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Control"]
@@ -116,7 +134,7 @@ layout_mode = 0
 offset_left = 8.0
 offset_top = 160.0
 offset_right = 144.0
-offset_bottom = 224.0
+offset_bottom = 232.0
 texture = SubResource("GradientTexture2D_drim8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
@@ -124,7 +142,7 @@ layout_mode = 0
 offset_left = 8.0
 offset_top = 160.0
 offset_right = 461.0
-offset_bottom = 373.0
+offset_bottom = 400.0
 scale = Vector2(0.3, 0.3)
 theme = SubResource("Theme_a48gc")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
@@ -146,8 +164,47 @@ Music and Sound FX:
   free-fantasy-sfx-and-music-bundle (by TomMusic)
   fantasy-ui-sound-effects (by Atelier Magicae)"
 
+[node name="PanelDeleteWarning" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 144.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3e5cu")
+
+[node name="Label" type="Label" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 72.0
+text = "There is already a saved game in progress. Delete existing file and start from scratch?"
+label_settings = SubResource("LabelSettings_nmewt")
+autowrap_mode = 2
+
+[node name="ButtonCancel" type="Button" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 64.0
+offset_bottom = 88.0
+text = "Cancel"
+
+[node name="ButtonYesDelete" type="Button" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 88.0
+text = "Yes"
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_7vxgx")
+stream = ExtResource("3_8n42m")
 autoplay = true
 
+[connection signal="button_up" from="Control/ButtonNew" to="." method="_on_button_new_button_up"]
+[connection signal="button_up" from="Control/ButtonContinue" to="." method="_on_button_continue_button_up"]
 [connection signal="button_up" from="Control/ButtonQuitGame" to="." method="_on_button_quit_game_button_up"]
+[connection signal="button_up" from="Control/PanelDeleteWarning/ButtonCancel" to="." method="_on_button_cancel_button_up"]
+[connection signal="button_up" from="Control/PanelDeleteWarning/ButtonYesDelete" to="." method="_on_button_yes_delete_button_up"]
