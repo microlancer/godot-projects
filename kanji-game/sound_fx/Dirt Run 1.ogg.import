@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmry48jrvyrft"
+path="res://.godot/imported/Dirt Run 1.ogg-347657c8d59a8c86ff4de63c96d8a398.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound_fx/Dirt Run 1.ogg"
+dest_files=["res://.godot/imported/Dirt Run 1.ogg-347657c8d59a8c86ff4de63c96d8a398.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

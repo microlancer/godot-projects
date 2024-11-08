@@ -45,6 +45,7 @@ func _ready() -> void:
 
 
 # From https://drtwelele.itch.io/casual-game-fx-one-shot
+var fx_dirt_run1: AudioStream = preload("res://sound_fx/Dirt Run 1.ogg")
 var fx_incorrect: AudioStream = preload("res://sound_fx/wind down 1.wav")
 var fx_correct: AudioStream = preload("res://sound_fx/wind up 1.wav")
 var fx_chop1: AudioStream = preload("res://sound_fx/chop 1.wav")
@@ -63,3 +64,4 @@ var music_action1: AudioStream = preload("res://music/Action 1.mp3")
 var fx_battle_win: AudioStream = preload("res://music/Fx 1.wav")
 var fx_battle_lose: AudioStream = preload("res://music/Fx 3.wav")
 var fx_battle_win2: AudioStream = preload("res://music/Action RPG music by escalonamusic/MS01triumph3NL.wav")
+var fx_level_up1: AudioStream = preload("res://sound_fx/MS01triumph2NL.wav")

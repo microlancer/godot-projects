@@ -10,6 +10,7 @@ var current_draw_total_characters = 0
 var replacement_type
 var sentence_obj
 var draw_word
+var level_up_during_battle = false
 #@export var replacement_type = Globals.REPLACE_TYPE_HIRAGANA
 
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
@@ -18,33 +19,48 @@ var draw_word
 var default_damage_label_y = 0
 var default_damage_label_color
 
-var player_hp_max = 5
-var player_hp = 5
+var player_hp_max = 4
+var player_hp = 4
+var enemy_hp_min = 5
 var enemy_hp_max = 5
-var enemy_hp = 5
+var enemy_hp = 8
+var enemy_level_max = 1
+var enemy_hp_range_max = 8
+
+var player_exp = 0
+var player_gold = 0
+var potential_exp = 0
 
 var player_dmg_min = 1
-var player_dmg_max = 5
+var player_dmg_max = 3
 
 var enemy_dmg_min = 1
-var enemy_dmg_max = 5
+var enemy_dmg_max = 3
 
 var player_level = 1
 var enemy_level = 1
 var enemy_name = "Skeleton"
 var player_name = "Player"
-var player_kp = 0
+var player_kp = 0 # kanji points
+var player_bp = 0 # battle points
 
 var complete_pool = []
-var progress = {"一":{"r": 0,"w": 0}}
+var progress = {"一":{"r":0,"w":0}}
 var known_pool_index = 0
 
+var start_fresh = false
+
 var target_word: String = ""
+
+var skilled_threshold = 1 # correct answers to no hints
+var mastery_threshold = 2 # correct answers to next kanji
+var mastery_max = 99
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2DPlayer.connect("animation_changed", Callable(self, "_animation_changed"))
 	$AnimatedSprite2DPlayer.connect("animation_finished", Callable(self, "_animation_finished"))
+	$AnimatedSprite2DPlayer.connect("animation_looped", Callable(self, "_animation_looped_player"))
 	$AnimatedSprite2DPlayer.animation = "idle"
 	$AnimatedSprite2DPlayer.play()
 	
@@ -54,15 +70,17 @@ func _ready() -> void:
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
 	
-	load_game()
+	if not start_fresh:
+		load_game()
 	
 	default_damage_label_y = $Control2/EnemyDamageLabel.position.y
 	default_damage_label_color = $Control2/EnemyDamageLabel.modulate
 	$Control2/EnemyDamageLabel.hide()
 	$Control2/PlayerDamageLabel.hide()
+	$Control2/LevelUpButton.hide()
 	
-	player_hp = player_hp_max
-	enemy_hp = enemy_hp_max
+	player_hp = player_hp_max + player_level
+	enemy_hp = randi_range(enemy_hp_min + enemy_level, enemy_hp_max + enemy_level)
 	update_hp()
 	
 	#$Control2/HealthBarPlayer.max_value = player_hp_max
@@ -106,6 +124,12 @@ func load_game():
 	
 	known_pool_index = save_data.slot0.known_pool_index
 	player_kp = save_data.slot0.kp
+	
+	if not save_data.slot0.has("gold"):
+		player_gold = 0
+	else:
+		player_gold = save_data.slot0.gold
+		
 	player_level = save_data.slot0.level
 	progress = save_data.slot0.progress
 	print({"save_data":save_data})
@@ -154,6 +178,7 @@ func save_game():
 		"slot0": {
 			"name": "Player",
 			"level": player_level,
+			"gold": player_gold,
 			"kp": player_kp,
 			"known_pool_index": known_pool_index,
 			"progress": progress
@@ -218,11 +243,11 @@ func set_char_to_draw(sentence_obj, replacement_type):
 	
 	if progress.has(target_word):
 		if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
-			if progress[target_word].has("r") and progress[target_word].r >= 5:
+			if progress[target_word].has("r") and progress[target_word].r >= skilled_threshold:
 				print("hiding")
 				$Control/KanjiLabel.hide()
 		if replacement_type == Globals.REPLACE_TYPE_KANJI:
-			if progress[target_word].has("w") and progress[target_word].w >= 5:
+			if progress[target_word].has("w") and progress[target_word].w >= skilled_threshold:
 				print("hiding")
 				$Control/KanjiLabel.hide()
 	
@@ -356,6 +381,7 @@ func _animation_changed():
 		"attack_spin": 0,
 		"hurt": 0,
 		"die": 0,
+		"run": 0,
 	}
 	$AnimatedSprite2DPlayer.offset.y = y_offsets[$AnimatedSprite2DPlayer.animation]
 			
@@ -395,6 +421,7 @@ func _animation_finished():
 		
 		
 		
+		
 	elif $AnimatedSprite2DPlayer.animation == "sword_draw":
 		$AnimatedSprite2DPlayer.animation = "idle_sword"
 		$AnimatedSprite2DPlayer.play()
@@ -404,12 +431,23 @@ func _animation_finished():
 		$AudioStreamPlayerBgMusic.play()
 		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
 		$AudioStreamPlayer2D.play()
-		player_hp = player_hp_max
+		player_hp = player_hp_max + player_level
 		$Control2/HealthBarPlayer.hide()
 		$Control2/NextBattleButton.text = "Try again"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
 		$Control/KanjiLabel.hide()
+		
+		player_gold = floori(player_gold / 2)
+		update_hp()
+		save_game()
+		
+func _animation_looped_player():
+	pass
+	#if $AnimatedSprite2DPlayer.animation == "run":
+		#$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
+		#$AudioStreamPlayer2D.stream.loop = true
+		#$AudioStreamPlayer2D.play()
 		
 func _animation_finished_enemy():
 	if $AnimatedSprite2DEnemy.animation == "enemy_hurt":
@@ -433,19 +471,39 @@ func _animation_finished_enemy():
 	if $AnimatedSprite2DEnemy.animation == "enemy_die":
 		$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
 		$AudioStreamPlayerBgMusic.play()
-		$AudioStreamPlayer2D.stream = Globals.fx_battle_win2
-		$AudioStreamPlayer2D.play()
+		$AudioStreamPlayer2D2.stream = Globals.fx_battle_win2
+		$AudioStreamPlayer2D2.volume_db = -15.0
+		$AudioStreamPlayer2D2.play()
 		$Control2/HealthBarEnemy.hide()
 		$AnimatedSprite2DEnemy.hide()
 		$Control2/HealthBarPlayer.hide()
-		$Control2/NextBattleButton.text = "次 (Next)"
+		$Control2/NextBattleButton.text = "次 (つぎ)"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
 		$Control/KanjiLabel.hide()
-		#$Control/VerticalTextLabel.hide()
+		
+		if level_up_during_battle:
+			level_up()
+			level_up_during_battle = false
+		
+		get_gold()
+		
+		$Control/VerticalTextLabel.hide()
 		$AnimatedSprite2DPlayer.animation = "sword_away"
 		$AnimatedSprite2DPlayer.play()
-		
+
+func get_gold():
+	$Prize.show()
+	
+	var gold_amount = randi_range(1, enemy_level)
+	
+	$Prize/TextureRectCoin/GoldAmount.text = str(gold_amount)
+	
+	player_gold += gold_amount
+	
+	update_hp()
+	save_game()
+	
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -540,6 +598,8 @@ func reset_progress():
 	else:
 		progress[target_word].w = 0
 		
+	$Control/KanjiLabel.show() # since we reset to 0, show hint again
+	
 	calculate_kp()
 	
 	save_game()
@@ -559,15 +619,17 @@ func increment_progress():
 	if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
 		if not progress[target_word].has("r"):
 			progress[target_word].r = 1
-		else:
+		elif progress[target_word].r < mastery_max:
 			progress[target_word].r += 1
 	else:
 		if not progress[target_word].has("r"):
 			progress[target_word].w = 1
-		else:
+		elif progress[target_word].w < mastery_max:
 			progress[target_word].w += 1
 	
 	calculate_kp()
+	
+	
 	
 	
 	if known_pool_index >= complete_pool.size():
@@ -582,19 +644,29 @@ func increment_progress():
 	var all_mastered = true
 	
 	for item in progress:
-		if progress[item].r < 10 or progress[item].w < 10:
+		if progress[item].r < mastery_threshold or progress[item].w < mastery_threshold:
 			all_mastered = false
 			break
 			
 	if all_mastered:
-		print("adding new word to the pool")
+		
+		known_pool_index += 1
+		
+		print("adding new word to the pool: " + complete_pool[known_pool_index])
 		progress[complete_pool[known_pool_index]] = {
 			"r": 0,
 			"w": 0,
 		}
-		known_pool_index += 1
 		
-	
+		if true or known_pool_index % 10 == 0:
+			
+			
+			# there is a bug here where if you level up twice
+			# during the same battle, you only get credit once
+			# but it's rare, so i'm ignoring it
+			level_up_during_battle = true
+			
+			
 		
 	print({"progress":progress})
 	
@@ -603,6 +675,20 @@ func increment_progress():
 	
 	save_game()
 	
+func level_up():
+	$Control2/LevelUpButton.show()
+	$AudioStreamPlayer2D.stream = Globals.fx_level_up1
+	$AudioStreamPlayer2D.play()
+	player_level += 1
+	player_hp = player_hp_max + player_level
+	#player_dmg_min += 1
+	#player_dmg_max += 1
+	#enemy_dmg_min += 1
+	#enemy_dmg_min += 1
+	#enemy_hp_max += 1
+	#enemy_hp_min += 1
+	enemy_level += 1
+	
 func play_enemy_hurt():
 	print("enemy_hurt")
 	
@@ -610,7 +696,7 @@ func play_enemy_hurt():
 	#audio_player2.volume_db = 8
 	audio_player2.play()
 	
-	var damage_points = randi_range(player_dmg_min, player_dmg_max)
+	var damage_points = randi_range(player_dmg_min + player_level, player_dmg_max + player_level)
 	
 	enemy_hp -= damage_points
 	update_hp()
@@ -631,20 +717,20 @@ func play_enemy_hurt():
 	tween.parallel().tween_property($Control2/EnemyDamageLabel, "position:y", default_damage_label_y - 20, 1)
 	tween.parallel().tween_property($Control2/EnemyDamageLabel, "modulate", Color(0, 0, 0, 0), 1)
 	
-	if false and enemy_hp <= 0:
-		# Create a timer to delay the enemy animation
-		var timer = Timer.new()
-		timer.wait_time = 1
-		timer.one_shot = true  # Makes the timer run only once
-		add_child(timer)
-		timer.timeout.connect(Callable(self, "play_enemy_dead"))
-		timer.start()
+	#if false and enemy_hp <= 0:
+		## Create a timer to delay the enemy animation
+		#var timer = Timer.new()
+		#timer.wait_time = 1
+		#timer.one_shot = true  # Makes the timer run only once
+		#add_child(timer)
+		#timer.timeout.connect(Callable(self, "play_enemy_dead"))
+		#timer.start()
 	
-func xxxplay_enemy_dead():
-	$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
-	$AudioStreamPlayerBgMusic.play()
-	$AudioStreamPlayer2D.stream = Globals.fx_battle_win2
-	$AudioStreamPlayer2D.play()
+#func xxxplay_enemy_dead():
+	#$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
+	#$AudioStreamPlayerBgMusic.play()
+	#$AudioStreamPlayer2D.stream = Globals.fx_battle_win2
+	#$AudioStreamPlayer2D.play()
 	
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	$AnimatedSprite2DEnemy.animation = "enemy_attack"
@@ -673,7 +759,7 @@ func play_player_hurt():
 	#audio_player2.volume_db = 8
 	audio_player2.play()
 	
-	var damage_points = randi_range(enemy_dmg_min, enemy_dmg_max)
+	var damage_points = randi_range(enemy_dmg_min + enemy_level, enemy_dmg_max + enemy_level)
 	player_hp -= damage_points
 	update_hp()
 	
@@ -693,13 +779,15 @@ func update_hp():
 	$Control2/HealthBarPlayer.value = player_hp
 	$Control2/HealthBarEnemy.value = enemy_hp
 	
-	$Control2/HealthBarEnemy.max_value = enemy_hp_max
-	$Control2/HealthBarPlayer.max_value = player_hp_max
+	$Control2/HealthBarEnemy.max_value = enemy_hp_max + enemy_level
+	$Control2/HealthBarPlayer.max_value = player_hp_max + player_level
 	
 	$Control2/PlayerStats.text = player_name + "\n" +\
 		"Lv: " + str(player_level) + "\n" +\
-		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
-		"EXP: " + str(known_pool_index)
+		"HP: " + str(player_hp) + "/" + str(player_hp_max + player_level) + "\n" +\
+		"KP: " + str(known_pool_index) + "\n" +\
+		#"EXP: " + str(player_exp) + "\n" +\
+		"Gold: " + str(player_gold)
 		
 	if enemy_hp > 0:
 		$Control2/EnemyStats.text = enemy_name + "\n" +\
@@ -712,7 +800,7 @@ func _on_try_again_button_gui_input(event: InputEvent) -> void:
 	#print(event)
 	if event is InputEventMouseButton and event.button_index == 1:
 		#$Control/ResultLabel.text = ""
-		#$Control/TryAgainButton.hide()
+		$Control/TryAgainButton.hide()
 		$Control/KanjiDrawPanel.reset_draw_panel()
 		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 
@@ -728,21 +816,74 @@ func _on_komoji_button_toggled(toggled_on: bool) -> void:
 		$Control/KomojiLabel.hide()
 
 func _on_next_battle_button_button_up() -> void:
+	
+	$Control2/NextBattleButton.hide()
+	$Control/VerticalTextLabel.hide()
+	$Prize.hide()
+	$Control2/LevelUpButton.hide()
+	
+	audio_player.stream = Globals.fx_chop1
+	audio_player.play(0.3)
+	
+	$AnimatedSprite2DPlayer.animation = "run"
+	$AnimatedSprite2DPlayer.play()
+	
+	$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
+	$AudioStreamPlayer2D.stream.loop = true
+	$AudioStreamPlayer2D.play()
+	
+	var tween = create_tween()
+	tween.connect("finished", Callable(self, "_encounter_enemy"))
+	tween.parallel().tween_property($TileMapLayer, "position:x", -90, 2)
+	tween.parallel().tween_property($Decors2, "position:x", 80, 2)
+	tween.parallel().tween_property($Decors, "position:x", -80, 2)
+	
+	$Control2/HealthBarEnemy.hide()
+	
+	$AnimatedSprite2DEnemy.position.x = 250
+	$AnimatedSprite2DEnemy.show()
+	$AnimatedSprite2DEnemy.animation = "enemy_idle"
+	$AnimatedSprite2DEnemy.play()
+	tween.parallel().tween_property($AnimatedSprite2DEnemy, "position:x", 76, 2)
+	
+func _encounter_enemy():
+	$AnimatedSprite2DPlayer.animation = "idle"
+	$AnimatedSprite2DPlayer.offset.y = 0
+	$AnimatedSprite2DPlayer.play()
+	
+	$AudioStreamPlayer2D.stop()
+	$Control2/HealthBarEnemy.show()
+	
+	print("_encounter_enemy")
+	
+	start_battle()
+	
+	
+	
+func start_battle():
 	audio_player.stream = Globals.fx_mine4
 	audio_player.play(0.1)
 	
 	$Control2/NextBattleButton.hide()
+	$Control2/LevelUpButton.hide()
 	$Control/KanjiDrawPanel.show()
 	$Control/KanjiDrawPanel.enable()
 	$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+	$TileMapLayer.position.x = 90
+	
+	$Decors.position.x = 80
+	$Decors2.position.x = 245
 
 	$Control/VerticalTextLabel.show()
 	$Control/KanjiLabel.show()
 	
+	enemy_hp_max = randi_range(enemy_hp_min + enemy_level, enemy_hp_range_max + enemy_level)
 	enemy_hp = enemy_hp_max
+
+	$Prize.hide()
 	
 	if player_hp <= 0:
-		player_hp = player_hp_max
+		player_hp = player_hp_max + player_level
 	
 	update_hp()
 	
@@ -765,3 +906,9 @@ func _on_next_battle_button_button_up() -> void:
 		
 	
 	
+
+
+func _on_level_up_button_button_up() -> void:
+	audio_player.stream = Globals.fx_chop1
+	audio_player.play(0.3)
+	$Control2/LevelUpButton.hide()
