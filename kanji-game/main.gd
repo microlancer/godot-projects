@@ -25,6 +25,7 @@ var enemy_hp_min = 5
 var enemy_hp_max = 5
 var enemy_hp = 8
 var enemy_level_max = 1
+var enemy_hp_range_min = 8
 var enemy_hp_range_max = 8
 
 var player_exp = 0
@@ -53,8 +54,8 @@ var mastery_max = 99
 # These parameters are tweaked during debugging
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
-var skilled_threshold = 3 # correct answers to no hints
-var mastery_threshold = 6 # correct answers to next kanji
+var skilled_threshold = 3 # correct answers to no hints (3)
+var mastery_threshold = 6 # correct answers to next kanji (6)
 var start_fresh = 0
 var progress = {"一":{"r":0,"w":0}}
 # -------------------------------------------------------------------
@@ -71,8 +72,14 @@ func _ready() -> void:
 	$AnimatedSprite2DEnemy.connect("animation_finished", Callable(self, "_animation_finished_enemy"))
 	$AnimatedSprite2DEnemy.animation = "enemy_idle"
 	$AnimatedSprite2DEnemy.play()
+	
+	$AnimatedSprite2DEnemy2.animation = "snake_idle"
+	$AnimatedSprite2DEnemy2.play()
+	
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
+	
+	
 	
 	if not start_fresh:
 		load_game()
@@ -83,8 +90,9 @@ func _ready() -> void:
 	$Control2/PlayerDamageLabel.hide()
 	$Control2/LevelUpButton.hide()
 	
-	player_hp = player_hp_max + player_level
-	enemy_hp = randi_range(enemy_hp_min + enemy_level, enemy_hp_max + enemy_level)
+	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
+	enemy_hp = enemy_hp_max
+	
 	update_hp()
 	
 	#$Control2/HealthBarPlayer.max_value = player_hp_max
@@ -135,6 +143,14 @@ func load_game():
 		player_gold = save_data.slot0.gold
 		
 	player_level = save_data.slot0.level
+	
+	if not save_data.slot0.has("hp"):
+		player_hp = player_hp_max
+	else:
+		player_hp = save_data.slot0.hp
+	
+	set_stats_by_level(player_level)
+	
 	progress = save_data.slot0.progress
 	print({"save_data":save_data})
 	
@@ -182,6 +198,7 @@ func save_game():
 		"slot0": {
 			"name": "Player",
 			"level": player_level,
+			"hp": player_hp,
 			"gold": player_gold,
 			"kp": player_kp,
 			"known_pool_index": known_pool_index,
@@ -688,14 +705,39 @@ func level_up():
 	$AudioStreamPlayer2D.stream = Globals.fx_level_up1
 	$AudioStreamPlayer2D.play()
 	player_level += 1
-	player_hp = player_hp_max + player_level
+	set_stats_by_level(player_level)
+	
+	# Recover full HP when leveling up as a bonus.
+	player_hp = player_hp_max
+	
+	#player_hp += 5
 	#player_dmg_min += 1
-	#player_dmg_max += 1
+	#player_dmg_max += 3
 	#enemy_dmg_min += 1
-	#enemy_dmg_min += 1
-	#enemy_hp_max += 1
+	#enemy_dmg_min += 3
+	#enemy_hp_range_max += 5
 	#enemy_hp_min += 1
-	enemy_level += 1
+	#enemy_level += 1
+	
+func set_stats_by_level(level):
+	enemy_level = level
+	player_hp_max = level * 5
+	player_dmg_min = level
+	player_dmg_max = 10 + level
+	enemy_hp_range_max = level * 8
+	enemy_dmg_min = level
+	enemy_dmg_max = 10 + level
+	enemy_hp_range_min = level * 3
+	
+	print({"level":level,
+		"player_hp_max":player_hp_max,
+		"player_dmg_min":player_dmg_min,
+		"player_dmg_max":player_dmg_max,
+		"enemy_hp_range_max":enemy_hp_range_max,
+		"enemy_dmg_min":enemy_dmg_min,
+		"enemy_dmg_max":enemy_dmg_max,
+		"enemy_hp_range_min":enemy_hp_range_min,
+	})
 	
 func play_enemy_hurt():
 	print("enemy_hurt")
@@ -704,7 +746,7 @@ func play_enemy_hurt():
 	#audio_player2.volume_db = 8
 	audio_player2.play()
 	
-	var damage_points = randi_range(player_dmg_min + player_level, player_dmg_max + player_level)
+	var damage_points = randi_range(player_dmg_min, player_dmg_max)
 	
 	enemy_hp -= damage_points
 	update_hp()
@@ -767,7 +809,7 @@ func play_player_hurt():
 	#audio_player2.volume_db = 8
 	audio_player2.play()
 	
-	var damage_points = randi_range(enemy_dmg_min + enemy_level, enemy_dmg_max + enemy_level)
+	var damage_points = randi_range(enemy_dmg_min, enemy_dmg_max)
 	player_hp -= damage_points
 	update_hp()
 	
@@ -784,15 +826,15 @@ func update_hp():
 	if player_hp < 0:
 		player_hp = 0
 	
+	$Control2/HealthBarPlayer.max_value = player_hp_max
 	$Control2/HealthBarPlayer.value = player_hp
-	$Control2/HealthBarEnemy.value = enemy_hp
 	
-	$Control2/HealthBarEnemy.max_value = enemy_hp_max + enemy_level
-	$Control2/HealthBarPlayer.max_value = player_hp_max + player_level
+	$Control2/HealthBarEnemy.max_value = enemy_hp_max
+	$Control2/HealthBarEnemy.value = enemy_hp
 	
 	$Control2/PlayerStats.text = player_name + "\n" +\
 		"Lv: " + str(player_level) + "\n" +\
-		"HP: " + str(player_hp) + "/" + str(player_hp_max + player_level) + "\n" +\
+		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
 		"KP: " + str(known_pool_index) + "\n" +\
 		#"EXP: " + str(player_exp) + "\n" +\
 		"Gold: " + str(player_gold)
@@ -803,6 +845,11 @@ func update_hp():
 	else:
 		$Control2/EnemyStats.text = ""
 		
+	print({
+		"player_hp":player_hp,
+		"enemy_hp_max":enemy_hp_max,
+		"enemy_hp":enemy_hp
+	})
 
 func _on_try_again_button_gui_input(event: InputEvent) -> void:
 	#print(event)
@@ -885,13 +932,13 @@ func start_battle():
 	$Control/VerticalTextLabel.show()
 	$Control/KanjiLabel.show()
 	
-	enemy_hp_max = randi_range(enemy_hp_min + enemy_level, enemy_hp_range_max + enemy_level)
+	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
 	enemy_hp = enemy_hp_max
 
 	$Prize.hide()
 	
 	if player_hp <= 0:
-		player_hp = player_hp_max + player_level
+		player_hp = player_hp_max
 	
 	update_hp()
 	
