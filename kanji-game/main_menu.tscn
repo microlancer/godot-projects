@@ -59,7 +59,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="BackgroundVillage" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_left = -8.33484
 offset_top = -7.32581
@@ -68,7 +68,7 @@ offset_bottom = 269.674
 texture = ExtResource("2_a8duo")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="Control"]
+[node name="TitleKanji" type="Label" parent="Control"]
 layout_mode = 0
 offset_right = 151.0
 offset_bottom = 33.0
@@ -77,7 +77,7 @@ label_settings = SubResource("LabelSettings_4g1xm")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Control"]
+[node name="TitleFurigana" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 26.0511
 offset_top = 26.1022
@@ -86,7 +86,7 @@ offset_bottom = 43.1022
 text = "かんじ"
 label_settings = SubResource("LabelSettings_uk14d")
 
-[node name="Label3" type="Label" parent="Control"]
+[node name="TitleFurigana2" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 90.3797
 offset_top = 25.2613
@@ -95,7 +95,7 @@ offset_bottom = 42.2613
 text = "ぼうけん"
 label_settings = SubResource("LabelSettings_uk14d")
 
-[node name="Label4" type="Label" parent="Control"]
+[node name="TitleEnglish" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 30.062
 offset_top = 34.2665
@@ -128,7 +128,7 @@ offset_right = 127.0
 offset_bottom = 149.0
 text = "出 Quit game"
 
-[node name="TextureRect2" type="TextureRect" parent="Control"]
+[node name="CreditsBackground" type="TextureRect" parent="Control"]
 modulate = Color(0.25, 0.25, 0.25, 0.678431)
 layout_mode = 0
 offset_left = 8.0
@@ -137,7 +137,7 @@ offset_right = 144.0
 offset_bottom = 232.0
 texture = SubResource("GradientTexture2D_drim8")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+[node name="Credits" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 160.0
@@ -173,7 +173,7 @@ offset_right = 144.0
 offset_bottom = 152.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3e5cu")
 
-[node name="Label" type="Label" parent="Control/PanelDeleteWarning"]
+[node name="WarningText" type="Label" parent="Control/PanelDeleteWarning"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0

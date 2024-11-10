@@ -122,7 +122,75 @@ func _draw():
 	alreadyDrawnIndex = strokes.size() - 2
 			
 	return
+	
+func count_direction_changes(points):
+	if points.size() < 3:
+		return 0
+
+	var changes = 0
+	for i in range(1, points.size() - 1):
+		var dx1 = points[i].x - points[i - 1].x
+		var dx2 = points[i + 1].x - points[i].x
+		var dy1 = points[i].y - points[i - 1].y
+		var dy2 = points[i + 1].y - points[i].y
 		
+		# Check if there's a reversal in x or y direction
+		if sign(dx1) != sign(dx2) and abs(dx1) > 5 and abs(dx2) > 5:
+			changes += 1
+		if sign(dy1) != sign(dy2) and abs(dy1) > 5 and abs(dy2) > 5:
+			changes += 1
+
+	return changes
+	
+func count_major_direction_changes(points, num_segments=5):
+	if points.size() < num_segments + 1:
+		return 0
+
+	# Step 1: Divide points into segments
+	var segment_size = int(points.size() / num_segments)
+	var directions = []
+	
+	# Step 2: Calculate average direction per segment
+	for i in range(num_segments):
+		var start = points[i * segment_size]
+		var end = points[min((i + 1) * segment_size, points.size() - 1)]
+		
+		var dx = end.x - start.x
+		var dy = end.y - start.y
+		
+		# Determine direction for this segment
+		if abs(dx) > abs(dy):  # Horizontal movement dominates
+			directions.append("R" if dx > 0 else "L")
+		else:  # Vertical movement dominates
+			directions.append("D" if dy > 0 else "U")
+	
+	# Step 3: Count directional changes between segments
+	var direction_changes = 0
+	for i in range(1, directions.size()):
+		if directions[i] != directions[i - 1]:
+			direction_changes += 1
+
+	return direction_changes
+		
+func is_curved(points):
+	if points.size() < 3:
+		return false
+
+	var start_point = points[0]
+	var end_point = points[-1]
+	var threshold = max(abs(end_point.x - start_point.x), abs(end_point.y - start_point.y)) * 0.1
+	var curved_points = 0
+
+	for i in range(1, points.size() - 1):
+		var point = points[i]
+		# Calculate perpendicular distance to the line (start_point -> end_point)
+		var distance = abs((end_point.y - start_point.y) * point.x - (end_point.x - start_point.x) * point.y + end_point.x * start_point.y - end_point.y * start_point.x) / sqrt(pow(end_point.y - start_point.y, 2) + pow(end_point.x - start_point.x, 2))
+		if distance > threshold:
+			curved_points += 1
+	
+	# If a significant portion of points deviate, consider it curved
+	return curved_points > points.size() * 0.3
+	
 # Every collection of points can be converted into one of the following 
 # vector strokes.
 # down (A), right (B), down-left (C), down-right (D),
@@ -139,6 +207,13 @@ func calculate_stroke(points):
 	var max_size = max(total_x, total_y)
 	var half_size = int(max_size / 2)
 	
+	var direction_data = {
+		"direction": "", 
+		"is_corner": true, 
+		"is_curved": false, 
+		"direction_changes": 0
+	}
+	
 	#print([total_x, total_y, max_size, half_size])
 	
 	var moved_more_than_half_right = points[-1].x - points[0].x > half_size
@@ -146,33 +221,36 @@ func calculate_stroke(points):
 	var moved_more_than_half_down = points[-1].y - points[0].y > half_size
 	var moved_more_than_half_up = points[0].y - points[-1].y > half_size
 	
-	var direction = ""
-	
 	if moved_more_than_half_right and moved_more_than_half_down:
-		direction = "DR"
+		direction_data["direction"]  = "DR"
 	elif moved_more_than_half_left and moved_more_than_half_down:
-		direction = "DL"
+		direction_data["direction"]  = "DL"
 	elif moved_more_than_half_right and moved_more_than_half_up:
-		direction = "UR"
+		direction_data["direction"]  = "UR"
 	elif moved_more_than_half_left and moved_more_than_half_up:
-		direction = "UL"
+		direction_data["direction"]  = "UL"
 	elif moved_more_than_half_right:
-		direction = "R"
+		direction_data["direction"]  = "R"
 	elif moved_more_than_half_left:
-		direction = "L"
+		direction_data["direction"]  = "L"
 	elif moved_more_than_half_down:
-		direction = "D"
+		direction_data["direction"]  = "D"
 	else:
-		direction = "U"
+		direction_data["direction"]  = "U"
 		
 	var is_corner = true
 	
+	# Additional characteristics
+	direction_data["is_curved"] = is_curved(points)
+	direction_data["direction_changes"] = count_major_direction_changes(points)
+	
 	for p in points:
 		if p.x < 35 or p.y < 35:
-			is_corner = false
+			direction_data["is_corner"] = false
 			break
-		
-	return {"direction": direction, "is_corner": is_corner}
+			
+	print(direction_data)
+	return direction_data
 	
 func _on_mouse_exited() -> void:
 	# If the user swipes beyond the drawing area, just end the stroke.

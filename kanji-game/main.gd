@@ -11,6 +11,7 @@ var replacement_type
 var sentence_obj
 var draw_word
 var level_up_during_battle = false
+var translation_mode = "Jp"
 #@export var replacement_type = Globals.REPLACE_TYPE_HIRAGANA
 
 @onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
@@ -57,7 +58,8 @@ var mastery_max = 99
 var skilled_threshold = 3 # correct answers to no hints (3)
 var mastery_threshold = 6 # correct answers to next kanji (6)
 var start_fresh = 0
-var progress = {"一":{"r":0,"w":0}}
+var init_progress =  {"一":{"r":0,"w":0}}
+var progress = init_progress
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 
@@ -130,6 +132,12 @@ func load_game():
 	
 	if not save_data or save_data.size() == 0 or not save_data.has("slot0"):
 		# try to create it
+		player_gold = 0
+		player_level = 1
+		set_stats_by_level(player_level)
+		player_hp = player_hp_max # reset for new game
+		known_pool_index = 1
+		progress = init_progress
 		save_game()
 		load_game()
 		return
@@ -452,7 +460,7 @@ func _animation_finished():
 		$AudioStreamPlayerBgMusic.play()
 		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
 		$AudioStreamPlayer2D.play()
-		player_hp = player_hp_max + player_level
+		player_hp = player_hp_max
 		$Control2/HealthBarPlayer.hide()
 		$Control2/NextBattleButton.text = "Try again"
 		$Control2/NextBattleButton.show()
@@ -509,10 +517,74 @@ func _animation_finished_enemy():
 		
 		get_gold()
 		
+		show_kanji_progress()
+		
 		$Control/VerticalTextLabel.hide()
+		$Control2/TranslateButton.hide()
 		$AnimatedSprite2DPlayer.animation = "sword_away"
 		$AnimatedSprite2DPlayer.play()
 
+func show_kanji_progress():
+	
+	var kp_progress = get_kp_progress()
+	
+	if kp_progress.first.kanji == "":
+		# No more kanji to learn
+		return
+		
+	print(kp_progress)
+	
+	$KanjiProgress.show()
+	
+	$KanjiProgress/Control/LabelKanjiWord.text = kp_progress.first.kanji
+	$KanjiProgress/Control/LabelReadingKp.text = "読み reading " + \
+		str(min(kp_progress.first.r, mastery_threshold)) + "/" + str(mastery_threshold) + " KP"
+	$KanjiProgress/Control/LabelWritingKp.text = "書き writing " + \
+		str(min(kp_progress.first.w, mastery_threshold)) + "/" + str(mastery_threshold) + " KP"
+	
+	var offset = Vector2i(12, 20)
+	
+	for i in range(0, mastery_threshold):
+		print("i: " + str(i))
+		
+		var diamond = TextureRect.new()
+		diamond.texture = $KanjiProgress/Control/TextureDiamondBright.texture.duplicate()
+		
+		if i < kp_progress.first.r:
+			diamond.modulate = $KanjiProgress/Control/TextureDiamondBright.modulate
+			print("bright")
+		else: 
+			print("dark")
+			diamond.modulate = $KanjiProgress/Control/TextureDiamondDark.modulate
+			
+		diamond.size = $KanjiProgress/Control/TextureDiamondBright.size
+		diamond.scale = $KanjiProgress/Control/TextureDiamondBright.scale
+		diamond.position.y = 36
+		diamond.position.x = 4 + (12 * i)
+		print("Assigned texture: ", diamond.texture)
+		$KanjiProgress/Control/RenderedDiamonds.add_child(diamond)
+		
+	for i in range(0, mastery_threshold):
+		print("i: " + str(i))
+		
+		var diamond = TextureRect.new()
+		diamond.texture = $KanjiProgress/Control/TextureDiamondBright.texture.duplicate()
+		
+		if i < kp_progress.first.w:
+			diamond.modulate = $KanjiProgress/Control/TextureDiamondBright.modulate
+			print("bright")
+		else: 
+			print("dark")
+			diamond.modulate = $KanjiProgress/Control/TextureDiamondDark.modulate
+			
+		diamond.size = $KanjiProgress/Control/TextureDiamondBright.size
+		diamond.scale = $KanjiProgress/Control/TextureDiamondBright.scale
+		diamond.position.y = 60
+		diamond.position.x = 4 + (12 * i)
+		print("Assigned texture: ", diamond.texture)
+		$KanjiProgress/Control/RenderedDiamonds.add_child(diamond)
+		
+	
 func get_gold():
 	$Prize.show()
 	
@@ -545,6 +617,8 @@ func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, stroke: Variant) 
 	#audio_player.play()
 
 func _on_kanji_draw_panel_kanji_correct() -> void:
+	
+	$Control/KanjiDrawPanel.disable()
 	
 	current_draw_character_index += 1
 	
@@ -721,12 +795,12 @@ func level_up():
 	
 func set_stats_by_level(level):
 	enemy_level = level
-	player_hp_max = level * 5
+	player_hp_max = 10 + level * 5
 	player_dmg_min = level
-	player_dmg_max = 10 + level
+	player_dmg_max = 10 + level * 3
 	enemy_hp_range_max = level * 8
-	enemy_dmg_min = level
-	enemy_dmg_max = 10 + level
+	enemy_dmg_min = level * 2
+	enemy_dmg_max = 2 + level
 	enemy_hp_range_min = level * 3
 	
 	print({"level":level,
@@ -820,6 +894,43 @@ func play_player_hurt():
 	$Control2/PlayerDamageLabel.modulate = default_damage_label_color
 	tween.parallel().tween_property($Control2/PlayerDamageLabel, "position:y", default_damage_label_y - 20, 1)
 	tween.parallel().tween_property($Control2/PlayerDamageLabel, "modulate", Color(0, 0, 0, 0), 1)
+
+func get_kp_progress():
+	
+	var kp_progress = {
+		"goal": 0,
+		"current": 0,
+		"first": {
+			"kanji": "",
+			"r": 0,
+			"w": 0,
+		}
+	}
+	
+	kp_progress.goal = progress.size() * mastery_threshold * 2
+	
+	for kanji_item in progress:
+		if progress[kanji_item].r < mastery_threshold:
+			kp_progress.current += progress[kanji_item].r
+			#kp_progress.goal += mastery_threshold
+			if kp_progress.first.kanji == "":
+				kp_progress.first.kanji = kanji_item
+				kp_progress.first.r = progress[kanji_item].r
+				kp_progress.first.w = min(progress[kanji_item].w, mastery_threshold)
+		else:
+			kp_progress.current += mastery_threshold
+			
+		if progress[kanji_item].w < mastery_threshold:
+			kp_progress.current += progress[kanji_item].w
+			#kp_progress.goal += mastery_threshold
+			if kp_progress.first.kanji == "":
+				kp_progress.first.kanji = kanji_item
+				kp_progress.first.r = min(progress[kanji_item].r, mastery_threshold)
+				kp_progress.first.w = progress[kanji_item].w
+		else:
+			kp_progress.current += mastery_threshold
+			
+	return kp_progress 		
 	
 func update_hp():
 	
@@ -832,10 +943,12 @@ func update_hp():
 	$Control2/HealthBarEnemy.max_value = enemy_hp_max
 	$Control2/HealthBarEnemy.value = enemy_hp
 	
+	var kp_progress = get_kp_progress()
+	
 	$Control2/PlayerStats.text = player_name + "\n" +\
 		"Lv: " + str(player_level) + "\n" +\
 		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
-		"KP: " + str(known_pool_index) + "\n" +\
+		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
 		#"EXP: " + str(player_exp) + "\n" +\
 		"Gold: " + str(player_gold)
 		
@@ -874,8 +987,10 @@ func _on_next_battle_button_button_up() -> void:
 	
 	$Control2/NextBattleButton.hide()
 	$Control/VerticalTextLabel.hide()
+	$Control2/TranslateButton.hide()
 	$Prize.hide()
 	$Control2/LevelUpButton.hide()
+	$KanjiProgress.hide()
 	
 	audio_player.stream = Globals.fx_chop1
 	audio_player.play(0.3)
@@ -930,6 +1045,10 @@ func start_battle():
 	$Decors2.position.x = 245
 
 	$Control/VerticalTextLabel.show()
+	$Control2/TranslateButton.show()
+	translation_mode = "Jp"
+	$Control2/TranslateButton.text = "Jp"
+	$Control2/AltLangText.hide()
 	$Control/KanjiLabel.show()
 	
 	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
@@ -971,3 +1090,21 @@ func _on_level_up_button_button_up() -> void:
 
 func _on_menu_menu_button_button_up() -> void:
 	get_tree().change_scene_to_file("res://main_menu.tscn")
+
+
+func _on_translate_button_button_up() -> void:
+	audio_player.stream = Globals.fx_chop1
+	audio_player.play(0.3)
+	
+	$Control2/AltLangText.text = sentence_obj.en
+	
+	if translation_mode == "Jp":
+		translation_mode = "En"
+		$Control2/TranslateButton.text = "En"
+		$Control2/AltLangText.show()
+		$Control/VerticalTextLabel.hide()
+	elif translation_mode == "En":
+		translation_mode = "Jp"
+		$Control2/TranslateButton.text = "Jp"
+		$Control2/AltLangText.hide()
+		$Control/VerticalTextLabel.show()

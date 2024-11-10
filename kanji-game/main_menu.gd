@@ -38,6 +38,7 @@ func _on_button_new_button_up() -> void:
 		$Control/PanelDeleteWarning.show()
 	else:
 		print("Starting new game")
+		get_tree().change_scene_to_file("res://battle.tscn")
 		$AudioStreamPlayer2D.stop()
 
 func _on_button_yes_delete_button_up() -> void:

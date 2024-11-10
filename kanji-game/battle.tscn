@@ -1,4 +1,4 @@
-[gd_scene load_steps=618 format=4 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=619 format=4 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_s1kmn"]
 [ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://music/Action 1.mp3" id="2_jxwwp"]
@@ -80,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="78_i31v6"]
 [ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="79_ejpk5"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="80_poxa7"]
+[ext_resource type="PackedScene" uid="uid://c841tuc4putwe" path="res://kanji_progress.tscn" id="81_vvxck"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5yhu"]
 texture = ExtResource("7_btw6s")
@@ -4462,6 +4463,7 @@ offset_bottom = 213.0
 text = "Next battle"
 
 [node name="LevelUpButton" type="Button" parent="Control2"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 14.0
@@ -4484,6 +4486,24 @@ offset_bottom = 35.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
 
+[node name="TranslateButton" type="Button" parent="Control2"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 134.0
+offset_right = 145.0
+offset_bottom = 148.0
+text = "En"
+
+[node name="AltLangText" type="RichTextLabel" parent="Control2"]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 91.0
+offset_right = 141.0
+offset_bottom = 131.0
+bbcode_enabled = true
+text = "This is where the [u]translation[/u] would go."
+
 [node name="IconsPack" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-75, 91)
@@ -4491,13 +4511,14 @@ sprite_frames = SubResource("SpriteFrames_v1esm")
 
 [node name="Prize" type="Node2D" parent="."]
 visible = false
+position = Vector2(-1, -24)
 
 [node name="TextureRectChest" type="Sprite2D" parent="Prize"]
-position = Vector2(79, 86)
+position = Vector2(74, 87)
 texture = SubResource("AtlasTexture_m36k7")
 
 [node name="TextureRectCoin" type="Sprite2D" parent="Prize"]
-position = Vector2(65, 111)
+position = Vector2(66, 106)
 scale = Vector2(0.5625, 0.5625)
 texture = SubResource("AtlasTexture_p33sn")
 
@@ -4511,6 +4532,10 @@ text = "300
 label_settings = SubResource("LabelSettings_7vpyw")
 metadata/_edit_use_anchors_ = true
 
+[node name="KanjiProgress" parent="." instance=ExtResource("81_vvxck")]
+visible = false
+position = Vector2(38, 89)
+
 [connection signal="correct_stroke" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
 [connection signal="kanji_correct" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
 [connection signal="kanji_incorrect" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_incorrect"]
@@ -4519,3 +4544,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_up" from="Control2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
 [connection signal="button_up" from="Control2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
 [connection signal="button_up" from="Control2/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
+[connection signal="button_up" from="Control2/TranslateButton" to="." method="_on_translate_button_button_up"]
+
+[editable path="KanjiProgress"]

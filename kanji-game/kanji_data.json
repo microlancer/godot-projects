@@ -23,67 +23,82 @@
 	"sentences": {
 		"一": {
 			"sentence": "このラーメンは・一・番｜美味しいです。",
+			"en": "This ramen is the most (best, [u]first[/u] rank) delicious.",
 			"furigana": ["いち","ばん","おい"]
 		},
 		"二": {
 			"sentence": "私のオフィスは・二・階です。",
+			"en": "My office is on the [u]second[/u] floor.",
 			"furigana": ["わたし","に","かい"]
 		},
 		"三": {
 			"sentence": "牛丼を・三・杯｜食べました。",
+			"en": "I ate [u]three[/u] bowls of beef over rice.",
 			"furigana": ["ぎゅうどん","さん","ばい","た"]
 		},
 		"四": {
 			"sentence": "部屋の中に子犬が・四・匹います。",
+			"en": "There are [u]four[/u] puppies inside of the room.",
 			"furigana": ["へや","なか","こいぬ","よん","ひき"]
 		},
 		"五": {
 			"sentence": "私たちは・五・人｜兄弟です。",
+			"en": "I have [u]five[/u] siblings.",
 			"furigana": ["わたし","ご","にん","きょうだい"]
 		},
 		"六": {
 			"sentence": "仕事は・六・時に終わります。",
+			"en": "Work finishes as [u]six[/u] o'clock.",
 			"furigana": ["しごと","ろく","じ","お"]
 		},
 		"七": {
 			"sentence": "うどんに・七・味を掛けますか？",
+			"en": "Do you want [u]seven[/u]-spice on your udon noodles?",
 			"furigana": ["しち","み","か"]
 		},
 		"八": {
 			"sentence": "学校の夏休みは・八・月です。",
+			"en": "School summer vacation is August ([u]eighth[/u] month).",
 			"furigana": ["がっこう","なつやす","はち","がつ"]
 		},
 		"九": {
 			"sentence": "その野球｜選手は・九・回の裏でホームランを打ちました。",
+			"en": "That baseball player hit a home run in the bottom of the [u]ninth[/u] inning.",
 			"furigana": ["やきゅう","せんしゅ","きゅう","かい","うら","う"]
 		},
 		"十": {
 			"sentence": "・十・まで指で数えてください。",
-			"translation": "I can count to [u]ten[/u] with my fingers.",
+			"en": "Please count to [u]ten[/u] with your fingers.",
 			"furigana": ["じゅう","ゆび","かぞ"]
 		},
 		"日": {
 			"sentence": "今日はあたたかい・日・だ。",
+			"en": "Today is a warm [u]day[/u].",
 			"furigana": ["きょう","ひ"]
 		},
 		"王": {
 			"sentence": "その・王・は国を治めた。",
+			"en": "The [u]king[/u] ruled over the country.",
 			"furigana": ["おう","くに","おさ"]
 		},
 		"玉": {
 			"sentence": "走って額は・玉・の汗だった。",
+			"en": "From running, my forehead was covered in [u]beads[/u] of sweat.",
 			"furigana": ["はし","ひたい","たま","あせ"]
 		},
 		"国": {
 			"sentence": "その歌手は・国・の内外で有名である。",
+			"en": "That singer is famous around the [u]country[/u].",
 			"furigana": ["かしゅ","くに","ないがい","ゆうめい"]
 		},
 		"距離": {
 			"sentence": "京都までの・距離・は百五十キロです。",
+			"en": "The [u]distance[/u] to Kyoto is 150 kilometers.",
 			"furigana": ["きょうと","きょり","ひゃくごじゅう"]
 		},
 		"朗": {
 			"sentence": "母はのんきで・朗・らかでお人好しです。",
+			"en": "My mother is easy-going, [u]cheerful (bright)[/u], and friendly.",
 			"furigana": ["はは","ほが","ひとよ"]
 		}
 	},
