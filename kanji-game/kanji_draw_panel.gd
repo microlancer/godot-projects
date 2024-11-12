@@ -10,6 +10,7 @@ var draw_panel: Control
 var kanji_to_draw
 var replacement_type
 var all_small = false
+var debug = false
 
 @export var kanji_refs = {}
 
@@ -37,7 +38,10 @@ func _ready() -> void:
 	draw_panel.size = self.size
 	
 func set_kanji_to_expect(kanji: String):
-	print("Setting kanji to expect: " + kanji)
+	if debug:
+		$"../KanjiLabel".text = "[center]" + kanji + "[/center]"
+		return
+	#print("Setting kanji to expect: " + kanji)
 	kanji_to_draw = kanji_refs[kanji]
 	$"../KanjiLabel".text = "[center]" + kanji + "[/center]"
 	
@@ -54,7 +58,7 @@ func set_kanji_to_expect(kanji: String):
 
 func expand_strokes(ref_kanji):
 	
-	print("expand_strokes")
+	#print("expand_strokes")
 	var done = false
 	var i = 0
 	var expansion = false
@@ -63,12 +67,12 @@ func expand_strokes(ref_kanji):
 		var stroke = ref_kanji.strokes[i]
 		if stroke is String:
 			expansion = true
-			print("Convert " + stroke)
+			#print("Convert " + stroke)
 			var reference_strokes = kanji_refs[stroke].strokes
 			ref_kanji.strokes.remove_at(i) # remove the reference kanji
 			for j in range(reference_strokes.size()-1, -1, -1):
 				ref_kanji.strokes.insert(i, reference_strokes[j])
-			print({"kanji.strokes":ref_kanji.strokes})
+			#print({"kanji.strokes":ref_kanji.strokes})
 			i = 0 # start over to search for recursive expansions
 		else:
 			i = i + 1
@@ -81,12 +85,24 @@ func expand_strokes(ref_kanji):
 func _process(delta: float) -> void:
 	pass
 
+var all_strokes = []
+
 func _on_stroke_drawn(stroke_index, stroke):
 	
 	var direction = stroke.direction
 	var is_corner = stroke.is_corner 
 	
-	print([stroke_index, direction, is_corner, kanji_to_draw.strokes])
+	#print([stroke_index, direction, is_corner, kanji_to_draw.strokes])
+	
+	if stroke_index == 0:
+		all_strokes = [[stroke.direction]]
+	else:
+		all_strokes.push_back([stroke.direction])
+		
+	print(all_strokes)
+	
+	if debug:
+		return
 	
 	if direction not in kanji_to_draw.strokes[stroke_index]:
 		kanji_incorrect.emit()

@@ -18,7 +18,9 @@
 		"玉",
 		"国",
 		"距離",
-		"朗"
+		"朗",
+		"推す",
+		"推定",
 	],
 	"sentences": {
 		"一": {
@@ -100,6 +102,16 @@
 			"sentence": "母はのんきで・朗・らかでお人好しです。",
 			"en": "My mother is easy-going, [u]cheerful (bright)[/u], and friendly.",
 			"furigana": ["はは","ほが","ひとよ"]
+		},
+		"推す": {
+			"sentence": "彼はイントネーションから・推・すにフランス語圏に住んでいたと思われる。",
+			"en": "You can [u]tell[/u] by his intonation that he lived in a French speaking country.",
+			"furigana": ["かれ","お","ごけん","す","おも"]
+		},
+		"推定": {
+			"sentence": "君の・推定・は間違っているようだ。",
+			"en": "Your [u]assumption[/u] seems to be wrong.",
+			"furigana": ["きみ","すいてい","まちが"]
 		}
 	},
 	"quiz_level_01": [
@@ -153,7 +165,7 @@
 			"strokes": []
 		},
 		"い": {
-			"strokes": [["D","DR"],["D","DR"]]
+			"strokes": [["D","DR","R"],["D","DR","DL"]]
 		},
 		"う": {
 			"strokes": [["R","DR","D"], ["D","DR"]]
@@ -202,7 +214,7 @@
 			"strokes": [["D","DR"]]
 		},
 		"す": {
-			"strokes": []
+			"strokes": [["R"],["D","DL"]]
 		},
 		"せ": {
 			"strokes": []
@@ -235,7 +247,7 @@
 			"strokes": []
 		},
 		"て": {
-			"strokes": []
+			"strokes": [["DR"]]
 		},
 		"と": {
 			"strokes": []
@@ -330,7 +342,16 @@
 		},
 		"なべぶた": {
 			"radical": true,
+			"stroke_count": 2,
 			"strokes": [["D","DR","R"],["R","UR"]]
+		},
+		"てへん": {
+			"stroke_count": 3,
+			"strokes": [["R","UR"],["D","DL"],["R","UR"]],
+		},
+		"うかんむり": {
+			"stroke_count": 3,
+			"strokes": [["D","DR"], ["D","DL"], ["R","DR"]],
 		},
 		"あしあと": {
 			"radical": true,
@@ -351,11 +372,13 @@
 		"一": {
 			"unicode": 19968,
 			"readings": ["いち"],
+			"stroke_count": 1,
 			"strokes": [["R","UR"]]
 		},
 		"二": {
 			"unicode": 20108,
 			"readings": ["に"],
+			"stroke_count": 2,
 			"strokes": [["R","UR"],["R","UR"]]
 		},
 		"三": {
@@ -464,6 +487,15 @@
 		"離": {
 			"unicode": 38626,
 			"strokes": ["きょりへん","さいづくり"]
+		},
+		"推": {
+			"strokes": ["てへん", ["DL","D"], ["D"], ["DL","D"], ["R"], ["D"], ["R"], ["R"], ["R"]]
+		},
+		"正": {
+			"strokes": [["R"], ["D"], ["R"], ["DL","D"], ["R","DR"]]
+		},
+		"定": {
+			"strokes": ["うかんむり", "正"]
 		}
 	}
 }

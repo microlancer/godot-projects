@@ -74,7 +74,7 @@ var custom_bg_music_enabled: bool = true
 
 var AudioStreamPlayerBgMusic: AudioStreamPlayer2D
 var AudioStreamPlayerSoundFx: AudioStreamPlayer2D
-var player_name
+var player_name: String = "Player"
 
 func save_settings():
 	var file = FileAccess.open("user://settings.json", FileAccess.WRITE)

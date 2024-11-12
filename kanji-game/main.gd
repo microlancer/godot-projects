@@ -60,6 +60,8 @@ var mastery_threshold = 6 # correct answers to next kanji (6)
 var start_fresh = 0
 var init_progress =  {"一":{"r":0,"w":0}}
 var progress = init_progress
+var debug_detector_mode: bool = false
+var debug_detector_kanji: String = "定"
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 
@@ -118,6 +120,12 @@ func _ready() -> void:
 	
 	$Control2/NextBattleButton.hide()
 	#replacement_type = Globals.REPLACE_TYPES.pick_random()
+	
+	if debug_detector_mode:
+		$Control/KanjiDrawPanel.debug = true
+		$Control/KanjiDrawPanel.set_kanji_to_expect(debug_detector_kanji)
+		$Control/KanjiLabel.show()
+	
 	return
 	
 func load_game():
@@ -853,6 +861,10 @@ func play_enemy_hurt():
 	#$AudioStreamPlayer2D.play()
 	
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
+	
+	if debug_detector_mode:
+		return
+	
 	$AnimatedSprite2DEnemy.animation = "enemy_attack"
 	$AnimatedSprite2DEnemy.offset.x = -16
 	$AnimatedSprite2DEnemy.offset.y = -5
