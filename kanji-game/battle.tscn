@@ -4141,10 +4141,9 @@ font_size = 20
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_s1kmn")
 
-[node name="AudioStreamPlayerBgMusic" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayerBgMusicX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_jxwwp")
 volume_db = -0.675
-autoplay = true
 parameters/looping = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

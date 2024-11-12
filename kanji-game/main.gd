@@ -42,7 +42,7 @@ var enemy_dmg_max = 3
 var player_level = 1
 var enemy_level = 1
 var enemy_name = "Skeleton"
-var player_name = "Player"
+var player_name = "PlayerXXX"
 var player_kp = 0 # kanji points
 var player_bp = 0 # battle points
 
@@ -81,7 +81,8 @@ func _ready() -> void:
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
 	
-	
+	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
+	Globals.AudioStreamPlayerBgMusic.play()
 	
 	if not start_fresh:
 		load_game()
@@ -113,16 +114,10 @@ func _ready() -> void:
 	$Control/KanjiDrawPanel.kanji_refs = kanji_data.refs
 	
 	pick_random_sentence()
-	
-	
-	
 	save_game()
 	
-	
 	$Control2/NextBattleButton.hide()
-	
 	#replacement_type = Globals.REPLACE_TYPES.pick_random()
-	
 	return
 	
 func load_game():
@@ -204,13 +199,14 @@ func save_game():
 	var file = FileAccess.open("user://save_game.json", FileAccess.WRITE)
 	var save_data = {
 		"slot0": {
-			"name": "Player",
+			"name": Globals.player_name,
 			"level": player_level,
 			"hp": player_hp,
 			"gold": player_gold,
 			"kp": player_kp,
 			"known_pool_index": known_pool_index,
-			"progress": progress
+			"progress": progress,
+			"bg_music_enabled": Globals.custom_bg_music_enabled
 		}
 	}
 	print({"save_data":save_data})
@@ -456,8 +452,8 @@ func _animation_finished():
 		$AnimatedSprite2DPlayer.play()
 		
 	if $AnimatedSprite2DPlayer.animation == "die":
-		$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
-		$AudioStreamPlayerBgMusic.play()
+		Globals.AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
+		Globals.AudioStreamPlayerBgMusic.play()
 		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
 		$AudioStreamPlayer2D.play()
 		player_hp = player_hp_max
@@ -498,8 +494,8 @@ func _animation_finished_enemy():
 		$AnimatedSprite2DEnemy.play()
 		
 	if $AnimatedSprite2DEnemy.animation == "enemy_die":
-		$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
-		$AudioStreamPlayerBgMusic.play()
+		Globals.AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
+		Globals.AudioStreamPlayerBgMusic.play()
 		$AudioStreamPlayer2D2.stream = Globals.fx_battle_win2
 		$AudioStreamPlayer2D2.volume_db = -15.0
 		$AudioStreamPlayer2D2.play()
@@ -797,11 +793,11 @@ func set_stats_by_level(level):
 	enemy_level = level
 	player_hp_max = 10 + level * 5
 	player_dmg_min = level
-	player_dmg_max = 10 + level * 3
+	player_dmg_max = 2 + level * 2
 	enemy_hp_range_max = level * 8
-	enemy_dmg_min = level * 2
-	enemy_dmg_max = 2 + level
-	enemy_hp_range_min = level * 3
+	enemy_dmg_min = 0 + level
+	enemy_dmg_max = 2 + level * 2
+	enemy_hp_range_min = 2 + level * 4
 	
 	print({"level":level,
 		"player_hp_max":player_hp_max,
@@ -945,7 +941,7 @@ func update_hp():
 	
 	var kp_progress = get_kp_progress()
 	
-	$Control2/PlayerStats.text = player_name + "\n" +\
+	$Control2/PlayerStats.text = Globals.player_name + "\n" +\
 		"Lv: " + str(player_level) + "\n" +\
 		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
 		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
@@ -1073,15 +1069,9 @@ func start_battle():
 	$Control2/HealthBarPlayer.show()
 	$Control2/HealthBarEnemy.show()
 
-	$AudioStreamPlayerBgMusic.stream = Globals.music_action1
-	$AudioStreamPlayerBgMusic.play()
+	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
+	Globals.AudioStreamPlayerBgMusic.play()
 	
-	
-		
-	
-	
-
-
 func _on_level_up_button_button_up() -> void:
 	audio_player.stream = Globals.fx_chop1
 	audio_player.play(0.3)
@@ -1089,12 +1079,14 @@ func _on_level_up_button_button_up() -> void:
 
 
 func _on_menu_menu_button_button_up() -> void:
+	Globals.AudioStreamPlayerBgMusic.stop()
+	Globals.AudioStreamPlayerBgMusic.stream = null
 	get_tree().change_scene_to_file("res://main_menu.tscn")
 
 
 func _on_translate_button_button_up() -> void:
-	audio_player.stream = Globals.fx_chop1
-	audio_player.play(0.3)
+	Globals.AudioStreamPlayerSoundFx.stream = Globals.fx_chop1
+	Globals.AudioStreamPlayerSoundFx.play(0.3)
 	
 	$Control2/AltLangText.text = sentence_obj.en
 	

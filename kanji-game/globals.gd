@@ -41,7 +41,10 @@ var KANA_SYMBOLS = "ー。！？、「」　・｜"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	AudioStreamPlayerBgMusic = AudioStreamPlayer2D.new()
+	add_child(AudioStreamPlayerBgMusic)
+	AudioStreamPlayerSoundFx = AudioStreamPlayer2D.new()
+	add_child(AudioStreamPlayerSoundFx)
 
 
 # From https://drtwelele.itch.io/casual-game-fx-one-shot
@@ -65,3 +68,20 @@ var fx_battle_win: AudioStream = preload("res://music/Fx 1.wav")
 var fx_battle_lose: AudioStream = preload("res://music/Fx 3.wav")
 var fx_battle_win2: AudioStream = preload("res://music/Action RPG music by escalonamusic/MS01triumph3NL.wav")
 var fx_level_up1: AudioStream = preload("res://sound_fx/MS01triumph2NL.wav")
+
+var custom_skip_kanji_list: String = ""
+var custom_bg_music_enabled: bool = true
+
+var AudioStreamPlayerBgMusic: AudioStreamPlayer2D
+var AudioStreamPlayerSoundFx: AudioStreamPlayer2D
+var player_name
+
+func save_settings():
+	var file = FileAccess.open("user://settings.json", FileAccess.WRITE)
+	var save_data = {
+		"bg_music_enabled": Globals.custom_bg_music_enabled,
+		"player_name": Globals.player_name,
+		"custom_skip_kanji_list": Globals.custom_skip_kanji_list
+	}
+	print({"save_data":save_data})
+	file.store_string(JSON.stringify(save_data))
