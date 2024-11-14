@@ -21,6 +21,7 @@
 		"朗",
 		"推す",
 		"推定",
+		"慢ずる",
 	],
 	"sentences": {
 		"一": {
@@ -112,9 +113,19 @@
 			"sentence": "君の・推定・は間違っているようだ。",
 			"en": "Your [u]assumption[/u] seems to be wrong.",
 			"furigana": ["きみ","すいてい","まちが"]
+		},
+		"慢ずる": {
+			"sentence": "彼は権力を持つことに・慢ずる・者であった。",
+			"en": "He was a person who took [u]pride[/u] in holding power.",
+			"furigana": ["かれ","けんりょく","も","まん","もの"]
 		}
 	},
 	"quiz_level_01": [
+		{
+			"sentence": "彼は自身の成功に・慢・じて、新しい挑戦を怠るようになった。",
+			"en": "He took [u]pride[/u] in his success and began to neglect new challenges.",
+			"furigana": ["かれ","じしん","せいこう","まん","あたら","ちょうせん","おこた"]
+		},
 		{
 			"sentence": "このラーメンは・一・番です。",
 			"furigana": ["いち","ばん"]
@@ -226,10 +237,10 @@
 			"strokes": []
 		},
 		"じ": {
-			"strokes": [["D","DR"], ["D","DR"], ["D","DR"]]
+			"strokes": [["D","DR"],"てんてん"]
 		},
 		"ず": {
-			"strokes": []
+			"strokes": [["R","UR"],["DL","D"],"てんてん"]
 		},
 		"ぜ": {
 			"strokes": []
@@ -312,7 +323,7 @@
 			"strokes": [["D"],["DL","D"]]
 		},
 		"る": {
-			"strokes": []
+			"strokes": [["D","DR"]]
 		},
 		"れ": {
 			"strokes": []
@@ -424,7 +435,7 @@
 		"日": {
 			"unicode": 26085,
 			"JLPT": "N5",
-			"strokes": [["D"],["DR","D","R"], ["R","UR"],["R","UR"]]
+			"strokes": [["D","DR"],["DR","D","R"], ["R","UR"],["R","UR"]]
 		},
 		"王": {
 			"unicode": 29579,
@@ -496,6 +507,18 @@
 		},
 		"定": {
 			"strokes": ["うかんむり", "正"]
+		},
+		"りっしんべん": {
+			"strokes": [["D","DL"], ["DR","D"], ["D"]]
+		},
+		"よこめ": {
+			"strokes": [["D","DL","DR"], ["R","DR"], ["D"], ["D"], ["R","UR"]]
+		},
+		"又": {
+			"strokes": [["D","DL","DR"], ["DR","D","R"]]
+		},
+		"慢": {
+			"strokes": ["りっしんべん", "日", "よこめ", "又"]
 		}
 	}
 }

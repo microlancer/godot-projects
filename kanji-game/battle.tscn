@@ -1091,10 +1091,6 @@ font_size = 5
 atlas = ExtResource("79_ejpk5")
 region = Rect2(64, 672, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2kio"]
-atlas = ExtResource("79_ejpk5")
-region = Rect2(224, 544, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_53lsb"]
 atlas = ExtResource("79_ejpk5")
 region = Rect2(0, 0, 32, 32)
@@ -4138,6 +4134,10 @@ region = Rect2(224, 384, 32, 32)
 [sub_resource type="LabelSettings" id="LabelSettings_7vpyw"]
 font_size = 20
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2kio"]
+atlas = ExtResource("79_ejpk5")
+region = Rect2(224, 544, 32, 32)
+
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_s1kmn")
 
@@ -4154,18 +4154,28 @@ volume_db = 3.377
 unique_name_in_owner = true
 volume_db = 3.377
 
-[node name="Bg1" type="Sprite2D" parent="."]
-position = Vector2(85.4716, 35.7898)
-scale = Vector2(0.53125, 0.53125)
+[node name="Bg1Clouds" type="Sprite2D" parent="."]
+position = Vector2(78.1339, -3.53841)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("3_k8obe")
+
+[node name="Bg4Clouds" type="Sprite2D" parent="."]
+position = Vector2(266.55, -3.45555)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("3_k8obe")
+
+[node name="Bg5Clouds" type="Sprite2D" parent="."]
+position = Vector2(-110.265, -3.42087)
+scale = Vector2(0.588542, 0.588542)
 texture = ExtResource("3_k8obe")
 
 [node name="Bg2" type="Sprite2D" parent="."]
-position = Vector2(92, 26)
+position = Vector2(95.0034, 12.6516)
 scale = Vector2(0.802083, 0.802083)
 texture = ExtResource("4_ah0m3")
 
-[node name="Bg3" type="Sprite2D" parent="."]
-position = Vector2(109.744, 7.5)
+[node name="Bg3GreenHills" type="Sprite2D" parent="."]
+position = Vector2(102.596, 4.97731)
 scale = Vector2(0.854167, 0.854167)
 texture = ExtResource("5_d4jpw")
 
@@ -4206,7 +4216,6 @@ offset_top = -112.0
 offset_right = 760.0
 offset_bottom = 848.0
 texture = SubResource("CanvasTexture_qm0hu")
-metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
 visible = false
@@ -4217,7 +4226,6 @@ layout_mode = 0
 offset_right = 152.0
 offset_bottom = 240.0
 texture = SubResource("CanvasTexture_qm0hu")
-metadata/_edit_lock_ = true
 
 [node name="TextureRect3" type="TextureRect" parent="Control"]
 visible = false
@@ -4239,7 +4247,6 @@ theme_override_font_sizes/normal_font_size = 66
 bbcode_enabled = true
 text = "[center]覆[/center]"
 scroll_active = false
-metadata/_edit_lock_ = true
 
 [node name="KanjiDrawPanel" type="TextureRect" parent="Control"]
 modulate = Color(1, 1, 1, 0.843137)
@@ -4264,9 +4271,9 @@ offset_right = 152.0
 offset_bottom = 64.0
 bbcode_enabled = true
 text = "[center]世界の[color=red]繁栄[/color]を目指す[/center]"
-metadata/_edit_lock_ = true
 
 [node name="ResultLabel" type="RichTextLabel" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 170.0
 offset_top = 80.0
@@ -4274,7 +4281,6 @@ offset_right = 322.0
 offset_bottom = 96.0
 bbcode_enabled = true
 text = "[center]Correct![/center]"
-metadata/_edit_lock_ = true
 
 [node name="ClearButton" type="Button" parent="Control"]
 visible = false
@@ -4285,7 +4291,6 @@ offset_right = 150.0
 offset_bottom = 238.0
 rotation = 0.00226829
 text = "Clear"
-metadata/_edit_lock_ = true
 
 [node name="TryAgainButtonX" type="Control" parent="Control"]
 visible = false
@@ -4294,7 +4299,6 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 148.0
 offset_bottom = 238.0
-metadata/_edit_lock_ = true
 
 [node name="VerticalTextLabel" type="Label" parent="Control"]
 layout_mode = 0
@@ -4306,9 +4310,9 @@ text = "世界の繁栄を目指す"
 text_direction = 2
 language = "ja_JP"
 script = ExtResource("12_0t3nj")
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 176.0
 offset_top = 6.0
@@ -4321,7 +4325,6 @@ text = "ゆ
 label_settings = SubResource("LabelSettings_8byi6")
 vertical_alignment = 1
 autowrap_mode = 1
-metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
@@ -4330,9 +4333,9 @@ offset_top = 18.0
 offset_right = 246.0
 offset_bottom = 58.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_p27sb")
-metadata/_edit_lock_ = true
 
 [node name="KomojiButton" type="Button" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = -36.0
 offset_top = 210.0
@@ -4340,7 +4343,6 @@ offset_right = -12.0
 offset_bottom = 224.0
 toggle_mode = true
 text = "小字"
-metadata/_edit_lock_ = true
 
 [node name="KomojiLabel" type="Label" parent="Control"]
 visible = false
@@ -4476,15 +4478,6 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="MenuMenuButton" type="Button" parent="Control2"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 35.0
-offset_bottom = 35.0
-scale = Vector2(0.5, 0.5)
-icon = SubResource("AtlasTexture_j2kio")
-
 [node name="TranslateButton" type="Button" parent="Control2"]
 layout_mode = 0
 offset_left = 120.0
@@ -4505,6 +4498,7 @@ text = "This is where the [u]translation[/u] would go."
 
 [node name="IconsPack" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-75, 91)
 sprite_frames = SubResource("SpriteFrames_v1esm")
 
@@ -4535,6 +4529,35 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(38, 89)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(72, 120)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.5
+drag_top_margin = 0.5
+drag_right_margin = 0.5
+drag_bottom_margin = 0.5
+editor_draw_drag_margin = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control3" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MenuMenuButton" type="Button" parent="CanvasLayer/Control3"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 35.0
+offset_bottom = 35.0
+scale = Vector2(0.5, 0.5)
+icon = SubResource("AtlasTexture_j2kio")
+
 [connection signal="correct_stroke" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
 [connection signal="kanji_correct" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
 [connection signal="kanji_incorrect" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_incorrect"]
@@ -4542,7 +4565,7 @@ position = Vector2(38, 89)
 [connection signal="toggled" from="Control/KomojiButton" to="." method="_on_komoji_button_toggled"]
 [connection signal="button_up" from="Control2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
 [connection signal="button_up" from="Control2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
-[connection signal="button_up" from="Control2/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
 [connection signal="button_up" from="Control2/TranslateButton" to="." method="_on_translate_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control3/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
 
 [editable path="KanjiProgress"]

@@ -14,7 +14,7 @@ config/name="KanjiGame"
 config/version="1.0.0"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-run/max_fps=30
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,6 +27,7 @@ window/size/viewport_width=450
 window/size/viewport_height=720
 window/energy_saving/keep_screen_on=false
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/stretch/scale=3.0
 window/handheld/orientation=1
 window/vsync/vsync_mode=0
@@ -48,3 +49,4 @@ pointing/emulate_touch_from_mouse=true
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

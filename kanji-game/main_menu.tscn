@@ -60,10 +60,10 @@ offset_bottom = 40.0
 
 [node name="BackgroundVillage" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = -8.33484
-offset_top = -7.32581
-offset_right = 205.665
-offset_bottom = 269.674
+offset_left = -96.0
+offset_top = -88.0
+offset_right = 264.0
+offset_bottom = 377.0
 texture = ExtResource("2_a8duo")
 expand_mode = 1
 
@@ -210,6 +210,16 @@ text = "Yes"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 volume_db = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(72, 120)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.5
+drag_top_margin = 0.5
+drag_right_margin = 0.5
+drag_bottom_margin = 0.5
+editor_draw_drag_margin = true
 
 [connection signal="button_up" from="Control/ButtonNew" to="." method="_on_button_new_button_up"]
 [connection signal="button_up" from="Control/ButtonContinue" to="." method="_on_button_continue_button_up"]

@@ -154,6 +154,10 @@ func convert_text_to_blocks(replacement_type: String, show_answer: bool = false,
 			block.rotation_degrees = 270
 			block.position.x -= 4
 			block.position.y += 8
+		
+		if letter == "、":
+			block.position.x += 8
+			block.position.y -= 6
 			
 		if letter == "ー":
 			block.rotation_degrees = 270

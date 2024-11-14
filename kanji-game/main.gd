@@ -61,7 +61,7 @@ var start_fresh = 0
 var init_progress =  {"一":{"r":0,"w":0}}
 var progress = init_progress
 var debug_detector_mode: bool = false
-var debug_detector_kanji: String = "定"
+var debug_detector_kanji: String = "慢"
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 
@@ -126,7 +126,14 @@ func _ready() -> void:
 		$Control/KanjiDrawPanel.set_kanji_to_expect(debug_detector_kanji)
 		$Control/KanjiLabel.show()
 	
+	$Control/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
+	
 	return
+	
+func _on_stroke_started():
+	print("_on_stroke_started")
+	audio_player.stream = Globals.fx_light_torch1
+	audio_player.play()
 	
 func load_game():
 	var file_path_save = "user://save_game.json"
@@ -613,8 +620,9 @@ func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, stroke: Variant) 
 		audio_player.stream = Globals.fx_sword_unsheath1
 		audio_player.play()
 	else:
-		audio_player.stream = Globals.fx_light_torch1
-		audio_player.play()
+		pass
+		#audio_player.stream = Globals.fx_light_torch1
+		#audio_player.play()
 
 #func _after_correct_sound():
 	#audio_player.stream = fx_sword_attack1

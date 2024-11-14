@@ -82,10 +82,10 @@ offset_bottom = 40.0
 
 [node name="BackgroundVillage" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = -8.33484
-offset_top = -7.32581
-offset_right = 205.665
-offset_bottom = 269.674
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 240.0
+offset_bottom = 325.0
 texture = ExtResource("2_mphoi")
 expand_mode = 1
 
@@ -126,6 +126,7 @@ offset_bottom = 200.0
 texture = SubResource("GradientTexture2D_drim8")
 
 [node name="Credits" type="RichTextLabel" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 224.0
 offset_top = 72.0

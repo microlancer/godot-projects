@@ -30,6 +30,7 @@ var minimum_point_distance = 1
 var enabled = true
 	
 signal stroke_drawn(stroke_index, direction)
+signal stroke_started()
 
 func _ready():	
 	Input.set_use_accumulated_input(false)
@@ -61,6 +62,18 @@ func _gui_input(event):
 	if !enabled:
 		#print("disabled")
 		return
+		
+	if event is InputEventMouseButton:
+		if !event.is_pressed() or !event.button_index == MOUSE_BUTTON_LEFT:
+			if strokes[stroke_index].size() > 0:
+				end_stroke()
+			return
+	
+	# Handle mouse motion for drawing strokes
+	if event is InputEventMouseMotion:
+		handle_mouse(event)
+		
+func handle_mouse(event):
 	
 	if is_out_of_bounds(event.position):
 		# skip events happening outside of the drawing area
@@ -83,8 +96,13 @@ func _gui_input(event):
 		if distance < minimum_point_distance:
 			#print('skip')
 			return
+	
+	if strokes[stroke_index].size() == 0:
+		stroke_started.emit()
 		
 	strokes[stroke_index].append(event.position)
+	
+	
 	queue_redraw()
 	
 func is_out_of_bounds(point):
