@@ -115,7 +115,7 @@
 			"furigana": ["きみ","すいてい","まちが"]
 		},
 		"慢ずる": {
-			"sentence": "彼は権力を持つことに・慢ずる・者であった。",
+			"sentence": "彼は権力を持つことに・慢・ずる者であった。",
 			"en": "He was a person who took [u]pride[/u] in holding power.",
 			"furigana": ["かれ","けんりょく","も","まん","もの"]
 		}
@@ -188,7 +188,7 @@
 			"strokes": [["R","UR"],["D","DR"],["R","D","DR"]]
 		},
 		"か": {
-			"strokes": [["DR","R"],["D","DL"],["DR","D"]]
+			"strokes": [["DR","R","D"],["D","DL"],["DR","D"]]
 		},
 		"き": {
 			"strokes": [["R","UR"],["R","UR"],["D","DR"],["R","DR"]]
@@ -338,7 +338,7 @@
 			"strokes": [["D","DR"], ["D","DL"]]
 		},
 		"よ": {
-			"strokes": [["R","UR"],["D","DR"]]
+			"strokes": [["R","UR"],["D","DR","R"]]
 		},
 		"ゅ": {
 			"small": true,
@@ -366,7 +366,7 @@
 		},
 		"あしあと": {
 			"radical": true,
-			"strokes": [["D"],["DR"],["DL","D"],["UR","R"],["DR","D"]]
+			"strokes": [["D"],["DR"],["DL","D"],["UR","R"],["DR","D","R"]]
 		},
 		"きょりへん": {
 			"radical": true,
@@ -410,7 +410,7 @@
 		"六": {
 			"unicode": 20845,
 			"readings": ["ろく"],
-			"strokes": [["D","DR"],["R","UR"],["DL","D"],["D","DR"]]
+			"strokes": [["D","DR"],["R","UR"],["DL","D","L"],["D","DR","R"]]
 		},
 		"七": {
 			"unicode": 19971,

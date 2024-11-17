@@ -29,7 +29,7 @@ func _ready() -> void:
 	
 	#kanji_keys = kanji_characters.keys()
 	
-	small_kanji_default_position = $"../KanjiLabel".position
+	small_kanji_default_position = $"KanjiLabel".position
 	
 	draw_panel = DrawPanel.new()
 	draw_panel.connect("stroke_drawn", Callable(self, "_on_stroke_drawn"))
@@ -39,18 +39,18 @@ func _ready() -> void:
 	
 func set_kanji_to_expect(kanji: String):
 	if debug:
-		$"../KanjiLabel".text = "[center]" + kanji + "[/center]"
+		%KanjiLabel.text = "[center]" + kanji + "[/center]"
 		return
-	#print("Setting kanji to expect: " + kanji)
+	print("Setting kanji to expect: " + kanji)
 	kanji_to_draw = kanji_refs[kanji]
-	$"../KanjiLabel".text = "[center]" + kanji + "[/center]"
+	%KanjiLabel.text = "[center]" + kanji + "[/center]"
 	
 	if kanji in Globals.KANA_SMALL:
-		$"../KanjiLabel".scale = Vector2(0.7, 0.7)
-		$"../KanjiLabel".position = Vector2i(27, 183)
+		%KanjiLabel.scale = Vector2(0.7, 0.7)
+		%KanjiLabel.position = Vector2i(27, 183)
 	else:
-		$"../KanjiLabel".scale = Vector2(1, 1)
-		$"../KanjiLabel".position = small_kanji_default_position
+		%KanjiLabel.scale = Globals.large_kanji_scale #Vector2(1, 1)
+		%KanjiLabel.position = Globals.large_kanji_position #small_kanji_default_position
 		
 	#print(kanji_to_draw)
 	draw_panel.clear()
@@ -92,7 +92,7 @@ func _on_stroke_drawn(stroke_index, stroke):
 	var direction = stroke.direction
 	var is_corner = stroke.is_corner 
 	
-	#print([stroke_index, direction, is_corner, kanji_to_draw.strokes])
+	print([stroke_index, direction, is_corner, kanji_to_draw.strokes])
 	
 	if stroke_index == 0:
 		all_strokes = [[stroke.direction]]

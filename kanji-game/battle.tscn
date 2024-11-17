@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bw08o7bpatien" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/Decors.png" id="6_lo3t8"]
 [ext_resource type="Texture2D" uid="uid://dlkni6tdcdruh" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/Tileset.png" id="7_btw6s"]
 [ext_resource type="Texture2D" uid="uid://cw48ik3c011jc" path="res://graphics/kanji-block.png" id="8_noomt"]
-[ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://fonts/KanjiStrokeOrders_v4.004.ttf" id="9_83hhj"]
 [ext_resource type="Texture2D" uid="uid://d1sic1jsrgotf" path="res://graphics/kanji-block2.png" id="10_ix0ld"]
 [ext_resource type="Script" path="res://kanji_draw_panel.gd" id="11_6lg1f"]
 [ext_resource type="Script" path="res://vertical_text_label.gd" id="12_0t3nj"]
@@ -131,6 +130,18 @@ texture = ExtResource("7_btw6s")
 sources/0 = SubResource("TileSetAtlasSource_s5yhu")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qm0hu"]
+
+[sub_resource type="FontFile" id="FontFile_r43uu"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/66/0/ascent = 0.0
+cache/0/66/0/descent = 0.0
+cache/0/66/0/underline_position = 0.0
+cache/0/66/0/underline_thickness = 0.0
+cache/0/66/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_8byi6"]
 line_spacing = -10.0
@@ -4236,18 +4247,6 @@ offset_right = 397.0
 offset_bottom = 16.6239
 texture = ExtResource("8_noomt")
 
-[node name="KanjiLabel" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = -20.0
-offset_top = 157.0
-offset_right = 179.0
-offset_bottom = 248.0
-theme_override_fonts/normal_font = ExtResource("9_83hhj")
-theme_override_font_sizes/normal_font_size = 66
-bbcode_enabled = true
-text = "[center]覆[/center]"
-scroll_active = false
-
 [node name="KanjiDrawPanel" type="TextureRect" parent="Control"]
 modulate = Color(1, 1, 1, 0.843137)
 layout_mode = 1
@@ -4262,6 +4261,19 @@ offset_bottom = 75.0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("10_ix0ld")
 script = ExtResource("11_6lg1f")
+
+[node name="KanjiLabel" type="RichTextLabel" parent="Control/KanjiDrawPanel"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.243137)
+layout_mode = 0
+offset_top = -8.0
+offset_right = 75.0
+offset_bottom = 67.0
+theme_override_fonts/normal_font = SubResource("FontFile_r43uu")
+theme_override_font_sizes/normal_font_size = 66
+bbcode_enabled = true
+text = "[center]覆[/center]"
+scroll_active = false
 
 [node name="SentenceLabel" type="RichTextLabel" parent="Control"]
 visible = false
@@ -4530,7 +4542,7 @@ visible = false
 position = Vector2(38, 89)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(72, 120)
+position = Vector2(77, 120)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 0.5

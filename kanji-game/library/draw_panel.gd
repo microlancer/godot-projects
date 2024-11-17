@@ -262,8 +262,13 @@ func calculate_stroke(points):
 	direction_data["is_curved"] = is_curved(points)
 	direction_data["direction_changes"] = count_major_direction_changes(points)
 	
+	
+	print("corner - check width of box", self.size)
+	var small_box_x = self.size.x / 2
+	var small_box_y = self.size.y / 2
+	
 	for p in points:
-		if p.x < 35 or p.y < 35:
+		if p.x < small_box_x or p.y < small_box_y:
 			direction_data["is_corner"] = false
 			break
 			

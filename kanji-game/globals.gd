@@ -76,6 +76,9 @@ var AudioStreamPlayerBgMusic: AudioStreamPlayer2D
 var AudioStreamPlayerSoundFx: AudioStreamPlayer2D
 var player_name: String = "Player"
 
+var large_kanji_position = Vector2i(0, -8)
+var large_kanji_scale = Vector2(1.0, 1.0)
+
 func save_settings():
 	var file = FileAccess.open("user://settings.json", FileAccess.WRITE)
 	var save_data = {

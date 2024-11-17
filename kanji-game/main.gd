@@ -62,6 +62,11 @@ var init_progress =  {"一":{"r":0,"w":0}}
 var progress = init_progress
 var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
+
+
+
+
+
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 
@@ -79,6 +84,8 @@ func _ready() -> void:
 	
 	$AnimatedSprite2DEnemy2.animation = "snake_idle"
 	$AnimatedSprite2DEnemy2.play()
+	
+	get_tree().get_root().size_changed.connect(Callable(self, "_on_size_changed"))
 	
 	#$AudioStreamPlayerBgMusic.play()
 	is_battle_start = true
@@ -124,12 +131,53 @@ func _ready() -> void:
 	if debug_detector_mode:
 		$Control/KanjiDrawPanel.debug = true
 		$Control/KanjiDrawPanel.set_kanji_to_expect(debug_detector_kanji)
-		$Control/KanjiLabel.show()
+		%KanjiLabel.show()
 	
 	$Control/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
-	return
+	set_draw_area_based_on_window()
 	
+	return
+
+func _on_size_changed():
+	set_draw_area_based_on_window()
+	
+func set_draw_area_based_on_window():
+	var y = get_viewport().size.y
+	var x = get_viewport().size.x
+	var diff_x = 450 - get_viewport().size.x
+	var diff_y = 720 - get_viewport().size.y
+	
+	if diff_x > 0:
+		# game is wider now, so there should be more vertical
+		# space
+		$Control/KanjiDrawPanel.size.x = 75 + floori(diff_x / 3)
+		$Control/KanjiDrawPanel.size.y = 75 + floori(diff_x / 3)
+		$Control/KanjiDrawPanel.position.x = 40 - floori(diff_x / 3 / 2)
+		#$Control/KanjiDrawPanel.position.y = 164 - floori(diff_x * 2 / 1)
+		print(diff_x)
+		var style = %KanjiLabel.get_theme_font_size("theme_override_font_sizes/normal_font_size", "RichTextLabel")
+		print(style)
+		var scale = $Control/KanjiDrawPanel.size.x / 75
+		%KanjiLabel.scale = Vector2(scale, scale)
+		%KanjiLabel.position.y = -8 - floori(diff_x / 16)
+		%KanjiLabel.position.x = 0
+		
+		#%KanjiLabel.position.x = -20 - 40 - $Control/KanjiDrawPanel.position.x
+	else:
+		$Control/KanjiDrawPanel.size.x = 75
+		$Control/KanjiDrawPanel.size.y = 75
+		$Control/KanjiDrawPanel.position.x = 40
+		$Control/KanjiDrawPanel.position.y = 164
+		%KanjiLabel.scale = Vector2(1.0, 1.0)
+		%KanjiLabel.position = Vector2(0, -8)
+		#%KanjiLabel.position.x = -20
+	#print(x,y)
+	Globals.large_kanji_position = %KanjiLabel.position
+	Globals.large_kanji_scale = %KanjiLabel.scale
+	$Control/KanjiDrawPanel.draw_panel.size = $Control/KanjiDrawPanel.size
+		
+
 func _on_stroke_started():
 	print("_on_stroke_started")
 	audio_player.stream = Globals.fx_light_torch1
@@ -279,17 +327,17 @@ func set_char_to_draw(sentence_obj, replacement_type):
 	
 	print({"progress":progress,"target_word":target_word})
 	
-	$Control/KanjiLabel.show()
+	%KanjiLabel.show()
 	
 	if progress.has(target_word):
 		if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
 			if progress[target_word].has("r") and progress[target_word].r >= skilled_threshold:
 				print("hiding")
-				$Control/KanjiLabel.hide()
+				%KanjiLabel.hide()
 		if replacement_type == Globals.REPLACE_TYPE_KANJI:
 			if progress[target_word].has("w") and progress[target_word].w >= skilled_threshold:
 				print("hiding")
-				$Control/KanjiLabel.hide()
+				%KanjiLabel.hide()
 	
 	if replacement_type == Globals.REPLACE_TYPE_HIRAGANA:
 		set_furigana_to_draw(sentence_obj)
@@ -476,7 +524,7 @@ func _animation_finished():
 		$Control2/NextBattleButton.text = "Try again"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
-		$Control/KanjiLabel.hide()
+		%KanjiLabel.hide()
 		
 		player_gold = floori(player_gold / 2)
 		update_hp()
@@ -520,7 +568,7 @@ func _animation_finished_enemy():
 		$Control2/NextBattleButton.text = "次 (つぎ)"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
-		$Control/KanjiLabel.hide()
+		%KanjiLabel.hide()
 		
 		if level_up_during_battle:
 			level_up()
@@ -650,7 +698,7 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		$AnimatedSprite2DPlayer.animation = attacks.pick_random()
 		$AnimatedSprite2DPlayer.play()
 		
-		$Control/KanjiLabel.text = ""
+		%KanjiLabel.text = ""
 		
 		# Create a timer to delay the enemy animation
 		var timer = Timer.new()
@@ -705,7 +753,7 @@ func reset_progress():
 	else:
 		progress[target_word].w = 0
 		
-	$Control/KanjiLabel.show() # since we reset to 0, show hint again
+	%KanjiLabel.show() # since we reset to 0, show hint again
 	
 	calculate_kp()
 	
@@ -1065,7 +1113,7 @@ func start_battle():
 	translation_mode = "Jp"
 	$Control2/TranslateButton.text = "Jp"
 	$Control2/AltLangText.hide()
-	$Control/KanjiLabel.show()
+	%KanjiLabel.show()
 	
 	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
 	enemy_hp = enemy_hp_max
