@@ -1,4 +1,4 @@
-[gd_scene load_steps=619 format=4 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=620 format=4 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_s1kmn"]
 [ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://music/Action 1.mp3" id="2_jxwwp"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cw48ik3c011jc" path="res://graphics/kanji-block.png" id="8_noomt"]
 [ext_resource type="Texture2D" uid="uid://d1sic1jsrgotf" path="res://graphics/kanji-block2.png" id="10_ix0ld"]
 [ext_resource type="Script" path="res://kanji_draw_panel.gd" id="11_6lg1f"]
+[ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://fonts/KanjiStrokeOrders_v4.004.ttf" id="11_vsx3a"]
 [ext_resource type="Script" path="res://vertical_text_label.gd" id="12_0t3nj"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="13_e688e"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="14_vu4hq"]
@@ -79,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="78_i31v6"]
 [ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="79_ejpk5"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="80_poxa7"]
+[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://graphics/village.jpg" id="81_72oci"]
 [ext_resource type="PackedScene" uid="uid://c841tuc4putwe" path="res://kanji_progress.tscn" id="81_vvxck"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5yhu"]
@@ -130,18 +132,6 @@ texture = ExtResource("7_btw6s")
 sources/0 = SubResource("TileSetAtlasSource_s5yhu")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qm0hu"]
-
-[sub_resource type="FontFile" id="FontFile_r43uu"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/66/0/ascent = 0.0
-cache/0/66/0/descent = 0.0
-cache/0/66/0/underline_position = 0.0
-cache/0/66/0/underline_thickness = 0.0
-cache/0/66/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_8byi6"]
 line_spacing = -10.0
@@ -4269,7 +4259,7 @@ layout_mode = 0
 offset_top = -8.0
 offset_right = 75.0
 offset_bottom = 67.0
-theme_override_fonts/normal_font = SubResource("FontFile_r43uu")
+theme_override_fonts/normal_font = ExtResource("11_vsx3a")
 theme_override_font_sizes/normal_font_size = 66
 bbcode_enabled = true
 text = "[center]覆[/center]"
@@ -4569,6 +4559,16 @@ offset_right = 35.0
 offset_bottom = 35.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-249.35, 148.803)
+scale = Vector2(0.670118, 0.670118)
+texture = ExtResource("81_72oci")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(403.912, 155.545)
+scale = Vector2(0.670118, 0.670118)
+texture = ExtResource("81_72oci")
 
 [connection signal="correct_stroke" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
 [connection signal="kanji_correct" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
