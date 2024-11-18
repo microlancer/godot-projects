@@ -4542,6 +4542,7 @@ drag_bottom_margin = 0.5
 editor_draw_drag_margin = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_scale = 3.0
 
 [node name="Control3" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -4552,6 +4553,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="MenuMenuButton" type="Button" parent="CanvasLayer/Control3"]
+z_index = 3
 layout_mode = 1
 offset_left = 1.0
 offset_top = 1.0

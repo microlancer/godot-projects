@@ -143,14 +143,71 @@ func _on_size_changed():
 	set_draw_area_based_on_window()
 	
 func set_draw_area_based_on_window():
+	
 	var y = get_viewport().size.y
 	var x = get_viewport().size.x
 	var diff_x = 450 - get_viewport().size.x
 	var diff_y = 720 - get_viewport().size.y
 	
-	if diff_x > 0:
+	var v = {
+		"vp_size": get_viewport().size,
+		"scaled_vp_size": get_viewport().size / 3,
+		"kdp_size": $Control/KanjiDrawPanel.size,
+		"kdp_scale": $Control/KanjiDrawPanel.scale,
+		"scaled_kdp_size": $Control/KanjiDrawPanel.size * $Control/KanjiDrawPanel.scale,
+		"camera_zoom": $Camera2D.zoom,
+		"camera_scale": $Camera2D.scale,
+		"vp_xy_ratio": float(get_viewport().size.x) / float(get_viewport().size.y),
+		"vp_default_xy_ratio": 0.625,
+		"diff_x": diff_x,
+		"diff_y": diff_y,
+	}
+	print(v)
+	
+	if v.vp_xy_ratio < v.vp_default_xy_ratio:
+		print("tall box")
+		var diff_ratio = v.vp_default_xy_ratio - v.vp_xy_ratio
+		var diff_ratio_pct = diff_ratio / v.vp_default_xy_ratio
+		var less_x_space = 450 - v.vp_size.x
+		var more_y_space = v.vp_size.y - 720
+		var adjustment = less_x_space / 3.25 + more_y_space / 6
+		print({
+			"diff_ratio_pct":diff_ratio_pct,
+			"less_x_space":less_x_space,
+			"more_y_space":more_y_space,
+			"adjustment":adjustment
+		})
+		$Control/KanjiDrawPanel.size.x = 75 + adjustment
+		$Control/KanjiDrawPanel.size.y = $Control/KanjiDrawPanel.size.x 
+		
+		# Center the KanjiDrawPanel
+		$Control/KanjiDrawPanel.position.x = 40 - (adjustment/2)
+		
+		var scale = $Control/KanjiDrawPanel.size.x / 75
+		%KanjiLabel.scale = Vector2(scale, scale)
+		%KanjiLabel.position.y = -8# - floori(diff_x / 16)
+		%KanjiLabel.position.x = 0
+		
+	elif false and v.vp_xy_ratio >= v.vp_default_xy_ratio:
+		print("default or wide box")
+	
+	elif false and x <= 470 and y >= 720:
+		print("adjustment: width is normal or less, height is tall")
+		$Control/KanjiDrawPanel.size.x = 75 + abs(diff_y / 3 / 2)
+		$Control/KanjiDrawPanel.size.y = 75 + abs(diff_y / 3 / 2)
+		$Control/KanjiDrawPanel.position.x = 40 - abs(diff_y) / 10
+		#$Control/KanjiDrawPanel.position.y = 164 - floori(diff_x * 2 / 1)
+		print(diff_x)
+		var style = %KanjiLabel.get_theme_font_size("theme_override_font_sizes/normal_font_size", "RichTextLabel")
+		print(style)
+		var scale = $Control/KanjiDrawPanel.size.x / 75
+		%KanjiLabel.scale = Vector2(scale, scale)
+		%KanjiLabel.position.y = -8 - floori(diff_x / 16)
+		%KanjiLabel.position.x = 0
+	elif false and diff_x > 0:
 		# game is wider now, so there should be more vertical
 		# space
+		print("adjustment: width only")
 		$Control/KanjiDrawPanel.size.x = 75 + floori(diff_x / 3)
 		$Control/KanjiDrawPanel.size.y = 75 + floori(diff_x / 3)
 		$Control/KanjiDrawPanel.position.x = 40 - floori(diff_x / 3 / 2)
@@ -165,6 +222,7 @@ func set_draw_area_based_on_window():
 		
 		#%KanjiLabel.position.x = -20 - 40 - $Control/KanjiDrawPanel.position.x
 	else:
+		print("adjustment: default")
 		$Control/KanjiDrawPanel.size.x = 75
 		$Control/KanjiDrawPanel.size.y = 75
 		$Control/KanjiDrawPanel.position.x = 40
