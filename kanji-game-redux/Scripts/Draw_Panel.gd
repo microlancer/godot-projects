@@ -1,23 +1,31 @@
 extends TextureRect
 
-var array_of_points:PackedVector2Array #Array of points for current stroke
-var array_of_strokes:Array[PackedVector2Array] #Array of strokes
+var current_stroke:PackedVector2Array #Array of points for current stroke
+var all_strokes:Array[PackedVector2Array] #Array of strokes
+
+@export var line_width:float = 3
+@export var anti_alias:bool = true
 
 func _draw():
-	if not array_of_points.size() < 2:
+	if not current_stroke.size() < 2:
 		# Halts function if there are less than two points
 		# As draw_polyline will fail
-		draw_polyline(array_of_points,Color.AQUA,10)
+		draw_polyline(current_stroke,Color.AQUA,line_width,anti_alias)
 		
-	for stroke in array_of_strokes:
-		draw_polyline(stroke,Color.ALICE_BLUE,10)
+	for stroke in all_strokes:
+		# Draws previously made strokes
+		draw_polyline(stroke,Color.ALICE_BLUE,line_width,anti_alias)
 
 func _input(event):
 	if Input.is_action_pressed("Draw"):
-		array_of_points.append(event.position)
+		# Adds current position to the current stroke
+		current_stroke.append(event.position)
 	elif Input.is_action_just_released("Draw"):
-		array_of_strokes.append(array_of_points.duplicate())
-		array_of_points.clear()
+		# Adds current stroke to the list of all strokes and 
+		# Empties the current stroke for another stroke
+		all_strokes.append(current_stroke.duplicate())
+		current_stroke.clear()
 	if Input.is_action_pressed("Empty Drawing"):
-		array_of_points.clear()
+		# Clears the whole drawing.
+		current_stroke.clear()
 	queue_redraw()
