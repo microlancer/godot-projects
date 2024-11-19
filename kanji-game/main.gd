@@ -14,8 +14,8 @@ var level_up_during_battle = false
 var translation_mode = "Jp"
 #@export var replacement_type = Globals.REPLACE_TYPE_HIRAGANA
 
-@onready var audio_player: AudioStreamPlayer2D = %AudioStreamPlayer2D  # Adjust the path if necessary
-@onready var audio_player2: AudioStreamPlayer2D = %AudioStreamPlayer2D2  # Adjust the path if necessary
+@onready var audio_player: AudioStreamPlayer2D = %Player  # Adjust the path if necessary
+@onready var audio_player2: AudioStreamPlayer2D = %Player2  # Adjust the path if necessary
 
 var default_damage_label_y = 0
 var default_damage_label_color
@@ -72,11 +72,11 @@ var debug_detector_kanji: String = "慢"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2DPlayer.connect("animation_changed", Callable(self, "_animation_changed"))
-	$AnimatedSprite2DPlayer.connect("animation_finished", Callable(self, "_animation_finished"))
-	$AnimatedSprite2DPlayer.connect("animation_looped", Callable(self, "_animation_looped_player"))
-	$AnimatedSprite2DPlayer.animation = "idle"
-	$AnimatedSprite2DPlayer.play()
+	$Player.connect("animation_changed", Callable(self, "_animation_changed"))
+	$Player.connect("animation_finished", Callable(self, "_animation_finished"))
+	$Player.connect("animation_looped", Callable(self, "_animation_looped_player"))
+	$Player.animation = "idle"
+	$Player.play()
 	
 	$AnimatedSprite2DEnemy.connect("animation_finished", Callable(self, "_animation_finished_enemy"))
 	$AnimatedSprite2DEnemy.animation = "enemy_idle"
@@ -471,18 +471,18 @@ func _animation_changed():
 		"die": 0,
 		"run": 0,
 	}
-	$AnimatedSprite2DPlayer.offset.y = y_offsets[$AnimatedSprite2DPlayer.animation]
+	$Player.offset.y = y_offsets[$Player.animation]
 			
 func _animation_finished():
 	
-	if $AnimatedSprite2DPlayer.animation == "sword_away":
-		$AnimatedSprite2DPlayer.animation = "idle"
-		$AnimatedSprite2DPlayer.offset.y = 0
-		$AnimatedSprite2DPlayer.play()
+	if $Player.animation == "sword_away":
+		$Player.animation = "idle"
+		$Player.offset.y = 0
+		$Player.play()
 		
-	if $AnimatedSprite2DPlayer.animation in attacks:
-		$AnimatedSprite2DPlayer.animation = "idle_sword"
-		$AnimatedSprite2DPlayer.play()
+	if $Player.animation in attacks:
+		$Player.animation = "idle_sword"
+		$Player.play()
 		
 		if enemy_hp > 0:
 			print("battle continues, enemy_hp: " + str(enemy_hp))
@@ -493,15 +493,15 @@ func _animation_finished():
 		#replacement_type = Globals.REPLACE_TYPES.pick_random()
 		#$Control/VerticalTextLabel.build_sentence(replacement_type)
 		$Control/KanjiDrawPanel.enable()
-	elif $AnimatedSprite2DPlayer.animation in ["hurt"]:
+	elif $Player.animation in ["hurt"]:
 		
 		if player_hp <= 0:
-			$AnimatedSprite2DPlayer.animation = "die"
-			$AnimatedSprite2DPlayer.play()
+			$Player.animation = "die"
+			$Player.play()
 			return
 		
-		$AnimatedSprite2DPlayer.animation = "idle_sword"
-		$AnimatedSprite2DPlayer.play()
+		$Player.animation = "idle_sword"
+		$Player.play()
 		$Control/KanjiDrawPanel.reset_draw_panel()
 		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 		$Control/KanjiDrawPanel.enable()
@@ -510,15 +510,15 @@ func _animation_finished():
 		
 		
 		
-	elif $AnimatedSprite2DPlayer.animation == "sword_draw":
-		$AnimatedSprite2DPlayer.animation = "idle_sword"
-		$AnimatedSprite2DPlayer.play()
+	elif $Player.animation == "sword_draw":
+		$Player.animation = "idle_sword"
+		$Player.play()
 		
-	if $AnimatedSprite2DPlayer.animation == "die":
+	if $Player.animation == "die":
 		Globals.AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
 		Globals.AudioStreamPlayerBgMusic.play()
-		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
-		$AudioStreamPlayer2D.play()
+		%Player.stream = Globals.fx_battle_lose
+		%Player.play()
 		player_hp = player_hp_max
 		$Control2/HealthBarPlayer.hide()
 		$Control2/NextBattleButton.text = "Try again"
@@ -532,10 +532,10 @@ func _animation_finished():
 		
 func _animation_looped_player():
 	pass
-	#if $AnimatedSprite2DPlayer.animation == "run":
-		#$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
-		#$AudioStreamPlayer2D.stream.loop = true
-		#$AudioStreamPlayer2D.play()
+	#if $Player.animation == "run":
+		#%Player.stream = Globals.fx_dirt_run1
+		#%Player.stream.loop = true
+		#%Player.play()
 		
 func _animation_finished_enemy():
 	if $AnimatedSprite2DEnemy.animation == "enemy_hurt":
@@ -559,9 +559,9 @@ func _animation_finished_enemy():
 	if $AnimatedSprite2DEnemy.animation == "enemy_die":
 		Globals.AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
 		Globals.AudioStreamPlayerBgMusic.play()
-		$AudioStreamPlayer2D2.stream = Globals.fx_battle_win2
-		$AudioStreamPlayer2D2.volume_db = -15.0
-		$AudioStreamPlayer2D2.play()
+		%Player2.stream = Globals.fx_battle_win2
+		%Player2.volume_db = -15.0
+		%Player2.play()
 		$Control2/HealthBarEnemy.hide()
 		$AnimatedSprite2DEnemy.hide()
 		$Control2/HealthBarPlayer.hide()
@@ -580,8 +580,8 @@ func _animation_finished_enemy():
 		
 		$Control/VerticalTextLabel.hide()
 		$Control2/TranslateButton.hide()
-		$AnimatedSprite2DPlayer.animation = "sword_away"
-		$AnimatedSprite2DPlayer.play()
+		$Player.animation = "sword_away"
+		$Player.play()
 
 func show_kanji_progress():
 	
@@ -662,9 +662,9 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, stroke: Variant) -> void:
-	if strokeIndex == 0 and $AnimatedSprite2DPlayer.animation != "idle_sword":
-		$AnimatedSprite2DPlayer.animation = "sword_draw"
-		$AnimatedSprite2DPlayer.play()
+	if strokeIndex == 0 and $Player.animation != "idle_sword":
+		$Player.animation = "sword_draw"
+		$Player.play()
 		audio_player.stream = Globals.fx_sword_unsheath1
 		audio_player.play()
 	else:
@@ -695,8 +695,8 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		#$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
 	
 		$Control/VerticalTextLabel.show_answer()
-		$AnimatedSprite2DPlayer.animation = attacks.pick_random()
-		$AnimatedSprite2DPlayer.play()
+		$Player.animation = attacks.pick_random()
+		$Player.play()
 		
 		%KanjiLabel.text = ""
 		
@@ -836,8 +836,8 @@ func increment_progress():
 	
 func level_up():
 	$Control2/LevelUpButton.show()
-	$AudioStreamPlayer2D.stream = Globals.fx_level_up1
-	$AudioStreamPlayer2D.play()
+	%Player.stream = Globals.fx_level_up1
+	%Player.play()
 	player_level += 1
 	set_stats_by_level(player_level)
 	
@@ -913,8 +913,8 @@ func play_enemy_hurt():
 #func xxxplay_enemy_dead():
 	#$AudioStreamPlayerBgMusic.stream = Globals.music_ambient1
 	#$AudioStreamPlayerBgMusic.play()
-	#$AudioStreamPlayer2D.stream = Globals.fx_battle_win2
-	#$AudioStreamPlayer2D.play()
+	#%Player.stream = Globals.fx_battle_win2
+	#%Player.play()
 	
 func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	
@@ -940,8 +940,8 @@ func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	reset_progress()
 
 func play_player_hurt():
-	$AnimatedSprite2DPlayer.animation = "hurt"
-	$AnimatedSprite2DPlayer.play()
+	$Player.animation = "hurt"
+	$Player.play()
 	
 	audio_player2.stream = Globals.fx_sword_impact2
 	#audio_player2.volume_db = 8
@@ -1059,12 +1059,12 @@ func _on_next_battle_button_button_up() -> void:
 	audio_player.stream = Globals.fx_chop1
 	audio_player.play(0.3)
 	
-	$AnimatedSprite2DPlayer.animation = "run"
-	$AnimatedSprite2DPlayer.play()
+	$Player.animation = "run"
+	$Player.play()
 	
-	$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
-	$AudioStreamPlayer2D.stream.loop = true
-	$AudioStreamPlayer2D.play()
+	%Player.stream = Globals.fx_dirt_run1
+	%Player.stream.loop = true
+	%Player.play()
 	
 	var tween = create_tween()
 	tween.connect("finished", Callable(self, "_encounter_enemy"))
@@ -1081,11 +1081,11 @@ func _on_next_battle_button_button_up() -> void:
 	tween.parallel().tween_property($AnimatedSprite2DEnemy, "position:x", 76, 2)
 	
 func _encounter_enemy():
-	$AnimatedSprite2DPlayer.animation = "idle"
-	$AnimatedSprite2DPlayer.offset.y = 0
-	$AnimatedSprite2DPlayer.play()
+	$Player.animation = "idle"
+	$Player.offset.y = 0
+	$Player.play()
 	
-	$AudioStreamPlayer2D.stop()
+	%Player.stop()
 	$Control2/HealthBarEnemy.show()
 	
 	print("_encounter_enemy")
@@ -1130,8 +1130,8 @@ func start_battle():
 	$AnimatedSprite2DEnemy.animation = "enemy_idle"
 	$AnimatedSprite2DEnemy.play()
 	
-	$AnimatedSprite2DPlayer.animation = "idle"
-	$AnimatedSprite2DPlayer.offset.y = 0
+	$Player.animation = "idle"
+	$Player.offset.y = 0
 	$AnimatedSprite2DEnemy.play()
 	
 	$Control2/HealthBarPlayer.show()

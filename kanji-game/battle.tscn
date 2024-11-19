@@ -4142,74 +4142,86 @@ region = Rect2(224, 544, 32, 32)
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_s1kmn")
 
-[node name="AudioStreamPlayerBgMusicX" type="AudioStreamPlayer2D" parent="."]
+[node name="Audio" type="Node2D" parent="."]
+position = Vector2(78.1339, -3.53841)
+scale = Vector2(0.588542, 0.588542)
+
+[node name="BG Music" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2(-132.758, 6.01216)
+scale = Vector2(1.69911, 1.69911)
 stream = ExtResource("2_jxwwp")
 volume_db = -0.675
 parameters/looping = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Player" type="AudioStreamPlayer2D" parent="Audio"]
 unique_name_in_owner = true
+position = Vector2(-132.758, 6.01216)
+scale = Vector2(1.69911, 1.69911)
 volume_db = 3.377
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+[node name="Player2" type="AudioStreamPlayer2D" parent="Audio"]
 unique_name_in_owner = true
+position = Vector2(-132.758, 6.01216)
+scale = Vector2(1.69911, 1.69911)
 volume_db = 3.377
 
-[node name="Bg1Clouds" type="Sprite2D" parent="."]
+[node name="BG Art" type="Node2D" parent="."]
+z_index = -1
 position = Vector2(78.1339, -3.53841)
 scale = Vector2(0.588542, 0.588542)
+
+[node name="Bg1Clouds" type="Sprite2D" parent="BG Art"]
 texture = ExtResource("3_k8obe")
 
-[node name="Bg4Clouds" type="Sprite2D" parent="."]
-position = Vector2(266.55, -3.45555)
-scale = Vector2(0.588542, 0.588542)
+[node name="Bg4Clouds" type="Sprite2D" parent="BG Art"]
+position = Vector2(320.14, 0.140789)
 texture = ExtResource("3_k8obe")
 
-[node name="Bg5Clouds" type="Sprite2D" parent="."]
-position = Vector2(-110.265, -3.42087)
-scale = Vector2(0.588542, 0.588542)
+[node name="Bg5Clouds" type="Sprite2D" parent="BG Art"]
+position = Vector2(-320.111, 0.199714)
 texture = ExtResource("3_k8obe")
 
-[node name="Bg2" type="Sprite2D" parent="."]
-position = Vector2(95.0034, 12.6516)
-scale = Vector2(0.802083, 0.802083)
+[node name="BgMountains" type="Sprite2D" parent="BG Art"]
+position = Vector2(28.6632, 27.5087)
+scale = Vector2(1.36283, 1.36283)
 texture = ExtResource("4_ah0m3")
 
-[node name="Bg3GreenHills" type="Sprite2D" parent="."]
-position = Vector2(102.596, 4.97731)
-scale = Vector2(0.854167, 0.854167)
+[node name="Bg3GreenHills" type="Sprite2D" parent="BG Art"]
+position = Vector2(41.5639, 14.4692)
+scale = Vector2(1.45133, 1.45133)
 texture = ExtResource("5_d4jpw")
 
-[node name="Decors" type="Sprite2D" parent="."]
-position = Vector2(80, 20)
-scale = Vector2(0.410714, 0.410714)
+[node name="Trees" type="Sprite2D" parent="BG Art"]
+position = Vector2(3.17072, 39.9944)
+scale = Vector2(0.69785, 0.69785)
 texture = ExtResource("6_lo3t8")
 
-[node name="Decors2" type="Sprite2D" parent="."]
-position = Vector2(245, 20)
-scale = Vector2(0.410714, 0.410714)
+[node name="Trees2" type="Sprite2D" parent="BG Art"]
+position = Vector2(283.525, 39.9944)
+scale = Vector2(0.69785, 0.69785)
 texture = ExtResource("6_lo3t8")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="Ground" type="TileMapLayer" parent="."]
 position = Vector2(90, 59.807)
 tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAARAP//AAABAAAAAAASAP//AAABAAAAAAATAP//AAABAAAAAAAUAP//AAABAAAAAAAVAP//AAABAAAAAAAWAP//AAABAAAAAAAXAP//AAABAAAAAAAYAP//AAABAAAAAAAZAP//AAABAAAAAAAaAP//AAABAAAAAAAbAP//AAABAAAAAAAcAP//AAABAAAAAAA=")
 tile_set = SubResource("TileSet_f6huk")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Top Plate" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(-131.871, 25.0127)
 scale = Vector2(6.60848, 1)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(9.169, 23, 60.755, 23, 60.8387, 78.7043, 9.20376, 78.7043)
 
-[node name="Control" type="Control" parent="."]
+[node name="Bottom Panel" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="BG Plate" type="TextureRect" parent="Bottom Panel"]
 modulate = Color(0, 0, 0, 1)
-z_index = -5
+z_index = -2
 z_as_relative = false
 layout_mode = 0
 offset_left = -328.0
@@ -4218,7 +4230,7 @@ offset_right = 760.0
 offset_bottom = 848.0
 texture = SubResource("CanvasTexture_qm0hu")
 
-[node name="TextureRect2" type="TextureRect" parent="Control"]
+[node name="Blue Plate" type="TextureRect" parent="Bottom Panel"]
 visible = false
 modulate = Color(0.2, 1, 1, 1)
 z_index = -5
@@ -4228,7 +4240,7 @@ offset_right = 152.0
 offset_bottom = 240.0
 texture = SubResource("CanvasTexture_qm0hu")
 
-[node name="TextureRect3" type="TextureRect" parent="Control"]
+[node name="Empty Panel" type="TextureRect" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_left = 322.0
@@ -4237,7 +4249,7 @@ offset_right = 397.0
 offset_bottom = 16.6239
 texture = ExtResource("8_noomt")
 
-[node name="KanjiDrawPanel" type="TextureRect" parent="Control"]
+[node name="KanjiDrawPanel" type="TextureRect" parent="Bottom Panel"]
 modulate = Color(1, 1, 1, 0.843137)
 layout_mode = 1
 anchors_preset = -1
@@ -4252,7 +4264,7 @@ mouse_force_pass_scroll_events = false
 texture = ExtResource("10_ix0ld")
 script = ExtResource("11_6lg1f")
 
-[node name="KanjiLabel" type="RichTextLabel" parent="Control/KanjiDrawPanel"]
+[node name="KanjiLabel" type="RichTextLabel" parent="Bottom Panel/KanjiDrawPanel"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.243137)
 layout_mode = 0
@@ -4265,7 +4277,7 @@ bbcode_enabled = true
 text = "[center]覆[/center]"
 scroll_active = false
 
-[node name="SentenceLabel" type="RichTextLabel" parent="Control"]
+[node name="SentenceLabel" type="RichTextLabel" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_top = 43.0
@@ -4274,7 +4286,7 @@ offset_bottom = 64.0
 bbcode_enabled = true
 text = "[center]世界の[color=red]繁栄[/color]を目指す[/center]"
 
-[node name="ResultLabel" type="RichTextLabel" parent="Control"]
+[node name="ResultLabel" type="RichTextLabel" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_left = 170.0
@@ -4284,7 +4296,7 @@ offset_bottom = 96.0
 bbcode_enabled = true
 text = "[center]Correct![/center]"
 
-[node name="ClearButton" type="Button" parent="Control"]
+[node name="ClearButton" type="Button" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_left = 96.0
@@ -4294,7 +4306,7 @@ offset_bottom = 238.0
 rotation = 0.00226829
 text = "Clear"
 
-[node name="TryAgainButtonX" type="Control" parent="Control"]
+[node name="TryAgainButtonX" type="Control" parent="Bottom Panel"]
 visible = false
 anchors_preset = 0
 offset_left = 4.0
@@ -4302,7 +4314,7 @@ offset_top = 4.0
 offset_right = 148.0
 offset_bottom = 238.0
 
-[node name="VerticalTextLabel" type="Label" parent="Control"]
+[node name="VerticalTextLabel" type="Label" parent="Bottom Panel"]
 layout_mode = 0
 offset_left = 3.66858
 offset_top = 49.639
@@ -4313,7 +4325,7 @@ text_direction = 2
 language = "ja_JP"
 script = ExtResource("12_0t3nj")
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_left = 176.0
@@ -4328,7 +4340,7 @@ label_settings = SubResource("LabelSettings_8byi6")
 vertical_alignment = 1
 autowrap_mode = 1
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="Panel" type="Panel" parent="Bottom Panel"]
 layout_mode = 0
 offset_left = 206.0
 offset_top = 18.0
@@ -4336,7 +4348,7 @@ offset_right = 246.0
 offset_bottom = 58.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_p27sb")
 
-[node name="KomojiButton" type="Button" parent="Control"]
+[node name="KomojiButton" type="Button" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_left = -36.0
@@ -4346,7 +4358,7 @@ offset_bottom = 224.0
 toggle_mode = true
 text = "小字"
 
-[node name="KomojiLabel" type="Label" parent="Control"]
+[node name="KomojiLabel" type="Label" parent="Bottom Panel"]
 visible = false
 layout_mode = 0
 offset_left = 34.0
@@ -4358,14 +4370,14 @@ label_settings = SubResource("LabelSettings_423xv")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2DPlayer" type="AnimatedSprite2D" parent="."]
+[node name="Player" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(44, 9)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
 animation = &"idle"
 centered = false
 
-[node name="AnimatedSprite2DEnemy" type="AnimatedSprite2D" parent="."]
+[node name="Skeleton" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(76, 13)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
@@ -4373,13 +4385,15 @@ animation = &"enemy_idle"
 centered = false
 flip_h = true
 
-[node name="AnimatedSprite2DEnemy2" type="AnimatedSprite2D" parent="."]
+[node name="Naga" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(74, 20)
 scale = Vector2(0.46875, 0.46875)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
 animation = &"snake_idle"
+frame = 8
+frame_progress = 0.373095
 centered = false
 flip_h = true
 
@@ -4541,9 +4555,9 @@ drag_right_margin = 0.5
 drag_bottom_margin = 0.5
 editor_draw_drag_margin = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Exit Button Canvas Layer" type="CanvasLayer" parent="."]
 
-[node name="Control3" type="Control" parent="CanvasLayer"]
+[node name="Exit Button" type="Control" parent="Exit Button Canvas Layer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -4551,7 +4565,7 @@ offset_bottom = 40.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="MenuMenuButton" type="Button" parent="CanvasLayer/Control3"]
+[node name="MenuMenuButton" type="Button" parent="Exit Button Canvas Layer/Exit Button"]
 layout_mode = 1
 offset_left = 1.0
 offset_top = 1.0
@@ -4560,24 +4574,25 @@ offset_bottom = 35.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Town Image L" type="Sprite2D" parent="."]
 position = Vector2(-249.35, 148.803)
 scale = Vector2(0.670118, 0.670118)
 texture = ExtResource("81_72oci")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Town Image R" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(403.912, 155.545)
 scale = Vector2(0.670118, 0.670118)
 texture = ExtResource("81_72oci")
 
-[connection signal="correct_stroke" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
-[connection signal="kanji_correct" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
-[connection signal="kanji_incorrect" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_incorrect"]
-[connection signal="button_down" from="Control/ClearButton" to="Control/KanjiDrawPanel" method="_on_clear_button_button_down"]
-[connection signal="toggled" from="Control/KomojiButton" to="." method="_on_komoji_button_toggled"]
+[connection signal="correct_stroke" from="Bottom Panel/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
+[connection signal="kanji_correct" from="Bottom Panel/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
+[connection signal="kanji_incorrect" from="Bottom Panel/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_incorrect"]
+[connection signal="button_down" from="Bottom Panel/ClearButton" to="Bottom Panel/KanjiDrawPanel" method="_on_clear_button_button_down"]
+[connection signal="toggled" from="Bottom Panel/KomojiButton" to="." method="_on_komoji_button_toggled"]
 [connection signal="button_up" from="Control2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
 [connection signal="button_up" from="Control2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
 [connection signal="button_up" from="Control2/TranslateButton" to="." method="_on_translate_button_button_up"]
-[connection signal="button_up" from="CanvasLayer/Control3/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
+[connection signal="button_up" from="Exit Button Canvas Layer/Exit Button/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
 
 [editable path="KanjiProgress"]
