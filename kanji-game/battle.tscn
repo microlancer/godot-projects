@@ -4488,6 +4488,15 @@ offset_right = 145.0
 offset_bottom = 148.0
 text = "En"
 
+[node name="DebugButton1" type="Button" parent="Control2"]
+layout_mode = 0
+offset_left = 120.265
+offset_top = 115.195
+offset_right = 145.265
+offset_bottom = 129.195
+text = "debug1
+"
+
 [node name="AltLangText" type="RichTextLabel" parent="Control2"]
 visible = false
 layout_mode = 0
@@ -4580,6 +4589,7 @@ texture = ExtResource("81_72oci")
 [connection signal="button_up" from="Control2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
 [connection signal="button_up" from="Control2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
 [connection signal="button_up" from="Control2/TranslateButton" to="." method="_on_translate_button_button_up"]
+[connection signal="button_up" from="Control2/DebugButton1" to="." method="_on_debug_button_1_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control3/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
 
 [editable path="KanjiProgress"]

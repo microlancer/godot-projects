@@ -41,7 +41,7 @@ var enemy_dmg_max = 3
 
 var player_level = 1
 var enemy_level = 1
-var enemy_name = "Skeleton"
+var enemy_name = "スケルトン"
 var player_name = "PlayerXXX"
 var player_kp = 0 # kanji points
 var player_bp = 0 # battle points
@@ -53,6 +53,8 @@ var target_word: String = ""
 var mastery_max = 99
 
 # These parameters are tweaked during debugging
+# To debug, change debug_detector_mode = true
+#           change debug_detector_kanji = "<charyouwant>"
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 var skilled_threshold = 3 # correct answers to no hints (3)
@@ -132,6 +134,9 @@ func _ready() -> void:
 		$Control/KanjiDrawPanel.debug = true
 		$Control/KanjiDrawPanel.set_kanji_to_expect(debug_detector_kanji)
 		%KanjiLabel.show()
+		$Control2/DebugButton1.show()
+	else:
+		$Control2/DebugButton1.hide()
 	
 	$Control/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
@@ -171,6 +176,14 @@ func set_draw_area_based_on_window():
 		var less_x_space = 450 - v.vp_size.x
 		var more_y_space = v.vp_size.y - 720
 		var adjustment = less_x_space / 3.25 + more_y_space / 6
+		
+		# the above adjustment seems to work well on chrome+pc
+		# but on chrome+android the above results in a drawing
+		# area that is too large and cut off at the screen edge
+		# so we cut that adjustment in half. ideally, dont want
+		# this:
+		adjustment = adjustment / 2
+		
 		print({
 			"diff_ratio_pct":diff_ratio_pct,
 			"less_x_space":less_x_space,
@@ -188,39 +201,6 @@ func set_draw_area_based_on_window():
 		%KanjiLabel.position.y = -8# - floori(diff_x / 16)
 		%KanjiLabel.position.x = 0
 		
-	elif false and v.vp_xy_ratio >= v.vp_default_xy_ratio:
-		print("default or wide box")
-	
-	elif false and x <= 470 and y >= 720:
-		print("adjustment: width is normal or less, height is tall")
-		$Control/KanjiDrawPanel.size.x = 75 + abs(diff_y / 3 / 2)
-		$Control/KanjiDrawPanel.size.y = 75 + abs(diff_y / 3 / 2)
-		$Control/KanjiDrawPanel.position.x = 40 - abs(diff_y) / 10
-		#$Control/KanjiDrawPanel.position.y = 164 - floori(diff_x * 2 / 1)
-		print(diff_x)
-		var style = %KanjiLabel.get_theme_font_size("theme_override_font_sizes/normal_font_size", "RichTextLabel")
-		print(style)
-		var scale = $Control/KanjiDrawPanel.size.x / 75
-		%KanjiLabel.scale = Vector2(scale, scale)
-		%KanjiLabel.position.y = -8 - floori(diff_x / 16)
-		%KanjiLabel.position.x = 0
-	elif false and diff_x > 0:
-		# game is wider now, so there should be more vertical
-		# space
-		print("adjustment: width only")
-		$Control/KanjiDrawPanel.size.x = 75 + floori(diff_x / 3)
-		$Control/KanjiDrawPanel.size.y = 75 + floori(diff_x / 3)
-		$Control/KanjiDrawPanel.position.x = 40 - floori(diff_x / 3 / 2)
-		#$Control/KanjiDrawPanel.position.y = 164 - floori(diff_x * 2 / 1)
-		print(diff_x)
-		var style = %KanjiLabel.get_theme_font_size("theme_override_font_sizes/normal_font_size", "RichTextLabel")
-		print(style)
-		var scale = $Control/KanjiDrawPanel.size.x / 75
-		%KanjiLabel.scale = Vector2(scale, scale)
-		%KanjiLabel.position.y = -8 - floori(diff_x / 16)
-		%KanjiLabel.position.x = 0
-		
-		#%KanjiLabel.position.x = -20 - 40 - $Control/KanjiDrawPanel.position.x
 	else:
 		print("adjustment: default")
 		$Control/KanjiDrawPanel.size.x = 75
@@ -1068,15 +1048,15 @@ func update_hp():
 	var kp_progress = get_kp_progress()
 	
 	$Control2/PlayerStats.text = Globals.player_name + "\n" +\
-		"Lv: " + str(player_level) + "\n" +\
+		"レベル: " + str(player_level) + "\n" +\
 		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
 		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
 		#"EXP: " + str(player_exp) + "\n" +\
-		"Gold: " + str(player_gold)
+		"ゴールド: " + str(player_gold)
 		
 	if enemy_hp > 0:
 		$Control2/EnemyStats.text = enemy_name + "\n" +\
-			"Lv: " + str(enemy_level)
+			"レベル: " + str(enemy_level)
 	else:
 		$Control2/EnemyStats.text = ""
 		
@@ -1226,3 +1206,21 @@ func _on_translate_button_button_up() -> void:
 		$Control2/TranslateButton.text = "Jp"
 		$Control2/AltLangText.hide()
 		$Control/VerticalTextLabel.show()
+
+
+func _on_debug_button_1_button_up() -> void:
+	progress = {
+	  "一": {"r": 99, "w": 99},
+	  "二": {"r": 99, "w": 99},
+	  "三": {"r": 99, "w": 99},
+	  "四": {"r": 99, "w": 99},
+	  "五": {"r": 99, "w": 99},
+	  "六": {"r": 99, "w": 99},
+	  "七": {"r": 99, "w": 99},
+	  "八": {"r": 99, "w": 99},
+	  "九": {"r": 99, "w": 99},
+	  "十": {"r": 99, "w": 5},
+	}
+
+	known_pool_index = 9
+	start_battle()

@@ -20,10 +20,10 @@ func _ready() -> void:
 		if settings_data.has("player_name"):
 			Globals.player_name = settings_data.player_name
 		else:
-			Globals.player_name = "Player"
+			Globals.player_name = "プレイヤー"
 	else:
 		Globals.custom_bg_music_enabled = true
-		Globals.player_name = "Player"
+		Globals.player_name = "プレイヤー"
 		
 	if not Globals.AudioStreamPlayerBgMusic.stream:
 		Globals.AudioStreamPlayerBgMusic.stream = preload("res://music/Ambient 1.mp3")
