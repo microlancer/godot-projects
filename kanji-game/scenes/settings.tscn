@@ -1,0 +1,289 @@
+[gd_scene load_steps=26 format=3 uid="uid://42ucg8rbkrrb"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_3uqes"]
+[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="2_bebsp"]
+[ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="3_104ws"]
+
+[sub_resource type="Gradient" id="Gradient_dhf4y"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_drim8"]
+gradient = SubResource("Gradient_dhf4y")
+fill = 1
+
+[sub_resource type="Theme" id="Theme_a48gc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73db0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e5cu"]
+bg_color = Color(0.13, 0.13, 0.13, 0.898039)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_nmewt"]
+line_spacing = 0.0
+font_size = 10
+font_color = Color(1, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrql2"]
+font_size = 12
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2rb0a"]
+font_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_oo8xm"]
+
+[sub_resource type="Theme" id="Theme_j2qyf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppofa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kku8r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_itrhk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7oyox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edn3u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6lny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2g4dm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ss4wq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aexfp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0hmbk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5v2r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m2he"]
+atlas = ExtResource("3_104ws")
+region = Rect2(224, 544, 32, 32)
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_3uqes")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundVillage" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 240.0
+offset_bottom = 325.0
+texture = ExtResource("2_bebsp")
+expand_mode = 1
+
+[node name="ButtonNew" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 127.0
+offset_bottom = 85.0
+text = "新 Start new game"
+
+[node name="ButtonContinue" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 127.0
+offset_bottom = 117.0
+text = "続 Continue existing game"
+
+[node name="ButtonQuitGame" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 128.0
+offset_right = 127.0
+offset_bottom = 149.0
+text = "出 Quit game"
+
+[node name="CreditsBackground" type="TextureRect" parent="Control"]
+modulate = Color(0.800491, 0.800491, 0.800491, 0.678431)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 144.0
+offset_bottom = 200.0
+texture = SubResource("GradientTexture2D_drim8")
+
+[node name="Credits" type="RichTextLabel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 224.0
+offset_top = 72.0
+offset_right = 677.0
+offset_bottom = 312.0
+scale = Vector2(0.3, 0.3)
+theme = SubResource("Theme_a48gc")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 22
+theme_override_styles/fill = SubResource("StyleBoxFlat_73db0")
+text = "Created by AlmightyThor
+製作 オールマイティソア
+
+CREDITS　クレジット 
+
+Graphics:
+  animated-pixel-hero (by rvros)
+  shikashis-fantasy-icons-pack (by shikashipx)
+  skeleton-pack (by Jesse Munguia)
+  free-pixelart-tileset-cute-forest (by aamatniekss)
+Music and Sound FX:
+  an-rpg-makers-kit-2-rpg-soundsmusicfree-set (by TheAmbientFort)
+  free-fantasy-sfx-and-music-bundle (by TomMusic)
+  fantasy-ui-sound-effects (by Atelier Magicae)"
+
+[node name="PanelDeleteWarning" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 144.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3e5cu")
+
+[node name="WarningText" type="Label" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 72.0
+text = "There is already a saved game in progress. Delete existing file and start from scratch?"
+label_settings = SubResource("LabelSettings_nmewt")
+autowrap_mode = 2
+
+[node name="ButtonCancel" type="Button" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 64.0
+offset_bottom = 88.0
+text = "Cancel"
+
+[node name="ButtonYesDelete" type="Button" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 88.0
+text = "Yes"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 102.0
+offset_bottom = 24.0
+text = "設定 Settings"
+label_settings = SubResource("LabelSettings_lrql2")
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 44.0
+text = "名前 Name"
+label_settings = SubResource("LabelSettings_2rb0a")
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 122.0
+offset_bottom = 87.0
+text = "漢字知識 Known kanji/words"
+label_settings = SubResource("LabelSettings_2rb0a")
+
+[node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 176.0
+offset_right = 124.0
+offset_bottom = 191.0
+text = "音楽 BG Music"
+label_settings = SubResource("LabelSettings_2rb0a")
+
+[node name="TextEditPlayerName" type="TextEdit" parent="Control"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 48.0
+offset_right = 1108.0
+offset_bottom = 208.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 80
+text = "Player"
+
+[node name="TextEditCustomSkipKanjiList" type="TextEdit" parent="Control"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 88.0
+offset_right = 1108.0
+offset_bottom = 888.0
+scale = Vector2(0.1, 0.1)
+theme = SubResource("Theme_oo8xm")
+theme_override_font_sizes/font_size = 80
+text = "ー、二、三、距離、六"
+wrap_mode = 1
+scroll_smooth = true
+language = "ja_JP"
+
+[node name="CheckBoxBgMusic" type="CheckButton" parent="Control"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 176.0
+offset_right = 246.0
+offset_bottom = 256.0
+scale = Vector2(0.2, 0.2)
+theme = SubResource("Theme_j2qyf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ppofa")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kku8r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_itrhk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7oyox")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_edn3u")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m6lny")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2g4dm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ss4wq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aexfp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_0hmbk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f5v2r")
+button_pressed = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="MenuMenuButton" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 35.0
+offset_bottom = 35.0
+scale = Vector2(0.5, 0.5)
+icon = SubResource("AtlasTexture_3m2he")
+
+[connection signal="button_up" from="Control/ButtonNew" to="." method="_on_button_new_button_up"]
+[connection signal="button_up" from="Control/ButtonContinue" to="." method="_on_button_continue_button_up"]
+[connection signal="button_up" from="Control/ButtonQuitGame" to="." method="_on_button_quit_game_button_up"]
+[connection signal="button_up" from="Control/PanelDeleteWarning/ButtonCancel" to="." method="_on_button_cancel_button_up"]
+[connection signal="button_up" from="Control/PanelDeleteWarning/ButtonYesDelete" to="." method="_on_button_yes_delete_button_up"]
+[connection signal="text_changed" from="Control/TextEditPlayerName" to="." method="_on_text_edit_player_name_text_changed"]
+[connection signal="text_changed" from="Control/TextEditCustomSkipKanjiList" to="." method="_on_text_edit_custom_skip_kanji_list_text_changed"]
+[connection signal="button_up" from="Control/CheckBoxBgMusic" to="." method="_on_check_box_bg_music_button_up"]
+[connection signal="button_up" from="MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]

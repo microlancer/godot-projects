@@ -1,0 +1,229 @@
+[gd_scene load_steps=12 format=3 uid="uid://dn4epyc67l5dv"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_3q730"]
+[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="2_4e6we"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4g1xm"]
+font_size = 22
+font_color = Color(0.664569, 0.695757, 0.942824, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.180392)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uk14d"]
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_blk08"]
+font_size = 12
+font_color = Color(0.664569, 0.695757, 0.942824, 1)
+shadow_color = Color(0, 0, 0, 0.478431)
+
+[sub_resource type="Gradient" id="Gradient_dhf4y"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_drim8"]
+gradient = SubResource("Gradient_dhf4y")
+fill = 1
+
+[sub_resource type="Theme" id="Theme_a48gc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73db0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e5cu"]
+bg_color = Color(0.13, 0.13, 0.13, 0.898039)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_nmewt"]
+line_spacing = 0.0
+font_size = 10
+font_color = Color(1, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_3q730")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundVillage" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -88.0
+offset_right = 264.0
+offset_bottom = 377.0
+texture = ExtResource("2_4e6we")
+expand_mode = 1
+
+[node name="TitleKanji" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 151.0
+offset_bottom = 33.0
+text = "漢字の冒険"
+label_settings = SubResource("LabelSettings_4g1xm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleFurigana" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 26.0511
+offset_top = 26.1022
+offset_right = 59.0511
+offset_bottom = 43.1022
+text = "かんじ"
+label_settings = SubResource("LabelSettings_uk14d")
+
+[node name="TitleFurigana2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 90.3797
+offset_top = 25.2613
+offset_right = 130.38
+offset_bottom = 42.2613
+text = "ぼうけん"
+label_settings = SubResource("LabelSettings_uk14d")
+
+[node name="TitleEnglish" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 30.062
+offset_top = 34.2665
+offset_right = 151.062
+offset_bottom = 58.2665
+text = "Kanji Adventure"
+label_settings = SubResource("LabelSettings_blk08")
+
+[node name="ButtonNew" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 127.0
+offset_bottom = 85.0
+text = "新 Start new game"
+
+[node name="ButtonContinue" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 127.0
+offset_bottom = 117.0
+text = "続 Continue existing game"
+
+[node name="ButtonSettings" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 128.0
+offset_right = 127.0
+offset_bottom = 149.0
+text = "設 Settings"
+
+[node name="ButtonQuitGame" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 160.0
+offset_right = 127.0
+offset_bottom = 181.0
+text = "出 Quit game"
+
+[node name="CreditsBackground" type="TextureRect" parent="Control"]
+modulate = Color(0.25, 0.25, 0.25, 0.678431)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 184.0
+offset_right = 280.0
+offset_bottom = 280.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_drim8")
+
+[node name="Credits" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 184.0
+offset_right = 461.0
+offset_bottom = 344.0
+scale = Vector2(0.3, 0.3)
+theme = SubResource("Theme_a48gc")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 22
+theme_override_styles/fill = SubResource("StyleBoxFlat_73db0")
+text = "Created by AlmightyThor
+製作 オールマイティソア
+
+CREDITS　クレジット 
+
+Graphics:
+  animated-pixel-hero (by rvros)
+  shikashis-fantasy-icons-pack (by shikashipx)
+  skeleton-pack (by Jesse Munguia)
+  free-pixelart-tileset-cute-forest (by aamatniekss)
+Music and Sound FX:
+  an-rpg-makers-kit-2-rpg-soundsmusicfree-set (by TheAmbientFort)
+  free-fantasy-sfx-and-music-bundle (by TomMusic)
+  fantasy-ui-sound-effects (by Atelier Magicae)"
+
+[node name="PanelDeleteWarning" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 144.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3e5cu")
+
+[node name="WarningText" type="Label" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 72.0
+text = "There is already a saved game in progress. Delete existing file and start from scratch?"
+label_settings = SubResource("LabelSettings_nmewt")
+autowrap_mode = 2
+
+[node name="ButtonCancel" type="Button" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 64.0
+offset_bottom = 88.0
+text = "Cancel"
+
+[node name="ButtonYesDelete" type="Button" parent="Control/PanelDeleteWarning"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 88.0
+text = "Yes"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+volume_db = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(72, 120)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.5
+drag_top_margin = 0.5
+drag_right_margin = 0.5
+drag_bottom_margin = 0.5
+editor_draw_drag_margin = true
+
+[connection signal="button_up" from="Control/ButtonNew" to="." method="_on_button_new_button_up"]
+[connection signal="button_up" from="Control/ButtonContinue" to="." method="_on_button_continue_button_up"]
+[connection signal="button_up" from="Control/ButtonSettings" to="." method="_on_button_settings_button_up"]
+[connection signal="button_up" from="Control/ButtonQuitGame" to="." method="_on_button_quit_game_button_up"]
+[connection signal="button_up" from="Control/PanelDeleteWarning/ButtonCancel" to="." method="_on_button_cancel_button_up"]
+[connection signal="button_up" from="Control/PanelDeleteWarning/ButtonYesDelete" to="." method="_on_button_yes_delete_button_up"]

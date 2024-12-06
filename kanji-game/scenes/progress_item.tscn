@@ -1,0 +1,183 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccfriccaw8lmk"]
+
+[ext_resource type="Texture2D" uid="uid://d2xlran5ob5g5" path="res://assets/graphics/card-front120.png" id="1_37855"]
+[ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="2_w8trs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0mdgl"]
+line_spacing = 0.0
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b7sto"]
+line_spacing = 0.0
+font_size = 8
+font_color = Color(7.03912e-07, 0.329689, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6rvxw"]
+line_spacing = 0.0
+font_size = 14
+font_color = Color(0.513726, 0.878431, 0.298039, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4kr6"]
+atlas = ExtResource("2_w8trs")
+region = Rect2(64, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_att2x"]
+atlas = ExtResource("2_w8trs")
+region = Rect2(32, 672, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l62ix"]
+atlas = ExtResource("2_w8trs")
+region = Rect2(320, 416, 32, 32)
+
+[node name="ProgressItem" type="Control"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 164.0
+texture = ExtResource("1_37855")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 3.59386
+offset_top = 41.8895
+offset_right = 119.594
+offset_bottom = 93.8895
+text = "運転免許証"
+label_settings = SubResource("LabelSettings_0mdgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 2.64893
+offset_top = 57.0085
+offset_right = 118.649
+offset_bottom = 109.008
+text = "うんてんめんきょしょう"
+label_settings = SubResource("LabelSettings_b7sto")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 3.59387
+offset_top = -13.5471
+offset_right = 119.594
+offset_bottom = 38.4529
+text = "読み方"
+label_settings = SubResource("LabelSettings_6rvxw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 44.0937
+offset_top = 24.7413
+offset_right = 76.0937
+offset_bottom = 56.7413
+texture = SubResource("AtlasTexture_d4kr6")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 12.6216
+offset_top = 90.8919
+offset_right = 44.6216
+offset_bottom = 122.892
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_att2x")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 32.6216
+offset_top = 90.8919
+offset_right = 64.6216
+offset_bottom = 122.892
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 52.6216
+offset_top = 90.8919
+offset_right = 84.6216
+offset_bottom = 122.892
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect5" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 72.6216
+offset_top = 90.8919
+offset_right = 104.622
+offset_bottom = 122.892
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect6" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 92.6216
+offset_top = 90.8919
+offset_right = 124.622
+offset_bottom = 122.892
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect8" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 12.6216
+offset_top = 108.135
+offset_right = 44.6216
+offset_bottom = 140.135
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_att2x")
+
+[node name="TextureRect9" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 32.6216
+offset_top = 108.135
+offset_right = 64.6216
+offset_bottom = 140.135
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect10" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 52.6216
+offset_top = 108.135
+offset_right = 84.6216
+offset_bottom = 140.135
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect11" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 72.6216
+offset_top = 108.135
+offset_right = 104.622
+offset_bottom = 140.135
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")
+
+[node name="TextureRect12" type="TextureRect" parent="TextureRect"]
+modulate = Color(0, 0, 0, 0.286275)
+layout_mode = 0
+offset_left = 92.6216
+offset_top = 108.135
+offset_right = 124.622
+offset_bottom = 140.135
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_l62ix")

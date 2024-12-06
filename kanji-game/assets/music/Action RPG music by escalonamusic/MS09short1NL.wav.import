@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfqlkv6fuvave"
+path="res://.godot/imported/MS09short1NL.wav-5f21e56c9613f800aeed4e7dcb6f9522.sample"
+
+[deps]
+
+source_file="res://assets/music/Action RPG music by escalonamusic/MS09short1NL.wav"
+dest_files=["res://.godot/imported/MS09short1NL.wav-5f21e56c9613f800aeed4e7dcb6f9522.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -12,14 +12,14 @@ config_version=5
 
 config/name="KanjiGame"
 config/version="1.0.0"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*res://globals.gd"
+Globals="*res://scripts/globals.gd"
 
 [display]
 
@@ -35,7 +35,7 @@ window/vsync/vsync_mode=0
 [gui]
 
 theme/default_theme_scale=3.0
-theme/custom="res://default_theme.tres"
+theme/custom="res://themes/default_theme.tres"
 theme/custom_font="res://assets/fonts/KleeOne-Regular.ttf"
 theme/default_font_antialiasing=0
 theme/default_font_subpixel_positioning=0
