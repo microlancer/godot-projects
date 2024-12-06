@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://graphics/village.jpg" id="1_4e3vk"]
 [ext_resource type="Texture2D" uid="uid://cafllv565arv" path="res://graphics/card-front768.png" id="2_4aw38"]
-[ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://fonts/KanjiStrokeOrders_v4.004.ttf" id="3_81yaq"]
+[ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="3_81yaq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1mq4m"]
 line_spacing = 0.0

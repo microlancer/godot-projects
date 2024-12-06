@@ -1,6 +1,6 @@
 [gd_scene load_steps=620 format=4 uid="uid://p1onvqcjv8ce"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_s1kmn"]
+[ext_resource type="Script" path="res://battle.gd" id="1_s1kmn"]
 [ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://music/Action 1.mp3" id="2_jxwwp"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="3_k8obe"]
 [ext_resource type="Texture2D" uid="uid://bfv7i6nwi3b2u" path="res://graphics/FreeCuteTilesetv1/FreeCuteTileset/BG2.png" id="4_ah0m3"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cw48ik3c011jc" path="res://graphics/kanji-block.png" id="8_noomt"]
 [ext_resource type="Texture2D" uid="uid://d1sic1jsrgotf" path="res://graphics/kanji-block2.png" id="10_ix0ld"]
 [ext_resource type="Script" path="res://kanji_draw_panel.gd" id="11_6lg1f"]
-[ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://fonts/KanjiStrokeOrders_v4.004.ttf" id="11_vsx3a"]
+[ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_vsx3a"]
 [ext_resource type="Script" path="res://vertical_text_label.gd" id="12_0t3nj"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="13_e688e"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="14_vu4hq"]
@@ -4139,8 +4139,13 @@ font_size = 20
 atlas = ExtResource("79_ejpk5")
 region = Rect2(224, 544, 32, 32)
 
-[node name="Battle" type="Node2D"]
+[node name="Battle" type="Node2D" node_paths=PackedStringArray("animated_player", "animated_enemy", "enemy_damage_label", "player_damage_label", "level_up_button")]
 script = ExtResource("1_s1kmn")
+animated_player = NodePath("AnimatedPlayer")
+animated_enemy = NodePath("AnimatedEnemy")
+enemy_damage_label = NodePath("Control2/EnemyDamageLabel")
+player_damage_label = NodePath("Control2/PlayerDamageLabel")
+level_up_button = NodePath("Control2/LevelUpButton")
 
 [node name="AudioStreamPlayerBgMusicX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_jxwwp")
@@ -4358,14 +4363,14 @@ label_settings = SubResource("LabelSettings_423xv")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2DPlayer" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(44, 9)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
 animation = &"idle"
 centered = false
 
-[node name="AnimatedSprite2DEnemy" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedEnemy" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(76, 13)
 sprite_frames = SubResource("SpriteFrames_hdx0j")

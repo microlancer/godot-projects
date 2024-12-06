@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://ba2hj7e15wv3n"]
 
 [ext_resource type="StyleBox" uid="uid://cgmsb4qvuyjf1" path="res://style_box_flat_button.tres" id="1_dxvd4"]
-[ext_resource type="FontFile" uid="uid://47731eqvwht3" path="res://fonts/KleeOne-Regular.ttf" id="1_vbrul"]
+[ext_resource type="FontFile" uid="uid://47731eqvwht3" path="res://assets/fonts/KleeOne-Regular.ttf" id="1_vbrul"]
 [ext_resource type="StyleBox" uid="uid://t6duhs6loqr3" path="res://new_style_box_pressed.tres" id="2_06kmm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uxb1"]

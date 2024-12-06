@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://8tpsa602r53a"
-path="res://.godot/imported/KanjiStrokeOrders_v4.004.ttf-434294770e650928f61f8e809403905c.fontdata"
+uid="uid://b83rmoaa3yuq7"
+path="res://.godot/imported/KleeOne-SemiBold.ttf-65a79e97e21dfac57df54b20cd8d2c5e.fontdata"
 
 [deps]
 
-source_file="res://fonts/KanjiStrokeOrders_v4.004.ttf"
-dest_files=["res://.godot/imported/KanjiStrokeOrders_v4.004.ttf-434294770e650928f61f8e809403905c.fontdata"]
+source_file="res://assets/fonts/KleeOne-SemiBold.ttf"
+dest_files=["res://.godot/imported/KleeOne-SemiBold.ttf-65a79e97e21dfac57df54b20cd8d2c5e.fontdata"]
 
 [params]
 

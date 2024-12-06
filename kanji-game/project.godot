@@ -36,7 +36,7 @@ window/vsync/vsync_mode=0
 
 theme/default_theme_scale=3.0
 theme/custom="res://default_theme.tres"
-theme/custom_font="res://fonts/KleeOne-Regular.ttf"
+theme/custom_font="res://assets/fonts/KleeOne-Regular.ttf"
 theme/default_font_antialiasing=0
 theme/default_font_subpixel_positioning=0
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://47731eqvwht3"
-path="res://.godot/imported/KleeOne-Regular.ttf-28fcb75e83be721b67b46499db4682dd.fontdata"
+path="res://.godot/imported/KleeOne-Regular.ttf-f9e083b8b5b52b23fac51f9fc7b01dec.fontdata"
 
 [deps]
 
-source_file="res://fonts/KleeOne-Regular.ttf"
-dest_files=["res://.godot/imported/KleeOne-Regular.ttf-28fcb75e83be721b67b46499db4682dd.fontdata"]
+source_file="res://assets/fonts/KleeOne-Regular.ttf"
+dest_files=["res://.godot/imported/KleeOne-Regular.ttf-f9e083b8b5b52b23fac51f9fc7b01dec.fontdata"]
 
 [params]
 
