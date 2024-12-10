@@ -1,0 +1,232 @@
+[gd_scene load_steps=10 format=3 uid="uid://b328cc8an1ojp"]
+
+[ext_resource type="Script" path="res://scripts/merchant.gd" id="1_v6ses"]
+[ext_resource type="Texture2D" uid="uid://cydw23ljdluvu" path="res://assets/graphics/NPCs/Idle1/1.png" id="1_wpddl"]
+[ext_resource type="Texture2D" uid="uid://ccptbcgttwifb" path="res://assets/graphics/NPCs/Idle1/2.png" id="2_giwmy"]
+[ext_resource type="Texture2D" uid="uid://dbtfb3rg5drpq" path="res://assets/graphics/NPCs/Idle1/3.png" id="3_bjco8"]
+[ext_resource type="Texture2D" uid="uid://c4gniw865uhnn" path="res://assets/graphics/NPCs/Idle1/4.png" id="4_58kw3"]
+[ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="6_y7h2v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6nt2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wpddl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_giwmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bjco8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_58kw3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cg61"]
+radius = 75.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kydk"]
+font_size = 7
+
+[node name="Merchant" type="Area2D"]
+script = ExtResource("1_v6ses")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8.5, 0)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_x6nt2")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 0)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_4cg61")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -72.0
+offset_top = -96.0
+offset_right = 71.0
+offset_bottom = -32.0
+columns = 4
+
+[node name="Button" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(4, 451, 24, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button2"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(69, 291, 22, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button2"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 30"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button3"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(36, 453, 23, 23)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button3"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button4" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button4"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(72, 451, 16, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button4"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button5"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(35, 388, 26, 25)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button5"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button6" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button6"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(323, 451, 26, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button6"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button7" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button7"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(358, 451, 22, 27)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button7"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button8" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button8"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(419, 451, 27, 27)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button8"]
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 12"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="DialogueLabel" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -56.0
+offset_right = 64.0
+offset_bottom = -24.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

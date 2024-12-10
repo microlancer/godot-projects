@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://3pq5viin7pui"]
+
+[ext_resource type="PackedScene" uid="uid://b328cc8an1ojp" path="res://scenes/merchant.tscn" id="1_bfmos"]
+[ext_resource type="PackedScene" uid="uid://d3drf8st43386" path="res://scenes/player.tscn" id="2_f63sw"]
+
+[node name="ShopScene" type="Node2D"]
+
+[node name="Merchant" parent="." instance=ExtResource("1_bfmos")]
+position = Vector2(342, 189)
+
+[node name="Player" parent="." instance=ExtResource("2_f63sw")]
+position = Vector2(47, 168)
