@@ -28,7 +28,7 @@ func _on_check_box_bg_music_button_up() -> void:
 			Globals.AudioStreamPlayerBgMusic.play()
 	else:
 		Globals.AudioStreamPlayerBgMusic.volume_db = -999
-	
+
 	Globals.save_settings()
 
 
