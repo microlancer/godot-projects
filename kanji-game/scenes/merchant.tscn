@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b328cc8an1ojp"]
+[gd_scene load_steps=10 format=3 uid="uid://ctk8v6eodpy76"]
 
 [ext_resource type="Script" path="res://scripts/merchant.gd" id="1_v6ses"]
 [ext_resource type="Texture2D" uid="uid://cydw23ljdluvu" path="res://assets/graphics/NPCs/Idle1/1.png" id="1_wpddl"]
@@ -95,6 +95,7 @@ region_enabled = true
 region_rect = Rect2(69, 291, 22, 26)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button2"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0
@@ -115,6 +116,7 @@ region_enabled = true
 region_rect = Rect2(36, 453, 23, 23)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button3"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0
@@ -135,6 +137,7 @@ region_enabled = true
 region_rect = Rect2(72, 451, 16, 26)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button4"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0
@@ -155,6 +158,7 @@ region_enabled = true
 region_rect = Rect2(35, 388, 26, 25)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button5"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0
@@ -175,6 +179,7 @@ region_enabled = true
 region_rect = Rect2(323, 451, 26, 26)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button6"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0
@@ -195,6 +200,7 @@ region_enabled = true
 region_rect = Rect2(358, 451, 22, 27)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button7"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0
@@ -215,6 +221,7 @@ region_enabled = true
 region_rect = Rect2(419, 451, 27, 27)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button8"]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
 offset_bottom = 25.0

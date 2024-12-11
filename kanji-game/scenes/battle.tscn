@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/kanji_draw_panel.gd" id="10_khsv0"]
 [ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_wpydr"]
 [ext_resource type="Script" path="res://scripts/vertical_text_label.gd" id="12_d4whg"]
-[ext_resource type="PackedScene" uid="uid://d3drf8st43386" path="res://scenes/player.tscn" id="13_cxe15"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="13_cxe15"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="13_slb1u"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="14_yqd52"]
 [ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="15_he0ga"]
