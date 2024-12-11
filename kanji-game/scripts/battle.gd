@@ -200,9 +200,17 @@ func set_draw_area_based_on_window():
 		$Control/KanjiDrawPanel.position.x = 40 - (adjustment/2)
 		
 		var scale = $Control/KanjiDrawPanel.size.x / 75
-		%KanjiLabel.scale = Vector2(scale, scale)
-		%KanjiLabel.position.y = -8# - floori(diff_x / 16)
-		%KanjiLabel.position.x = 0
+		Globals.large_kanji_scale = Vector2(scale, scale)
+		Globals.large_kanji_position.y = -8# - floori(diff_x / 16)
+		Globals.large_kanji_position.x = 0
+		
+		var half_size = Vector2(
+			$Control/KanjiDrawPanel.size.x / 2,
+			$Control/KanjiDrawPanel.size.y / 2
+		)
+		print("half",half_size)
+		Globals.small_kanji_position = half_size
+		Globals.small_kanji_scale = Vector2(0.7*scale, 0.7*scale)
 		
 	else:
 		print("adjustment: default")
@@ -210,12 +218,14 @@ func set_draw_area_based_on_window():
 		$Control/KanjiDrawPanel.size.y = 75
 		$Control/KanjiDrawPanel.position.x = 40
 		$Control/KanjiDrawPanel.position.y = 164
-		%KanjiLabel.scale = Vector2(1.0, 1.0)
-		%KanjiLabel.position = Vector2(0, -8)
+		Globals.large_kanji_scale = Vector2(1.0, 1.0)
+		Globals.large_kanji_position = Vector2(0, -8)
+		Globals.small_kanji_position = Vector2i(30, 19)
+		Globals.small_kanji_scale = Vector2(0.7, 0.7)
 		#%KanjiLabel.position.x = -20
 	#print(x,y)
-	Globals.large_kanji_position = %KanjiLabel.position
-	Globals.large_kanji_scale = %KanjiLabel.scale
+	#Globals.large_kanji_position = %KanjiLabel.position
+	#Globals.large_kanji_scale = %KanjiLabel.scale
 	$Control/KanjiDrawPanel.draw_panel.size = $Control/KanjiDrawPanel.size
 		
 

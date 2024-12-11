@@ -79,6 +79,9 @@ var player_name: String = "プレイヤー"
 var large_kanji_position = Vector2i(0, -8)
 var large_kanji_scale = Vector2(1.0, 1.0)
 
+var small_kanji_position = Vector2i(30, 19)
+var small_kanji_scale = Vector2(0.7, 0.7)
+
 func save_settings():
 	var file = FileAccess.open("user://settings.json", FileAccess.WRITE)
 	var save_data = {
