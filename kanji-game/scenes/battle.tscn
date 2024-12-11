@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/kanji_draw_panel.gd" id="10_khsv0"]
 [ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_wpydr"]
 [ext_resource type="Script" path="res://scripts/vertical_text_label.gd" id="12_d4whg"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="13_cxe15"]
+[ext_resource type="PackedScene" uid="uid://d3drf8st43386" path="res://scenes/player.tscn" id="13_cxe15"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="13_slb1u"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="14_yqd52"]
 [ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="15_he0ga"]
@@ -4140,8 +4140,9 @@ font_size = 20
 atlas = ExtResource("79_pgljm")
 region = Rect2(224, 544, 32, 32)
 
-[node name="Battle" type="Node2D" node_paths=PackedStringArray("animated_enemy", "enemy_damage_label", "player_damage_label", "level_up_button")]
+[node name="Battle" type="Node2D" node_paths=PackedStringArray("animated_player", "animated_enemy", "enemy_damage_label", "player_damage_label", "level_up_button")]
 script = ExtResource("1_vyelx")
+animated_player = NodePath("Player")
 animated_enemy = NodePath("AnimatedEnemy")
 enemy_damage_label = NodePath("Control2/EnemyDamageLabel")
 player_damage_label = NodePath("Control2/PlayerDamageLabel")
