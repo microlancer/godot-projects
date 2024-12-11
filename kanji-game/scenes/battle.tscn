@@ -1,4 +1,4 @@
-[gd_scene load_steps=621 format=4 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=620 format=4 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://scripts/battle.gd" id="1_vyelx"]
 [ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://assets/music/Action 1.mp3" id="2_1fdng"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" path="res://scripts/kanji_draw_panel.gd" id="10_khsv0"]
 [ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_wpydr"]
 [ext_resource type="Script" path="res://scripts/vertical_text_label.gd" id="12_d4whg"]
-[ext_resource type="PackedScene" uid="uid://d3drf8st43386" path="res://scenes/player.tscn" id="13_cxe15"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="13_slb1u"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="14_yqd52"]
 [ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="15_he0ga"]
@@ -4142,7 +4141,7 @@ region = Rect2(224, 544, 32, 32)
 
 [node name="Battle" type="Node2D" node_paths=PackedStringArray("animated_player", "animated_enemy", "enemy_damage_label", "player_damage_label", "level_up_button")]
 script = ExtResource("1_vyelx")
-animated_player = NodePath("Player")
+animated_player = NodePath("AnimatedPlayer")
 animated_enemy = NodePath("AnimatedEnemy")
 enemy_damage_label = NodePath("Control2/EnemyDamageLabel")
 player_damage_label = NodePath("Control2/PlayerDamageLabel")
@@ -4364,7 +4363,12 @@ label_settings = SubResource("LabelSettings_423xv")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("13_cxe15")]
+[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(44, 9)
+sprite_frames = SubResource("SpriteFrames_hdx0j")
+animation = &"idle"
+centered = false
 
 [node name="AnimatedEnemy" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=3 uid="uid://d3drf8st43386"]
+[gd_scene load_steps=161 format=3 uid="uid://cs5a2tcusjewb"]
 
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="1_2o2fh"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="2_axj36"]
@@ -1010,16 +1010,13 @@ position = Vector2(25, 22)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
 shape = SubResource("CircleShape2D_55bl2")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(25, 0)
-
 [node name="CanvasLayer" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -3.0
-offset_top = -35.0
-offset_right = -3.0
-offset_bottom = -35.0
+offset_left = 4.0
+offset_top = 47.0
+offset_right = 4.0
+offset_bottom = 47.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 layout_mode = 0

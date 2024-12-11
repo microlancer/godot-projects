@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b328cc8an1ojp"]
+[gd_scene load_steps=10 format=3 uid="uid://dl8e7gqy7b4f6"]
 
 [ext_resource type="Script" path="res://scripts/merchant.gd" id="1_v6ses"]
 [ext_resource type="Texture2D" uid="uid://cydw23ljdluvu" path="res://assets/graphics/NPCs/Idle1/1.png" id="1_wpddl"]
