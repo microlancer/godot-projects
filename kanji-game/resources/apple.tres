@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://c7solq6cd7mpl"]
+
+[ext_resource type="Script" path="res://resources/inventory_item.gd" id="1_ycjqd"]
+
+[resource]
+script = ExtResource("1_ycjqd")
+price = 5
+health_given = 5
+item_name = "apple"

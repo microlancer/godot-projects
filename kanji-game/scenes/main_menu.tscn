@@ -21,10 +21,10 @@ font_size = 12
 font_color = Color(0.664569, 0.695757, 0.942824, 1)
 shadow_color = Color(0, 0, 0, 0.478431)
 
-[sub_resource type="Gradient" id="Gradient_dhf4y"]
+[sub_resource type="Gradient" id="Gradient_hkirp"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_drim8"]
-gradient = SubResource("Gradient_dhf4y")
+gradient = SubResource("Gradient_hkirp")
 fill = 1
 
 [sub_resource type="Theme" id="Theme_a48gc"]

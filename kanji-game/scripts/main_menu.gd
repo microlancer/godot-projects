@@ -66,7 +66,7 @@ func _on_button_new_button_up() -> void:
 		$Control/PanelDeleteWarning.show()
 	else:
 		print("Starting new game")
-		get_tree().change_scene_to_file("res://scenes/battle.tscn")
+		get_tree().change_scene_to_file("res://scenes/town.tscn")
 		$AudioStreamPlayer2D.stop()
 
 func _on_button_yes_delete_button_up() -> void:
@@ -80,7 +80,7 @@ func _on_button_yes_delete_button_up() -> void:
 		dir_access.remove(file_path)
 
 	$AudioStreamPlayer2D.stop()
-	get_tree().change_scene_to_file("res://scenes/battle.tscn")
+	get_tree().change_scene_to_file("res://scenes/town.tscn")
 
 
 func _on_button_cancel_button_up() -> void:

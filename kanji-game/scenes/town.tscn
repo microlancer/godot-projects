@@ -1,0 +1,127 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnnm56ew0xp1v"]
+
+[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="1_khcsx"]
+[ext_resource type="Script" path="res://scripts/town.gd" id="1_yewqa"]
+[ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="2_im5tr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_huej1"]
+font_size = 22
+font_color = Color(0.664569, 0.695757, 0.942824, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.180392)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e2w1l"]
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_l1gct"]
+font_size = 12
+font_color = Color(0.664569, 0.695757, 0.942824, 1)
+shadow_color = Color(0, 0, 0, 0.478431)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0osxc"]
+atlas = ExtResource("2_im5tr")
+region = Rect2(224, 544, 32, 32)
+
+[node name="Town" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yewqa")
+
+[node name="BackgroundVillage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -64.0
+offset_right = 264.0
+offset_bottom = 320.0
+texture = ExtResource("1_khcsx")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 56.0
+offset_right = 40.0
+offset_bottom = 96.0
+
+[node name="TitleKanji" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 151.0
+offset_bottom = 33.0
+text = "漢字の冒険"
+label_settings = SubResource("LabelSettings_huej1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleFurigana" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 26.0511
+offset_top = 26.1022
+offset_right = 59.0511
+offset_bottom = 43.1022
+text = "かんじ"
+label_settings = SubResource("LabelSettings_e2w1l")
+
+[node name="TitleFurigana2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 90.3797
+offset_top = 25.2613
+offset_right = 130.38
+offset_bottom = 42.2613
+text = "ぼうけん"
+label_settings = SubResource("LabelSettings_e2w1l")
+
+[node name="TitleEnglish" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 30.062
+offset_top = 34.2665
+offset_right = 151.062
+offset_bottom = 58.2665
+text = "Kanji Adventure"
+label_settings = SubResource("LabelSettings_l1gct")
+
+[node name="ButtonBattle" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 127.0
+offset_bottom = 85.0
+text = "新 Go To Battle"
+
+[node name="ButtonMerchant" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 127.0
+offset_bottom = 117.0
+text = "続 Visit Merchant"
+
+[node name="Control3" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -56.0
+offset_right = 40.0
+offset_bottom = -16.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MenuMenuButton" type="Button" parent="Control/Control3"]
+z_index = 3
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 42.0
+offset_bottom = 42.0
+scale = Vector2(0.5, 0.5)
+icon = SubResource("AtlasTexture_0osxc")
+
+[connection signal="pressed" from="Control/ButtonBattle" to="." method="_on_button_battle_pressed"]
+[connection signal="pressed" from="Control/ButtonMerchant" to="." method="_on_button_merchant_pressed"]
+[connection signal="pressed" from="Control/Control3/MenuMenuButton" to="." method="_on_menu_menu_button_pressed"]
