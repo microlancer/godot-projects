@@ -1055,6 +1055,7 @@ region_rect = Rect2(4, 323, 23, 26)
 
 [node name="MenuMenuButton" type="Button" parent="UI"]
 z_index = 3
+layout_mode = 0
 offset_left = -45.0
 offset_top = 139.0
 offset_right = 80.0
