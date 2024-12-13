@@ -83,7 +83,7 @@
 [ext_resource type="PackedScene" uid="uid://c841tuc4putwe" path="res://scenes/kanji_progress.tscn" id="81_bh4je"]
 [ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="82_4d63p"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5yhu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mubqu"]
 texture = ExtResource("7_vbvvp")
 0:0/0 = 0
 1:0/0 = 0
@@ -129,7 +129,7 @@ texture = ExtResource("7_vbvvp")
 4:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_f6huk"]
-sources/0 = SubResource("TileSetAtlasSource_s5yhu")
+sources/0 = SubResource("TileSetAtlasSource_mubqu")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qm0hu"]
 
