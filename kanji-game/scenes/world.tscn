@@ -1,5 +1,6 @@
-[gd_scene load_steps=166 format=4 uid="uid://cnp6rgq1i2raw"]
+[gd_scene load_steps=167 format=4 uid="uid://cnp6rgq1i2raw"]
 
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_qyuig"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="3_hom52"]
 [ext_resource type="Texture2D" uid="uid://bfv7i6nwi3b2u" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG2.png" id="4_3l3xg"]
 [ext_resource type="Texture2D" uid="uid://jo1b80rhwlc6" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG3.png" id="5_qxiki"]
@@ -71,6 +72,54 @@
 [ext_resource type="Texture2D" uid="uid://olq8xxamcn2b" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-01.png" id="71_63pmj"]
 [ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="72_rmhlc"]
 [ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="73_hkla2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mubqu"]
+texture = ExtResource("7_1jc74")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f6huk"]
+sources/0 = SubResource("TileSetAtlasSource_mubqu")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbjsk"]
 atlas = ExtResource("40_ancjl")
@@ -992,54 +1041,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mubqu"]
-texture = ExtResource("7_1jc74")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_f6huk"]
-sources/0 = SubResource("TileSetAtlasSource_mubqu")
-
 [sub_resource type="LabelSettings" id="LabelSettings_16kbr"]
 font_size = 10
 font_color = Color(0.999962, 0.438117, 0.419375, 1)
@@ -1064,6 +1065,7 @@ corner_radius_bottom_left = 1
 anti_aliasing = false
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_qyuig")
 
 [node name="WorldObjects" type="TextureRect" parent="."]
 clip_contents = true
@@ -1095,7 +1097,7 @@ scale = Vector2(0.854167, 0.854167)
 texture = ExtResource("5_qxiki")
 
 [node name="Trees" type="Sprite2D" parent="WorldObjects"]
-position = Vector2(80, 20)
+position = Vector2(80, 22)
 scale = Vector2(0.410714, 0.410714)
 texture = ExtResource("6_o0d1l")
 
@@ -1104,6 +1106,11 @@ position = Vector2(245, 20)
 scale = Vector2(0.410714, 0.410714)
 texture = ExtResource("6_o0d1l")
 
+[node name="TileMapLayer" type="TileMapLayer" parent="WorldObjects"]
+position = Vector2(90, 59.807)
+tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAARAP//AAABAAAAAAASAP//AAABAAAAAAATAP//AAABAAAAAAAUAP//AAABAAAAAAAVAP//AAABAAAAAAAWAP//AAABAAAAAAAXAP//AAABAAAAAAAYAP//AAABAAAAAAAZAP//AAABAAAAAAAaAP//AAABAAAAAAAbAP//AAABAAAAAAAcAP//AAABAAAAAAA=")
+tile_set = SubResource("TileSet_f6huk")
+
 [node name="AnimatedPlayer" type="AnimatedSprite2D" parent="WorldObjects"]
 texture_filter = 1
 position = Vector2(44, 9)
@@ -1111,7 +1118,7 @@ sprite_frames = SubResource("SpriteFrames_hdx0j")
 animation = &"idle"
 centered = false
 
-[node name="AnimatedEnemy" type="AnimatedSprite2D" parent="WorldObjects"]
+[node name="AnimatedNpc" type="AnimatedSprite2D" parent="WorldObjects"]
 texture_filter = 1
 position = Vector2(76, 13)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
@@ -1129,24 +1136,13 @@ animation = &"snake_idle"
 centered = false
 flip_h = true
 
-[node name="TileMapLayer" type="TileMapLayer" parent="WorldObjects"]
-position = Vector2(90, 59.807)
-tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAARAP//AAABAAAAAAASAP//AAABAAAAAAATAP//AAABAAAAAAAUAP//AAABAAAAAAAVAP//AAABAAAAAAAWAP//AAABAAAAAAAXAP//AAABAAAAAAAYAP//AAABAAAAAAAZAP//AAABAAAAAAAaAP//AAABAAAAAAAbAP//AAABAAAAAAAcAP//AAABAAAAAAA=")
-tile_set = SubResource("TileSet_f6huk")
-
-[node name="Polygon2D" type="Polygon2D" parent="WorldObjects"]
-position = Vector2(-131.871, 25.0127)
-scale = Vector2(6.60848, 1)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(9.169, 23, 60.755, 23, 60.8387, 78.7043, 9.20376, 78.7043)
-
-[node name="Control2" type="Control" parent="WorldObjects"]
+[node name="UI" type="Control" parent="WorldObjects"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="EnemyDamageLabel" type="Label" parent="WorldObjects/Control2"]
+[node name="EnemyDamageLabel" type="Label" parent="WorldObjects/UI"]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 25.0
@@ -1156,7 +1152,7 @@ text = "332	"
 label_settings = SubResource("LabelSettings_16kbr")
 horizontal_alignment = 1
 
-[node name="PlayerDamageLabel" type="Label" parent="WorldObjects/Control2"]
+[node name="PlayerDamageLabel" type="Label" parent="WorldObjects/UI"]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 25.0
@@ -1166,7 +1162,7 @@ text = "332	"
 label_settings = SubResource("LabelSettings_16kbr")
 horizontal_alignment = 1
 
-[node name="HealthBarPlayer" type="ProgressBar" parent="WorldObjects/Control2"]
+[node name="HealthBarPlayer" type="ProgressBar" parent="WorldObjects/UI"]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 11.0
@@ -1178,7 +1174,7 @@ step = 1.0
 value = 50.0
 show_percentage = false
 
-[node name="HealthBarEnemy" type="ProgressBar" parent="WorldObjects/Control2"]
+[node name="HealthBarEnemy" type="ProgressBar" parent="WorldObjects/UI"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 11.0
@@ -1189,3 +1185,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_qh5vc")
 step = 1.0
 value = 50.0
 show_percentage = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+volume_db = 3.377
