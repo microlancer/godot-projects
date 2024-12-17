@@ -65,11 +65,21 @@ var progress = init_progress
 var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
 
-
-@export var animated_player:AnimatedSprite2D
-@export var animated_enemy:AnimatedSprite2D
-@export var enemy_damage_label:Label
-@export var player_damage_label:Label
+@export var world:Node2D
+#@export var animated_player:AnimatedSprite2D
+#@export var animated_enemy:AnimatedSprite2D
+#@export var enemy_damage_label:Label
+#@export var player_damage_label:Label
+#@export var level_up_button:Button
+@onready var animated_player = world.Player
+@onready var animated_enemy = world.Skeleton_enemy
+@onready var enemy_damage_label = world.Player_health_label
+@onready var player_damage_label = world.Enemy_health_label
+@onready var tile_map_layer = world.world_tile_map_layer
+@onready var decor1 = world.Decor1
+@onready var decor2 = world.Decor2
+@onready var Health_bar_player = world.player_health_bar
+@onready var Health_bar_enemy = world.enemy_health_bar
 @export var level_up_button:Button
 
 # -------------------------------------------------------------------
@@ -571,7 +581,7 @@ func _animation_finished():
 		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
 		$AudioStreamPlayer2D.play()
 		player_hp = player_hp_max
-		$Control2/HealthBarPlayer.hide()
+		Health_bar_player.hide()
 		$Control2/NextBattleButton.text = "Try again"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
@@ -613,9 +623,9 @@ func _animation_finished_enemy():
 		$AudioStreamPlayer2D2.stream = Globals.fx_battle_win2
 		$AudioStreamPlayer2D2.volume_db = -15.0
 		$AudioStreamPlayer2D2.play()
-		$Control2/HealthBarEnemy.hide()
+		Health_bar_enemy.hide()
 		animated_enemy.hide()
-		$Control2/HealthBarPlayer.hide()
+		Health_bar_player.hide()
 		$Control2/NextBattleButton.text = "次 (つぎ)"
 		$Control2/NextBattleButton.show()
 		$Control/KanjiDrawPanel.hide()
@@ -1052,11 +1062,11 @@ func update_hp():
 	if player_hp < 0:
 		player_hp = 0
 	
-	$Control2/HealthBarPlayer.max_value = player_hp_max
-	$Control2/HealthBarPlayer.value = player_hp
+	Health_bar_player.max_value = player_hp_max
+	Health_bar_player.value = player_hp
 	
-	$Control2/HealthBarEnemy.max_value = enemy_hp_max
-	$Control2/HealthBarEnemy.value = enemy_hp
+	Health_bar_enemy.max_value = enemy_hp_max
+	Health_bar_enemy.value = enemy_hp
 	
 	var kp_progress = get_kp_progress()
 	
@@ -1119,11 +1129,11 @@ func _on_next_battle_button_button_up() -> void:
 	
 	var tween = create_tween()
 	tween.connect("finished", Callable(self, "_encounter_enemy"))
-	tween.parallel().tween_property($TileMapLayer, "position:x", -90, 2)
-	tween.parallel().tween_property($Decors2, "position:x", 80, 2)
-	tween.parallel().tween_property($Decors, "position:x", -80, 2)
+	tween.parallel().tween_property(tile_map_layer, "position:x", -90, 2)
+	tween.parallel().tween_property(decor2, "position:x", 80, 2)
+	tween.parallel().tween_property(decor1, "position:x", -80, 2)
 	
-	$Control2/HealthBarEnemy.hide()
+	Health_bar_enemy.hide()
 	
 	animated_enemy.position.x = 250
 	animated_enemy.show()
@@ -1137,7 +1147,7 @@ func _encounter_enemy():
 	animated_player.play()
 	
 	$AudioStreamPlayer2D.stop()
-	$Control2/HealthBarEnemy.show()
+	Health_bar_enemy.show()
 	
 	print("_encounter_enemy")
 	
@@ -1154,10 +1164,10 @@ func start_battle():
 	$Control/KanjiDrawPanel.show()
 	$Control/KanjiDrawPanel.enable()
 	$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
-	$TileMapLayer.position.x = 90
+	tile_map_layer.position.x = 90
 	
-	$Decors.position.x = 80
-	$Decors2.position.x = 245
+	decor1.position.x = 80
+	decor2.position.x = 245
 
 	$Control/VerticalTextLabel.show()
 	$Control2/TranslateButton.show()
@@ -1185,8 +1195,8 @@ func start_battle():
 	animated_player.offset.y = 0
 	animated_enemy.play()
 	
-	$Control2/HealthBarPlayer.show()
-	$Control2/HealthBarEnemy.show()
+	Health_bar_player.show()
+	Health_bar_enemy.show()
 
 	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
 	Globals.AudioStreamPlayerBgMusic.play()
