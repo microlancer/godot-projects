@@ -2,11 +2,12 @@ extends Node2D
 
 @onready var animated_player = $WorldObjects/AnimatedPlayer
 @onready var animated_npc = $WorldObjects/AnimatedNpc
+@onready var audio_player = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animated_player.position.x = -50
-	$WorldObjects/AnimatedNpc.position.x = 300
+	animated_npc.position.x = 300
 	$WorldObjects/UI.hide()
 	fade_in_and_run_to_npc()
 	
@@ -24,9 +25,9 @@ func _process(delta: float) -> void:
 func fade_in_and_run_to_npc() -> void:
 	animated_player.animation = "run"
 	animated_player.play()
-	$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
-	$AudioStreamPlayer2D.stream.loop = true
-	$AudioStreamPlayer2D.play()
+	audio_player.stream = Globals.fx_dirt_run1
+	audio_player.stream.loop = true
+	audio_player.play()
 	var tween = create_tween()
 	var time_sec = 2
 	tween.connect("finished", Callable(self, "_end_run"))
@@ -41,15 +42,15 @@ func fade_in_and_run_to_npc() -> void:
 	
 func _end_run() -> void:
 	animated_player.animation = "idle"
-	$AudioStreamPlayer2D.stop()
+	audio_player.stop()
 	
 func run_away() -> void:
 	animated_player.animation = "run"
 	animated_player.flip_h = true
 	animated_player.play()
-	$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
-	$AudioStreamPlayer2D.stream.loop = true
-	$AudioStreamPlayer2D.play()
+	audio_player.stream = Globals.fx_dirt_run1
+	audio_player.stream.loop = true
+	audio_player.play()
 	var tween = create_tween()
 	var time_sec = 2
 	tween.connect("finished", Callable(self, "_end_run"))

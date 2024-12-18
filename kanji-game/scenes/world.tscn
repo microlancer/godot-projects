@@ -1,4 +1,4 @@
-[gd_scene load_steps=167 format=4 uid="uid://cnp6rgq1i2raw"]
+[gd_scene load_steps=169 format=4 uid="uid://cnp6rgq1i2raw"]
 
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_qyuig"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="3_hom52"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://jo1b80rhwlc6" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG3.png" id="5_qxiki"]
 [ext_resource type="Texture2D" uid="uid://bw08o7bpatien" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/Decors.png" id="6_o0d1l"]
 [ext_resource type="Texture2D" uid="uid://dlkni6tdcdruh" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/Tileset.png" id="7_1jc74"]
+[ext_resource type="PackedScene" uid="uid://brjhlhp0pdbh6" path="res://scenes/animated_player.tscn" id="7_cbq5x"]
+[ext_resource type="PackedScene" uid="uid://2obbu5ed32sn" path="res://scenes/animated_npc.tscn" id="8_0amk4"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="8_6m4s1"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="9_t08ye"]
 [ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="10_hcbtr"]
@@ -1111,20 +1113,9 @@ position = Vector2(90, 59.807)
 tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAARAP//AAABAAAAAAASAP//AAABAAAAAAATAP//AAABAAAAAAAUAP//AAABAAAAAAAVAP//AAABAAAAAAAWAP//AAABAAAAAAAXAP//AAABAAAAAAAYAP//AAABAAAAAAAZAP//AAABAAAAAAAaAP//AAABAAAAAAAbAP//AAABAAAAAAAcAP//AAABAAAAAAA=")
 tile_set = SubResource("TileSet_f6huk")
 
-[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="WorldObjects"]
-texture_filter = 1
-position = Vector2(44, 9)
-sprite_frames = SubResource("SpriteFrames_hdx0j")
-animation = &"idle"
-centered = false
+[node name="AnimatedPlayer" parent="WorldObjects" instance=ExtResource("7_cbq5x")]
 
-[node name="AnimatedNpc" type="AnimatedSprite2D" parent="WorldObjects"]
-texture_filter = 1
-position = Vector2(76, 13)
-sprite_frames = SubResource("SpriteFrames_hdx0j")
-animation = &"enemy_idle"
-centered = false
-flip_h = true
+[node name="AnimatedNpc" parent="WorldObjects" instance=ExtResource("8_0amk4")]
 
 [node name="AnimatedSprite2DEnemy2" type="AnimatedSprite2D" parent="WorldObjects"]
 visible = false
