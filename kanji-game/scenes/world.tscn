@@ -4097,17 +4097,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="world" type="Node2D" node_paths=PackedStringArray("Player", "Skeleton_enemy", "Player_health_label", "Enemy_health_label", "world_tile_map_layer", "player_health_bar", "enemy_health_bar", "Decor1", "Decor2")]
+[node name="world" type="Node2D" node_paths=PackedStringArray("Player", "NonPlayableCharacter", "Player_health_label", "Enemy_health_label", "player_health_bar", "enemy_health_bar")]
 script = ExtResource("1_hie7w")
 Player = NodePath("AnimatedPlayer")
-Skeleton_enemy = NodePath("AnimatedEnemy")
-Player_health_label = NodePath("Control2/EnemyDamageLabel")
-Enemy_health_label = NodePath("Control2/PlayerDamageLabel")
-world_tile_map_layer = NodePath("TileMapLayer")
-player_health_bar = NodePath("Control2/HealthBarPlayer")
-enemy_health_bar = NodePath("Control2/HealthBarEnemy")
-Decor1 = NodePath("Decors")
-Decor2 = NodePath("Decors2")
+NonPlayableCharacter = NodePath("AnimatedEnemy")
+Player_health_label = NodePath("UI/EnemyDamageLabel")
+Enemy_health_label = NodePath("UI/PlayerDamageLabel")
+player_health_bar = NodePath("UI/HealthBarPlayer")
+enemy_health_bar = NodePath("UI/HealthBarEnemy")
 
 [node name="Bg1Clouds" type="Sprite2D" parent="."]
 position = Vector2(78.1339, -3.53841)
@@ -4174,13 +4171,13 @@ animation = &"snake_idle"
 centered = false
 flip_h = true
 
-[node name="Control2" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="EnemyDamageLabel" type="Label" parent="Control2"]
+[node name="EnemyDamageLabel" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 25.0
@@ -4190,7 +4187,7 @@ text = "332	"
 label_settings = SubResource("LabelSettings_16kbr")
 horizontal_alignment = 1
 
-[node name="PlayerDamageLabel" type="Label" parent="Control2"]
+[node name="PlayerDamageLabel" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 25.0
@@ -4200,7 +4197,7 @@ text = "332	"
 label_settings = SubResource("LabelSettings_16kbr")
 horizontal_alignment = 1
 
-[node name="HealthBarPlayer" type="ProgressBar" parent="Control2"]
+[node name="HealthBarPlayer" type="ProgressBar" parent="UI"]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 11.0
@@ -4212,7 +4209,7 @@ step = 1.0
 value = 50.0
 show_percentage = false
 
-[node name="HealthBarEnemy" type="ProgressBar" parent="Control2"]
+[node name="HealthBarEnemy" type="ProgressBar" parent="UI"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 11.0
@@ -4229,3 +4226,6 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(-75, 91)
 sprite_frames = SubResource("SpriteFrames_v1esm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 3.377

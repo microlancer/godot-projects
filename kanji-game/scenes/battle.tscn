@@ -3081,7 +3081,7 @@ region = Rect2(224, 544, 32, 32)
 [node name="Battle" type="Node2D" node_paths=PackedStringArray("world", "level_up_button")]
 script = ExtResource("1_vyelx")
 world = NodePath("world_root/world")
-level_up_button = NodePath("Control2/LevelUpButton")
+level_up_button = NodePath("UI2/LevelUpButton")
 
 [node name="world_root" type="Node2D" parent="."]
 
@@ -3106,24 +3106,23 @@ scale = Vector2(6.60848, 1)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(9.169, 23, 60.755, 23, 60.8387, 78.7043, 9.20376, 78.7043)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
 z_index = -5
 z_as_relative = false
-layout_mode = 0
 offset_left = -328.0
 offset_top = -112.0
 offset_right = 760.0
 offset_bottom = 848.0
 texture = SubResource("CanvasTexture_qm0hu")
 
-[node name="TextureRect2" type="TextureRect" parent="Control"]
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="UI"]
 visible = false
 modulate = Color(0.2, 1, 1, 1)
 z_index = -5
@@ -3133,7 +3132,7 @@ offset_right = 152.0
 offset_bottom = 240.0
 texture = SubResource("CanvasTexture_qm0hu")
 
-[node name="TextureRect3" type="TextureRect" parent="Control"]
+[node name="TextureRect3" type="TextureRect" parent="UI"]
 visible = false
 layout_mode = 0
 offset_left = 322.0
@@ -3142,7 +3141,7 @@ offset_right = 397.0
 offset_bottom = 16.6239
 texture = ExtResource("8_6fbru")
 
-[node name="KanjiDrawPanel" type="TextureRect" parent="Control"]
+[node name="KanjiDrawPanel" type="TextureRect" parent="UI"]
 modulate = Color(1, 1, 1, 0.843137)
 layout_mode = 1
 anchors_preset = -1
@@ -3157,7 +3156,7 @@ mouse_force_pass_scroll_events = false
 texture = ExtResource("9_ehk8a")
 script = ExtResource("10_khsv0")
 
-[node name="KanjiLabel" type="RichTextLabel" parent="Control/KanjiDrawPanel"]
+[node name="KanjiLabel" type="RichTextLabel" parent="UI/KanjiDrawPanel"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.243137)
 layout_mode = 0
@@ -3170,7 +3169,7 @@ bbcode_enabled = true
 text = "[center]覆[/center]"
 scroll_active = false
 
-[node name="SentenceLabel" type="RichTextLabel" parent="Control"]
+[node name="SentenceLabel" type="RichTextLabel" parent="UI"]
 visible = false
 layout_mode = 0
 offset_top = 43.0
@@ -3179,7 +3178,7 @@ offset_bottom = 64.0
 bbcode_enabled = true
 text = "[center]世界の[color=red]繁栄[/color]を目指す[/center]"
 
-[node name="ResultLabel" type="RichTextLabel" parent="Control"]
+[node name="ResultLabel" type="RichTextLabel" parent="UI"]
 visible = false
 layout_mode = 0
 offset_left = 170.0
@@ -3189,7 +3188,7 @@ offset_bottom = 96.0
 bbcode_enabled = true
 text = "[center]Correct![/center]"
 
-[node name="ClearButton" type="Button" parent="Control"]
+[node name="ClearButton" type="Button" parent="UI"]
 visible = false
 layout_mode = 0
 offset_left = 96.0
@@ -3199,7 +3198,7 @@ offset_bottom = 238.0
 rotation = 0.00226829
 text = "Clear"
 
-[node name="TryAgainButtonX" type="Control" parent="Control"]
+[node name="TryAgainButtonX" type="Control" parent="UI"]
 visible = false
 anchors_preset = 0
 offset_left = 4.0
@@ -3207,7 +3206,7 @@ offset_top = 4.0
 offset_right = 148.0
 offset_bottom = 238.0
 
-[node name="VerticalTextLabel" type="Label" parent="Control"]
+[node name="VerticalTextLabel" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = 3.66858
 offset_top = 49.639
@@ -3218,7 +3217,7 @@ text_direction = 2
 language = "ja_JP"
 script = ExtResource("12_d4whg")
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="UI"]
 visible = false
 layout_mode = 0
 offset_left = 176.0
@@ -3233,7 +3232,7 @@ label_settings = SubResource("LabelSettings_8byi6")
 vertical_alignment = 1
 autowrap_mode = 1
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="Panel" type="Panel" parent="UI"]
 layout_mode = 0
 offset_left = 206.0
 offset_top = 18.0
@@ -3241,7 +3240,7 @@ offset_right = 246.0
 offset_bottom = 58.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_p27sb")
 
-[node name="KomojiButton" type="Button" parent="Control"]
+[node name="KomojiButton" type="Button" parent="UI"]
 visible = false
 layout_mode = 0
 offset_left = -36.0
@@ -3251,7 +3250,7 @@ offset_bottom = 224.0
 toggle_mode = true
 text = "小字"
 
-[node name="KomojiLabel" type="Label" parent="Control"]
+[node name="KomojiLabel" type="Label" parent="UI"]
 visible = false
 layout_mode = 0
 offset_left = 34.0
@@ -3263,13 +3262,13 @@ label_settings = SubResource("LabelSettings_423xv")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Control2" type="Control" parent="."]
+[node name="UI2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PlayerStats" type="Label" parent="Control2"]
+[node name="PlayerStats" type="Label" parent="UI2"]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 50.0
@@ -3282,7 +3281,7 @@ KP: 0
 Gold: 0"
 label_settings = SubResource("LabelSettings_cyab5")
 
-[node name="EnemyStats" type="Label" parent="Control2"]
+[node name="EnemyStats" type="Label" parent="UI2"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 50.0
@@ -3293,7 +3292,7 @@ Lv: 1"
 label_settings = SubResource("LabelSettings_cyab5")
 horizontal_alignment = 2
 
-[node name="NextBattleButton" type="Button" parent="Control2"]
+[node name="NextBattleButton" type="Button" parent="UI2"]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 185.0
@@ -3301,7 +3300,7 @@ offset_right = 126.0
 offset_bottom = 213.0
 text = "Next battle"
 
-[node name="LevelUpButton" type="Button" parent="Control2"]
+[node name="LevelUpButton" type="Button" parent="UI2"]
 visible = false
 z_index = 1
 layout_mode = 0
@@ -3316,7 +3315,7 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="TranslateButton" type="Button" parent="Control2"]
+[node name="TranslateButton" type="Button" parent="UI2"]
 layout_mode = 0
 offset_left = 120.0
 offset_top = 134.0
@@ -3324,7 +3323,7 @@ offset_right = 145.0
 offset_bottom = 148.0
 text = "En"
 
-[node name="DebugButton1" type="Button" parent="Control2"]
+[node name="DebugButton1" type="Button" parent="UI2"]
 layout_mode = 0
 offset_left = 120.265
 offset_top = 115.195
@@ -3333,7 +3332,7 @@ offset_bottom = 129.195
 text = "debug1
 "
 
-[node name="AltLangText" type="RichTextLabel" parent="Control2"]
+[node name="AltLangText" type="RichTextLabel" parent="UI2"]
 visible = false
 layout_mode = 0
 offset_left = 6.0
@@ -3417,15 +3416,15 @@ position = Vector2(403.912, 155.545)
 scale = Vector2(0.670118, 0.670118)
 texture = ExtResource("82_4d63p")
 
-[connection signal="correct_stroke" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
-[connection signal="kanji_correct" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
-[connection signal="kanji_incorrect" from="Control/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_incorrect"]
-[connection signal="button_down" from="Control/ClearButton" to="Control/KanjiDrawPanel" method="_on_clear_button_button_down"]
-[connection signal="toggled" from="Control/KomojiButton" to="." method="_on_komoji_button_toggled"]
-[connection signal="button_up" from="Control2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
-[connection signal="button_up" from="Control2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
-[connection signal="button_up" from="Control2/TranslateButton" to="." method="_on_translate_button_button_up"]
-[connection signal="button_up" from="Control2/DebugButton1" to="." method="_on_debug_button_1_button_up"]
+[connection signal="correct_stroke" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
+[connection signal="kanji_correct" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
+[connection signal="kanji_incorrect" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_incorrect"]
+[connection signal="button_down" from="UI/ClearButton" to="UI/KanjiDrawPanel" method="_on_clear_button_button_down"]
+[connection signal="toggled" from="UI/KomojiButton" to="." method="_on_komoji_button_toggled"]
+[connection signal="button_up" from="UI2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
+[connection signal="button_up" from="UI2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
+[connection signal="button_up" from="UI2/TranslateButton" to="." method="_on_translate_button_button_up"]
+[connection signal="button_up" from="UI2/DebugButton1" to="." method="_on_debug_button_1_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control3/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
 
 [editable path="KanjiProgress"]

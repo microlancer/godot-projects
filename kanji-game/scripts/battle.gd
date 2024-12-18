@@ -72,12 +72,12 @@ var debug_detector_kanji: String = "慢"
 #@export var player_damage_label:Label
 #@export var level_up_button:Button
 @onready var animated_player = world.Player
-@onready var animated_enemy = world.Skeleton_enemy
+@onready var animated_enemy = world.NonPlayableCharacter
 @onready var enemy_damage_label = world.Player_health_label
 @onready var player_damage_label = world.Enemy_health_label
-@onready var tile_map_layer = world.world_tile_map_layer
-@onready var decor1 = world.Decor1
-@onready var decor2 = world.Decor2
+#@onready var tile_map_layer = world.world_tile_map_layer
+#@onready var decor1 = world.Decor1
+#@onready var decor2 = world.Decor2
 @onready var Health_bar_player = world.player_health_bar
 @onready var Health_bar_enemy = world.enemy_health_bar
 @export var level_up_button:Button
@@ -87,27 +87,16 @@ var debug_detector_kanji: String = "慢"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	$UI.hide()
+	$UI2.hide()
+	
+	world.connect("end_run_to_npc", Callable(self, "_end_run"))
 	animated_player.connect("animation_changed", Callable(self, "_animation_changed"))
 	animated_player.connect("animation_finished", Callable(self, "_animation_finished"))
 	animated_player.connect("animation_looped", Callable(self, "_animation_looped_player"))
-	animated_player.animation = "idle"
-	animated_player.play()
-	
 	animated_enemy.connect("animation_finished", Callable(self, "_animation_finished_enemy"))
-	animated_enemy.animation = "enemy_idle"
-	animated_enemy.play()
-	
-	#animated_enemy2.animation = "snake_idle"
-	#animated_enemy2.play()
-	
 	get_tree().get_root().size_changed.connect(Callable(self, "_on_size_changed"))
-	
-	#$AudioStreamPlayerBgMusic.play()
-	is_battle_start = true
-	
-	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
-	Globals.AudioStreamPlayerBgMusic.play()
-	
 	if not start_fresh:
 		load_game()
 	
@@ -121,13 +110,6 @@ func _ready() -> void:
 	enemy_hp = enemy_hp_max
 	
 	update_hp()
-	
-	#$Control2/HealthBarPlayer.max_value = player_hp_max
-	#$Control2/HealthBarPlayer.value = player_hp
-	#
-	#$Control2/HealthBarEnemy.max_value = enemy_hp_max
-	#$Control2/HealthBarEnemy.value = enemy_hp
-	
 	var file_path = "res://data/kanji_data.json"
 	var json_as_text = FileAccess.get_file_as_string(file_path)
 	var kanji_data = JSON.parse_string(json_as_text)
@@ -135,28 +117,58 @@ func _ready() -> void:
 	complete_pool = kanji_data.pool
 	#kanji_refs = kanji_data.refs
 	
-	$Control/KanjiDrawPanel.kanji_refs = kanji_data.refs
+	$UI/KanjiDrawPanel.kanji_refs = kanji_data.refs
 	
 	pick_random_sentence()
 	save_game()
 	
-	$Control2/NextBattleButton.hide()
+	$UI2/NextBattleButton.hide()
 	#replacement_type = Globals.REPLACE_TYPES.pick_random()
 	
 	if debug_detector_mode:
-		$Control/KanjiDrawPanel.debug = true
-		$Control/KanjiDrawPanel.set_kanji_to_expect(debug_detector_kanji)
+		$UI/KanjiDrawPanel.debug = true
+		$UI/KanjiDrawPanel.set_kanji_to_expect(debug_detector_kanji)
 		%KanjiLabel.show()
-		$Control2/DebugButton1.show()
+		$UI2/DebugButton1.show()
 	else:
-		$Control2/DebugButton1.hide()
+		$UI2/DebugButton1.hide()
 	
-	$Control/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
+	$UI/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
 	set_draw_area_based_on_window()
 	
-	return
-
+		
+func _end_run() -> void:
+	animated_player.animation = "idle"
+	animated_player.play()
+	
+	animated_enemy.animation = "enemy_idle"
+	animated_enemy.play()
+	
+	#animated_enemy2.animation = "snake_idle"
+	#animated_enemy2.play()
+	
+	#$AudioStreamPlayerBgMusic.play()
+	is_battle_start = true
+	
+	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
+	Globals.AudioStreamPlayerBgMusic.play()
+	
+	$UI.show()
+	$UI2.show()
+	world.UI.show()
+	
+	#animated_player.animation = "idle"
+	#animated_player.offset.y = 0
+	#animated_player.play()
+	
+	#$AudioStreamPlayer2D.stop()
+	#Health_bar_enemy.show()
+	
+	print("_encounter_enemy")
+	
+	start_battle()
+	
 func _on_size_changed():
 	set_draw_area_based_on_window()
 	
@@ -170,9 +182,9 @@ func set_draw_area_based_on_window():
 	var v = {
 		"vp_size": get_viewport().size,
 		"scaled_vp_size": get_viewport().size / 3,
-		"kdp_size": $Control/KanjiDrawPanel.size,
-		"kdp_scale": $Control/KanjiDrawPanel.scale,
-		"scaled_kdp_size": $Control/KanjiDrawPanel.size * $Control/KanjiDrawPanel.scale,
+		"kdp_size": $UI/KanjiDrawPanel.size,
+		"kdp_scale": $UI/KanjiDrawPanel.scale,
+		"scaled_kdp_size": $UI/KanjiDrawPanel.size * $UI/KanjiDrawPanel.scale,
 		"camera_zoom": $Camera2D.zoom,
 		"camera_scale": $Camera2D.scale,
 		"vp_xy_ratio": float(get_viewport().size.x) / float(get_viewport().size.y),
@@ -203,20 +215,20 @@ func set_draw_area_based_on_window():
 			"more_y_space":more_y_space,
 			"adjustment":adjustment
 		})
-		$Control/KanjiDrawPanel.size.x = 75 + adjustment
-		$Control/KanjiDrawPanel.size.y = $Control/KanjiDrawPanel.size.x 
+		$UI/KanjiDrawPanel.size.x = 75 + adjustment
+		$UI/KanjiDrawPanel.size.y = $UI/KanjiDrawPanel.size.x 
 		
 		# Center the KanjiDrawPanel
-		$Control/KanjiDrawPanel.position.x = 40 - (adjustment/2)
+		$UI/KanjiDrawPanel.position.x = 40 - (adjustment/2)
 		
-		var scale = $Control/KanjiDrawPanel.size.x / 75
+		var scale = $UI/KanjiDrawPanel.size.x / 75
 		Globals.large_kanji_scale = Vector2(scale, scale)
 		Globals.large_kanji_position.y = -8# - floori(diff_x / 16)
 		Globals.large_kanji_position.x = 0
 		
 		var half_size = Vector2(
-			$Control/KanjiDrawPanel.size.x / 2,
-			$Control/KanjiDrawPanel.size.y / 2
+			$UI/KanjiDrawPanel.size.x / 2,
+			$UI/KanjiDrawPanel.size.y / 2
 		)
 		print("half",half_size)
 		Globals.small_kanji_position = half_size
@@ -224,10 +236,10 @@ func set_draw_area_based_on_window():
 		
 	else:
 		print("adjustment: default")
-		$Control/KanjiDrawPanel.size.x = 75
-		$Control/KanjiDrawPanel.size.y = 75
-		$Control/KanjiDrawPanel.position.x = 40
-		$Control/KanjiDrawPanel.position.y = 164
+		$UI/KanjiDrawPanel.size.x = 75
+		$UI/KanjiDrawPanel.size.y = 75
+		$UI/KanjiDrawPanel.position.x = 40
+		$UI/KanjiDrawPanel.position.y = 164
 		Globals.large_kanji_scale = Vector2(1.0, 1.0)
 		Globals.large_kanji_position = Vector2(0, -8)
 		Globals.small_kanji_position = Vector2i(30, 19)
@@ -236,7 +248,7 @@ func set_draw_area_based_on_window():
 	#print(x,y)
 	#Globals.large_kanji_position = %KanjiLabel.position
 	#Globals.large_kanji_scale = %KanjiLabel.scale
-	$Control/KanjiDrawPanel.draw_panel.size = $Control/KanjiDrawPanel.size
+	$UI/KanjiDrawPanel.draw_panel.size = $UI/KanjiDrawPanel.size
 		
 
 func _on_stroke_started():
@@ -376,7 +388,7 @@ func pick_random_sentence():
 		
 	set_char_to_draw(sentence_obj, replacement_type)
 	
-	$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type)
+	$UI/VerticalTextLabel.build_sentence(sentence_obj, replacement_type)
 	
 	#$"../KanjiLabel".text = "[center]" + kanji_key + "[/center]"
 	#$"../SentenceLabel".text = "[center]" + sentence_obj.sentence + "[/center]"
@@ -463,7 +475,7 @@ func set_kanji_to_draw(sentence_obj):
 	target_word = "".join(draw_word)
 	
 	var kanji_key = draw_word[current_draw_character_index]
-	$Control/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
+	$UI/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
 	#kanji_to_draw = kanji_refs[kanji_key]
 	#expand_strokes(kanji_to_draw)
 	
@@ -513,26 +525,26 @@ func set_furigana_to_draw(sentence_obj):
 	var furigana_array = sentence_obj.furigana[furigana_index].split()
 	current_draw_total_characters = furigana_array.size()
 	var kanji_key = furigana_array[current_draw_character_index]
-	$Control/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
+	$UI/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
 		
 	
 	#var kanji_key = draw_word[current_draw_character_index]
-	#$Control/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
+	#$UI/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
 	
-func _animation_changed():
-	var y_offsets = {
-		"idle": 3,
-		"idle_sword": 0,
-		"sword_draw": 0,
-		"sword_away": 0,
-		"attack_up": 0,
-		"attack_down": 0,
-		"attack_spin": 0,
-		"hurt": 0,
-		"die": 0,
-		"run": 0,
-	}
-	animated_player.offset.y = y_offsets[animated_player.animation]
+#func _animation_changed():
+	#var y_offsets = {
+		#"idle": 0,
+		#"idle_sword": 0,
+		#"sword_draw": 0,
+		#"sword_away": 0,
+		#"attack_up": 0,
+		#"attack_down": 0,
+		#"attack_spin": 0,
+		#"hurt": 0,
+		#"die": 0,
+		#"run": 0,
+	#}
+	#animated_player.offset.y = y_offsets[animated_player.animation]
 			
 func _animation_finished():
 	
@@ -549,11 +561,11 @@ func _animation_finished():
 			print("battle continues, enemy_hp: " + str(enemy_hp))
 			pick_random_sentence()
 		#pick_random_sentence()
-		#$Control/KanjiDrawPanel.reset_draw_panel()
-		#$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+		#$UI/KanjiDrawPanel.reset_draw_panel()
+		#$UI/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 		#replacement_type = Globals.REPLACE_TYPES.pick_random()
-		#$Control/VerticalTextLabel.build_sentence(replacement_type)
-		$Control/KanjiDrawPanel.enable()
+		#$UI/VerticalTextLabel.build_sentence(replacement_type)
+		$UI/KanjiDrawPanel.enable()
 	elif animated_player.animation in ["hurt"]:
 		
 		if player_hp <= 0:
@@ -563,9 +575,9 @@ func _animation_finished():
 		
 		animated_player.animation = "idle_sword"
 		animated_player.play()
-		$Control/KanjiDrawPanel.reset_draw_panel()
-		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
-		$Control/KanjiDrawPanel.enable()
+		$UI/KanjiDrawPanel.reset_draw_panel()
+		$UI/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+		$UI/KanjiDrawPanel.enable()
 		
 		
 		
@@ -582,9 +594,9 @@ func _animation_finished():
 		$AudioStreamPlayer2D.play()
 		player_hp = player_hp_max
 		Health_bar_player.hide()
-		$Control2/NextBattleButton.text = "Try again"
-		$Control2/NextBattleButton.show()
-		$Control/KanjiDrawPanel.hide()
+		$UI2/NextBattleButton.text = "Try again"
+		$UI2/NextBattleButton.show()
+		$UI/KanjiDrawPanel.hide()
 		%KanjiLabel.hide()
 		
 		player_gold = floori(player_gold / 2)
@@ -626,9 +638,9 @@ func _animation_finished_enemy():
 		Health_bar_enemy.hide()
 		animated_enemy.hide()
 		Health_bar_player.hide()
-		$Control2/NextBattleButton.text = "次 (つぎ)"
-		$Control2/NextBattleButton.show()
-		$Control/KanjiDrawPanel.hide()
+		$UI2/NextBattleButton.text = "次 (つぎ)"
+		$UI2/NextBattleButton.show()
+		$UI/KanjiDrawPanel.hide()
 		%KanjiLabel.hide()
 		
 		if level_up_during_battle:
@@ -639,8 +651,8 @@ func _animation_finished_enemy():
 		
 		show_kanji_progress()
 		
-		$Control/VerticalTextLabel.hide()
-		$Control2/TranslateButton.hide()
+		$UI/VerticalTextLabel.hide()
+		$UI2/TranslateButton.hide()
 		animated_player.animation = "sword_away"
 		animated_player.play()
 
@@ -739,7 +751,7 @@ func _on_kanji_draw_panel_correct_stroke(strokeIndex: Variant, stroke: Variant) 
 
 func _on_kanji_draw_panel_kanji_correct() -> void:
 	
-	$Control/KanjiDrawPanel.disable()
+	$UI/KanjiDrawPanel.disable()
 	
 	current_draw_character_index += 1
 	
@@ -752,10 +764,10 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		audio_player.play()
 		
 		#audio_player.connect("", Callable(self, "_after_correct_sound"))
-		$Control/KanjiDrawPanel.reset_draw_panel()
-		#$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
+		$UI/KanjiDrawPanel.reset_draw_panel()
+		#$UI/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
 	
-		$Control/VerticalTextLabel.show_answer()
+		$UI/VerticalTextLabel.show_answer()
 		animated_player.animation = attacks.pick_random()
 		animated_player.play()
 		
@@ -769,7 +781,7 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		timer.timeout.connect(Callable(self, "play_enemy_hurt"))
 		timer.start()
 		
-		$Control/KanjiDrawPanel.disable()
+		$UI/KanjiDrawPanel.disable()
 		
 		current_draw_character_index = 0
 		current_draw_total_characters = 0
@@ -785,12 +797,12 @@ func _on_kanji_draw_panel_kanji_correct() -> void:
 		audio_player.play()
 		# more letters to be drawn
 		#print("more letters")
-		$Control/KanjiDrawPanel.reset_draw_panel()
+		$UI/KanjiDrawPanel.reset_draw_panel()
 		#var kanji_key = furigana_array[current_draw_character_index]
-		#$Control/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
+		#$UI/KanjiDrawPanel.set_kanji_to_expect(kanji_key)
 		set_char_to_draw(sentence_obj, replacement_type)
 		#print("current_draw_character_index: " + str(current_draw_character_index))
-		$Control/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
+		$UI/VerticalTextLabel.build_sentence(sentence_obj, replacement_type, current_draw_character_index)
 
 func calculate_kp():
 	var total = 0
@@ -996,7 +1008,7 @@ func _on_kanji_draw_panel_kanji_incorrect() -> void:
 	
 	audio_player.stream = Globals.fx_incorrect
 	audio_player.play()
-	$Control/KanjiDrawPanel.redraw_with_color(Color.RED)
+	$UI/KanjiDrawPanel.redraw_with_color(Color.RED)
 	
 	reset_progress()
 
@@ -1070,7 +1082,7 @@ func update_hp():
 	
 	var kp_progress = get_kp_progress()
 	
-	$Control2/PlayerStats.text = Globals.player_name + "\n" +\
+	$UI2/PlayerStats.text = Globals.player_name + "\n" +\
 		"レベル: " + str(player_level) + "\n" +\
 		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
 		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
@@ -1078,10 +1090,10 @@ func update_hp():
 		"ゴールド: " + str(player_gold)
 		
 	if enemy_hp > 0:
-		$Control2/EnemyStats.text = enemy_name + "\n" +\
+		$UI2/EnemyStats.text = enemy_name + "\n" +\
 			"レベル: " + str(enemy_level)
 	else:
-		$Control2/EnemyStats.text = ""
+		$UI2/EnemyStats.text = ""
 		
 	print({
 		"player_hp":player_hp,
@@ -1092,27 +1104,27 @@ func update_hp():
 func _on_try_again_button_gui_input(event: InputEvent) -> void:
 	#print(event)
 	if event is InputEventMouseButton and event.button_index == 1:
-		#$Control/ResultLabel.text = ""
-		$Control/TryAgainButton.hide()
-		$Control/KanjiDrawPanel.reset_draw_panel()
-		$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+		#$UI/ResultLabel.text = ""
+		$UI/TryAgainButton.hide()
+		$UI/KanjiDrawPanel.reset_draw_panel()
+		$UI/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
 
 
 func _on_komoji_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		audio_player.stream = Globals.fx_chop1
 		audio_player.play(0.3)
-		$Control/KomojiLabel.show()
+		$UI/KomojiLabel.show()
 	else:
 		audio_player.stream = Globals.fx_mine4
 		audio_player.play(0.1)
-		$Control/KomojiLabel.hide()
+		$UI/KomojiLabel.hide()
 
 func _on_next_battle_button_button_up() -> void:
 	
-	$Control2/NextBattleButton.hide()
-	$Control/VerticalTextLabel.hide()
-	$Control2/TranslateButton.hide()
+	$UI2/NextBattleButton.hide()
+	$UI/VerticalTextLabel.hide()
+	$UI2/TranslateButton.hide()
 	$Prize.hide()
 	level_up_button.hide()
 	$KanjiProgress.hide()
@@ -1120,26 +1132,28 @@ func _on_next_battle_button_button_up() -> void:
 	audio_player.stream = Globals.fx_chop1
 	audio_player.play(0.3)
 	
-	animated_player.animation = "run"
-	animated_player.play()
+	world.run_to_next_npc()
 	
-	$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
-	$AudioStreamPlayer2D.stream.loop = true
-	$AudioStreamPlayer2D.play()
+	#animated_player.animation = "run"
+	#animated_player.play()
 	
-	var tween = create_tween()
-	tween.connect("finished", Callable(self, "_encounter_enemy"))
-	tween.parallel().tween_property(tile_map_layer, "position:x", -90, 2)
-	tween.parallel().tween_property(decor2, "position:x", 80, 2)
-	tween.parallel().tween_property(decor1, "position:x", -80, 2)
+	#$AudioStreamPlayer2D.stream = Globals.fx_dirt_run1
+	#$AudioStreamPlayer2D.stream.loop = true
+	#$AudioStreamPlayer2D.play()
 	
-	Health_bar_enemy.hide()
+	#var tween = create_tween()
+	#tween.connect("finished", Callable(self, "_encounter_enemy"))
+	#tween.parallel().tween_property(tile_map_layer, "position:x", -90, 2)
+	#tween.parallel().tween_property(decor2, "position:x", 80, 2)
+	#tween.parallel().tween_property(decor1, "position:x", -80, 2)
 	
-	animated_enemy.position.x = 250
-	animated_enemy.show()
-	animated_enemy.animation = "enemy_idle"
-	animated_enemy.play()
-	tween.parallel().tween_property(animated_enemy, "position:x", 76, 2)
+	#Health_bar_enemy.hide()
+	
+	#animated_enemy.position.x = 250
+	#animated_enemy.show()
+	#animated_enemy.animation = "enemy_idle"
+	#animated_enemy.play()
+	#tween.parallel().tween_property(animated_enemy, "position:x", 76, 2)
 	
 func _encounter_enemy():
 	animated_player.animation = "idle"
@@ -1159,21 +1173,21 @@ func start_battle():
 	audio_player.stream = Globals.fx_mine4
 	audio_player.play(0.1)
 	
-	$Control2/NextBattleButton.hide()
+	$UI2/NextBattleButton.hide()
 	level_up_button.hide()
-	$Control/KanjiDrawPanel.show()
-	$Control/KanjiDrawPanel.enable()
-	$Control/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
-	tile_map_layer.position.x = 90
+	$UI/KanjiDrawPanel.show()
+	$UI/KanjiDrawPanel.enable()
+	$UI/KanjiDrawPanel.redraw_with_color(Color.WHITE_SMOKE)
+	#tile_map_layer.position.x = 90
 	
-	decor1.position.x = 80
-	decor2.position.x = 245
+	#decor1.position.x = 80
+	#decor2.position.x = 245
 
-	$Control/VerticalTextLabel.show()
-	$Control2/TranslateButton.show()
+	$UI/VerticalTextLabel.show()
+	$UI2/TranslateButton.show()
 	translation_mode = "Jp"
-	$Control2/TranslateButton.text = "Jp"
-	$Control2/AltLangText.hide()
+	$UI2/TranslateButton.text = "Jp"
+	$UI2/AltLangText.hide()
 	%KanjiLabel.show()
 	
 	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
@@ -1217,18 +1231,18 @@ func _on_translate_button_button_up() -> void:
 	Globals.AudioStreamPlayerSoundFx.stream = Globals.fx_chop1
 	Globals.AudioStreamPlayerSoundFx.play(0.3)
 	
-	$Control2/AltLangText.text = sentence_obj.en
+	$UI2/AltLangText.text = sentence_obj.en
 	
 	if translation_mode == "Jp":
 		translation_mode = "En"
-		$Control2/TranslateButton.text = "En"
-		$Control2/AltLangText.show()
-		$Control/VerticalTextLabel.hide()
+		$UI2/TranslateButton.text = "En"
+		$UI2/AltLangText.show()
+		$UI/VerticalTextLabel.hide()
 	elif translation_mode == "En":
 		translation_mode = "Jp"
-		$Control2/TranslateButton.text = "Jp"
-		$Control2/AltLangText.hide()
-		$Control/VerticalTextLabel.show()
+		$UI2/TranslateButton.text = "Jp"
+		$UI2/AltLangText.hide()
+		$UI/VerticalTextLabel.show()
 
 
 func _on_debug_button_1_button_up() -> void:
