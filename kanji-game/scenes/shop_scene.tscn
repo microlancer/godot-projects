@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3pq5viin7pui"]
 
-[ext_resource type="PackedScene" uid="uid://b328cc8an1ojp" path="res://scenes/merchant.tscn" id="1_bfmos"]
-[ext_resource type="PackedScene" uid="uid://d3drf8st43386" path="res://scenes/player.tscn" id="2_f63sw"]
+[ext_resource type="PackedScene" uid="uid://dl8e7gqy7b4f6" path="res://scenes/merchant.tscn" id="1_bfmos"]
+[ext_resource type="PackedScene" uid="uid://dgs2gpy70wl21" path="res://scenes/player.tscn" id="2_f63sw"]
 
 [node name="ShopScene" type="Node2D"]
 
