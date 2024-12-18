@@ -38,9 +38,9 @@ func _process(_delta: float) -> void:
 	if _player != null:
 		_animated_sprite_2d.flip_h = _player.global_position.x < global_position.x
 
-		_player.position = _player.position.move_toward(_target.position, 200 * _delta)
+		_player.position.x = move_toward(_player.position.x, _target.position.x, 200 * _delta)
 
-		if _player.position == _target.position:
+		if _player.position.x == _target.position.x:
 			arrived.emit()
 
 	for i: Button in _inventory.get_children():
