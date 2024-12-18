@@ -1,4 +1,4 @@
-[gd_scene load_steps=601 format=4 uid="uid://2uycjxqdaclw"]
+[gd_scene load_steps=601 format=4 uid="uid://bmrjl77m8kh4x"]
 
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_hie7w"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="2_a6368"]

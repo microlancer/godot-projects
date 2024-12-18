@@ -1,8 +1,7 @@
-[gd_scene load_steps=456 format=3 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=455 format=3 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://scripts/battle.gd" id="1_vyelx"]
-[ext_resource type="AudioStream" uid="uid://dsq53dnwje0t" path="res://assets/music/Action 1.mp3" id="2_1fdng"]
-[ext_resource type="PackedScene" uid="uid://2uycjxqdaclw" path="res://scenes/world.tscn" id="2_f0y0t"]
+[ext_resource type="PackedScene" uid="uid://bmrjl77m8kh4x" path="res://scenes/world.tscn" id="2_f0y0t"]
 [ext_resource type="Texture2D" uid="uid://cw48ik3c011jc" path="res://assets/graphics/kanji-block.png" id="8_6fbru"]
 [ext_resource type="Texture2D" uid="uid://d1sic1jsrgotf" path="res://assets/graphics/kanji-block2.png" id="9_ehk8a"]
 [ext_resource type="Script" path="res://scripts/kanji_draw_panel.gd" id="10_khsv0"]
@@ -3088,9 +3087,7 @@ level_up_button = NodePath("UI2/LevelUpButton")
 [node name="world" parent="world_root" instance=ExtResource("2_f0y0t")]
 
 [node name="AudioStreamPlayerBgMusicX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_1fdng")
 volume_db = -0.675
-parameters/looping = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
