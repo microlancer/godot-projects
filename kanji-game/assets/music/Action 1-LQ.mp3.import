@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8hkghuscpbya"
+path="res://.godot/imported/Action 1-LQ.mp3-0d1ed3548ffdaf3f7d03f2fea3f90fc1.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Action 1-LQ.mp3"
+dest_files=["res://.godot/imported/Action 1-LQ.mp3-0d1ed3548ffdaf3f7d03f2fea3f90fc1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
