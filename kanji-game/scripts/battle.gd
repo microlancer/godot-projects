@@ -173,38 +173,62 @@ func _on_size_changed():
 	set_draw_area_based_on_window()
 	
 func set_draw_area_based_on_window():
-	return
 	var viewport_size = get_viewport().size
-	var default_aspect_ratio = 0.625  # Default (450/720)
+	var vp_aspect_ratio = float(viewport_size.x) / float(viewport_size.y)
+	var default_aspect_ratio = 450.0 / 720.0  # Default aspect ratio
+	
 	var draw_panel = $Control/KanjiDrawPanel
+	var adjustment = 0.0
 	
-	# Calculate viewport aspect ratio
-	var aspect_ratio = viewport_size.x / viewport_size.y
+	# Debug data to track calculations
+	var debug_data = {
+		"viewport_size": viewport_size,
+		"vp_aspect_ratio": vp_aspect_ratio,
+		"default_aspect_ratio": default_aspect_ratio,
+		"initial_draw_panel_size": draw_panel.size,
+		"initial_draw_panel_position": draw_panel.position
+	}
 	
-	# Determine maximum size for KanjiDrawPanel based on the narrower dimension
-	var max_size = min(viewport_size.x, viewport_size.y * default_aspect_ratio)
-	draw_panel.size = Vector2(max_size, max_size)  # Maintain square size
+	# Adjust based on aspect ratio
+	if vp_aspect_ratio < default_aspect_ratio:  # "Tall box" scenario
+		var diff_x = 450 - viewport_size.x
+		var diff_y = viewport_size.y - 720
+		
+		# Calculate adjustment to size
+		adjustment = (diff_x / 3.25 + diff_y / 6) / 2.0  # Halved adjustment for better fit
+		
+		# Resize the KanjiDrawPanel
+		draw_panel.size.x = 75 + adjustment
+		draw_panel.size.y = draw_panel.size.x  # Keep it square
+		
+		# Center and position
+		draw_panel.position.x = 10 - (adjustment / 2)
+		draw_panel.position.y = (viewport_size.y - draw_panel.size.y) / 2  # Center vertically
+		
+	else:  # Default adjustment
+		draw_panel.size = Vector2(75, 75)
+		draw_panel.position = Vector2(20, 164)
 	
-	# Center the KanjiDrawPanel horizontally, adjust vertically if needed
-	draw_panel.position.x = (viewport_size.x - max_size) / 2
-	draw_panel.position.y = (viewport_size.y - max_size) / 2
-	
-	# Scale adjustments
-	var scale = max_size / 75.0  # 75 is the default size
+	# Update scales and positions for Kanji
+	var scale = draw_panel.size.x / 75.0
 	Globals.large_kanji_scale = Vector2(scale, scale)
 	Globals.large_kanji_position = Vector2(0, -8)
-	Globals.small_kanji_position = draw_panel.size / 2
+	
+	Globals.small_kanji_position = Vector2(
+		draw_panel.size.x / 2, 
+		draw_panel.size.y / 2
+	)
 	Globals.small_kanji_scale = Vector2(0.7 * scale, 0.7 * scale)
 	
-	# Debug information for verification
-	print({
-		"viewport_size": viewport_size,
-		"aspect_ratio": aspect_ratio,
-		"draw_panel_size": draw_panel.size,
-		"draw_panel_position": draw_panel.position,
-		"scale": scale
-	})
-		
+	# Debug logging (adding new debug data manually)
+	debug_data["adjustment"] = adjustment
+	debug_data["final_draw_panel_size"] = draw_panel.size
+	debug_data["final_draw_panel_position"] = draw_panel.position
+	debug_data["large_kanji_scale"] = Globals.large_kanji_scale
+	debug_data["small_kanji_position"] = Globals.small_kanji_position
+	debug_data["small_kanji_scale"] = Globals.small_kanji_scale
+	
+	print(debug_data)
 
 func _on_stroke_started():
 	print("_on_stroke_started")
