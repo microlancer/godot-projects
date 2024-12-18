@@ -135,9 +135,7 @@ func _ready() -> void:
 	
 	$UI/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
-	set_draw_area_based_on_window()
 	
-		
 func _end_run() -> void:
 	animated_player.animation = "idle"
 	animated_player.play()
