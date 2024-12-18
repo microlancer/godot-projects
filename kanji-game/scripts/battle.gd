@@ -174,81 +174,36 @@ func _on_size_changed():
 	
 func set_draw_area_based_on_window():
 	return
-	var y = get_viewport().size.y
-	var x = get_viewport().size.x
-	var diff_x = 450 - get_viewport().size.x
-	var diff_y = 720 - get_viewport().size.y
+	var viewport_size = get_viewport().size
+	var default_aspect_ratio = 0.625  # Default (450/720)
+	var draw_panel = $Control/KanjiDrawPanel
 	
-	var v = {
-		"vp_size": get_viewport().size,
-		"scaled_vp_size": get_viewport().size / 3,
-		"kdp_size": $UI/KanjiDrawPanel.size,
-		"kdp_scale": $UI/KanjiDrawPanel.scale,
-		"scaled_kdp_size": $UI/KanjiDrawPanel.size * $UI/KanjiDrawPanel.scale,
-		"camera_zoom": $Camera2D.zoom,
-		"camera_scale": $Camera2D.scale,
-		"vp_xy_ratio": float(get_viewport().size.x) / float(get_viewport().size.y),
-		"vp_default_xy_ratio": 0.625,
-		"diff_x": diff_x,
-		"diff_y": diff_y,
-	}
-	print(v)
+	# Calculate viewport aspect ratio
+	var aspect_ratio = viewport_size.x / viewport_size.y
 	
-	if v.vp_xy_ratio < v.vp_default_xy_ratio:
-		print("tall box")
-		var diff_ratio = v.vp_default_xy_ratio - v.vp_xy_ratio
-		var diff_ratio_pct = diff_ratio / v.vp_default_xy_ratio
-		var less_x_space = 450 - v.vp_size.x
-		var more_y_space = v.vp_size.y - 720
-		var adjustment = less_x_space / 3.25 + more_y_space / 6
-		
-		# the above adjustment seems to work well on chrome+pc
-		# but on chrome+android the above results in a drawing
-		# area that is too large and cut off at the screen edge
-		# so we cut that adjustment in half. ideally, dont want
-		# this:
-		adjustment = adjustment / 2
-		
-		print({
-			"diff_ratio_pct":diff_ratio_pct,
-			"less_x_space":less_x_space,
-			"more_y_space":more_y_space,
-			"adjustment":adjustment
-		})
-		$UI/KanjiDrawPanel.size.x = 75 + adjustment
-		$UI/KanjiDrawPanel.size.y = $UI/KanjiDrawPanel.size.x 
-		
-		# Center the KanjiDrawPanel
-		$UI/KanjiDrawPanel.position.x = 40 - (adjustment/2)
-		
-		var scale = $UI/KanjiDrawPanel.size.x / 75
-		Globals.large_kanji_scale = Vector2(scale, scale)
-		Globals.large_kanji_position.y = -8# - floori(diff_x / 16)
-		Globals.large_kanji_position.x = 0
-		
-		var half_size = Vector2(
-			$UI/KanjiDrawPanel.size.x / 2,
-			$UI/KanjiDrawPanel.size.y / 2
-		)
-		print("half",half_size)
-		Globals.small_kanji_position = half_size
-		Globals.small_kanji_scale = Vector2(0.7*scale, 0.7*scale)
-		
-	else:
-		print("adjustment: default")
-		$UI/KanjiDrawPanel.size.x = 75
-		$UI/KanjiDrawPanel.size.y = 75
-		$UI/KanjiDrawPanel.position.x = 40
-		$UI/KanjiDrawPanel.position.y = 164
-		Globals.large_kanji_scale = Vector2(1.0, 1.0)
-		Globals.large_kanji_position = Vector2(0, -8)
-		Globals.small_kanji_position = Vector2i(30, 19)
-		Globals.small_kanji_scale = Vector2(0.7, 0.7)
-		#%KanjiLabel.position.x = -20
-	#print(x,y)
-	#Globals.large_kanji_position = %KanjiLabel.position
-	#Globals.large_kanji_scale = %KanjiLabel.scale
-	$UI/KanjiDrawPanel.draw_panel.size = $UI/KanjiDrawPanel.size
+	# Determine maximum size for KanjiDrawPanel based on the narrower dimension
+	var max_size = min(viewport_size.x, viewport_size.y * default_aspect_ratio)
+	draw_panel.size = Vector2(max_size, max_size)  # Maintain square size
+	
+	# Center the KanjiDrawPanel horizontally, adjust vertically if needed
+	draw_panel.position.x = (viewport_size.x - max_size) / 2
+	draw_panel.position.y = (viewport_size.y - max_size) / 2
+	
+	# Scale adjustments
+	var scale = max_size / 75.0  # 75 is the default size
+	Globals.large_kanji_scale = Vector2(scale, scale)
+	Globals.large_kanji_position = Vector2(0, -8)
+	Globals.small_kanji_position = draw_panel.size / 2
+	Globals.small_kanji_scale = Vector2(0.7 * scale, 0.7 * scale)
+	
+	# Debug information for verification
+	print({
+		"viewport_size": viewport_size,
+		"aspect_ratio": aspect_ratio,
+		"draw_panel_size": draw_panel.size,
+		"draw_panel_position": draw_panel.position,
+		"scale": scale
+	})
 		
 
 func _on_stroke_started():
