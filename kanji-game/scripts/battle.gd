@@ -66,20 +66,12 @@ var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
 
 @export var world:Node2D
-#@export var animated_player:AnimatedSprite2D
-#@export var animated_enemy:AnimatedSprite2D
-#@export var enemy_damage_label:Label
-#@export var player_damage_label:Label
-#@export var level_up_button:Button
-@onready var animated_player = world.Player
-@onready var animated_enemy = world.NonPlayableCharacter
-@onready var enemy_damage_label = world.Player_health_label
-@onready var player_damage_label = world.Enemy_health_label
-#@onready var tile_map_layer = world.world_tile_map_layer
-#@onready var decor1 = world.Decor1
-#@onready var decor2 = world.Decor2
-@onready var Health_bar_player = world.player_health_bar
-@onready var Health_bar_enemy = world.enemy_health_bar
+@onready var animated_player:AnimatedSprite2D = world.Player
+@onready var animated_enemy:AnimatedSprite2D = world.NonPlayableCharacter
+@onready var enemy_damage_label:Label = world.Player_health_label
+@onready var player_damage_label:Label = world.Enemy_health_label
+@onready var Health_bar_player:ProgressBar = world.player_health_bar
+@onready var Health_bar_enemy:ProgressBar = world.enemy_health_bar
 @export var level_up_button:Button
 
 # -------------------------------------------------------------------
@@ -167,67 +159,6 @@ func _end_run() -> void:
 	
 	start_battle()
 	
-func _on_size_changed():
-	set_draw_area_based_on_window()
-	
-func set_draw_area_based_on_window():
-	var viewport_size = get_viewport().size
-	var vp_aspect_ratio = float(viewport_size.x) / float(viewport_size.y)
-	var default_aspect_ratio = 450.0 / 720.0  # Default aspect ratio
-	
-	var draw_panel = $Control/KanjiDrawPanel
-	var adjustment = 0.0
-	
-	# Debug data to track calculations
-	var debug_data = {
-		"viewport_size": viewport_size,
-		"vp_aspect_ratio": vp_aspect_ratio,
-		"default_aspect_ratio": default_aspect_ratio,
-		"initial_draw_panel_size": draw_panel.size,
-		"initial_draw_panel_position": draw_panel.position
-	}
-	
-	# Adjust based on aspect ratio
-	if vp_aspect_ratio < default_aspect_ratio:  # "Tall box" scenario
-		var diff_x = 450 - viewport_size.x
-		var diff_y = viewport_size.y - 720
-		
-		# Calculate adjustment to size
-		adjustment = (diff_x / 3.25 + diff_y / 6) / 2.0  # Halved adjustment for better fit
-		
-		# Resize the KanjiDrawPanel
-		draw_panel.size.x = 75 + adjustment
-		draw_panel.size.y = draw_panel.size.x  # Keep it square
-		
-		# Center and position
-		draw_panel.position.x = 10 - (adjustment / 2)
-		draw_panel.position.y = (viewport_size.y - draw_panel.size.y) / 2  # Center vertically
-		
-	else:  # Default adjustment
-		draw_panel.size = Vector2(75, 75)
-		draw_panel.position = Vector2(20, 164)
-	
-	# Update scales and positions for Kanji
-	var scale = draw_panel.size.x / 75.0
-	Globals.large_kanji_scale = Vector2(scale, scale)
-	Globals.large_kanji_position = Vector2(0, -8)
-	
-	Globals.small_kanji_position = Vector2(
-		draw_panel.size.x / 2, 
-		draw_panel.size.y / 2
-	)
-	Globals.small_kanji_scale = Vector2(0.7 * scale, 0.7 * scale)
-	
-	# Debug logging (adding new debug data manually)
-	debug_data["adjustment"] = adjustment
-	debug_data["final_draw_panel_size"] = draw_panel.size
-	debug_data["final_draw_panel_position"] = draw_panel.position
-	debug_data["large_kanji_scale"] = Globals.large_kanji_scale
-	debug_data["small_kanji_position"] = Globals.small_kanji_position
-	debug_data["small_kanji_scale"] = Globals.small_kanji_scale
-	
-	print(debug_data)
-
 func _on_stroke_started():
 	print("_on_stroke_started")
 	audio_player.stream = Globals.fx_light_torch1
