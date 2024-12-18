@@ -3110,10 +3110,10 @@ polygon = PackedVector2Array(9.169, 23, 60.755, 23, 60.8387, 78.7043, 9.20376, 7
 modulate = Color(0, 0, 0, 1)
 z_index = -5
 z_as_relative = false
-offset_left = -328.0
-offset_top = -112.0
-offset_right = 760.0
-offset_bottom = 848.0
+offset_left = -466.593
+offset_top = -360.902
+offset_right = 621.407
+offset_bottom = 599.098
 texture = SubResource("CanvasTexture_qm0hu")
 
 [node name="UI" type="Control" parent="."]
