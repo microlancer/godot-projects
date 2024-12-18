@@ -15,3 +15,4 @@ DEMO: https://thorie.itch.io/kanjipaneldemo
 ## Sounds.
 
 royalty free cash register sound from pixabay
+royalty free error sound from pixabay
