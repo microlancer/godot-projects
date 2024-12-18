@@ -173,7 +173,7 @@ func _on_size_changed():
 	set_draw_area_based_on_window()
 	
 func set_draw_area_based_on_window():
-	
+	return
 	var y = get_viewport().size.y
 	var x = get_viewport().size.x
 	var diff_x = 450 - get_viewport().size.x
