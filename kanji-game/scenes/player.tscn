@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=3 uid="uid://cs5a2tcusjewb"]
+[gd_scene load_steps=162 format=3 uid="uid://cs5a2tcusjewb"]
 
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="1_2o2fh"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="2_axj36"]
@@ -996,6 +996,9 @@ radius = 50.636
 [sub_resource type="LabelSettings" id="LabelSettings_u80j4"]
 font = ExtResource("68_bnrld")
 
+[sub_resource type="LabelSettings" id="LabelSettings_s4h5c"]
+font_size = 7
+
 [node name="Player" type="AnimatedSprite2D"]
 texture_filter = 1
 position = Vector2(44, 9)
@@ -1010,15 +1013,15 @@ position = Vector2(25, 22)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
 shape = SubResource("CircleShape2D_55bl2")
 
-[node name="CanvasLayer" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 4.0
-offset_top = 47.0
-offset_right = 4.0
-offset_bottom = 47.0
+offset_left = -36.0
+offset_top = -25.0
+offset_right = -36.0
+offset_bottom = -25.0
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="UI"]
 layout_mode = 0
 offset_left = -26.0
 offset_top = -79.0
@@ -1028,15 +1031,39 @@ scale = Vector2(0.5, 0.5)
 text = ": 0"
 label_settings = SubResource("LabelSettings_u80j4")
 
-[node name="TextureRect" type="Sprite2D" parent="CanvasLayer"]
+[node name="TextureRect" type="Sprite2D" parent="UI"]
 position = Vector2(-35.75, -72)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("69_7yq57")
 region_enabled = true
 region_rect = Rect2(227, 389, 25, 21)
 
+[node name="InventoryButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = -77.0
+offset_right = 86.0
+offset_bottom = -66.0
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/InventoryButton"]
+modulate = Color(1, 0.615686, 1, 1)
+position = Vector2(6, 5)
+scale = Vector2(0.271739, 0.271739)
+texture = ExtResource("69_7yq57")
+region_enabled = true
+region_rect = Rect2(4, 323, 23, 26)
+
+[node name="MenuMenuButton" type="Button" parent="UI"]
+z_index = 3
+offset_left = -45.0
+offset_top = 139.0
+offset_right = 80.0
+offset_bottom = 173.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 16
+text = "BACK TO TOWN"
+
 [node name="Control" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -20.0
@@ -1044,54 +1071,88 @@ offset_top = -81.0
 offset_right = 20.0
 offset_bottom = -41.0
 
-[node name="GridContainer" type="GridContainer" parent="Control"]
+[node name="InventoryUI" type="GridContainer" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = -8.0
 offset_right = 96.0
 offset_bottom = 80.0
 columns = 3
 
-[node name="Button" type="Button" parent="Control/GridContainer"]
+[node name="Button" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button2" type="Button" parent="Control/GridContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/InventoryUI/Button"]
+position = Vector2(11, 8)
+
+[node name="Label" type="Label" parent="Control/InventoryUI/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.703704
+anchor_top = 0.210526
+anchor_right = 0.925926
+anchor_bottom = 0.894737
+label_settings = SubResource("LabelSettings_s4h5c")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button3" type="Button" parent="Control/GridContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/InventoryUI/Button2"]
+position = Vector2(11, 8)
+
+[node name="Label" type="Label" parent="Control/InventoryUI/Button2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.703704
+anchor_top = 0.210526
+anchor_right = 0.925926
+anchor_bottom = 0.894737
+offset_right = 0.555556
+offset_bottom = 10.6316
+label_settings = SubResource("LabelSettings_s4h5c")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button4" type="Button" parent="Control/GridContainer"]
+[node name="Button4" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button5" type="Button" parent="Control/GridContainer"]
+[node name="Button5" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button6" type="Button" parent="Control/GridContainer"]
+[node name="Button6" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button7" type="Button" parent="Control/GridContainer"]
+[node name="Button7" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button8" type="Button" parent="Control/GridContainer"]
+[node name="Button8" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button9" type="Button" parent="Control/GridContainer"]
+[node name="Button9" type="Button" parent="Control/InventoryUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[connection signal="pressed" from="UI/InventoryButton" to="." method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="UI/MenuMenuButton" to="." method="_on_menu_menu_button_pressed"]

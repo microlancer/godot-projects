@@ -1,11 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://dl8e7gqy7b4f6"]
+[gd_scene load_steps=16 format=3 uid="uid://dl8e7gqy7b4f6"]
 
 [ext_resource type="Script" path="res://scripts/merchant.gd" id="1_v6ses"]
 [ext_resource type="Texture2D" uid="uid://cydw23ljdluvu" path="res://assets/graphics/NPCs/Idle1/1.png" id="1_wpddl"]
+[ext_resource type="Script" path="res://resources/inventory_item.gd" id="2_5qjb7"]
 [ext_resource type="Texture2D" uid="uid://ccptbcgttwifb" path="res://assets/graphics/NPCs/Idle1/2.png" id="2_giwmy"]
+[ext_resource type="Resource" uid="uid://c7solq6cd7mpl" path="res://resources/apple.tres" id="3_2skwp"]
 [ext_resource type="Texture2D" uid="uid://dbtfb3rg5drpq" path="res://assets/graphics/NPCs/Idle1/3.png" id="3_bjco8"]
+[ext_resource type="Resource" uid="uid://qlw4h5k1efsc" path="res://resources/potion.tres" id="4_3hgep"]
 [ext_resource type="Texture2D" uid="uid://c4gniw865uhnn" path="res://assets/graphics/NPCs/Idle1/4.png" id="4_58kw3"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="6_y7h2v"]
+[ext_resource type="PackedScene" uid="uid://cs5a2tcusjewb" path="res://scenes/player.tscn" id="7_cjkvi"]
+[ext_resource type="AudioStream" uid="uid://drj4g5cqgib1i" path="res://assets/sound_fx/cash-register-purchase-87313.mp3" id="10_bgg52"]
+[ext_resource type="AudioStream" uid="uid://b7i17yvpj5jw3" path="res://assets/sound_fx/error-126627.mp3" id="12_7n1jf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x6nt2"]
 animations = [{
@@ -33,8 +39,11 @@ radius = 75.0
 [sub_resource type="LabelSettings" id="LabelSettings_0kydk"]
 font_size = 7
 
-[node name="Merchant" type="Area2D"]
+[node name="Merchant" type="Area2D" node_paths=PackedStringArray("_player")]
+position = Vector2(368, 88)
 script = ExtResource("1_v6ses")
+item_resources = Array[ExtResource("2_5qjb7")]([ExtResource("3_2skwp"), ExtResource("4_3hgep")])
+_player = NodePath("Player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8.5, 0)
@@ -66,7 +75,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button"]
+[node name="Apple" type="Sprite2D" parent="UI/Inventory/Button"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_y7h2v")
@@ -87,7 +96,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button2"]
+[node name="Potion" type="Sprite2D" parent="UI/Inventory/Button2"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_y7h2v")
@@ -111,11 +120,11 @@ size_flags_vertical = 3
 [node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button3"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_y7h2v")
 region_enabled = true
 region_rect = Rect2(36, 453, 23, 23)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button3"]
+visible = false
 layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
@@ -132,11 +141,11 @@ size_flags_vertical = 3
 [node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button4"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_y7h2v")
 region_enabled = true
 region_rect = Rect2(72, 451, 16, 26)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button4"]
+visible = false
 layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
@@ -153,11 +162,11 @@ size_flags_vertical = 3
 [node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button5"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_y7h2v")
 region_enabled = true
 region_rect = Rect2(35, 388, 26, 25)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button5"]
+visible = false
 layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
@@ -174,11 +183,11 @@ size_flags_vertical = 3
 [node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button6"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_y7h2v")
 region_enabled = true
 region_rect = Rect2(323, 451, 26, 26)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button6"]
+visible = false
 layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
@@ -195,11 +204,11 @@ size_flags_vertical = 3
 [node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button7"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_y7h2v")
 region_enabled = true
 region_rect = Rect2(358, 451, 22, 27)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button7"]
+visible = false
 layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
@@ -216,11 +225,11 @@ size_flags_vertical = 3
 [node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button8"]
 position = Vector2(12, 6.5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_y7h2v")
 region_enabled = true
 region_rect = Rect2(419, 451, 27, 27)
 
 [node name="Label" type="Label" parent="UI/Inventory/Button8"]
+visible = false
 layout_mode = 0
 offset_top = 10.0
 offset_right = 25.0
@@ -235,5 +244,21 @@ offset_left = -56.0
 offset_top = -56.0
 offset_right = 64.0
 offset_bottom = -24.0
+
+[node name="Player" parent="." instance=ExtResource("7_cjkvi")]
+position = Vector2(-352, -24)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-8, 16)
+position_smoothing_speed = 4.0
+
+[node name="PurchaseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_bgg52")
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_7n1jf")
+
+[node name="Target" type="Marker2D" parent="."]
+position = Vector2(16, -24)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
