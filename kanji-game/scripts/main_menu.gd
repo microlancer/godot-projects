@@ -26,7 +26,7 @@ func _ready() -> void:
 		Globals.player_name = "プレイヤー"
 		
 	if not Globals.AudioStreamPlayerBgMusic.stream:
-		Globals.AudioStreamPlayerBgMusic.stream = preload("res://assets/music/Ambient 1.mp3")
+		Globals.AudioStreamPlayerBgMusic.stream = preload("res://assets/music/Ambient 1-LQ.mp3")
 		#add_child(Globals.AudioStreamPlayerBgMusic)
 		
 	if Globals.custom_bg_music_enabled and not Globals.AudioStreamPlayerBgMusic.is_playing():
