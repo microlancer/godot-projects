@@ -1,6 +1,6 @@
 [gd_scene load_steps=601 format=4 uid="uid://bmrjl77m8kh4x"]
 
-[ext_resource type="Script" path="res://scenes/world.gd" id="1_hie7w"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_hie7w"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="2_a6368"]
 [ext_resource type="Texture2D" uid="uid://bfv7i6nwi3b2u" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG2.png" id="3_7mqe7"]
 [ext_resource type="Texture2D" uid="uid://jo1b80rhwlc6" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG3.png" id="4_16qid"]
