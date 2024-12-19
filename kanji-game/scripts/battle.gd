@@ -502,6 +502,7 @@ func _animation_finished():
 		$AudioStreamPlayer2D.play()
 		player_hp = player_hp_max
 		Health_bar_player.hide()
+		$UI2/PlayerLevel.hide()
 		$UI2/NextBattleButton.text = "Try again"
 		$UI2/NextBattleButton.show()
 		$UI/KanjiDrawPanel.hide()
@@ -544,8 +545,10 @@ func _animation_finished_enemy():
 		$AudioStreamPlayer2D2.volume_db = -15.0
 		$AudioStreamPlayer2D2.play()
 		Health_bar_enemy.hide()
+		$UI2/EnemyLevel.hide()
 		animated_enemy.hide()
 		Health_bar_player.hide()
+		$UI2/PlayerLevel.hide()
 		$UI2/NextBattleButton.text = "次 (つぎ)"
 		$UI2/NextBattleButton.show()
 		$UI/KanjiDrawPanel.hide()
@@ -631,7 +634,8 @@ func get_gold():
 	var gold_amount = randi_range(1, enemy_level)
 	
 	$Prize/TextureRectCoin/GoldAmount.text = str(gold_amount)
-	
+	$Prize/PlayerGold_Graphic/PlayerGold.text = str(player_gold)
+	$Prize/PlayerEXP_Graphic/Playerexperience.text = str(player_kp)
 	player_gold += gold_amount
 	
 	update_hp()
@@ -1000,7 +1004,7 @@ func update_hp():
 	if enemy_hp > 0:
 		pass
 	else:
-		$UI2/EnemyStats.text = ""
+		pass
 		
 	print({
 		"player_hp":player_hp,
@@ -1069,6 +1073,7 @@ func _encounter_enemy():
 	
 	$AudioStreamPlayer2D.stop()
 	Health_bar_enemy.show()
+	$UI2/EnemyLevel.show()
 	
 	print("_encounter_enemy")
 	
@@ -1117,7 +1122,9 @@ func start_battle():
 	animated_enemy.play()
 	
 	Health_bar_player.show()
+	$UI2/PlayerLevel.show()
 	Health_bar_enemy.show()
+	$UI2/EnemyLevel.show()
 
 	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
 	Globals.AudioStreamPlayerBgMusic.play()

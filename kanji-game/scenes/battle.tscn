@@ -1,4 +1,4 @@
-[gd_scene load_steps=458 format=3 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=457 format=3 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://scripts/battle.gd" id="1_vyelx"]
 [ext_resource type="PackedScene" uid="uid://bmrjl77m8kh4x" path="res://scenes/world.tscn" id="2_f0y0t"]
@@ -24,10 +24,6 @@ line_spacing = -10.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_423xv"]
 font_color = Color(0.356863, 0.356863, 0.356863, 0.243137)
-
-[sub_resource type="LabelSettings" id="LabelSettings_cyab5"]
-line_spacing = 0.0
-font_size = 5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqlou"]
 atlas = ExtResource("79_pgljm")
@@ -3287,9 +3283,6 @@ offset_bottom = 40.0
 
 [node name="PlayerLevel" type="Label" parent="UI2"]
 layout_mode = 0
-
-[node name="PlayerStats" type="Label" parent="UI2"]
-layout_mode = 0
 offset_left = 59.0
 offset_top = 1.0
 offset_right = 215.0
@@ -3300,15 +3293,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 46
 text = "level: 1"
-
-[node name="EnemyStats" type="Label" parent="UI2"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 50.0
-offset_right = 146.0
-offset_bottom = 97.0
-label_settings = SubResource("LabelSettings_cyab5")
-horizontal_alignment = 2
 
 [node name="EnemyLevel" type="Label" parent="UI2"]
 layout_mode = 0
