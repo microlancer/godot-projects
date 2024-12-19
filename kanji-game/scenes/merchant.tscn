@@ -1,0 +1,378 @@
+[gd_scene load_steps=21 format=4 uid="uid://dl8e7gqy7b4f6"]
+
+[ext_resource type="Script" path="res://scripts/merchant.gd" id="1_v6ses"]
+[ext_resource type="Texture2D" uid="uid://cydw23ljdluvu" path="res://assets/graphics/NPCs/Idle1/1.png" id="1_wpddl"]
+[ext_resource type="Script" path="res://resources/inventory_item.gd" id="2_5qjb7"]
+[ext_resource type="Texture2D" uid="uid://ccptbcgttwifb" path="res://assets/graphics/NPCs/Idle1/2.png" id="2_giwmy"]
+[ext_resource type="Resource" uid="uid://c7solq6cd7mpl" path="res://resources/apple.tres" id="3_2skwp"]
+[ext_resource type="Texture2D" uid="uid://dbtfb3rg5drpq" path="res://assets/graphics/NPCs/Idle1/3.png" id="3_bjco8"]
+[ext_resource type="Resource" uid="uid://qlw4h5k1efsc" path="res://resources/potion.tres" id="4_3hgep"]
+[ext_resource type="Texture2D" uid="uid://c4gniw865uhnn" path="res://assets/graphics/NPCs/Idle1/4.png" id="4_58kw3"]
+[ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="6_y7h2v"]
+[ext_resource type="PackedScene" uid="uid://cs5a2tcusjewb" path="res://scenes/player.tscn" id="7_cjkvi"]
+[ext_resource type="AudioStream" uid="uid://drj4g5cqgib1i" path="res://assets/sound_fx/cash-register-purchase-87313.mp3" id="10_bgg52"]
+[ext_resource type="AudioStream" uid="uid://b7i17yvpj5jw3" path="res://assets/sound_fx/error-126627.mp3" id="12_7n1jf"]
+[ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="13_w2xr5"]
+[ext_resource type="Texture2D" uid="uid://dlkni6tdcdruh" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/Tileset.png" id="14_fufhx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gioat"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6nt2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wpddl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_giwmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bjco8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_58kw3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cg61"]
+radius = 75.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kydk"]
+font_size = 7
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1yy4"]
+texture = ExtResource("14_fufhx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wg475"]
+sources/0 = SubResource("TileSetAtlasSource_q1yy4")
+
+[node name="Merchant" type="Area2D" node_paths=PackedStringArray("_player")]
+position = Vector2(368, 88)
+script = ExtResource("1_v6ses")
+item_resources = Array[ExtResource("2_5qjb7")]([ExtResource("3_2skwp"), ExtResource("4_3hgep")])
+_player = NodePath("Player")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -3
+offset_left = -576.0
+offset_top = -256.0
+offset_right = 728.0
+offset_bottom = -72.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gioat")
+
+[node name="Panel2" type="Panel" parent="."]
+z_index = -3
+offset_left = -536.0
+offset_top = -8.0
+offset_right = 728.0
+offset_bottom = 544.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gioat")
+
+[node name="CanvasLayer" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(0, -120)
+
+[node name="Bg1Clouds" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(446.134, 84.4616)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="Bg4Clouds" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(634.55, 84.5444)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="Bg5Clouds" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(257.735, 84.5791)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="Bg5Clouds2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(72, 84.5791)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="Bg5Clouds3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-112, 84.5791)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="Bg5Clouds4" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-296, 84.5791)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="Bg5Clouds5" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-480, 84.5791)
+scale = Vector2(0.588542, 0.588542)
+texture = ExtResource("13_w2xr5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.5, -9.25)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_x6nt2")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.5, -9.25)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_4cg61")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -72.0
+offset_top = -96.0
+offset_right = 71.0
+offset_bottom = -32.0
+columns = 4
+
+[node name="Button" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Apple" type="Sprite2D" parent="UI/Inventory/Button"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(4, 451, 24, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Potion" type="Sprite2D" parent="UI/Inventory/Button2"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y7h2v")
+region_enabled = true
+region_rect = Rect2(69, 291, 22, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button2"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 30"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button3"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(36, 453, 23, 23)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button3"]
+visible = false
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button4" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button4"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(72, 451, 16, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button4"]
+visible = false
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button5"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(35, 388, 26, 25)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button5"]
+visible = false
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button6" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button6"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(323, 451, 26, 26)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button6"]
+visible = false
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button7" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button7"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(358, 451, 22, 27)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button7"]
+visible = false
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 5"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="Button8" type="Button" parent="UI/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="Sprite2D" parent="UI/Inventory/Button8"]
+position = Vector2(12, 6.5)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(419, 451, 27, 27)
+
+[node name="Label" type="Label" parent="UI/Inventory/Button8"]
+visible = false
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+text = "G: 12"
+label_settings = SubResource("LabelSettings_0kydk")
+horizontal_alignment = 1
+
+[node name="DialogueLabel" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -56.0
+offset_right = 64.0
+offset_bottom = -24.0
+
+[node name="Player" parent="." instance=ExtResource("7_cjkvi")]
+position = Vector2(-352, -28)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-8, 16)
+position_smoothing_speed = 4.0
+
+[node name="PurchaseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_bgg52")
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_7n1jf")
+
+[node name="Target" type="Marker2D" parent="."]
+position = Vector2(16, -24)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(-216, 24)
+tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAARAP//AAABAAAAAAASAP//AAABAAAAAAATAP//AAABAAAAAAAUAP//AAABAAAAAAAVAP//AAABAAAAAAAWAP//AAABAAAAAAAXAP//AAABAAAAAAAYAP//AAABAAAAAAAZAP//AAABAAAAAAAaAP//AAABAAAAAAAbAP//AAABAAAAAAAcAP//AAABAAAAAADw////AAABAAAAAADx////AAABAAAAAADy////AAABAAAAAADz////AAABAAAAAAD0////AAABAAAAAAD1////AAABAAAAAADq////AAABAAAAAADr////AAABAAAAAADs////AAABAAAAAADt////AAABAAAAAADu////AAABAAAAAADv////AAABAAAAAAAdAP//AAABAAAAAAAeAP//AAABAAAAAAAfAP//AAABAAAAAAAgAP//AAABAAAAAAAhAP//AAABAAAAAAAiAP//AAABAAAAAAA=")
+tile_set = SubResource("TileSet_wg475")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
