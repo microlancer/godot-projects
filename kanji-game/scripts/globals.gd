@@ -1,9 +1,10 @@
 extends Node
 
-
 const REPLACE_TYPE_HIRAGANA = "hiragana"
 const REPLACE_TYPE_KANJI = "kanji"
 const REPLACE_TYPES = [REPLACE_TYPE_HIRAGANA, REPLACE_TYPE_KANJI]
+
+var time: float = 0.0
 
 var KANA_REGULAR = \
 	"あいうえお" + \
@@ -91,3 +92,6 @@ func save_settings():
 	}
 	print({"save_data":save_data})
 	file.store_string(JSON.stringify(save_data))
+
+func _process(delta: float) -> void:
+	time += delta
