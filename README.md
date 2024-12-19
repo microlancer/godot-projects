@@ -11,3 +11,8 @@ DEMO: https://thorie.itch.io/drawpaneldemo
 A sample application that uses the generic `DrawPanel`. It's a game where you have to draw the kanji character using the correct directional brush strokes in order defined.
 
 DEMO: https://thorie.itch.io/kanjipaneldemo
+
+## Sounds.
+
+royalty free cash register sound from pixabay
+royalty free error sound from pixabay
