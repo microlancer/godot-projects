@@ -1,4 +1,4 @@
-[gd_scene load_steps=455 format=3 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=456 format=3 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://scripts/battle.gd" id="1_vyelx"]
 [ext_resource type="PackedScene" uid="uid://bmrjl77m8kh4x" path="res://scenes/world.tscn" id="2_f0y0t"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/kanji_draw_panel.gd" id="10_khsv0"]
 [ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_wpydr"]
 [ext_resource type="Script" path="res://scripts/vertical_text_label.gd" id="12_d4whg"]
+[ext_resource type="Script" path="res://scenes/fade.gd" id="12_uf80n"]
 [ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="79_pgljm"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="80_88h8b"]
 [ext_resource type="PackedScene" uid="uid://c841tuc4putwe" path="res://scenes/kanji_progress.tscn" id="81_bh4je"]
@@ -3103,7 +3104,17 @@ scale = Vector2(6.60848, 1)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(9.169, 23, 60.755, 23, 60.8387, 78.7043, 9.20376, 78.7043)
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BgLeft" type="Sprite2D" parent="."]
+position = Vector2(-249.35, 148.803)
+scale = Vector2(0.670118, 0.670118)
+texture = ExtResource("82_4d63p")
+
+[node name="BgRight" type="Sprite2D" parent="."]
+position = Vector2(403.912, 155.545)
+scale = Vector2(0.670118, 0.670118)
+texture = ExtResource("82_4d63p")
+
+[node name="DefaultBlack" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
 z_index = -5
 z_as_relative = false
@@ -3112,6 +3123,15 @@ offset_top = -360.902
 offset_right = 621.407
 offset_bottom = 599.098
 texture = SubResource("CanvasTexture_qm0hu")
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+offset_left = -384.848
+offset_top = -357.878
+offset_right = 565.152
+offset_bottom = 592.122
+color = Color(0, 0, 0, 1)
+script = ExtResource("12_uf80n")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -3401,16 +3421,6 @@ offset_right = 35.0
 offset_bottom = 35.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-249.35, 148.803)
-scale = Vector2(0.670118, 0.670118)
-texture = ExtResource("82_4d63p")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(403.912, 155.545)
-scale = Vector2(0.670118, 0.670118)
-texture = ExtResource("82_4d63p")
 
 [connection signal="correct_stroke" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
 [connection signal="kanji_correct" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]
