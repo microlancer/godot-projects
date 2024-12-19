@@ -1,0 +1,139 @@
+[gd_scene load_steps=4 format=3 uid="uid://rsvuo631rkcq"]
+
+[ext_resource type="Script" path="res://scripts/progress_list.gd" id="1_rovpl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxse0"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t73hm"]
+border_width_top = 1
+
+[node name="progress_list" type="Control"]
+custom_minimum_size = Vector2(150, 240)
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -240.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_rovpl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "reading"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "writing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/separator = SubResource("StyleBoxFlat_t73hm")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="char" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Panel" type="PanelContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="read_progress" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel2" type="PanelContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="write_progress" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer/Panel2"]
+unique_name_in_owner = true
+layout_mode = 2
