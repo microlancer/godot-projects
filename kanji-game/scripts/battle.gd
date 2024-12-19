@@ -151,6 +151,7 @@ func _on_size_changed():
 	set_draw_area_based_on_window()
 	
 func set_draw_area_based_on_window():
+	#return
 	var viewport_size = get_viewport().size
 	var vp_aspect_ratio = float(viewport_size.x) / float(viewport_size.y)
 	var default_aspect_ratio = 450.0 / 720.0  # Default aspect ratio
@@ -648,7 +649,7 @@ func show_kanji_progress():
 			
 		diamond.size = $KanjiProgress/Control/TextureDiamondBright.size
 		diamond.scale = $KanjiProgress/Control/TextureDiamondBright.scale
-		diamond.position.y = 36
+		diamond.position.y = 70
 		diamond.position.x = 4 + (12 * i)
 		print("Assigned texture: ", diamond.texture)
 		$KanjiProgress/Control/RenderedDiamonds.add_child(diamond)
@@ -668,7 +669,7 @@ func show_kanji_progress():
 			
 		diamond.size = $KanjiProgress/Control/TextureDiamondBright.size
 		diamond.scale = $KanjiProgress/Control/TextureDiamondBright.scale
-		diamond.position.y = 60
+		diamond.position.y = 96
 		diamond.position.x = 4 + (12 * i)
 		print("Assigned texture: ", diamond.texture)
 		$KanjiProgress/Control/RenderedDiamonds.add_child(diamond)
@@ -1039,16 +1040,12 @@ func update_hp():
 	
 	var kp_progress = get_kp_progress()
 	
-	$Control2/PlayerStats.text = Globals.player_name + "\n" +\
-		"レベル: " + str(player_level) + "\n" +\
-		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
-		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
-		#"EXP: " + str(player_exp) + "\n" +\
-		"ゴールド: " + str(player_gold)
-		
+	#$Control2/PlayerStats.text = "KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
+		##"EXP: " + str(player_exp) + "\n" +\
+		#"ゴールド: " + str(player_gold)
+		#
 	if enemy_hp > 0:
-		$Control2/EnemyStats.text = enemy_name + "\n" +\
-			"レベル: " + str(enemy_level)
+		pass
 	else:
 		$Control2/EnemyStats.text = ""
 		
