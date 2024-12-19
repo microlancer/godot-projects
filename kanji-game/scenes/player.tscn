@@ -1,4 +1,4 @@
-[gd_scene load_steps=162 format=3 uid="uid://dgs2gpy70wl21"]
+[gd_scene load_steps=163 format=3 uid="uid://dgs2gpy70wl21"]
 
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="1_2o2fh"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="2_axj36"]
@@ -69,6 +69,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="67_nvsmv"]
 [ext_resource type="FontFile" uid="uid://47731eqvwht3" path="res://assets/fonts/KleeOne-Regular.ttf" id="68_bnrld"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="69_7yq57"]
+[ext_resource type="PackedScene" uid="uid://djc1pay0iveri" path="res://scenes/healthbar.tscn" id="70_uwqg3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbjsk"]
 atlas = ExtResource("33_3s6j3")
@@ -999,13 +1000,15 @@ font = ExtResource("68_bnrld")
 [sub_resource type="LabelSettings" id="LabelSettings_s4h5c"]
 font_size = 7
 
-[node name="Player" type="AnimatedSprite2D"]
+[node name="Player" type="AnimatedSprite2D" node_paths=PackedStringArray("battle_UI", "Hp")]
 texture_filter = 1
 position = Vector2(44, 9)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
 animation = &"idle"
 centered = false
 script = ExtResource("67_nvsmv")
+battle_UI = NodePath("battle_UI")
+Hp = NodePath("battle_UI/HealthBarPlayer")
 
 [node name="PlayerArea" type="Area2D" parent="."]
 position = Vector2(25, 22)
@@ -1014,6 +1017,7 @@ position = Vector2(25, 22)
 shape = SubResource("CircleShape2D_55bl2")
 
 [node name="UI" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -36.0
@@ -1064,6 +1068,7 @@ theme_override_font_sizes/font_size = 16
 text = "BACK TO TOWN"
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = -20.0
@@ -1153,6 +1158,19 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="battle_UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBarPlayer" parent="battle_UI" instance=ExtResource("70_uwqg3")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 0.0
+offset_right = 33.0
+offset_bottom = 2.0
 
 [connection signal="pressed" from="UI/InventoryButton" to="." method="_on_inventory_button_pressed"]
 [connection signal="pressed" from="UI/MenuMenuButton" to="." method="_on_menu_menu_button_pressed"]

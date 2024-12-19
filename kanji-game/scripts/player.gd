@@ -1,6 +1,7 @@
 extends AnimatedSprite2D
 class_name Player
-
+@export var battle_UI : Control
+@export var Hp : ProgressBar
 @onready var _label: Label = $UI/Label
 @onready var _inventory_ui: GridContainer = $Control/InventoryUI
 

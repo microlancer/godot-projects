@@ -4,8 +4,8 @@ extends Node2D
 @export var NonPlayableCharacter:AnimatedSprite2D
 @export var Player_health_label:Label
 @export var Enemy_health_label:Label
-@export var player_health_bar:ProgressBar
-@export var enemy_health_bar:ProgressBar
+#@export var player_health_bar:ProgressBar
+#@export var enemy_health_bar:ProgressBar
 
 @onready var world_tile_map_layer:TileMapLayer = $TileMapLayer
 @onready var Decor1:Sprite2D = $Decors
@@ -16,6 +16,15 @@ extends Node2D
 
 signal end_run_to_npc()
 signal end_run_from_npc()
+
+var player_hp_max = 5
+var player_hp = 5
+var enemy_hp_min = 5
+var enemy_hp_max = 5
+var enemy_hp = 8
+var enemy_level_max = 1
+var enemy_hp_range_min = 8
+var enemy_hp_range_max = 8
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

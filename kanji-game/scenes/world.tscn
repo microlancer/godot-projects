@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://jo1b80rhwlc6" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG3.png" id="4_16qid"]
 [ext_resource type="Texture2D" uid="uid://bw08o7bpatien" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/Decors.png" id="5_5utw1"]
 [ext_resource type="Texture2D" uid="uid://dlkni6tdcdruh" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/Tileset.png" id="6_mh2ij"]
+[ext_resource type="PackedScene" uid="uid://2obbu5ed32sn" path="res://scenes/animated_npc.tscn" id="7_o2ebt"]
+[ext_resource type="PackedScene" uid="uid://dgs2gpy70wl21" path="res://scenes/player.tscn" id="8_1gfpb"]
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="12_53aif"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="13_4rocy"]
 [ext_resource type="Texture2D" uid="uid://cy6twaolvq572" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-02.png" id="14_v513x"]
@@ -1047,23 +1049,6 @@ font_size = 10
 font_color = Color(0.999962, 0.438117, 0.419375, 1)
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vf52"]
-bg_color = Color(0.652249, 0.0411753, 1.92523e-07, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-shadow_size = 2
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qh5vc"]
-bg_color = Color(0.206122, 0.90067, 0, 1)
-border_color = Color(0, 0, 0, 1)
-border_blend = true
-corner_radius_top_left = 1
-corner_radius_bottom_left = 1
-anti_aliasing = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_53lsb"]
 atlas = ExtResource("78_2owi4")
@@ -4097,14 +4082,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="world" type="Node2D" node_paths=PackedStringArray("Player", "NonPlayableCharacter", "Player_health_label", "Enemy_health_label", "player_health_bar", "enemy_health_bar")]
+[node name="world" type="Node2D" node_paths=PackedStringArray("Player", "NonPlayableCharacter", "Player_health_label", "Enemy_health_label")]
 script = ExtResource("1_hie7w")
-Player = NodePath("AnimatedPlayer")
-NonPlayableCharacter = NodePath("AnimatedEnemy")
+Player = NodePath("Player")
+NonPlayableCharacter = NodePath("AnimatedNpc")
 Player_health_label = NodePath("UI/EnemyDamageLabel")
 Enemy_health_label = NodePath("UI/PlayerDamageLabel")
-player_health_bar = NodePath("UI/HealthBarPlayer")
-enemy_health_bar = NodePath("UI/HealthBarEnemy")
 
 [node name="Bg1Clouds" type="Sprite2D" parent="."]
 position = Vector2(78.1339, -3.53841)
@@ -4146,20 +4129,9 @@ position = Vector2(90, 59.807)
 tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAABAAAAAAD6////AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAD5////AAABAAAAAAD4////AAABAAAAAAD3////AAABAAAAAAD2////AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAKAP//AAABAAAAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAARAP//AAABAAAAAAASAP//AAABAAAAAAATAP//AAABAAAAAAAUAP//AAABAAAAAAAVAP//AAABAAAAAAAWAP//AAABAAAAAAAXAP//AAABAAAAAAAYAP//AAABAAAAAAAZAP//AAABAAAAAAAaAP//AAABAAAAAAAbAP//AAABAAAAAAAcAP//AAABAAAAAAA=")
 tile_set = SubResource("TileSet_f6huk")
 
-[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(44, 9)
-sprite_frames = SubResource("SpriteFrames_hdx0j")
-animation = &"idle"
-centered = false
+[node name="AnimatedNpc" parent="." instance=ExtResource("7_o2ebt")]
 
-[node name="AnimatedEnemy" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(76, 13)
-sprite_frames = SubResource("SpriteFrames_hdx0j")
-animation = &"enemy_idle"
-centered = false
-flip_h = true
+[node name="Player" parent="." instance=ExtResource("8_1gfpb")]
 
 [node name="AnimatedSprite2DEnemy2" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -4196,30 +4168,6 @@ offset_bottom = 48.0
 text = "332	"
 label_settings = SubResource("LabelSettings_16kbr")
 horizontal_alignment = 1
-
-[node name="HealthBarPlayer" type="ProgressBar" parent="UI"]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 11.0
-offset_right = 77.0
-offset_bottom = 13.0
-theme_override_styles/background = SubResource("StyleBoxFlat_5vf52")
-theme_override_styles/fill = SubResource("StyleBoxFlat_qh5vc")
-step = 1.0
-value = 50.0
-show_percentage = false
-
-[node name="HealthBarEnemy" type="ProgressBar" parent="UI"]
-layout_mode = 0
-offset_left = 83.0
-offset_top = 11.0
-offset_right = 100.0
-offset_bottom = 13.0
-theme_override_styles/background = SubResource("StyleBoxFlat_5vf52")
-theme_override_styles/fill = SubResource("StyleBoxFlat_qh5vc")
-step = 1.0
-value = 50.0
-show_percentage = false
 
 [node name="IconsPack" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

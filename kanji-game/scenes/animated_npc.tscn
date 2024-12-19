@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=3 uid="uid://2obbu5ed32sn"]
+[gd_scene load_steps=158 format=3 uid="uid://2obbu5ed32sn"]
 
 [ext_resource type="Texture2D" uid="uid://dluj3prg0qxix" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-00.png" id="1_xupmg"]
 [ext_resource type="Texture2D" uid="uid://cprkj6i2p55hm" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-attack2-01.png" id="2_vagq1"]
@@ -66,6 +66,8 @@
 [ext_resource type="Texture2D" uid="uid://olq8xxamcn2b" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-01.png" id="64_xrqv5"]
 [ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="65_t0q5h"]
 [ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="66_r3f24"]
+[ext_resource type="PackedScene" uid="uid://djc1pay0iveri" path="res://scenes/healthbar.tscn" id="67_awabf"]
+[ext_resource type="Script" path="res://scenes/animated_npc.gd" id="67_fpl61"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbjsk"]
 atlas = ExtResource("33_3fdn3")
@@ -987,10 +989,26 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="AnimatedNpc" type="AnimatedSprite2D"]
+[node name="AnimatedNpc" type="AnimatedSprite2D" node_paths=PackedStringArray("UI", "Hp")]
 texture_filter = 1
 position = Vector2(76, 13)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
 animation = &"enemy_idle"
 centered = false
 flip_h = true
+script = ExtResource("67_fpl61")
+UI = NodePath("battle_UI")
+Hp = NodePath("battle_UI/HealthBarPlayer")
+
+[node name="battle_UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBarPlayer" parent="battle_UI" instance=ExtResource("67_awabf")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 24.0
+offset_bottom = 1.0

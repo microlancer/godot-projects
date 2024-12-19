@@ -20,14 +20,6 @@ var translation_mode = "Jp"
 var default_damage_label_y = 0
 var default_damage_label_color
 
-var player_hp_max = 5
-var player_hp = 5
-var enemy_hp_min = 5
-var enemy_hp_max = 5
-var enemy_hp = 8
-var enemy_level_max = 1
-var enemy_hp_range_min = 8
-var enemy_hp_range_max = 8
 
 var player_exp = 0
 var player_gold = 0
@@ -70,8 +62,8 @@ var debug_detector_kanji: String = "慢"
 @onready var animated_enemy:AnimatedSprite2D = world.NonPlayableCharacter
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
-@onready var Health_bar_player:ProgressBar = world.player_health_bar
-@onready var Health_bar_enemy:ProgressBar = world.enemy_health_bar
+@onready var Health_bar_player:ProgressBar = world.Player.Hp
+@onready var Health_bar_enemy:ProgressBar = world.NonPlayableCharacter.Hp
 @export var level_up_button:Button
 
 # -------------------------------------------------------------------
@@ -98,8 +90,8 @@ func _ready() -> void:
 	player_damage_label.hide()
 	level_up_button.hide()
 	
-	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
-	enemy_hp = enemy_hp_max
+	world.enemy_hp_max = randi_range(world.enemy_hp_range_min, world.enemy_hp_range_max)
+	world.enemy_hp = world.enemy_hp_max
 	
 	update_hp()
 	var file_path = "res://data/kanji_data.json"
@@ -174,7 +166,7 @@ func load_game():
 		player_gold = 0
 		player_level = 1
 		set_stats_by_level(player_level)
-		player_hp = player_hp_max # reset for new game
+		world.player_hp = world.player_hp_max # reset for new game
 		known_pool_index = 1
 		progress = init_progress
 		save_game()
@@ -192,9 +184,9 @@ func load_game():
 	player_level = save_data.slot0.level
 	
 	if not save_data.slot0.has("hp"):
-		player_hp = player_hp_max
+		world.player_hp = world.player_hp_max
 	else:
-		player_hp = save_data.slot0.hp
+		world.player_hp = save_data.slot0.hp
 	
 	set_stats_by_level(player_level)
 	
@@ -245,7 +237,7 @@ func save_game():
 		"slot0": {
 			"name": Globals.player_name,
 			"level": player_level,
-			"hp": player_hp,
+			"hp": world.player_hp,
 			"gold": player_gold,
 			"kp": player_kp,
 			"known_pool_index": known_pool_index,
@@ -465,8 +457,8 @@ func _animation_finished():
 		animated_player.animation = "idle_sword"
 		animated_player.play()
 		
-		if enemy_hp > 0:
-			print("battle continues, enemy_hp: " + str(enemy_hp))
+		if world.enemy_hp > 0:
+			print("battle continues, enemy_hp: " + str(world.enemy_hp))
 			pick_random_sentence()
 		#pick_random_sentence()
 		#$UI/KanjiDrawPanel.reset_draw_panel()
@@ -476,7 +468,7 @@ func _animation_finished():
 		$UI/KanjiDrawPanel.enable()
 	elif animated_player.animation in ["hurt"]:
 		
-		if player_hp <= 0:
+		if world.player_hp <= 0:
 			animated_player.animation = "die"
 			animated_player.play()
 			return
@@ -500,7 +492,7 @@ func _animation_finished():
 		Globals.AudioStreamPlayerBgMusic.play()
 		$AudioStreamPlayer2D.stream = Globals.fx_battle_lose
 		$AudioStreamPlayer2D.play()
-		player_hp = player_hp_max
+		world.player_hp = world.player_hp_max
 		Health_bar_player.hide()
 		$UI2/NextBattleButton.text = "Try again"
 		$UI2/NextBattleButton.show()
@@ -521,8 +513,8 @@ func _animation_looped_player():
 func _animation_finished_enemy():
 	if animated_enemy.animation == "enemy_hurt":
 		
-		print({"enemy_hp":enemy_hp})
-		if enemy_hp <= 0:
+		print({"enemy_hp":world.enemy_hp})
+		if world.enemy_hp <= 0:
 			animated_enemy.animation = "enemy_die"
 			#animated_enemy.offset.x = 3
 			animated_enemy.play()
@@ -823,7 +815,7 @@ func level_up():
 	set_stats_by_level(player_level)
 	
 	# Recover full HP when leveling up as a bonus.
-	player_hp = player_hp_max
+	world.player_hp = world.player_hp_max
 	
 	#player_hp += 5
 	#player_dmg_min += 1
@@ -836,22 +828,22 @@ func level_up():
 	
 func set_stats_by_level(level):
 	enemy_level = level
-	player_hp_max = 10 + level * 5
+	world.player_hp_max = 10 + level * 5
 	player_dmg_min = level
 	player_dmg_max = 2 + level * 2
-	enemy_hp_range_max = level * 8
+	world.enemy_hp_range_max = level * 8
 	enemy_dmg_min = 0 + level
 	enemy_dmg_max = 2 + level * 2
-	enemy_hp_range_min = 2 + level * 4
+	world.enemy_hp_range_min = 2 + level * 4
 	
 	print({"level":level,
-		"player_hp_max":player_hp_max,
+		"player_hp_max":world.player_hp_max,
 		"player_dmg_min":player_dmg_min,
 		"player_dmg_max":player_dmg_max,
-		"enemy_hp_range_max":enemy_hp_range_max,
+		"enemy_hp_range_max":world.enemy_hp_range_max,
 		"enemy_dmg_min":enemy_dmg_min,
 		"enemy_dmg_max":enemy_dmg_max,
-		"enemy_hp_range_min":enemy_hp_range_min,
+		"enemy_hp_range_min":world.enemy_hp_range_min,
 	})
 	
 func play_enemy_hurt():
@@ -863,11 +855,11 @@ func play_enemy_hurt():
 	
 	var damage_points = randi_range(player_dmg_min, player_dmg_max)
 	
-	enemy_hp -= damage_points
+	world.enemy_hp -= damage_points
 	update_hp()
 	
-	print({"enemy_hp":enemy_hp})
-	if enemy_hp <= 0:
+	print({"enemy_hp":world.enemy_hp})
+	if world.enemy_hp <= 0:
 		animated_enemy.animation = "enemy_die"
 		animated_enemy.play()
 	else:
@@ -929,7 +921,7 @@ func play_player_hurt():
 	audio_player2.play()
 	
 	var damage_points = randi_range(enemy_dmg_min, enemy_dmg_max)
-	player_hp -= damage_points
+	world.player_hp -= damage_points
 	update_hp()
 	
 	var tween = create_tween()
@@ -979,34 +971,34 @@ func get_kp_progress():
 	
 func update_hp():
 	
-	if player_hp < 0:
-		player_hp = 0
+	if world.player_hp < 0:
+		world.player_hp = 0
 	
-	Health_bar_player.max_value = player_hp_max
-	Health_bar_player.value = player_hp
+	Health_bar_player.max_value = world.player_hp_max
+	Health_bar_player.value = world.player_hp
 	
-	Health_bar_enemy.max_value = enemy_hp_max
-	Health_bar_enemy.value = enemy_hp
+	Health_bar_enemy.max_value = world.enemy_hp_max
+	Health_bar_enemy.value = world.enemy_hp
 	
 	var kp_progress = get_kp_progress()
 	
 	$UI2/PlayerStats.text = Globals.player_name + "\n" +\
 		"レベル: " + str(player_level) + "\n" +\
-		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
+		"HP: " + str(world.player_hp) + "/" + str(world.player_hp_max) + "\n" +\
 		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
 		#"EXP: " + str(player_exp) + "\n" +\
 		"ゴールド: " + str(player_gold)
 		
-	if enemy_hp > 0:
+	if world.enemy_hp > 0:
 		$UI2/EnemyStats.text = enemy_name + "\n" +\
 			"レベル: " + str(enemy_level)
 	else:
 		$UI2/EnemyStats.text = ""
 		
 	print({
-		"player_hp":player_hp,
-		"enemy_hp_max":enemy_hp_max,
-		"enemy_hp":enemy_hp
+		"player_hp":world.player_hp,
+		"enemy_hp_max":world.enemy_hp_max,
+		"enemy_hp":world.enemy_hp
 	})
 
 func _on_try_again_button_gui_input(event: InputEvent) -> void:
@@ -1098,13 +1090,13 @@ func start_battle():
 	$UI2/AltLangText.hide()
 	%KanjiLabel.show()
 	
-	enemy_hp_max = randi_range(enemy_hp_range_min, enemy_hp_range_max)
-	enemy_hp = enemy_hp_max
+	world.enemy_hp_max = randi_range(world.enemy_hp_range_min, world.enemy_hp_range_max)
+	world.enemy_hp = world.enemy_hp_max
 
 	$Prize.hide()
 	
-	if player_hp <= 0:
-		player_hp = player_hp_max
+	if world.player_hp <= 0:
+		world.player_hp = world.player_hp_max
 	
 	update_hp()
 	
