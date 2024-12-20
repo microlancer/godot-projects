@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://rsvuo631rkcq"]
+[gd_scene load_steps=10 format=3 uid="uid://rsvuo631rkcq"]
 
 [ext_resource type="Script" path="res://scripts/progress_list.gd" id="1_rovpl"]
 [ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="2_3h7qq"]
@@ -11,9 +11,22 @@ shader_parameter/texture_ = ExtResource("2_3h7qq")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxse0"]
 bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t73hm"]
 border_width_top = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byfmw"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmrxw"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pixgm"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+corner_radius_bottom_right = 10
 
 [node name="progress_list" type="Control"]
 custom_minimum_size = Vector2(150, 240)
@@ -29,7 +42,7 @@ grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_rovpl")
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" type="PanelContainer" parent="."]
 texture_filter = 4
 material = SubResource("ShaderMaterial_qnwgj")
 layout_mode = 1
@@ -38,8 +51,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_3h7qq")
-expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -125,7 +136,7 @@ theme_override_constants/separation = 0
 self_modulate = Color(1, 1, 1, 0.705882)
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_byfmw")
 
 [node name="char" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer"]
 unique_name_in_owner = true
@@ -143,7 +154,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmrxw")
 
 [node name="read_progress" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer/Panel"]
 unique_name_in_owner = true
@@ -157,7 +168,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pixgm")
 
 [node name="write_progress" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer/Panel2"]
 unique_name_in_owner = true
