@@ -1,0 +1,29 @@
+[gd_resource type="SpriteFrames" script_class="EnemyResource" load_steps=2 format=3 uid="uid://dxgswut05a3os"]
+
+[ext_resource type="Script" path="res://resources/Enemies/EnemyResourceScript.gd" id="67_lwah1"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"enemy_attack",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"enemy_die",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"enemy_hurt",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"enemy_idle",
+"speed": 5.0
+}]
+script = ExtResource("67_lwah1")
+base_dmg = 0
+base_hp = 0
