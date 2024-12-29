@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://qlw4h5k1efsc"]
-
-[ext_resource type="Script" path="res://resources/inventory_item.gd" id="1_vb5ym"]
-
-[resource]
-script = ExtResource("1_vb5ym")
-price = 30
-health_given = 30
-item_name = "potion"

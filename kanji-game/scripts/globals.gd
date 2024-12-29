@@ -38,6 +38,7 @@ var KANA_REGULAR = \
 	"ワヲン"
 var KANA_SMALL = "ぁぃぅぇぉっゃゅょァィゥェォッャュョ"
 var KANA_SYMBOLS = "ー。！？、「」　・｜"
+var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,6 +46,9 @@ func _ready() -> void:
 	add_child(AudioStreamPlayerBgMusic)
 	AudioStreamPlayerSoundFx = AudioStreamPlayer2D.new()
 	add_child(AudioStreamPlayerSoundFx)
+
+	rng.randomize()
+	
 
 
 # From https://drtwelele.itch.io/casual-game-fx-one-shot
@@ -91,3 +95,11 @@ func save_settings():
 	}
 	print({"save_data":save_data})
 	file.store_string(JSON.stringify(save_data))
+
+
+	
+func pick_percent(per: float): 
+	if rng.randf_range(1.0,100.0) <= per:
+		return true
+	return false
+	

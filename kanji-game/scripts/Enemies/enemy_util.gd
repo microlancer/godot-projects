@@ -1,6 +1,6 @@
 extends Node
 class_name EnemyUtil
-var allowedEnemies = ["skeleton", "snake", "cat", "bat", "crow", "tree"]
+const allowedEnemies = ["skeleton", "snake", "cat", "bat", "crow", "tree"]
 
 
 func create_enemy(t: String)->AnimatedSprite2D: 
@@ -16,5 +16,6 @@ func create_enemy(t: String)->AnimatedSprite2D:
 	
 	# create enemy
 	var node: BaseEnemy = BaseEnemy.new(res)
+	node.flip_h = res.flip_h
 
 	return node

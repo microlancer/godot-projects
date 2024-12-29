@@ -1,9 +1,17 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://c7solq6cd7mpl"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://c7solq6cd7mpl"]
 
 [ext_resource type="Script" path="res://resources/inventory_item.gd" id="1_ycjqd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sljbw"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-33d3429058846de1f75f6fb1df467973.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hckx"]
+atlas = SubResource("CompressedTexture2D_sljbw")
+region = Rect2(4, 451, 24, 26)
 
 [resource]
 script = ExtResource("1_ycjqd")
 price = 5
 health_given = 5
+displayTexture = SubResource("AtlasTexture_2hckx")
 item_name = "apple"

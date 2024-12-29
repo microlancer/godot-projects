@@ -65,9 +65,9 @@ var progress = init_progress
 var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
 
-@export var world:Node2D
+@export var world: World
 @onready var animated_player:AnimatedSprite2D = world.Player
-@onready var animated_enemy:AnimatedSprite2D = world.NonPlayableCharacter
+var animated_enemy:AnimatedSprite2D = null
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
 @onready var Health_bar_player:ProgressBar = world.player_health_bar
@@ -79,6 +79,8 @@ var debug_detector_kanji: String = "慢"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	animated_enemy = world.spawn_enemy("skeleton")
 	
 	$UI.hide()
 	$UI2.hide()

@@ -19,17 +19,17 @@ func _ready() -> void:
 	player_gold = 75
 
 
-func update_inventory_ui(index_to_update: int, sprite: Sprite2D) -> void:
+func update_inventory_ui(index_to_update: int, texture: Texture2D) -> void:
 	for i: String in indexes_dict:
 		if indexes_dict[i] == index_to_update:
 			var current_button: Button = _inventory_ui.get_child(index_to_update)
 			var current_sprite: Sprite2D = current_button.get_child(0)
 
 			current_button.get_child(1).text = str(current_item[i]["amount"])
-			current_sprite.texture = sprite.texture
-			current_sprite.region_enabled = sprite.region_enabled
-			current_sprite.region_rect = sprite.region_rect
-			current_sprite.scale = sprite.scale
+			current_sprite.texture = texture
+			#current_sprite.region_enabled = sprite.region_enabled
+			#current_sprite.region_rect = sprite.region_rect
+			current_sprite.scale = Vector2.ONE * 0.5
 
 
 func _on_inventory_button_pressed() -> void:

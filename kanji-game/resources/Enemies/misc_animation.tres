@@ -990,3 +990,4 @@ animations = [{
 script = ExtResource("67_bgr2f")
 base_dmg = 0
 base_hp = 0
+flip_h = true

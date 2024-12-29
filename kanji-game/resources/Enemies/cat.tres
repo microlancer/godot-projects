@@ -115,3 +115,4 @@ animations = [{
 script = ExtResource("67_owhcp")
 base_dmg = 0
 base_hp = 0
+flip_h = true

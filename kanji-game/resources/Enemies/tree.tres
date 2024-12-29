@@ -95,3 +95,4 @@ animations = [{
 script = ExtResource("5_gkg53")
 base_dmg = 0
 base_hp = 0
+flip_h = false

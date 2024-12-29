@@ -7,3 +7,5 @@ class_name BaseEnemy
 func _init(res: EnemyResource):
 	base_dmg = res.base_dmg
 	base_hp = res.base_hp
+	sprite_frames = res
+	centered = false

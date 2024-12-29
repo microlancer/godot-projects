@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvsluir5culfp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7404q"]
+font_size = 7
+
+[node name="InventoryButton" type="Button"]
+offset_right = 2.0
+offset_bottom = 2.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 25.0
+label_settings = SubResource("LabelSettings_7404q")
+horizontal_alignment = 1
+
+[node name="Sprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 2.0
+offset_right = 5.0
+offset_bottom = 12.0
+grow_horizontal = 2
+expand_mode = 1
+stretch_mode = 5
