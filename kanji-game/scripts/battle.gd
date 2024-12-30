@@ -564,6 +564,7 @@ func _animation_finished_enemy():
 		
 		$UI/VerticalTextLabel.hide()
 		$UI2/TranslateButton.hide()
+		%Progress.hide()
 		animated_player.animation = "sword_away"
 		animated_player.play()
 
@@ -1036,6 +1037,7 @@ func _on_next_battle_button_button_up() -> void:
 	$UI2/NextBattleButton.hide()
 	$UI/VerticalTextLabel.hide()
 	$UI2/TranslateButton.hide()
+	%Progress.hide()
 	$Prize.hide()
 	level_up_button.hide()
 	$KanjiProgress.hide()
@@ -1097,6 +1099,7 @@ func start_battle():
 
 	$UI/VerticalTextLabel.show()
 	$UI2/TranslateButton.show()
+	%Progress.show()
 	translation_mode = "Jp"
 	$UI2/TranslateButton.text = "Jp"
 	$UI2/AltLangText.hide()
@@ -1175,3 +1178,9 @@ func _on_debug_button_1_button_up() -> void:
 
 	known_pool_index = 9
 	start_battle()
+
+func _on_progress_pressed() -> void:
+	%progress_list.show()
+
+func _on_close_progress_list_pressed() -> void:
+	%progress_list.hide()

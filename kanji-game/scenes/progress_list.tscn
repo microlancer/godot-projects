@@ -1,0 +1,176 @@
+[gd_scene load_steps=10 format=3 uid="uid://rsvuo631rkcq"]
+
+[ext_resource type="Script" path="res://scripts/progress_list.gd" id="1_rovpl"]
+[ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="2_3h7qq"]
+[ext_resource type="Shader" path="res://themes/background_blur.gdshader" id="2_wkwf8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qnwgj"]
+shader = ExtResource("2_wkwf8")
+shader_parameter/blur_amount = 2.5
+shader_parameter/texture_ = ExtResource("2_3h7qq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxse0"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t73hm"]
+border_width_top = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byfmw"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmrxw"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pixgm"]
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+corner_radius_bottom_right = 10
+
+[node name="progress_list" type="Control"]
+custom_minimum_size = Vector2(150, 240)
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -240.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_rovpl")
+
+[node name="background" type="PanelContainer" parent="."]
+texture_filter = 4
+material = SubResource("ShaderMaterial_qnwgj")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.705882)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pxse0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "reading"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "writing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/separator = SubResource("StyleBoxFlat_t73hm")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.705882)
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byfmw")
+
+[node name="char" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Panel" type="PanelContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.705882)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmrxw")
+
+[node name="read_progress" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 13
+
+[node name="Panel2" type="PanelContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.705882)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pixgm")
+
+[node name="write_progress" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/ScrollContainer/HBoxContainer/HBoxContainer/Panel2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 13
