@@ -502,6 +502,7 @@ func _animation_finished():
 		$AudioStreamPlayer2D.play()
 		player_hp = player_hp_max
 		Health_bar_player.hide()
+		$UI2/PlayerLevel.hide()
 		$UI2/NextBattleButton.text = "Try again"
 		$UI2/NextBattleButton.show()
 		$UI/KanjiDrawPanel.hide()
@@ -544,8 +545,10 @@ func _animation_finished_enemy():
 		$AudioStreamPlayer2D2.volume_db = -15.0
 		$AudioStreamPlayer2D2.play()
 		Health_bar_enemy.hide()
+		$UI2/EnemyLevel.hide()
 		animated_enemy.hide()
 		Health_bar_player.hide()
+		$UI2/PlayerLevel.hide()
 		$UI2/NextBattleButton.text = "次 (つぎ)"
 		$UI2/NextBattleButton.show()
 		$UI/KanjiDrawPanel.hide()
@@ -600,7 +603,7 @@ func show_kanji_progress():
 			
 		diamond.size = $KanjiProgress/Control/TextureDiamondBright.size
 		diamond.scale = $KanjiProgress/Control/TextureDiamondBright.scale
-		diamond.position.y = 36
+		diamond.position.y = 70
 		diamond.position.x = 4 + (12 * i)
 		print("Assigned texture: ", diamond.texture)
 		$KanjiProgress/Control/RenderedDiamonds.add_child(diamond)
@@ -620,7 +623,7 @@ func show_kanji_progress():
 			
 		diamond.size = $KanjiProgress/Control/TextureDiamondBright.size
 		diamond.scale = $KanjiProgress/Control/TextureDiamondBright.scale
-		diamond.position.y = 60
+		diamond.position.y = 96
 		diamond.position.x = 4 + (12 * i)
 		print("Assigned texture: ", diamond.texture)
 		$KanjiProgress/Control/RenderedDiamonds.add_child(diamond)
@@ -632,7 +635,8 @@ func get_gold():
 	var gold_amount = randi_range(1, enemy_level)
 	
 	$Prize/TextureRectCoin/GoldAmount.text = str(gold_amount)
-	
+	$Prize/PlayerGold_Graphic/PlayerGold.text = str(player_gold)
+	$Prize/PlayerEXP_Graphic/Playerexperience.text = str(player_kp)
 	player_gold += gold_amount
 	
 	update_hp()
@@ -991,18 +995,17 @@ func update_hp():
 	
 	var kp_progress = get_kp_progress()
 	
-	$UI2/PlayerStats.text = Globals.player_name + "\n" +\
-		"レベル: " + str(player_level) + "\n" +\
-		"HP: " + str(player_hp) + "/" + str(player_hp_max) + "\n" +\
-		"KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
-		#"EXP: " + str(player_exp) + "\n" +\
-		"ゴールド: " + str(player_gold)
+	#$UI2/PlayerStats.text = "KP: " + str(kp_progress.current) + "/" + str(kp_progress.goal) + "\n" +\
+		##"EXP: " + str(player_exp) + "\n" +\
+		#"ゴールド: " + str(player_gold)
+		#
+	if enemy_hp > 0:
+		pass
 		
 	if enemy_hp > 0:
-		$UI2/EnemyStats.text = enemy_name + "\n" +\
-			"レベル: " + str(enemy_level)
+		pass
 	else:
-		$UI2/EnemyStats.text = ""
+		pass
 		
 	print({
 		"player_hp":player_hp,
@@ -1072,6 +1075,7 @@ func _encounter_enemy():
 	
 	$AudioStreamPlayer2D.stop()
 	Health_bar_enemy.show()
+	$UI2/EnemyLevel.show()
 	
 	print("_encounter_enemy")
 	
@@ -1121,7 +1125,9 @@ func start_battle():
 	animated_enemy.play()
 	
 	Health_bar_player.show()
+	$UI2/PlayerLevel.show()
 	Health_bar_enemy.show()
+	$UI2/EnemyLevel.show()
 
 	Globals.AudioStreamPlayerBgMusic.stream = Globals.music_action1
 	Globals.AudioStreamPlayerBgMusic.play()
