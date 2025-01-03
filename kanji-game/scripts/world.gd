@@ -1,12 +1,13 @@
 extends Node2D
 class_name  World 
 
-@export var Player:AnimatedSprite2D
+@export var Player: Player 
 @export var NonPlayableCharacter:AnimatedSprite2D
 @export var Player_health_label:Label
 @export var Enemy_health_label:Label
 @export var player_health_bar:ProgressBar
 @export var enemy_health_bar:ProgressBar
+@export var level:int = 0
 
 @onready var world_tile_map_layer:TileMapLayer = $TileMapLayer
 @onready var Decor1:Sprite2D = $Decors
@@ -14,12 +15,27 @@ class_name  World
 
 @onready var AudioPlayer:AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var UI:Control = $UI
+@onready var rng = RandomNumberGenerator.new()
 
 signal end_run_to_npc()
 signal end_run_from_npc()
+var curr_level: BaseLevel = null  
 
+
+func load_level():  
+	var base_path = "res://scenes/Levels/"
+	if level == 0: 
+		base_path += "BaseLevel.tscn" 
+	else: 
+		base_path += "Level1.tscn"
+	
+	curr_level = load(base_path).instantiate()
+	$LevelContainer.add_child(curr_level)
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	load_level()
+	
 	Player.position.x = -50
 	reset_decor_positions()
 	UI.hide()
@@ -45,13 +61,28 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func spawn_enemy(enem: String): 
-	NonPlayableCharacter = $EnemyUtil.create_enemy(enem)	
+func spawn_enemy_on_level():
+	# pick enemy
+	var elist = curr_level.enemies
+	var enem = curr_level.enemies[rng.randi()%elist.size()]
+
+	# spawn enemy
+	NonPlayableCharacter = $EnemyUtil.create_enemy_from_res(enem)	
 	add_child(NonPlayableCharacter)
 	NonPlayableCharacter.global_position = $EnemyPos.global_position 
 	NonPlayableCharacter.animation = "enemy_idle"
 	NonPlayableCharacter.play()
 	return NonPlayableCharacter
+	 
+
+# for testing 
+#func spawn_enemy(enem: String): 
+	#NonPlayableCharacter = $EnemyUtil.create_enemy(enem)	
+	#add_child(NonPlayableCharacter)
+	#NonPlayableCharacter.global_position = $EnemyPos.global_position 
+	#NonPlayableCharacter.animation = "enemy_idle"
+	#NonPlayableCharacter.play()
+	#return NonPlayableCharacter
 	
 func fade_in_and_run_to_npc() -> void:
 	Player.animation = "run"

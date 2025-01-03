@@ -96,8 +96,11 @@ func save_settings():
 	print({"save_data":save_data})
 	file.store_string(JSON.stringify(save_data))
 
+static func get_json_in_dict(file_path: String):
+	var json_as_text = FileAccess.get_file_as_string(file_path)
+	var kanji_data = JSON.parse_string(json_as_text)
+	return kanji_data
 
-	
 func pick_percent(per: float): 
 	if rng.randf_range(1.0,100.0) <= per:
 		return true

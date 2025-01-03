@@ -3,7 +3,14 @@ class_name EnemyUtil
 const allowedEnemies = ["skeleton", "snake", "cat", "bat", "crow", "tree"]
 
 
-func create_enemy(t: String)->AnimatedSprite2D: 
+func create_enemy_from_res(res: EnemyResource): 
+	# create enemy
+	var node: BaseEnemy = BaseEnemy.new(res)
+	node.flip_h = res.flip_h
+
+	return node
+	
+func create_enemy_from_str(t: String)->AnimatedSprite2D: 
 	# sanitize
 	if !allowedEnemies.has(t):
 		printerr("Spawned not allowed enemy: ", t)
@@ -13,9 +20,4 @@ func create_enemy(t: String)->AnimatedSprite2D:
 	# res://resources/Enemies/skeleton.tres for e.g for skeleton resource
 	var baseResPath = "res://resources/Enemies/"
 	var res: EnemyResource = load(baseResPath + t + ".tres")
-	
-	# create enemy
-	var node: BaseEnemy = BaseEnemy.new(res)
-	node.flip_h = res.flip_h
-
-	return node
+	return create_enemy_from_res(res)

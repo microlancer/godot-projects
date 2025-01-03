@@ -1,0 +1,8 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvbvdc511iog"]
+
+[ext_resource type="PackedScene" uid="uid://cc7hyununn8vg" path="res://scenes/Levels/BaseLevel.tscn" id="1_15iib"]
+[ext_resource type="Script" path="res://resources/Enemies/EnemyResourceScript.gd" id="2_4nkc5"]
+[ext_resource type="SpriteFrames" uid="uid://c3okfe721512t" path="res://resources/Enemies/skeleton.tres" id="3_u7wi1"]
+
+[node name="Level1" instance=ExtResource("1_15iib")]
+enemies = Array[ExtResource("2_4nkc5")]([ExtResource("3_u7wi1")])

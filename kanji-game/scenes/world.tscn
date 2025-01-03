@@ -1,4 +1,4 @@
-[gd_scene load_steps=604 format=4 uid="uid://bmrjl77m8kh4x"]
+[gd_scene load_steps=605 format=4 uid="uid://bmrjl77m8kh4x"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_hie7w"]
 [ext_resource type="Texture2D" uid="uid://ddxjf6to5ay4q" path="res://assets/graphics/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="2_a6368"]
@@ -75,6 +75,7 @@
 [ext_resource type="Script" path="res://scripts/Enemies/base_enemy.gd" id="75_l2cya"]
 [ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="76_sav1y"]
 [ext_resource type="Texture2D" uid="uid://b1ggpio8d7ar" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-03.png" id="77_x8euj"]
+[ext_resource type="PackedScene" uid="uid://dgs2gpy70wl21" path="res://scenes/player.tscn" id="78_1fh1a"]
 [ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="78_2owi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5yhu"]
@@ -4102,11 +4103,12 @@ animations = [{
 
 [node name="world" type="Node2D" node_paths=PackedStringArray("Player", "Player_health_label", "Enemy_health_label", "player_health_bar", "enemy_health_bar")]
 script = ExtResource("1_hie7w")
-Player = NodePath("AnimatedPlayer")
+Player = NodePath("Player")
 Player_health_label = NodePath("UI/EnemyDamageLabel")
 Enemy_health_label = NodePath("UI/PlayerDamageLabel")
 player_health_bar = NodePath("UI/HealthBarPlayer")
 enemy_health_bar = NodePath("UI/HealthBarEnemy")
+level = 1
 
 [node name="Bg1Clouds" type="Sprite2D" parent="."]
 position = Vector2(78.1339, -3.53841)
@@ -4149,6 +4151,7 @@ tile_map_data = PackedByteArray("AAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAA
 tile_set = SubResource("TileSet_f6huk")
 
 [node name="AnimatedPlayer" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(44, 9)
 sprite_frames = SubResource("SpriteFrames_hdx0j")
@@ -4236,3 +4239,7 @@ script = ExtResource("75_l2cya")
 
 [node name="EnemyUtil" type="Node" parent="."]
 script = ExtResource("74_ke3v7")
+
+[node name="LevelContainer" type="Node" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("78_1fh1a")]

@@ -1052,17 +1052,6 @@ texture = ExtResource("69_7yq57")
 region_enabled = true
 region_rect = Rect2(4, 323, 23, 26)
 
-[node name="MenuMenuButton" type="Button" parent="UI"]
-z_index = 3
-layout_mode = 0
-offset_left = -45.0
-offset_top = 139.0
-offset_right = 80.0
-offset_bottom = 173.0
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 16
-text = "BACK TO TOWN"
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1155,4 +1144,3 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [connection signal="pressed" from="UI/InventoryButton" to="." method="_on_inventory_button_pressed"]
-[connection signal="pressed" from="UI/MenuMenuButton" to="." method="_on_menu_menu_button_pressed"]

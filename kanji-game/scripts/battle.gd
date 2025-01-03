@@ -66,7 +66,7 @@ var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
 
 @export var world: World
-@onready var animated_player:AnimatedSprite2D = world.Player
+@onready var animated_player: AnimatedSprite2D = world.Player
 var animated_enemy:AnimatedSprite2D = null
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
@@ -80,13 +80,16 @@ var animated_enemy:AnimatedSprite2D = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	animated_enemy = world.spawn_enemy("skeleton")
+	animated_enemy = world.spawn_enemy_on_level()
 	
 	$UI.hide()
 	$UI2.hide()
 	
 	world.connect("end_run_to_npc", Callable(self, "_end_run"))
 	animated_player.connect("animation_changed", Callable(self, "_animation_changed"))
+	animated_player.used_item.connect(_on_player_used_item)
+	animated_player.test.connect(_on_player_used_item)
+	
 	animated_player.connect("animation_finished", Callable(self, "_animation_finished"))
 	animated_player.connect("animation_looped", Callable(self, "_animation_looped_player"))
 	animated_enemy.connect("animation_finished", Callable(self, "_animation_finished_enemy"))
@@ -129,7 +132,10 @@ func _ready() -> void:
 	
 	$UI/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
-	
+func _on_player_used_item(item): 
+	print("used item")
+	pass 
+
 func _end_run() -> void:
 	animated_player.animation = "idle"
 	animated_player.play()

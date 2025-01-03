@@ -59,25 +59,11 @@ func _process(_delta: float) -> void:
 
 
 func _on_inventory_button_pressed(selected_item: InventoryItem) -> void:
-	if _player.player_gold >= selected_item.price:
-		_player.player_gold -= selected_item.price
+	var item_bought = _player.buy_item(selected_item)
+	if item_bought: 
 		_purchase_sound.play()
-#
-		if selected_item.item_name in _player.current_item.keys():
-			var cur_item: Dictionary = _player.current_item[selected_item.item_name]
-#
-			cur_item["amount"] += 1
-#
-			_player.update_inventory_ui(_player.indexes_dict[selected_item.item_name], selected_item.displayTexture)
-#
-		else:
-			_player.current_item[selected_item.item_name] = {
-				"amount": 1,
-			}
-			_player.indexes_dict[selected_item.item_name] = _player.index
-#
-			_player.update_inventory_ui(_player.index, selected_item.displayTexture)
-
-			_player.index += 1
-	elif _player.player_gold < selected_item.price:
+	else: 
 		_error_sound.play()
+
+func _on_menu_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/town.tscn")
