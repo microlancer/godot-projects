@@ -19,23 +19,10 @@ class_name  World
 
 signal end_run_to_npc()
 signal end_run_from_npc()
-var curr_level: BaseLevel = null  
 
 
-func load_level():  
-	var base_path = "res://scenes/Levels/"
-	if level == 0: 
-		base_path += "BaseLevel.tscn" 
-	else: 
-		base_path += "Level1.tscn"
-	
-	curr_level = load(base_path).instantiate()
-	$LevelContainer.add_child(curr_level)
-	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_level()
-	
 	Player.position.x = -50
 	reset_decor_positions()
 	UI.hide()
@@ -61,10 +48,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func spawn_enemy_on_level():
+func spawn_enemy(elist: Array[EnemyResource] ):
+	if elist.size() == 0: 
+		printerr("Enemies options must be more than 1!")
+		return null
+	
 	# pick enemy
-	var elist = curr_level.enemies
-	var enem = curr_level.enemies[rng.randi()%elist.size()]
+	var enem = elist[rng.randi()%elist.size()]
 
 	# spawn enemy
 	NonPlayableCharacter = $EnemyUtil.create_enemy_from_res(enem)	
@@ -75,14 +65,6 @@ func spawn_enemy_on_level():
 	return NonPlayableCharacter
 	 
 
-# for testing 
-#func spawn_enemy(enem: String): 
-	#NonPlayableCharacter = $EnemyUtil.create_enemy(enem)	
-	#add_child(NonPlayableCharacter)
-	#NonPlayableCharacter.global_position = $EnemyPos.global_position 
-	#NonPlayableCharacter.animation = "enemy_idle"
-	#NonPlayableCharacter.play()
-	#return NonPlayableCharacter
 	
 func fade_in_and_run_to_npc() -> void:
 	Player.animation = "run"

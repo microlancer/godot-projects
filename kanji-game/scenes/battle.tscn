@@ -1,4 +1,4 @@
-[gd_scene load_steps=456 format=3 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=457 format=3 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://scripts/battle.gd" id="1_vyelx"]
 [ext_resource type="PackedScene" uid="uid://bmrjl77m8kh4x" path="res://scenes/world.tscn" id="2_f0y0t"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_wpydr"]
 [ext_resource type="Script" path="res://scripts/vertical_text_label.gd" id="12_d4whg"]
 [ext_resource type="Script" path="res://scenes/fade.gd" id="12_uf80n"]
+[ext_resource type="Script" path="res://scripts/level_container.gd" id="13_almlr"]
 [ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="79_pgljm"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="80_88h8b"]
 [ext_resource type="PackedScene" uid="uid://c841tuc4putwe" path="res://scenes/kanji_progress.tscn" id="81_bh4je"]
@@ -3421,6 +3422,10 @@ offset_right = 35.0
 offset_bottom = 35.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
+
+[node name="LevelContainer" type="Node" parent="."]
+script = ExtResource("13_almlr")
+default_level = 1
 
 [connection signal="correct_stroke" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_correct_stroke"]
 [connection signal="kanji_correct" from="UI/KanjiDrawPanel" to="." method="_on_kanji_draw_panel_kanji_correct"]

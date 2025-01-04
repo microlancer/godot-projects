@@ -67,7 +67,8 @@ var debug_detector_kanji: String = "慢"
 
 @export var world: World
 @onready var animated_player: Player = world.Player
-@onready var current_level: BaseLevel = world.curr_level
+@onready var LevelManager = $LevelContainer
+var current_level: BaseLevel = null
 var animated_enemy:AnimatedSprite2D = null
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
@@ -80,8 +81,8 @@ var animated_enemy:AnimatedSprite2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	animated_enemy = world.spawn_enemy_on_level()
+	current_level = LevelManager.load_level()
+	animated_enemy = world.spawn_enemy(current_level.enemies)
 	
 	$UI.hide()
 	$UI2.hide()

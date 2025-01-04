@@ -4240,6 +4240,4 @@ script = ExtResource("75_l2cya")
 [node name="EnemyUtil" type="Node" parent="."]
 script = ExtResource("74_ke3v7")
 
-[node name="LevelContainer" type="Node" parent="."]
-
 [node name="Player" parent="." instance=ExtResource("78_1fh1a")]
