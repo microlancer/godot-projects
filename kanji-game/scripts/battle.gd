@@ -67,6 +67,7 @@ var debug_detector_kanji: String = "慢"
 
 @export var world: World
 @onready var animated_player: Player = world.Player
+@onready var current_level: BaseLevel = world.curr_level
 var animated_enemy:AnimatedSprite2D = null
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
@@ -107,14 +108,17 @@ func _ready() -> void:
 	enemy_hp = enemy_hp_max
 	
 	update_hp()
-	var file_path = "res://data/kanji_data.json"
-	var json_as_text = FileAccess.get_file_as_string(file_path)
-	var kanji_data = JSON.parse_string(json_as_text)
-	kanji_sentences = kanji_data.sentences
-	complete_pool = kanji_data.pool
+	
+	# load kanji
+	#var file_path = "res://data/kanji_data.json"
+	#var json_as_text = FileAccess.get_file_as_string(file_path)
+	#var kanji_data = JSON.parse_string(json_as_text)
+	var kanji_data = current_level.load_kanji()
+	kanji_sentences = kanji_data["sentences"]
+	complete_pool = kanji_data["pool"]
 	#kanji_refs = kanji_data.refs
 	
-	$UI/KanjiDrawPanel.kanji_refs = kanji_data.refs
+	$UI/KanjiDrawPanel.kanji_refs = kanji_data["refs"]
 	
 	pick_random_sentence()
 	save_game()

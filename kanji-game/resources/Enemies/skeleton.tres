@@ -321,7 +321,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yovjm")
 }],
-"loop": true,
+"loop": false,
 "name": &"enemy_die",
 "speed": 10.0
 }, {

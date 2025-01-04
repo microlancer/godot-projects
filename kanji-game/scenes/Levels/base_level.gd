@@ -2,11 +2,11 @@ extends Node
 class_name  BaseLevel
 
 @export var enemies: Array[EnemyResource] = []
-@export var sentence_ref_path: JSON 
-@export var sentence_file_path: JSON 
+@export var ref_json: JSON 
+@export var sentence_json: JSON 
+@export var pool_json: JSON = null
 
-
-# ref file format  
+# ref (n5_refs.json) file format  
 #{
 	#"一": {
 		#"unicode": 19968,
@@ -16,7 +16,7 @@ class_name  BaseLevel
 	#},
 #}
 
-# sentence file format
+# sentence (n5.json) file format
 #{ 
 	#"お皿": {
 		#"order": "1",
@@ -29,3 +29,17 @@ class_name  BaseLevel
 		#"en": "I \/wash\/ the dishes."
 	#},
 #}
+func load_kanji(): 
+	var pool = []
+	if pool_json != null: 
+		# load pool here 
+		pass 
+
+	var res = { 
+		"pool": pool, 
+		"sentences": JSON.parse_string(JSON.stringify(sentence_json.data)),
+		"refs": JSON.parse_string(JSON.stringify(ref_json.data))
+	} 
+	
+	return res
+	

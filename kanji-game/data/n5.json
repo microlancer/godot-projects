@@ -1,0 +1,4900 @@
+{
+	"お皿": {
+		"order": "1",
+		"word": "お皿",
+		"sentence": "私は・お皿・を洗う。",
+		"furigana": [
+			"さら",
+			"あらう"
+		],
+		"en": "I \/wash\/ the dishes."
+	},
+	"お風呂": {
+		"order": "2",
+		"word": "お風呂",
+		"sentence": "私は・お風呂・に入る。",
+		"furigana": [
+			"ふろ",
+			"はいる"
+		],
+		"en": "I \/take a bath\/."
+	},
+	"一日": {
+		"order": "3",
+		"word": "一日",
+		"sentence": "・一日・は二十四時間だ。",
+		"furigana": [
+			"いちにち",
+			"にじゅうよじかん"
+		],
+		"en": "A day has \/twenty-four hours\/."
+	},
+	"一月": {
+		"order": "4",
+		"word": "一月",
+		"sentence": "・一月・は最も寒い月です。",
+		"furigana": [
+			"いちがつ",
+			"もっとも",
+			"さむい",
+			"つき"
+		],
+		"en": "\/January\/ is the coldest month."
+	},
+	"さ来年": {
+		"order": "5",
+		"word": "さ来年",
+		"sentence": "・再来年・は二年後だ。",
+		"furigana": [
+			"さらいねん",
+			"にねんご"
+		],
+		"en": "\/The year after next\/ is two years from now."
+	},
+	"冷蔵庫": {
+		"order": "6",
+		"word": "冷蔵庫",
+		"sentence": "・冷蔵庫・を開ける。",
+		"furigana": [
+			"れいぞうこ",
+			"あける"
+		],
+		"en": "I opened the \/refridgerator\/."
+	},
+	"十": {
+		"order": "9",
+		"word": "十",
+		"sentence": "・十・まで指で数えてください。",
+		"furigana": [
+			"じゅう",
+			"ゆび",
+			"かぞ"
+		],
+		"en": "Count to \/ten\/ on your fingers."
+	},
+	"右": {
+		"order": "11",
+		"word": "右",
+		"sentence": "・右・に曲がってください。",
+		"furigana": [
+			"みぎ",
+			"ま"
+		],
+		"en": "Please turn \/right\/."
+	},
+	"地下鉄": {
+		"order": "13",
+		"word": "地下鉄",
+		"sentence": "・地下鉄・に乗る。",
+		"furigana": [
+			"ちかてつ",
+			"のる"
+		],
+		"en": "Take the \/subway\/."
+	},
+	"大きな": {
+		"order": "14",
+		"word": "大きな",
+		"sentence": "・大きな・犬がいる。",
+		"furigana": [
+			"おおきな",
+			"いぬ"
+		],
+		"en": "There is a \/big\/ dog."
+	},
+	"廊下": {
+		"order": "15",
+		"word": "廊下",
+		"sentence": "・廊下・は走ってはいけない。",
+		"furigana": [
+			"ろうか",
+			"はしってはいけない"
+		],
+		"en": "Do not run in the \/hallways\/."
+	},
+	"手紙": {
+		"order": "16",
+		"word": "手紙",
+		"sentence": "・手紙・を書く。",
+		"furigana": [
+			"てがみ",
+			"かく"
+		],
+		"en": "I wite a \/letter\/."
+	},
+	"新しい": {
+		"order": "17",
+		"word": "新しい",
+		"sentence": "・新しい・洋服を着る。",
+		"furigana": [
+			"あたらしい",
+			"ようふく",
+			"きる"
+		],
+		"en": "I wear \/new\/ clothes."
+	},
+	"昨夜": {
+		"order": "18",
+		"word": "昨夜",
+		"sentence": "・昨夜・は飲み会があった。",
+		"furigana": [
+			"さくや",
+			"のみかい"
+		],
+		"en": "There was a drinking party \/last night\/."
+	},
+	"東": {
+		"order": "20",
+		"word": "東",
+		"sentence": "・東・の方向に進む。",
+		"furigana": [
+			"ひがし",
+			"ほうこう",
+			"すすむ"
+		],
+		"en": "Proceed in the \/east\/ direction."
+	},
+	"玄関": {
+		"order": "22",
+		"word": "玄関",
+		"sentence": "・玄関・を掃除をする。",
+		"furigana": [
+			"げんかん",
+			"そうじ"
+		],
+		"en": "I wear clean the \/entrance hall\/."
+	},
+	"目": {
+		"order": "23",
+		"word": "目",
+		"sentence": "・目・をさます。",
+		"furigana": [
+			"め"
+		],
+		"en": "I will awaken (open my \/eye\/)."
+	},
+	"私": {
+		"order": "24",
+		"word": "私",
+		"sentence": "・私・は日本人です。",
+		"furigana": [
+			"わたし",
+			"にほんじん"
+		],
+		"en": "\/I\/ am a Japanese."
+	},
+	"西": {
+		"order": "25",
+		"word": "西",
+		"sentence": "・西・の方向に進む。",
+		"furigana": [
+			"にし",
+			"ほうこう",
+			"すすむ"
+		],
+		"en": "Proceed in the \/west\/ direction."
+	},
+	"財布": {
+		"order": "26",
+		"word": "財布",
+		"sentence": "・財布・を家に忘れた。",
+		"furigana": [
+			"さいふ",
+			"いえ",
+			"わすれた"
+		],
+		"en": "I forgot my \/wallet\/ at home."
+	},
+	"鉛筆": {
+		"order": "27",
+		"word": "鉛筆",
+		"sentence": "・鉛筆・を一ダース買う。",
+		"furigana": [
+			"えんぴつ",
+			"いち",
+			"かう"
+		],
+		"en": "I buy a dozen pencils."
+	},
+	"雨": {
+		"order": "28",
+		"word": "雨",
+		"sentence": "・雨・がたくさん降る。",
+		"furigana": [
+			"あめ",
+			"ふる"
+		],
+		"en": "It \/rains\/ a lot."
+	},
+	"電話": {
+		"order": "29",
+		"word": "電話",
+		"sentence": "友達に・電話・をかけた。",
+		"furigana": [
+			"ともだち",
+			"でんわ"
+		],
+		"en": "I called a friend."
+	},
+	"風邪": {
+		"order": "31",
+		"word": "風邪",
+		"sentence": "・風邪・をひいた。",
+		"furigana": [
+			"かぜ"
+		],
+		"en": "I caught a \/cold\/."
+	},
+	"番号": {
+		"order": "32",
+		"word": "番号",
+		"sentence": "あなたの電話・番号・を教えてください。",
+		"furigana": [
+			"でんわ",
+			"ばんごう",
+			"おしえてください"
+		],
+		"en": "Please tell me your phone \/number\/."
+	},
+	"英語": {
+		"order": "33",
+		"word": "英語",
+		"sentence": "アメリカ人は・英語・を話す。",
+		"furigana": [
+			"じん",
+			"えいご",
+			"はなす"
+		],
+		"en": "Americans speak \/English\/."
+	},
+	"座る": {
+		"order": "34",
+		"word": "座る",
+		"sentence": "いすに・座る・。",
+		"furigana": [
+			"すわる"
+		],
+		"en": "I \/sat\/ on the chair."
+	},
+	"七": {
+		"order": "35",
+		"word": "七",
+		"sentence": "うどんに・七・味をかけますか？",
+		"furigana": [
+			"しち",
+			"み"
+		],
+		"en": "Would you like to put \/shich\/imi on your udon?"
+	},
+	"葉書": {
+		"order": "37",
+		"word": "葉書",
+		"sentence": "おばあちゃんに・葉書・を書く。",
+		"furigana": [
+			"はがき",
+			"かく"
+		],
+		"en": "I write a \/postcard\/ to Grandma."
+	},
+	"暖かい": {
+		"order": "38",
+		"word": "暖かい",
+		"sentence": "カルフォルニアはとても・暖かい・気候だ。",
+		"furigana": [
+			"あたたかい",
+			"きこう"
+		],
+		"en": "California has a very \/warm\/ climate."
+	},
+	"少し": {
+		"order": "39",
+		"word": "少し",
+		"sentence": "このカレーは・少し・辛い。",
+		"furigana": [
+			"すこし",
+			"からい"
+		],
+		"en": "This curry is \/a little\/ spicy."
+	},
+	"薄い": {
+		"order": "40",
+		"word": "薄い",
+		"sentence": "このジュースの味はとても・薄い・。",
+		"furigana": [
+			"あじ",
+			"うすい"
+		],
+		"en": "The taste of this juice is very \/weak\/."
+	},
+	"問題": {
+		"order": "41",
+		"word": "問題",
+		"sentence": "このテストには・問題・がたくさんある。",
+		"furigana": [
+			"もんだい"
+		],
+		"en": "This test has a lot of \/questions\/."
+	},
+	"賑やか": {
+		"order": "43",
+		"word": "賑やか",
+		"sentence": "このパーティーは・賑やか・だ。",
+		"furigana": [
+			"にぎやか"
+		],
+		"en": "This party is \/lively\/."
+	},
+	"一": {
+		"order": "44",
+		"word": "一",
+		"sentence": "このラーメンは・一・番｜美味しいです。",
+		"furigana": [
+			"いち",
+			"ばん",
+			"おいしい"
+		],
+		"en": "This ramen is the \/best\/! "
+	},
+	"安い": {
+		"order": "45",
+		"word": "安い",
+		"sentence": "このりんごは・安い・。",
+		"furigana": [
+			"やすい"
+		],
+		"en": "This apple is \/cheap\/."
+	},
+	"毎月": {
+		"order": "46",
+		"word": "毎月",
+		"sentence": "この公園では・毎月・イベントが開催される。",
+		"furigana": [
+			"こうえん",
+			"まいつき",
+			"かいさい"
+		],
+		"en": "The park hosts events \/every month\/."
+	},
+	"難しい": {
+		"order": "47",
+		"word": "難しい",
+		"sentence": "この問題はとても・難しい・。",
+		"furigana": [
+			"もんだい",
+			"むずかしい"
+		],
+		"en": "This problem is very \/difficult\/."
+	},
+	"男の子": {
+		"order": "48",
+		"word": "男の子",
+		"sentence": "この学校は・男の子・が多い。",
+		"furigana": [
+			"がっこう",
+			"おとこのこ",
+			"おお"
+		],
+		"en": "There are more \/boys\/ in this school."
+	},
+	"厚い": {
+		"order": "49",
+		"word": "厚い",
+		"sentence": "この本は・厚い・。",
+		"furigana": [
+			"ほん",
+			"あつい"
+		],
+		"en": "This book is \/thick\/."
+	},
+	"閉まる": {
+		"order": "50",
+		"word": "閉まる",
+		"sentence": "この本屋は来年で・閉まる・。",
+		"furigana": [
+			"ほんや",
+			"らいねん",
+			"しまる"
+		],
+		"en": "This bookstore will be closing \/next year\/."
+	},
+	"危ない": {
+		"order": "52",
+		"word": "危ない",
+		"sentence": "この町は・危ない・。",
+		"furigana": [
+			"まち",
+			"あぶない"
+		],
+		"en": "This town is \/dangerous\/."
+	},
+	"何": {
+		"order": "53",
+		"word": "何",
+		"sentence": "あなたは・何・が好きですか？。",
+		"furigana": [
+			"なに"
+		],
+		"en": "\/What\/ do you like?"
+	},
+	"便利": {
+		"order": "54",
+		"word": "便利",
+		"sentence": "スマートフォンはとても・便利・だ。",
+		"furigana": [
+			"べんり"
+		],
+		"en": "Smartphones are very \/convenient\/."
+	},
+	"黒": {
+		"order": "55",
+		"word": "黒",
+		"sentence": "そこに・黒い・犬がいる。",
+		"furigana": [
+			"くろい",
+			"いぬ"
+		],
+		"en": "There is a \/black\/ dog there."
+	},
+	"王": {
+		"order": "56",
+		"word": "王",
+		"sentence": "その・王・は国を治めた。",
+		"furigana": [
+			"おう",
+			"くに",
+			"おさ"
+		],
+		"en": "The \/king\/ ruled the country."
+	},
+	"国": {
+		"order": "57",
+		"word": "国",
+		"sentence": "その歌手は・国・の海外で有名である。",
+		"furigana": [
+			"かしゅ",
+			"くに",
+			"かいがい",
+			"ゆうめい"
+		],
+		"en": "The singer is famous overseas in \/country\/."
+	},
+	"九": {
+		"order": "58",
+		"word": "九",
+		"sentence": "その野球｜選手は・九・回の裏でホームランを打ちました。",
+		"furigana": [
+			"やきゅう",
+			"せんしゅ",
+			"きゅう",
+			"かい",
+			"うら",
+			"う"
+		],
+		"en": "That baseball player hit a home run in the bottom of the \/ninth\/ inning."
+	},
+	"帰る": {
+		"order": "59",
+		"word": "帰る",
+		"sentence": "そろそろ家に・帰る・時間だ。",
+		"furigana": [
+			"いえ",
+			"かえる",
+			"じかん"
+		],
+		"en": "It's about time to go home."
+	},
+	"閉める": {
+		"order": "60",
+		"word": "閉める",
+		"sentence": "とびらを・閉める・。",
+		"furigana": [
+			"しめる"
+		],
+		"en": "I \/close\/ the door."
+	},
+	"高い": {
+		"order": "61",
+		"word": "高い",
+		"sentence": "ニューヨークのビルはとても・高い・。",
+		"furigana": [
+			"たかい"
+		],
+		"en": "The buildings in New York are very \/tall\/."
+	},
+	"飲む": {
+		"order": "62",
+		"word": "飲む",
+		"sentence": "ビールを・飲む・。",
+		"furigana": [
+			"のむ"
+		],
+		"en": "I \/drink\/ beer."
+	},
+	"休み": {
+		"order": "63",
+		"word": "休み",
+		"sentence": "もうすぐ夏・休み・が始まる。",
+		"furigana": [
+			"なつ",
+			"やすみ",
+			"はじ"
+		],
+		"en": "Summer \/vacation\/ will soon begin."
+	},
+	"お茶": {
+		"order": "64",
+		"word": "お茶",
+		"sentence": "京都で・お茶・を買った。",
+		"furigana": [
+			"きょうと",
+			"おちゃ",
+			"か"
+		],
+		"en": "I bought some \/tea\/ in Kyoto."
+	},
+	"遊ぶ": {
+		"order": "65",
+		"word": "遊ぶ",
+		"sentence": "今夜は友達と・遊ぶ・予定だ。",
+		"furigana": [
+			"こんや",
+			"ともだち",
+			"あそぶ",
+			"よてい"
+		],
+		"en": "I'm planning to \/hang out\/ with friends tonight."
+	},
+	"年": {
+		"order": "66",
+		"word": "年",
+		"sentence": "新年あけましておめでとう。",
+		"furigana": [
+			"しんねん"
+		],
+		"en": "Happy New \/Year\/."
+	},
+	"空": {
+		"order": "67",
+		"word": "空",
+		"sentence": "今日の・空・は青い。",
+		"furigana": [
+			"きょう",
+			"そら",
+			"あお"
+		],
+		"en": "Today's sky is \/blue\/."
+	},
+	"風": {
+		"order": "68",
+		"word": "風",
+		"sentence": "今日の夜はとても・風・が強い。",
+		"furigana": [
+			"きょう",
+			"よる",
+			"かぜ",
+			"つよ"
+		],
+		"en": "It's very \/windy\/ tonight."
+	},
+	"日": {
+		"order": "69",
+		"word": "日",
+		"sentence": "今日はあたたかい・日・だ。",
+		"furigana": [
+			"きょう",
+			"ひ"
+		],
+		"en": "It's a warm \/day\/ today."
+	},
+	"傘": {
+		"order": "70",
+		"word": "傘",
+		"sentence": "今日は雨予報なので・傘・を持っていく。",
+		"furigana": [
+			"きょう",
+			"あめよほう",
+			"かさ",
+			"も"
+		],
+		"en": "It's forecast to rain today, so I'll bring an \/umbrella\/."
+	},
+	"六つ": {
+		"order": "71",
+		"word": "六つ",
+		"sentence": "仕事は・六・時に終わります。",
+		"furigana": [
+			"しふぉと",
+			"ろく",
+			"じ",
+			"お"
+		],
+		"en": "The work finishes at \/six\/ o'clock."
+	},
+	"勤める": {
+		"order": "72",
+		"word": "勤める",
+		"sentence": "会社に・勤める・。",
+		"furigana": [
+			"かいしゃ",
+			"つとめる"
+		],
+		"en": "I work for a \/company\/."
+	},
+	"池": {
+		"order": "73",
+		"word": "池",
+		"sentence": "公園に大きな・池・がある。",
+		"furigana": [
+			"こうえん",
+			"おお",
+			"いけ"
+		],
+		"en": "There is a big \/pond\/ in the park."
+	},
+	"辞書": {
+		"order": "75",
+		"word": "辞書",
+		"sentence": "分からない単語を・辞書・で調べる。",
+		"furigana": [
+			"わ",
+			"たんご",
+			"じしょ",
+			"しら"
+		],
+		"en": "I look up any words you don't understand in a \/dictionary\/."
+	},
+	"茶色": {
+		"order": "76",
+		"word": "茶色",
+		"sentence": "動物園には・茶色・の熊がいる。",
+		"furigana": [
+			"どうぶつえん",
+			"ちゃいろ",
+			"くま"
+		],
+		"en": "There is a \/brown\/ bear in the zoo."
+	},
+	"寒い": {
+		"order": "79",
+		"word": "寒い",
+		"sentence": "北海道の冬はとても・寒い・。",
+		"furigana": [
+			"ほっかいどう",
+			"ふゆ",
+			"さむ"
+		],
+		"en": "Winter in Hokkaido is very \/cold\/."
+	},
+	"練習": {
+		"order": "80",
+		"word": "練習",
+		"sentence": "友達とサッカーを・練習・する。",
+		"furigana": [
+			"ともだち",
+			"れんしゅう"
+		],
+		"en": "I \/practice\/ soccer with friends."
+	},
+	"庭": {
+		"order": "83",
+		"word": "庭",
+		"sentence": "大きな・庭・がある。",
+		"furigana": [
+			"おお",
+			"にわ"
+		],
+		"en": "There is a large \/garden\/."
+	},
+	"自転車": {
+		"order": "84",
+		"word": "自転車",
+		"sentence": "子どもが・自転車・に乗る練習をしている。",
+		"furigana": [
+			"こ",
+			"じてんしゃ",
+			"の",
+			"れんしゅう"
+		],
+		"en": "A child is learning to ride a \/bicycle\/."
+	},
+	"授業": {
+		"order": "85",
+		"word": "授業",
+		"sentence": "学校の先生の・授業・はとても分かりやすい。",
+		"furigana": [
+			"がっこう",
+			"せんせい",
+			"じゅぎょう",
+			"わ"
+		],
+		"en": "The teachers' \/lessons\/ are very easy to understand."
+	},
+	"八": {
+		"order": "87",
+		"word": "八",
+		"sentence": "今日は八｜時間の授業がある。",
+		"furigana": [
+			"きょう",
+			"はち",
+			"じかん",
+			"じゅぎょう"
+		],
+		"en": "Today I have \/eight\/ hours of class."
+	},
+	"近く": {
+		"order": "90",
+		"word": "近く",
+		"sentence": "家の・近く・に公園がある。",
+		"furigana": [
+			"いえ",
+			"ちかく",
+			"こうえん"
+		],
+		"en": "There is a park \/near\/ my house."
+	},
+	"頭": {
+		"order": "94",
+		"word": "頭",
+		"sentence": "今日が頭が痛い。",
+		"furigana": [
+			"かれ",
+			"あたま"
+		],
+		"en": "My \/head\/ hurts today."
+	},
+	"速い": {
+		"order": "96",
+		"word": "速い",
+		"sentence": "彼は走るのが・速い・。",
+		"furigana": [
+			"かれ",
+			"はし",
+			"はやい"
+		],
+		"en": "He runs \/fast\/."
+	},
+	"磨く": {
+		"order": "97",
+		"word": "磨く",
+		"sentence": "彼は靴を・磨く・。",
+		"furigana": [
+			"かれ",
+			"くつ",
+			"みがく"
+		],
+		"en": "He \/polishes\/ his shoes."
+	},
+	"病気": {
+		"order": "98",
+		"word": "病気",
+		"sentence": "急に・病気・にかかる。",
+		"furigana": [
+			"きゅう",
+			"びょうき"
+		],
+		"en": "To suddenly become \/ill\/."
+	},
+	"始まる": {
+		"order": "99",
+		"word": "始まる",
+		"sentence": "クリスマスが・始まる・。",
+		"furigana": [
+			"はじまる"
+		],
+		"en": "Christmas \/begins\/."
+	},
+	"万年筆": {
+		"order": "100",
+		"word": "万年筆",
+		"sentence": "新しい・万年筆・を買った。",
+		"furigana": [
+			"あたら",
+			"まんねんひつ",
+			"か"
+		],
+		"en": "I bought a new \/fountain pen\/."
+	},
+	"料理": {
+		"order": "101",
+		"word": "料理",
+		"sentence": "日本・料理・はとても美味しい。",
+		"furigana": [
+			"にほん",
+			"りょうり",
+			"おい"
+		],
+		"en": "Japanese \/food\/ is very delicious."
+	},
+	"卵": {
+		"order": "102",
+		"word": "卵",
+		"sentence": "日本では生・卵・を食べる。",
+		"furigana": [
+			"にほん",
+			"なま",
+			"たまご"
+		],
+		"en": "In Japan, we eat raw \/eggs\/."
+	},
+	"外国人": {
+		"order": "104",
+		"word": "外国人",
+		"sentence": "日本にはたくさんの・外国人・がいる。",
+		"furigana": [
+			"にほん",
+			"がいこくじん"
+		],
+		"en": "They are many foreign people."
+	},
+	"暑い": {
+		"order": "105",
+		"word": "暑い",
+		"sentence": "日本の夏は・暑い・です。",
+		"furigana": [
+			"にほん",
+			"なつ",
+			"あつい"
+		],
+		"en": "Summer in Japan is hot."
+	},
+	"静か": {
+		"order": "106",
+		"word": "静か",
+		"sentence": "日本の電車は・静か・だ。",
+		"furigana": [
+			"にほん",
+			"でんしゃ",
+			"しずか"
+		],
+		"en": "Japanese trains are quiet."
+	},
+	"海": {
+		"order": "107",
+		"word": "海",
+		"sentence": "日本は・海・に囲まれている。",
+		"furigana": [
+			"にほん",
+			"うみ",
+			"かこ"
+		],
+		"en": "Japan is surrounded by the sea."
+	},
+	"留学生": {
+		"order": "108",
+		"word": "留学生",
+		"sentence": "東京にはたくさんの・留学生・がいる。",
+		"furigana": [
+			"とうきょう",
+			"りゅうがくせい"
+		],
+		"en": "There are many international students in Tokyo."
+	},
+	"病院": {
+		"order": "109",
+		"word": "病院",
+		"sentence": "毎週木曜日は・病院・に行く。",
+		"furigana": [
+			"まいしゅうもくようび",
+			"びょういん",
+			"い"
+		],
+		"en": "I go to the hospital every Thursday."
+	},
+	"脱ぐ": {
+		"order": "110",
+		"word": "脱ぐ",
+		"sentence": "洋服を・脱ぐ・。",
+		"furigana": [
+			"ようふく",
+			"ぬ"
+		],
+		"en": "I take off my clothes."
+	},
+	"覚える": {
+		"order": "111",
+		"word": "覚える",
+		"sentence": "漢字を・覚える・。",
+		"furigana": [
+			"かんじ",
+			"おぼ"
+		],
+		"en": "I learn kanji."
+	},
+	"新聞": {
+		"order": "113",
+		"word": "新聞",
+		"sentence": "父は・新聞・を読む。",
+		"furigana": [
+			"ちち",
+			"しんぶん",
+			"よ"
+		],
+		"en": "My father reads newspaper."
+	},
+	"三": {
+		"order": "114",
+		"word": "三",
+		"sentence": "牛丼を・三・杯｜食べました。",
+		"furigana": [
+			"ぎゅうどん",
+			"さん",
+			"ばい",
+			"た"
+		],
+		"en": "I ate three bowls of gyudon."
+	},
+	"五": {
+		"order": "117",
+		"word": "五",
+		"sentence": "私たちは・五・人｜兄弟です。",
+		"furigana": [
+			"わたし",
+			"ご",
+			"にん",
+			"きょうだい"
+		],
+		"en": "We are five siblings."
+	},
+	"お父さん": {
+		"order": "118",
+		"word": "お父さん",
+		"sentence": "私の・お父さん・は優しい。",
+		"furigana": [
+			"わたし",
+			"おとうさん",
+			"やさ"
+		],
+		"en": "My father is kind."
+	},
+	"両親": {
+		"order": "119",
+		"word": "両親",
+		"sentence": "私の・両親・は若い。",
+		"furigana": [
+			"わたし",
+			"りょうしん",
+			"わかい"
+		],
+		"en": "My parents are young."
+	},
+	"会社": {
+		"order": "120",
+		"word": "会社",
+		"sentence": "私の・会社・は東京にある。",
+		"furigana": [
+			"わたし",
+			"かいしゃ",
+			"とうきょう"
+		],
+		"en": "My company is in Tokyo."
+	},
+	"声": {
+		"order": "122",
+		"word": "声",
+		"sentence": "私の・声・はとても大きい。",
+		"furigana": [
+			"わたし",
+			"こえ",
+			"おお"
+		],
+		"en": "My voice is so loud."
+	},
+	"大学": {
+		"order": "123",
+		"word": "大学",
+		"sentence": "私の・大学・は渋谷にある。",
+		"furigana": [
+			"わたし",
+			"だいがく",
+			"しぶや"
+		],
+		"en": "My university in Shibuya."
+	},
+	"奥さん": {
+		"order": "124",
+		"word": "奥さん",
+		"sentence": "私の・奥さん・は綺麗だ。",
+		"furigana": [
+			"わたし",
+			"おくさん",
+			"きれい"
+		],
+		"en": "My wife is beautiful."
+	},
+	"家族": {
+		"order": "126",
+		"word": "家族",
+		"sentence": "私の・家族・は横浜に住んでいる。",
+		"furigana": [
+			"わたし",
+			"かぞく",
+			"よこはま",
+			"す"
+		],
+		"en": "My family live in Yokohama."
+	},
+	"生徒": {
+		"order": "128",
+		"word": "生徒",
+		"sentence": "私の・生徒・はとても素晴らしい。",
+		"furigana": [
+			"わたし",
+			"せいと",
+			"すば"
+		],
+		"en": "My students are amazing."
+	},
+	"二": {
+		"order": "129",
+		"word": "二",
+		"sentence": "私のオフィスは・二・階です。",
+		"furigana": [
+			"わたし",
+			"に",
+			"かい"
+		],
+		"en": "My office is on the second floor."
+	},
+	"作文": {
+		"order": "130",
+		"word": "作文",
+		"sentence": "私の友達が・作文・を書いた。",
+		"furigana": [
+			"わたし",
+			"ともだち",
+			"さくぶん",
+			"か"
+		],
+		"en": "My friend wrote the essay."
+	},
+	"無くす": {
+		"order": "131",
+		"word": "無くす",
+		"sentence": "私の妹は時々鍵を・無くす・。",
+		"furigana": [
+			"わたし",
+			"いもうと",
+			"ときどき",
+			"かぎ",
+			"なくす"
+		],
+		"en": "My sister sometimes lost the key."
+	},
+	"作る": {
+		"order": "134",
+		"word": "作る",
+		"sentence": "私の母が朝食を・作る・。",
+		"furigana": [
+			"わたし",
+			"はは",
+			"ちょうしょく",
+			"つくる"
+		],
+		"en": "My mother makes breakfast."
+	},
+	"狭い": {
+		"order": "135",
+		"word": "狭い",
+		"sentence": "私の部屋はとても・狭い・。",
+		"furigana": [
+			"わたし",
+			"へや",
+			"せまい"
+		],
+		"en": "My room is very small."
+	},
+	"台所": {
+		"order": "136",
+		"word": "台所",
+		"sentence": "私は・台所・で料理する。",
+		"furigana": [
+			"わたし",
+			"だいどころ",
+			"りょうり"
+		],
+		"en": "I cook in the kitchen."
+	},
+	"時々": {
+		"order": "137",
+		"word": "時々",
+		"sentence": "私は・時々・ラーメン食べる。",
+		"furigana": [
+			"わたし",
+			"ときどき",
+			"た"
+		],
+		"en": "I sometimes eat ramen."
+	},
+	"毎朝": {
+		"order": "138",
+		"word": "毎朝",
+		"sentence": "私は・毎朝・七時におきます。",
+		"furigana": [
+			"わたし",
+			"まいあさ",
+			"しちじ"
+		],
+		"en": "I wake up \/every morning\/ at 7 o'clock."
+	},
+	"花瓶": {
+		"order": "139",
+		"word": "花瓶",
+		"sentence": "突然・花瓶・が割れた。",
+		"furigana": [
+			"とつぜん",
+			"かびん",
+			"わ"
+		],
+		"en": "The vase suddenly broke."
+	},
+	"下手": {
+		"order": "142",
+		"word": "下手",
+		"sentence": "私はダンスが・下手・だ。",
+		"furigana": [
+			"わたし",
+			"へた"
+		],
+		"en": "I'm not good at dancing."
+	},
+	"引く": {
+		"order": "143",
+		"word": "引く",
+		"sentence": "私はとびらを・引く・。",
+		"furigana": [
+			"わたし",
+			"ひく"
+		],
+		"en": "I pull the door."
+	},
+	"押す": {
+		"order": "144",
+		"word": "押す",
+		"sentence": "私はとびらを・押す・。",
+		"furigana": [
+			"わたし",
+			"おす"
+		],
+		"en": "I push the door."
+	},
+	"好き": {
+		"order": "145",
+		"word": "好き",
+		"sentence": "私はラーメンが・好き・だ。",
+		"furigana": [
+			"わたし",
+			"すき"
+		],
+		"en": "I like ramen."
+	},
+	"売る": {
+		"order": "146",
+		"word": "売る",
+		"sentence": "私は古い本を・売る・ことにしました。",
+		"furigana": [
+			"わたし",
+			"ふる",
+			"ほん",
+			"うる"
+		],
+		"en": "I decided to sell old books."
+	},
+	"家": {
+		"order": "147",
+		"word": "家",
+		"sentence": "私は大きな・家・を買う。",
+		"furigana": [
+			"わたし",
+			"おお",
+			"いえ",
+			"かう"
+		],
+		"en": "I will but a big house."
+	},
+	"教える": {
+		"order": "148",
+		"word": "教える",
+		"sentence": "私は子供たちに英語を・教える・。",
+		"furigana": [
+			"わたし",
+			"こども",
+			"えいご",
+			"おしえる"
+		],
+		"en": "I teach English to my students."
+	},
+	"登る": {
+		"order": "149",
+		"word": "登る",
+		"sentence": "私は時々山に・登る・。",
+		"furigana": [
+			"わたし",
+			"ときどき",
+			"やま",
+			"のぼる"
+		],
+		"en": "I sometimes climb the mountains."
+	},
+	"電気": {
+		"order": "150",
+		"word": "電気",
+		"sentence": "突然・電気・が消えた。",
+		"furigana": [
+			"とつぜん・でんき・きえた"
+		],
+		"en": "Suddenly the electricity went out."
+	},
+	"朝御飯": {
+		"order": "153",
+		"word": "朝御飯",
+		"sentence": "英語を話すことは私にとって・朝飯前・だ。",
+		"furigana": [
+			"えいご",
+			"はなす",
+			"わたし",
+			"あさめしまえ"
+		],
+		"en": "Speaking English is a piece of cake for me."
+	},
+	"玉": {
+		"order": "154",
+		"word": "玉",
+		"sentence": "走って額は・玉・の汗だった。",
+		"furigana": [
+			"はしって",
+			"ひたい",
+			"たま",
+			"あせ"
+		],
+		"en": "Beads of sweat were on my forehead from running."
+	},
+	"汚い": {
+		"order": "155",
+		"word": "汚い",
+		"sentence": "部屋がとても・汚い・。",
+		"furigana": [
+			"へや",
+			"きたない"
+		],
+		"en": "My room is so dirty."
+	},
+	"掃除": {
+		"order": "156",
+		"word": "掃除",
+		"sentence": "部屋の・掃除・する。",
+		"furigana": [
+			"へや",
+			"そうじ"
+		],
+		"en": "I clean my room."
+	},
+	"四": {
+		"order": "157",
+		"word": "四",
+		"sentence": "部屋の中に子犬が・四・匹います。",
+		"furigana": [
+			"へや",
+			"なか",
+			"こいぬ",
+			"よん",
+			"ひき"
+		],
+		"en": "There are four dogs in the room."
+	},
+	"並ぶ": {
+		"order": "158",
+		"word": "並ぶ",
+		"sentence": "長い列に・並ぶ・。",
+		"furigana": [
+			"ながい",
+			"れつ"
+		],
+		"en": "I stand in a long line."
+	},
+	"消す": {
+		"order": "159",
+		"word": "消す",
+		"sentence": "電気を・消す・。",
+		"furigana": [
+			"でんき",
+			"けす"
+		],
+		"en": "I turn off the lights."
+	},
+	"道": {
+		"order": "160",
+		"word": "道",
+		"sentence": "駅までの・道・のりはとても長い。",
+		"furigana": [
+			"えき",
+			"みち",
+			"ながい"
+		],
+		"en": "The road to the station is long."
+	},
+	"建物": {
+		"order": "161",
+		"word": "建物",
+		"sentence": "東京は・建物・がとても多い。",
+		"furigana": [
+			"とうきょう",
+			"たかい",
+			"たてもの",
+			"おおい"
+		],
+		"en": "Tokyo has many tall buildings."
+	},
+	"飛ぶ": {
+		"order": "162",
+		"word": "飛ぶ",
+		"sentence": "鳥は空を・飛ぶ・。",
+		"furigana": [
+			"とり",
+			"そら",
+			"とぶ"
+		],
+		"en": "Birds fly in the sky."
+	},
+	"取る": {
+		"order": "163",
+		"word": "取る",
+		"sentence": "私は毎朝、新聞を・取る・習慣があります。",
+		"furigana": [
+			"わたし",
+			"まいあさ",
+			"しんぶん",
+			"とる",
+			"しゅうかん"
+		],
+		"en": "I have a habit of taking the newspaper every morning."
+	},
+	"中": {
+		"order": "166",
+		"word": "中",
+		"sentence": "私は・中・学校で日本語を勉強しています",
+		"furigana": [
+			"わたし",
+			"ちゅう",
+			"がっこう",
+			"にほんご",
+			"べんきょう"
+		],
+		"en": "I am studying Japanese in middle school."
+	},
+	"七つ": {
+		"order": "167",
+		"word": "七つ",
+		"sentence": "私は・七つ・の誕生日を楽しみにしています。",
+		"furigana": [
+			"わたし",
+			"ななつ",
+			"たんじょうび",
+			"たの"
+		],
+		"en": "I am looking forward to my seventh birthday."
+	},
+	"六日": {
+		"order": "169",
+		"word": "六日",
+		"sentence": "私は来週の・六日・に試験があります。",
+		"furigana": [
+			"わたしはらいしゅうの・むいか・にしけんがあります"
+		],
+		"en": "I have an exam next week on the sixth."
+	},
+	"違う": {
+		"order": "170",
+		"word": "違う",
+		"sentence": "これは・違う・色です",
+		"furigana": [
+			"これはちがういろです"
+		],
+		"en": "This is a different color."
+	},
+	"分かる": {
+		"order": "171",
+		"word": "分かる",
+		"sentence": "先生の説明を聞いて、この問題が・分かる・ようになりました",
+		"furigana": [
+			"せんせいのせつめいをきいて",
+			"このもんだいが・わかる・ようになりました"
+		],
+		"en": "After listening to the teacher's explanation, I was able to understand this problem."
+	},
+	"言う": {
+		"order": "173",
+		"word": "言う",
+		"sentence": "先生が「これは難しいです」と・言う・、",
+		"furigana": [
+			"せんせいが「これはむずかしいです」と・いう・"
+		],
+		"en": "The teacher says, \"This is difficult.\""
+	},
+	"黒い": {
+		"order": "174",
+		"word": "黒い",
+		"sentence": "私の猫は・黒い・色をしています",
+		"furigana": [
+			"わたしのねこは・くろい・いろをしています"
+		],
+		"en": "My cat is black."
+	},
+	"要る": {
+		"order": "176",
+		"word": "要る",
+		"sentence": "今日の宿題は難しいから、・要る・時間が多いです。",
+		"furigana": [
+			"きょうのしゅくだいはむずかしいから",
+			"・いる・じかんがおおいです。"
+		],
+		"en": "Today's homework is difficult"
+	},
+	"差す": {
+		"order": "178",
+		"word": "差す",
+		"sentence": "今日は天気が良くて、太陽が・差す・光がとてもきれいです。",
+		"furigana": [
+			"きょうはてんきがよくて",
+			"たいようが・さす・ひかりがとてもきれいです。"
+		],
+		"en": "Today the weather is nice, and the sunlight that the sun shines is very beautiful."
+	},
+	"辺": {
+		"order": "179",
+		"word": "辺",
+		"sentence": "私は公園の・辺・を散歩するのが好きです",
+		"furigana": [
+			"わたしはこうえんの・へん・をさんぽするのがすきです"
+		],
+		"en": "I like to take walks around the edge of the park."
+	},
+	"六": {
+		"order": "180",
+		"word": "六",
+		"sentence": "私は・六・時から勉強を始めます",
+		"furigana": [
+			"わたしは・ろく・じからべんきょうをはじめます"
+		],
+		"en": "I will start studying from six o'clock."
+	},
+	"今年": {
+		"order": "182",
+		"word": "今年",
+		"sentence": "・今年・は、とても忙しかったです。",
+		"furigana": [
+			"・ことし・は",
+			"とてもいそがしかったです"
+		],
+		"en": "This year was very busy."
+	},
+	"初めて": {
+		"order": "184",
+		"word": "初めて",
+		"sentence": "私は・初めて・日本語の授業を受けました",
+		"furigana": [
+			"わたしははじめてにほんごのじゅぎょうをうけました"
+		],
+		"en": "I took a Japanese class for the first time."
+	},
+	"赤い": {
+		"order": "186",
+		"word": "赤い",
+		"sentence": "私の・赤い・自転車はとても目立ちます",
+		"furigana": [
+			"わたしの・あかい・じてんしゃはとてもめだちます"
+		],
+		"en": "My red bicycle stands out a lot."
+	},
+	"甘い": {
+		"order": "187",
+		"word": "甘い",
+		"sentence": "今日のお菓子は・甘い・ですね",
+		"furigana": [
+			"きょうのおかしは・あまい・ですね"
+		],
+		"en": "Today's sweets are sweet, aren't they?"
+	},
+	"毎週": {
+		"order": "189",
+		"word": "毎週",
+		"sentence": "私は・毎週・日曜日におばあちゃんの家に行きます。",
+		"furigana": [
+			"わたしはまいしゅうにちようびにおばあちゃんのいえにいきます。"
+		],
+		"en": "I go to my grandmother's house every Sunday."
+	},
+	"五つ": {
+		"order": "190",
+		"word": "五つ",
+		"sentence": "私は・五つ・のりんごを持っています",
+		"furigana": [
+			"わたしは・いつつ・のりんごをもっています"
+		],
+		"en": "I have five apples."
+	},
+	"曇る": {
+		"order": "192",
+		"word": "曇る",
+		"sentence": "眼鏡が・曇る・と前が良く見えません。",
+		"furigana": [
+			"きょうはそらが・くもる・ので",
+			"そとであそべません。"
+		],
+		"en": "Today the sky is cloudy, so we can't play outside."
+	},
+	"夕方": {
+		"order": "193",
+		"word": "夕方",
+		"sentence": "私は・夕方・に公園で友達と遊ぶのが好きです",
+		"furigana": [
+			"わたしはゆうがたにこうえんでともだちとあそぶのがすきです"
+		],
+		"en": "I like to play with my friends in the park in the evening."
+	},
+	"撮る": {
+		"order": "195",
+		"word": "撮る",
+		"sentence": "今日、友達と一緒に公園で・撮る・写真がたくさんありました。",
+		"furigana": [
+			"きょう",
+			"ともだちといっしょにこうえんで・とる・しゃしんがたくさんありました。"
+		],
+		"en": "Today, I plan to take photos with my friends at the park."
+	},
+	"人": {
+		"order": "199",
+		"word": "人",
+		"sentence": "私の家族は四・人・です",
+		"furigana": [
+			"わたしのかぞくはよにんです"
+		],
+		"en": "My family has 4 people."
+	},
+	"困る": {
+		"order": "200",
+		"word": "困る",
+		"sentence": "今日の宿題が多すぎて・困る・よ",
+		"furigana": [
+			"きょうのしゅくだいがたすぎてこまるよ"
+		],
+		"en": "I'm troubled because today's homework is too much."
+	},
+	"疲れる": {
+		"order": "202",
+		"word": "疲れる",
+		"sentence": "算数の授業は・疲れる・から、早く帰りたいです。",
+		"furigana": [
+			"きょうのじゅぎょうで・つかれる・から",
+			"はやくかえりたいです。"
+		],
+		"en": "I want to go home early because today's class is tiring."
+	},
+	"一つ": {
+		"order": "203",
+		"word": "一つ",
+		"sentence": "私は・一つ・のりんごを食べました",
+		"furigana": [
+			"わたしは・いっつ・のりんごをたべました"
+		],
+		"en": "I ate one apple."
+	},
+	"来週": {
+		"order": "204",
+		"word": "来週",
+		"sentence": "来週・旅行・に・行きます",
+		"furigana": [
+			"らいしゅう・りょこう・に・いきます"
+		],
+		"en": "I will go on a trip next week."
+	},
+	"知る": {
+		"order": "205",
+		"word": "知る",
+		"sentence": "私は毎日新しいことを・知る・ために勉強しています。",
+		"furigana": [
+			"わたしはまいにちあたらしいことをしるためにべんきょうしています。"
+		],
+		"en": "I study every day to learn new things."
+	},
+	"言葉": {
+		"order": "206",
+		"word": "言葉",
+		"sentence": "私は毎日、新しい・言葉・を覚えています",
+		"furigana": [
+			"わたしはまいにち",
+			"あたらしい・ことば・をおぼえています"
+		],
+		"en": "I learn new words every day."
+	},
+	"赤": {
+		"order": "210",
+		"word": "赤",
+		"sentence": "今日は・赤・い服を着ています",
+		"furigana": [
+			"きょうは・あか・いふくをきています"
+		],
+		"en": "Today I am wearing red clothes."
+	},
+	"自分": {
+		"order": "211",
+		"word": "自分",
+		"sentence": "・自分・で勉強するのが好きです",
+		"furigana": [
+			"・じぶん・でべんきょうするのがすきです"
+		],
+		"en": "I like studying by myself."
+	},
+	"低い": {
+		"order": "212",
+		"word": "低い",
+		"sentence": "彼の声は・低い・ので、聞き取りにくいです。",
+		"furigana": [
+			"かれのこえは・ひくい・ので",
+			"ききとりにくいです。"
+		],
+		"en": "His voice is low, so it's hard to hear."
+	},
+	"小さな": {
+		"order": "213",
+		"word": "小さな",
+		"sentence": "・小さな・犬が公園で遊んでいます",
+		"furigana": [
+			"・ちいさな・いぬがこうえんであそんでいます"
+		],
+		"en": "A small dog is playing in the park."
+	},
+	"時間": {
+		"order": "214",
+		"word": "時間",
+		"sentence": "今日は・時間・があまりないので、宿題ができません。",
+		"furigana": [
+			"きょうは・じかん・があまりないので",
+			"はやくかえりたいです。"
+		],
+		"en": "Today I don't have much time, so I want to go home early."
+	},
+	"上げる": {
+		"order": "215",
+		"word": "上げる",
+		"sentence": "私は毎朝、国旗を・上げる・ために学校に行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"こっきを・あげる・ためにがっこうにいきます。"
+		],
+		"en": "I go to school every morning to raise the flag."
+	},
+	"出す": {
+		"order": "216",
+		"word": "出す",
+		"sentence": "毎朝、新聞を・出す・前にコーヒーを飲みます",
+		"furigana": [
+			"まいあさ",
+			"しんぶんを・だす・まえにこーひーをのみます"
+		],
+		"en": "I drink coffee every morning before taking out the newspaper."
+	},
+	"音楽": {
+		"order": "217",
+		"word": "音楽",
+		"sentence": "私は毎朝、・音楽・を聴きながら学校に行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・おんがく・をききながらがっこうにいきます。"
+		],
+		"en": "I listen to music every morning while going to school."
+	},
+	"歌": {
+		"order": "218",
+		"word": "歌",
+		"sentence": "私は毎朝、・歌・を聴きながら学校に行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"うたをききながらがっこうにいきます。"
+		],
+		"en": "I listen to songs every morning while going to school."
+	},
+	"咲く": {
+		"order": "219",
+		"word": "咲く",
+		"sentence": "春になると、公園の桜が・咲く・とてもきれいです。",
+		"furigana": [
+			"はるになると",
+			"こうえんのさくらが・さく・とてもきれいです。"
+		],
+		"en": "When spring comes, the cherry blossoms in the park start to bloom."
+	},
+	"山": {
+		"order": "219",
+		"word": "山",
+		"sentence": "私は夏休みに・山・に登りました。",
+		"furigana": [
+			"わたしはなつやすみに・やま・にのぼりました。"
+		],
+		"en": "I climbed a mountain during my summer vacation."
+	},
+	"学校": {
+		"order": "219",
+		"word": "学校",
+		"sentence": "私は毎日・学校・へ行きます",
+		"furigana": [
+			"わたしはまいにちがっこうへいきます"
+		],
+		"en": "I go to school every day."
+	},
+	"入る": {
+		"order": "221",
+		"word": "入る",
+		"sentence": "私は毎朝・入る・教室で友達と話します",
+		"furigana": [
+			"わたしはまいあさ・いる・きょうしつでともだちとはなします"
+		],
+		"en": "I talk with my friends in the classroom I enter every morning."
+	},
+	"曇り": {
+		"order": "222",
+		"word": "曇り",
+		"sentence": "今日は・曇り・の天気です。",
+		"furigana": [
+			"きょうは・くもり・のてんきです。"
+		],
+		"en": "Today the weather is cloudy."
+	},
+	"外国": {
+		"order": "223",
+		"word": "外国",
+		"sentence": "私は・外国・の文化に興味があります",
+		"furigana": [
+			"わたしはがいこくのぶんかにきょうみがあります"
+		],
+		"en": "I am interested in the culture of foreign countries."
+	},
+	"温い": {
+		"order": "224",
+		"word": "温い",
+		"sentence": "今日の風呂の水は・温い・ので、ちょうど良かったです。",
+		"furigana": [
+			"きょうのふろのみずは・ぬるい・ので",
+			"ちょうどよかったです。"
+		],
+		"en": "The bathwater today was lukewarm, so it felt just right."
+	},
+	"仕事": {
+		"order": "226",
+		"word": "仕事",
+		"sentence": "私は毎日・仕事・の後に勉強します。",
+		"furigana": [
+			"わたしはまいにちしごとのあとにべんきょうします。"
+		],
+		"en": "I study every day after work."
+	},
+	"窓": {
+		"order": "227",
+		"word": "窓",
+		"sentence": "私は毎朝・窓・を開けて新鮮な空気を入れます。",
+		"furigana": [
+			"わたしはまいあさまどをあけてしんせんなくうきをいれます。"
+		],
+		"en": "I open the window every morning to let in fresh air."
+	},
+	"晩": {
+		"order": "228",
+		"word": "晩",
+		"sentence": "今日の・晩・は友達と映画を見に行きます",
+		"furigana": [
+			"きょうの・ばん・はともだちとえいがをみにいきます"
+		],
+		"en": "Tonight I'm going to watch a movie with my friends."
+	},
+	"村": {
+		"order": "229",
+		"word": "村",
+		"sentence": "私の祖父は・村・で農業をしていました",
+		"furigana": [
+			"わたしのそふはむらでのうぎょうをしていました"
+		],
+		"en": "My grandfather did farming in the village."
+	},
+	"長い": {
+		"order": "230",
+		"word": "長い",
+		"sentence": "今日の授業は・長い・時間がかかりました",
+		"furigana": [
+			"きょうのじゅぎょうは・ながい・じかんがかかりました"
+		],
+		"en": "Today's class took a long time."
+	},
+	"生まれる": {
+		"order": "233",
+		"word": "生まれる",
+		"sentence": "私は・生まれる・前に母のおなかの中で成長しました",
+		"furigana": [
+			"わたしは・うまれる・まえにおかあさんのおなかの中でせいちょうしました"
+		],
+		"en": "I grew inside my mother's womb before I was born."
+	},
+	"雑誌": {
+		"order": "236",
+		"word": "雑誌",
+		"sentence": "私は毎月・雑誌・を読んでいます",
+		"furigana": [
+			"わたしはまいつきざっしをよんでいます"
+		],
+		"en": "I read magazines every month."
+	},
+	"今朝": {
+		"order": "238",
+		"word": "今朝",
+		"sentence": "・今朝・はとてもさむかったです",
+		"furigana": [
+			"きょうあさはとてもさむかったです"
+		],
+		"en": "This morning was very cold."
+	},
+	"晴れる": {
+		"order": "239",
+		"word": "晴れる",
+		"sentence": "明日は・晴れる・から、ピクニックに行こう。",
+		"furigana": [
+			"きょうは・はれる・から",
+			"ぴくにっくにいこう。"
+		],
+		"en": "Today it will probably be sunny, so let's go to the park."
+	},
+	"夕飯": {
+		"order": "240",
+		"word": "夕飯",
+		"sentence": "今日の・夕飯・は何にしようかな、",
+		"furigana": [
+			"きょうのゆうはんはなんにしようかな"
+		],
+		"en": "Today's dinner, what should I have?"
+	},
+	"一緒": {
+		"order": "241",
+		"word": "一緒",
+		"sentence": "今日は・一緒・に公園に行きましょう。",
+		"furigana": [
+			"きょうは・いっしょ・にこうえんにいきましょう。"
+		],
+		"en": "Let's go to the park together today."
+	},
+	"立つ": {
+		"order": "242",
+		"word": "立つ",
+		"sentence": "毎朝、私は早く起きて・立つ・ためにベッドから出ます。",
+		"furigana": [
+			"まいあさ",
+			"わたしははやくおきて・たつ・ためにべっどからでます。"
+		],
+		"en": "Every morning, I get out of bed early to stand up."
+	},
+	"元気": {
+		"order": "243",
+		"word": "元気",
+		"sentence": "今日は・元気・ですね",
+		"furigana": [
+			"きょうは・げんき・ですね"
+		],
+		"en": "Today you seem energetic"
+	},
+	"天気": {
+		"order": "244",
+		"word": "天気",
+		"sentence": "今日の・天気・はどうですか？",
+		"furigana": [
+			"きょうの・てんき・はどうですか？"
+		],
+		"en": "How is the weather today?"
+	},
+	"医者": {
+		"order": "245",
+		"word": "医者",
+		"sentence": "私の父は・医者・です",
+		"furigana": [
+			"わたしのちちは・いしゃ・です"
+		],
+		"en": "My father is a doctor."
+	},
+	"戸": {
+		"order": "246",
+		"word": "戸",
+		"sentence": "私は毎朝、・戸・を開けて外に出ます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・と・をあけてそとにでます。"
+		],
+		"en": "I open the door every morning and go outside."
+	},
+	"今日": {
+		"order": "247",
+		"word": "今日",
+		"sentence": "・今日・は学校に行きます",
+		"furigana": [
+			"きょうはがっこうにいきます"
+		],
+		"en": "Today I will go to school."
+	},
+	"一昨年": {
+		"order": "248",
+		"word": "一昨年",
+		"sentence": "・一昨年・、私は初めて海外旅行に行きました。",
+		"furigana": [
+			"・いっさくねん・",
+			"わたしははじめてかいがいりょこうにいきました。"
+		],
+		"en": "The year before last, I went on my first trip abroad."
+	},
+	"文章": {
+		"order": "250",
+		"word": "文章",
+		"sentence": "先生は、・文章・を書く練習を毎日させます。",
+		"furigana": [
+			"せんせいは",
+			"ぶんしょうをかくれんしゅうをまいにちさせます。"
+		],
+		"en": "The teacher makes us practice writing compositions every day."
+	},
+	"公園": {
+		"order": "251",
+		"word": "公園",
+		"sentence": "私は毎週末、・公園・で友達と遊びます。",
+		"furigana": [
+			"わたしはまいしゅうまつ",
+			"・こうえん・でともだちとあそびます。"
+		],
+		"en": "I play with my friends at the park every weekend."
+	},
+	"借りる": {
+		"order": "252",
+		"word": "借りる",
+		"sentence": "私は友達から・借りる・ことがよくあります",
+		"furigana": [
+			"わたしはともだちから・かりる・ことがよくあります"
+		],
+		"en": "I often borrow things from my friends."
+	},
+	"口": {
+		"order": "253",
+		"word": "口",
+		"sentence": "私の・口・は大きくて、よく笑います。",
+		"furigana": [
+			"わたしのくちはおおきくて",
+			"よくわらいます。"
+		],
+		"en": "My mouth is big and I often laugh."
+	},
+	"持つ": {
+		"order": "257",
+		"word": "持つ",
+		"sentence": "私は毎日・持つ・かばんが重いです",
+		"furigana": [
+			"わたしはまいにち・もつ・かばんがおもいです"
+		],
+		"en": "I carry a heavy bag every day."
+	},
+	"上着": {
+		"order": "258",
+		"word": "上着",
+		"sentence": "今日は寒いので、・上着・を着て学校に行きます。",
+		"furigana": [
+			"きょうはさむいので",
+			"・うわぎ・をきてがっこうにいきます。"
+		],
+		"en": "Today it's cold, so I will wear a jacket and go to school."
+	},
+	"秋": {
+		"order": "259",
+		"word": "秋",
+		"sentence": "・秋・は涼しくて、紅葉がきれいです。",
+		"furigana": [
+			"・あき・はすずしくて",
+			"もみじがきれいです。"
+		],
+		"en": "Autumn is cool and the autumn leaves are beautiful."
+	},
+	"悪い": {
+		"order": "260",
+		"word": "悪い",
+		"sentence": "彼は・悪い・ことをしたね。",
+		"furigana": [
+			"かれはわるいことをしたね。"
+		],
+		"en": "He did a bad thing, didn't he?"
+	},
+	"青い": {
+		"order": "262",
+		"word": "青い",
+		"sentence": "今日は・青い・空を見ました",
+		"furigana": [
+			"きょうは・あおい・そらをみました"
+		],
+		"en": "Today I saw a blue sky."
+	},
+	"住む": {
+		"order": "264",
+		"word": "住む",
+		"sentence": "私は東京に・住む・つもりです。",
+		"furigana": [
+			"わたしはとうきょうに・すむ・つもりです。"
+		],
+		"en": "I plan to live in Tokyo."
+	},
+	"木曜日": {
+		"order": "266",
+		"word": "木曜日",
+		"sentence": "私は・木曜日・に学校のクラブ活動があります",
+		"furigana": [
+			"わたしはきょくじつにがっこうのくらぶかつどうがあります"
+		],
+		"en": "I have school club activities on Thursday."
+	},
+	"忘れる": {
+		"order": "267",
+		"word": "忘れる",
+		"sentence": "今日の宿題を・忘れる・と、先生に怒られるよ",
+		"furigana": [
+			"きょうのしゅくだいを・わすれる・と",
+			"せんせいにおこられるよ"
+		],
+		"en": "If you forget today's homework, the teacher will scold you."
+	},
+	"お手洗い": {
+		"order": "268",
+		"word": "お手洗い",
+		"sentence": "・お手洗い・はどこですか",
+		"furigana": [
+			"おてあらいはどこですか"
+		],
+		"en": "Where is the bathroom?"
+	},
+	"写真": {
+		"order": "269",
+		"word": "写真",
+		"sentence": "私は昨日のパーティーの・写真・を友達に見せました。",
+		"furigana": [
+			"わたしはきのうのぱーてぃーの・しゃしん・をともだちにみせました。"
+		],
+		"en": "I showed my friends the photos from yesterday's party."
+	},
+	"会う": {
+		"order": "270",
+		"word": "会う",
+		"sentence": "今日、友達と公園で・会う・つもりです",
+		"furigana": [
+			"きょう",
+			"ともだちとこうえんで・あう・つもりです"
+		],
+		"en": "I plan to meet my friend at the park today."
+	},
+	"南": {
+		"order": "271",
+		"word": "南",
+		"sentence": "私は・南・アメリカに行きたいです",
+		"furigana": [
+			"わたしは・みなみ・あめりかにいきたいです"
+		],
+		"en": "I want to go to South America."
+	},
+	"五日": {
+		"order": "272",
+		"word": "五日",
+		"sentence": "私は・五日・後に試験があります。",
+		"furigana": [
+			"わたしはごにちごにちあとにしけんがあります。"
+		],
+		"en": "I have an exam in five days."
+	},
+	"着る": {
+		"order": "273",
+		"word": "着る",
+		"sentence": "今日は新しい服を・着る・つもりです",
+		"furigana": [
+			"きょうはあたらしいふくを・きる・つもりです"
+		],
+		"en": "I plan to wear new clothes today."
+	},
+	"終る": {
+		"order": "274",
+		"word": "終る",
+		"sentence": "今日の授業は・終る・と、みんながほっとしたね。",
+		"furigana": [
+			"きょうのじゅぎょうは・おわる・と",
+			"みんながほっとしたね。"
+		],
+		"en": "When today's class \/ends\/, everyone feels relieved, right?"
+	},
+	"読む": {
+		"order": "275",
+		"word": "読む",
+		"sentence": "私は毎日新聞を・読む・ために時間を取っています",
+		"furigana": [
+			"わたしはまいにちしんぶんを・よむ・ためにじかんをとっています"
+		],
+		"en": "I take time every day to read the newspaper."
+	},
+	"来月": {
+		"order": "276",
+		"word": "来月",
+		"sentence": "来月・旅行・に・行きます",
+		"furigana": [
+			"らいげつ・りょこう・に・いきます"
+		],
+		"en": "I will go on a trip next month."
+	},
+	"果物": {
+		"order": "277",
+		"word": "果物",
+		"sentence": "私は毎朝、・果物・を食べます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"くだものをたべます。"
+		],
+		"en": "I eat fruit every morning."
+	},
+	"止まる": {
+		"order": "279",
+		"word": "止まる",
+		"sentence": "電車が・止まる・駅で降ります",
+		"furigana": [
+			"でんしゃが・とまる・えきでおります"
+		],
+		"en": "I will get off at the station where the train stops."
+	},
+	"着く": {
+		"order": "280",
+		"word": "着く",
+		"sentence": "私は電車で東京に・着く・予定です",
+		"furigana": [
+			"わたしはでんしゃでとうきょうに・つく・よていです"
+		],
+		"en": "I plan to arrive in Tokyo by train."
+	},
+	"大好き": {
+		"order": "281",
+		"word": "大好き",
+		"sentence": "私は・大好き・なアニメを見るのが楽しみです",
+		"furigana": [
+			"わたしはだいすきなあにめをみるのがたのしみです"
+		],
+		"en": "I enjoy watching my favorite anime."
+	},
+	"妹": {
+		"order": "283",
+		"word": "妹",
+		"sentence": "私の・妹・はとても元気です",
+		"furigana": [
+			"わたしのいもうとはとてもげんきです"
+		],
+		"en": "My little sister is very energetic."
+	},
+	"夏": {
+		"order": "284",
+		"word": "夏",
+		"sentence": "・夏・は暑い季節です",
+		"furigana": [
+			"なつはあついきせつです"
+		],
+		"en": "Summer is a hot season."
+	},
+	"今晩": {
+		"order": "285",
+		"word": "今晩",
+		"sentence": "・今晩・は何をしますか？",
+		"furigana": [
+			"こんばんはなにをしますか？"
+		],
+		"en": "What will you do tonight?"
+	},
+	"塩": {
+		"order": "286",
+		"word": "塩",
+		"sentence": "今日のお味噌汁には・塩・を少し足しました",
+		"furigana": [
+			"きょうのおみそしるには・しお・をすこしそいました"
+		],
+		"en": "I added a little bit of salt to today's miso soup."
+	},
+	"先週": {
+		"order": "289",
+		"word": "先週",
+		"sentence": "・先週・は、友達と映画を見に行きました。",
+		"furigana": [
+			"・せんしゅう・は",
+			"ともだちとえいがをみにいきました。"
+		],
+		"en": "Last week, I went to see a movie with my friend."
+	},
+	"欲しい": {
+		"order": "290",
+		"word": "欲しい",
+		"sentence": "私は新しい自転車が・欲しい・です。",
+		"furigana": [
+			"わたしはあたらしいじてんしゃが・ほしい・です。"
+		],
+		"en": "I want a new bicycle."
+	},
+	"木": {
+		"order": "292",
+		"word": "木",
+		"sentence": "私は公園で・木・の下で本を読むのが好きです",
+		"furigana": [
+			"わたしはこうえんで・き・のしたでほんをよむのがすきです"
+		],
+		"en": "I like to read books under the trees in the park."
+	},
+	"薬": {
+		"order": "293",
+		"word": "薬",
+		"sentence": "今日は頭が痛いので、・薬・を飲みました。",
+		"furigana": [
+			"きょうはあたまがいたいので",
+			"・くすり・をのみました。"
+		],
+		"en": "Today I had a headache, so I took some medicine."
+	},
+	"お菓子": {
+		"order": "294",
+		"word": "お菓子",
+		"sentence": "今日のおやつは・お菓子・が食べたいです。",
+		"furigana": [
+			"きょうのおやつは・おかし・がたべたいです。"
+		],
+		"en": "I want to eat snacks for today's snack time."
+	},
+	"金曜日": {
+		"order": "295",
+		"word": "金曜日",
+		"sentence": "・金曜日・は学校が終わった後、友達と遊ぶ予定です。",
+		"furigana": [
+			"きんようびはがっこうがおわったあと",
+			"ともだちとあそぶよていです。"
+		],
+		"en": "On Friday, after school is over, I plan to hang out with my friends."
+	},
+	"お酒": {
+		"order": "296",
+		"word": "お酒",
+		"sentence": "私は・お酒・を飲むのが好きです",
+		"furigana": [
+			"わたしはおさけをのむのがすきです"
+		],
+		"en": "I like to drink alcohol."
+	},
+	"多い": {
+		"order": "297",
+		"word": "多い",
+		"sentence": "彼の部屋には・多い・本があります",
+		"furigana": [
+			"かれのへやには・おおい・ほんがあります"
+		],
+		"en": "There are many books in his room."
+	},
+	"動物": {
+		"order": "298",
+		"word": "動物",
+		"sentence": "私は・動物・が大好きです",
+		"furigana": [
+			"わたしはどうぶつがだいすきです"
+		],
+		"en": "I love animals."
+	},
+	"切符": {
+		"order": "299",
+		"word": "切符",
+		"sentence": "今日は電車に乗るために・切符・を買いました",
+		"furigana": [
+			"きょうはでんしゃにのるために・きっぷ・をかいました"
+		],
+		"en": "Today I bought a ticket to ride the train."
+	},
+	"呼ぶ": {
+		"order": "300",
+		"word": "呼ぶ",
+		"sentence": "今日のパーティーには友達を・呼ぶ・つもりです",
+		"furigana": [
+			"きょうのぱーてぃーにはともだちを・よぶ・つもりです"
+		],
+		"en": "I plan to invite friends to today's party."
+	},
+	"体": {
+		"order": "301",
+		"word": "体",
+		"sentence": "今日は・体・がだるくて、学校に行きたくないです。",
+		"furigana": [
+			"きょうは・からだ・がだるくて",
+			"がっこうにいきたくないです。"
+		],
+		"en": "Today my body feels sluggish and I don't want to go to school."
+	},
+	"二日": {
+		"order": "302",
+		"word": "二日",
+		"sentence": "私は・二日・前に宿題を終えました。",
+		"furigana": [
+			"わたしはにちまえにしゅくだいをおえました。"
+		],
+		"en": "I finished my homework two days ago."
+	},
+	"大人": {
+		"order": "303",
+		"word": "大人",
+		"sentence": "私は・大人・になりたいと思っています",
+		"furigana": [
+			"わたしは・おとな・になりたいとおもっています"
+		],
+		"en": "I want to become an adult."
+	},
+	"歯": {
+		"order": "304",
+		"word": "歯",
+		"sentence": "私は毎朝、・歯・を磨きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・は・をみがきます。"
+		],
+		"en": "I brush my teeth every morning."
+	},
+	"冬": {
+		"order": "305",
+		"word": "冬",
+		"sentence": "・冬・が好きです、",
+		"furigana": [
+			"ふゆがすきです"
+		],
+		"en": "I like winter."
+	},
+	"所": {
+		"order": "307",
+		"word": "所",
+		"sentence": "私の・所・から学校まで歩いて30分かかります。",
+		"furigana": [
+			"わたしのところからがっこうまであるいて30ふんかかります。"
+		],
+		"en": "It takes 30 minutes to walk from my place to school."
+	},
+	"吹く": {
+		"order": "308",
+		"word": "吹く",
+		"sentence": "今日は風が・吹く・ので、外で遊ぶのはやめましょう。",
+		"furigana": [
+			"きょうはかぜが・ふく・ので",
+			"そとであそぶのはやめましょう。"
+		],
+		"en": "Let's not play outside today because the wind is blowing."
+	},
+	"足": {
+		"order": "309",
+		"word": "足",
+		"sentence": "私の・足・がとても疲れています",
+		"furigana": [
+			"わたしの・あし・がとてもつかれています"
+		],
+		"en": "My feet are very tired."
+	},
+	"箱": {
+		"order": "310",
+		"word": "箱",
+		"sentence": "私は・箱・にプレゼントを入れました",
+		"furigana": [
+			"わたしははこにぷれぜんとをいれました"
+		],
+		"en": "I put a present in the box."
+	},
+	"朝": {
+		"order": "311",
+		"word": "朝",
+		"sentence": "今日は・朝・早く起きました",
+		"furigana": [
+			"きょうは・あさ・はやくおきました"
+		],
+		"en": "I woke up early this morning."
+	},
+	"一昨日": {
+		"order": "312",
+		"word": "一昨日",
+		"sentence": "・一昨日・のテストは難しかったですね",
+		"furigana": [
+			"おとといのてすとはむずかしかったですね"
+		],
+		"en": "The test the day before yesterday was difficult, wasn't it?"
+	},
+	"有名": {
+		"order": "313",
+		"word": "有名",
+		"sentence": "彼は・有名・な俳優になりたいと思っています",
+		"furigana": [
+			"かれは・ゆうめい・なはいゆうになりたいとおもっています"
+		],
+		"en": "He wants to become a famous actor."
+	},
+	"二十日": {
+		"order": "314",
+		"word": "二十日",
+		"sentence": "・二十日・までにレポートを提出しなければなりません",
+		"furigana": [
+			"にじゅうにちまでにれぽーとをていしゅつしなければなりません"
+		],
+		"en": "You must submit the report by the 20th."
+	},
+	"近い": {
+		"order": "315",
+		"word": "近い",
+		"sentence": "私の家は学校に・近い・です",
+		"furigana": [
+			"わたしのいえはがっこうにちかいです"
+		],
+		"en": "My house is close to the school."
+	},
+	"時計": {
+		"order": "316",
+		"word": "時計",
+		"sentence": "私の・時計・は朝6時に鳴ります",
+		"furigana": [
+			"わたしの・とき・はあさろくじになります"
+		],
+		"en": "My watch rings at 6 AM."
+	},
+	"午後": {
+		"order": "319",
+		"word": "午後",
+		"sentence": "今日は・午後・から雨が降るそうです",
+		"furigana": [
+			"きょうは・ごご・からあめがふるそうです"
+		],
+		"en": "It seems that it will rain from this afternoon."
+	},
+	"食べ物": {
+		"order": "320",
+		"word": "食べ物",
+		"sentence": "私は毎日色々な・食べ物・を試しています",
+		"furigana": [
+			"わたしはまいにちいろいろなたべものをためしています"
+		],
+		"en": "I try various foods every day."
+	},
+	"降る": {
+		"order": "321",
+		"word": "降る",
+		"sentence": "今日は雨が・降る・予報です",
+		"furigana": [
+			"きょうはあめが・ふる・よほうです"
+		],
+		"en": "Today's forecast says it will rain."
+	},
+	"易しい": {
+		"order": "322",
+		"word": "易しい",
+		"sentence": "今日の漢字の宿題は・易しい・ですね。",
+		"furigana": [
+			"きょうのkanjiのしゅくだいは・やさしい・ですね。"
+		],
+		"en": "Today's kanji homework is easy"
+	},
+	"大使館": {
+		"order": "323",
+		"word": "大使館",
+		"sentence": "私は・大使館・に行ってビザを申請しました",
+		"furigana": [
+			"わたしはたいしかんにいってびざをしんせいしました"
+		],
+		"en": "I went to the embassy to apply for a visa."
+	},
+	"誰": {
+		"order": "324",
+		"word": "誰",
+		"sentence": "・誰・が教室にいますか、",
+		"furigana": [
+			"だれがきょうしつにいますか",
+			""
+		],
+		"en": "Who is in the classroom?"
+	},
+	"上": {
+		"order": "325",
+		"word": "上",
+		"sentence": "私は・上・の段ボールに本を置きました",
+		"furigana": [
+			"わたしは・うえ・のだんぼうるにほんをおきました"
+		],
+		"en": "I placed the book on top of the cardboard box."
+	},
+	"十日": {
+		"order": "326",
+		"word": "十日",
+		"sentence": "私は・十日・後に試験があります。",
+		"furigana": [
+			"わたしはとおかごにしけんがあります。"
+		],
+		"en": "I have an exam in ten days."
+	},
+	"小さい": {
+		"order": "328",
+		"word": "小さい",
+		"sentence": "私の猫は・小さい・です",
+		"furigana": [
+			"わたしのねこはちいさいです"
+		],
+		"en": "My cat is small."
+	},
+	"今週": {
+		"order": "329",
+		"word": "今週",
+		"sentence": "・今週・はテストがあります",
+		"furigana": [
+			"・こんしゅう・はてすとがあります"
+		],
+		"en": "This week there is a test."
+	},
+	"肉": {
+		"order": "330",
+		"word": "肉",
+		"sentence": "今日の夕食は・肉・を使った料理を作ります",
+		"furigana": [
+			"きょうのゆうしょくは・にく・をつかったりょうりをつくります"
+		],
+		"en": "Today's dinner will be a dish made with meat."
+	},
+	"零": {
+		"order": "331",
+		"word": "零",
+		"sentence": "今日の気温は・零・度で、とても寒かったです。",
+		"furigana": [
+			"きょうのきおんは・れい・どで",
+			"とてもさむかったです。"
+		],
+		"en": "Today's temperature was zero degrees"
+	},
+	"豚肉": {
+		"order": "332",
+		"word": "豚肉",
+		"sentence": "今日の夕食は・豚肉・を使った料理を作ります",
+		"furigana": [
+			"きょうのゆうしょくは・ぶたにく・をつかったりょうりをつくります"
+		],
+		"en": "Today's dinner will be a dish made with pork."
+	},
+	"広い": {
+		"order": "333",
+		"word": "広い",
+		"sentence": "私の学校の教室は・広い・です。",
+		"furigana": [
+			"わたしのがっこうのきょうしつは・ひろい・です。"
+		],
+		"en": "My school's classroom is spacious."
+	},
+	"靴下": {
+		"order": "334",
+		"word": "靴下",
+		"sentence": "私は毎朝、・靴下・を履いて学校に行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"くつしたをはいてがっこうにいきます。"
+		],
+		"en": "I put on socks every morning and go to school."
+	},
+	"一人": {
+		"order": "335",
+		"word": "一人",
+		"sentence": "今日は・一人・で映画を見に行きます。",
+		"furigana": [
+			"きょうは・ひとり・でえいがをみにいきます。"
+		],
+		"en": "Today, I will go to watch a movie alone."
+	},
+	"向こう": {
+		"order": "336",
+		"word": "向こう",
+		"sentence": "・向こう・の公園で友達と遊ぶのが好きです。",
+		"furigana": [
+			"むこうのこうえんでともだちとあそぶのがすきです。"
+		],
+		"en": "I like to play with my friends at the park over there."
+	},
+	"上手": {
+		"order": "337",
+		"word": "上手",
+		"sentence": "彼はピアノを・上手・に弾きます。",
+		"furigana": [
+			"かれはぴあのを・じょうず・にときます。"
+		],
+		"en": "He plays the piano skillfully."
+	},
+	"牛肉": {
+		"order": "338",
+		"word": "牛肉",
+		"sentence": "私は・牛肉・を使った料理が大好きです。",
+		"furigana": [
+			"わたしは・ぎゅうにく・をつかったりょうりがだいすきです。"
+		],
+		"en": "I love dishes made with beef."
+	},
+	"話": {
+		"order": "339",
+		"word": "話",
+		"sentence": "今日の授業で・話・をするのが楽しみです",
+		"furigana": [
+			"きょうのじゅぎょうで・はな・をするのがたのしみです"
+		],
+		"en": "I am looking forward to having a discussion in today's class."
+	},
+	"毎晩": {
+		"order": "340",
+		"word": "毎晩",
+		"sentence": "私は・毎晩・勉強しています",
+		"furigana": [
+			"わたしはまいばんべんきょうしています"
+		],
+		"en": "I study every night."
+	},
+	"三つ": {
+		"order": "341",
+		"word": "三つ",
+		"sentence": "私は・三つ・のりんごを食べました",
+		"furigana": [
+			"わたしは・みっつ・のりんごをたべました"
+		],
+		"en": "I ate three apples."
+	},
+	"吸う": {
+		"order": "342",
+		"word": "吸う",
+		"sentence": "彼は毎日タバコを・吸う・ことが習慣になっています",
+		"furigana": [
+			"かれはまいにちたばこを・すう・ことがしゅうかんになっています"
+		],
+		"en": "He smokes cigarettes every day and it has become a habit."
+	},
+	"銀行": {
+		"order": "343",
+		"word": "銀行",
+		"sentence": "私は毎月・銀行・に給料を預けています。",
+		"furigana": [
+			"わたしはまいつきぎんこうにきゅうりょうをあずけています。"
+		],
+		"en": "I deposit my salary into the bank every month."
+	},
+	"大切": {
+		"order": "344",
+		"word": "大切",
+		"sentence": "家族は・大切・な存在です",
+		"furigana": [
+			"かぞくは・たいせつ・なそんざいです"
+		],
+		"en": "Family is an important existence."
+	},
+	"学生": {
+		"order": "346",
+		"word": "学生",
+		"sentence": "私の妹は・学生・です",
+		"furigana": [
+			"わたしのいもうとはがくせいです"
+		],
+		"en": "My younger sister is a student."
+	},
+	"部屋": {
+		"order": "347",
+		"word": "部屋",
+		"sentence": "今日は、・部屋・を掃除しました。",
+		"furigana": [
+			"きょうは",
+			"へやをそうじしました。"
+		],
+		"en": "Today, I cleaned my room."
+	},
+	"昼御飯": {
+		"order": "348",
+		"word": "昼御飯",
+		"sentence": "今日の・昼御飯・は何にしようかな。",
+		"furigana": [
+			"きょうの・ひるごはん・はなんにしようかな。"
+		],
+		"en": "What should I have for lunch today?"
+	},
+	"下": {
+		"order": "349",
+		"word": "下",
+		"sentence": "私は毎朝、・下・の階に行って朝食を食べます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・した・のかいにいってちょうしょくをたべます。"
+		],
+		"en": "I go downstairs every morning to eat breakfast."
+	},
+	"二つ": {
+		"order": "350",
+		"word": "二つ",
+		"sentence": "私は・二つ・のアップルを買いました",
+		"furigana": [
+			"わたしは・につ・のあっぷるをかいました"
+		],
+		"en": "I bought two apples."
+	},
+	"百": {
+		"order": "351",
+		"word": "百",
+		"sentence": "私は・百・ページの本を読みました。",
+		"furigana": [
+			"わたしは・ひゃく・ぺーじのほんをよみました。"
+		],
+		"en": "I read a book that has 100 pages."
+	},
+	"地図": {
+		"order": "352",
+		"word": "地図",
+		"sentence": "私は・地図・を見て学校までの道を確認しました。",
+		"furigana": [
+			"わたしはちずをみてがっこうまでのみちをかくにんしました。"
+		],
+		"en": "I looked at the map and confirmed the way to school."
+	},
+	"八百屋": {
+		"order": "353",
+		"word": "八百屋",
+		"sentence": "私はよく・八百屋・で野菜を買います",
+		"furigana": [
+			"わたしはよくやおやでやさいをかいます"
+		],
+		"en": "I often buy vegetables at the greengrocer."
+	},
+	"去年": {
+		"order": "354",
+		"word": "去年",
+		"sentence": "・去年・の夏休みはとても楽しかったです",
+		"furigana": [
+			"・きょねん・のなつやすみはとてもたのしかったです"
+		],
+		"en": "Last year's summer vacation was a lot of fun."
+	},
+	"火曜日": {
+		"order": "355",
+		"word": "火曜日",
+		"sentence": "私は・火曜日・に学校に行きます",
+		"furigana": [
+			"わたしはかようびにがっこうにいきます"
+		],
+		"en": "I go to school on Tuesday."
+	},
+	"乗る": {
+		"order": "356",
+		"word": "乗る",
+		"sentence": "私は毎日自転車に・乗る・ことを楽しんでいます。",
+		"furigana": [
+			"わたしはまいにちじてんしゃに・のる・ことをたのしんでいます。"
+		],
+		"en": "I enjoy riding my bike every day."
+	},
+	"弟": {
+		"order": "357",
+		"word": "弟",
+		"sentence": "私の・弟・はサッカーが好きです",
+		"furigana": [
+			"わたしの・おとうと・はさっかーがすきです"
+		],
+		"en": "My younger brother likes soccer."
+	},
+	"千": {
+		"order": "359",
+		"word": "千",
+		"sentence": "私は・千・円でお菓子を買いました",
+		"furigana": [
+			"わたしはせんえんでおかしをかいました"
+		],
+		"en": "I bought snacks for 1,000 yen."
+	},
+	"緑": {
+		"order": "360",
+		"word": "緑",
+		"sentence": "私の家の近くには・緑・がたくさんあります。",
+		"furigana": [
+			"わたしのいえのちかくには・みどり・がたくさんあります。"
+		],
+		"en": "There is a lot of greenery near my house."
+	},
+	"とり肉": {
+		"order": "361",
+		"word": "とり肉",
+		"sentence": "今日の夕食は・とり肉・を使った料理を作ります。",
+		"furigana": [
+			"きょうのゆうしょくは・とりにく・をつかったりょうりをつくります。"
+		],
+		"en": "Today's dinner will be a dish made with chicken meat."
+	},
+	"軽い": {
+		"order": "362",
+		"word": "軽い",
+		"sentence": "今日の宿題は・軽い・から、すぐに終わると思います",
+		"furigana": [
+			"きょうのしゅくだいは・かるい・から",
+			"すぐにおわるっとおもいます"
+		],
+		"en": "I think today's homework is light, so I'll finish it quickly."
+	},
+	"帽子": {
+		"order": "364",
+		"word": "帽子",
+		"sentence": "今日は・帽子・をかぶって学校に行きました",
+		"furigana": [
+			"きょうは・ぼうし・をかぶってがっこうにいきました"
+		],
+		"en": "I wore a hat to school today."
+	},
+	"丈夫": {
+		"order": "365",
+		"word": "丈夫",
+		"sentence": "彼の・丈夫・な体格はスポーツに有利です",
+		"furigana": [
+			"かれの・じょうぶ・なたいかくはスポーツにゆうりです"
+		],
+		"en": "His sturdy physique is advantageous for sports."
+	},
+	"入れる": {
+		"order": "366",
+		"word": "入れる",
+		"sentence": "私は毎朝、牛乳を・入れる・前にコーヒーを温めます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"ぎゅうにゅうを・いれる・まえにこーひーをあたためます。"
+		],
+		"en": "I warm up the coffee every morning before I \/put in\/ the milk."
+	},
+	"二十歳": {
+		"order": "368",
+		"word": "二十歳",
+		"sentence": "私は来年・二十歳・になります",
+		"furigana": [
+			"わたしはらいねんはたちになります"
+		],
+		"en": "I will turn 20 years old next year."
+	},
+	"三日": {
+		"order": "369",
+		"word": "三日",
+		"sentence": "私は・三日・前に宿題を終えました。",
+		"furigana": [
+			"わたしはみっかまえにしゅくだいをおえました。"
+		],
+		"en": "I finished my homework three days ago."
+	},
+	"遠い": {
+		"order": "370",
+		"word": "遠い",
+		"sentence": "私の家は学校から・遠い・です。",
+		"furigana": [
+			"わたしのいえはがっこうから・とおい・です。"
+		],
+		"en": "My house is far from school."
+	},
+	"夏休み": {
+		"order": "371",
+		"word": "夏休み",
+		"sentence": "・夏休み・の間、友達と海に行きました。",
+		"furigana": [
+			"・なつやすみ・のあいだ",
+			"ともだちとうみにいきました。"
+		],
+		"en": "During summer vacation, I went to the beach with my friends."
+	},
+	"友達": {
+		"order": "372",
+		"word": "友達",
+		"sentence": "私の・友達・は元気です",
+		"furigana": [
+			"わたしの・ともだち・はげんきです"
+		],
+		"en": "My friend is energetic."
+	},
+	"横": {
+		"order": "373",
+		"word": "横",
+		"sentence": "私の家は川の・横・にあります。",
+		"furigana": [
+			"わたしのいえはかわのよこにあります。"
+		],
+		"en": "My house is next to the river."
+	},
+	"冷たい": {
+		"order": "374",
+		"word": "冷たい",
+		"sentence": "今日の風は・冷たい・ですね",
+		"furigana": [
+			"きょうのかぜは・つめたい・ですね"
+		],
+		"en": "The wind today is cold, isn't it?"
+	},
+	"夜": {
+		"order": "375",
+		"word": "夜",
+		"sentence": "今日は・夜・遅くまで勉強しました",
+		"furigana": [
+			"きょうは・よる・おそくまでべんきょうしました"
+		],
+		"en": "I studied until late at night today."
+	},
+	"暇": {
+		"order": "381",
+		"word": "暇",
+		"sentence": "今日は・暇・だから、友達と遊びに行くよ。",
+		"furigana": [
+			"きょうは・ひま・だから",
+			"ともだちとあそびにいくよ。"
+		],
+		"en": "Today I have free time, so I'm going out to play with friends."
+	},
+	"鳴く": {
+		"order": "382",
+		"word": "鳴く",
+		"sentence": "毎朝、公園で鳥が・鳴く・のを聞くのが好きです。",
+		"furigana": [
+			"まいあさ",
+			"こうえんでとりが・なく・のをきくのがすきです。"
+		],
+		"en": "I like to listen to the birds in the park every morning."
+	},
+	"隣": {
+		"order": "383",
+		"word": "隣",
+		"sentence": "私の・隣・の席に座っているのは、田中さんです。",
+		"furigana": [
+			"わたしのとなりのせきにすわっているのは",
+			"たなかさんです。"
+		],
+		"en": "The person sitting in the seat next to mine is Tanaka-san."
+	},
+	"先生": {
+		"order": "384",
+		"word": "先生",
+		"sentence": "・先生・はとてもやさしいです",
+		"furigana": [
+			"せんせいはとてもやさしいです"
+		],
+		"en": "The teacher is very kind."
+	},
+	"出口": {
+		"order": "385",
+		"word": "出口",
+		"sentence": "教室の・出口・はあそこです",
+		"furigana": [
+			"きょうしつのでぐちはあそこです"
+		],
+		"en": "The exit of the classroom is over there."
+	},
+	"後ろ": {
+		"order": "386",
+		"word": "後ろ",
+		"sentence": "先生は黒板の・後ろ・に立っています",
+		"furigana": [
+			"せんせいはこくばんのうしろにたっています"
+		],
+		"en": "The teacher is standing behind the blackboard."
+	},
+	"先月": {
+		"order": "387",
+		"word": "先月",
+		"sentence": "・先月・はとても忙しかったです",
+		"furigana": [
+			"・せんげつ・はとてもいそがしかったです"
+		],
+		"en": "Last month was very busy."
+	},
+	"お姉さん": {
+		"order": "388",
+		"word": "お姉さん",
+		"sentence": "・お姉さん・は毎日学校に自転車で行きます",
+		"furigana": [
+			"おねえさんはまいにちがっこうにじてんしゃでいきます"
+		],
+		"en": "My older sister goes to school by bicycle every day."
+	},
+	"本": {
+		"order": "389",
+		"word": "本",
+		"sentence": "私は毎日・本・を読みます",
+		"furigana": [
+			"わたしはまいにちほんをよみます"
+		],
+		"en": "I read a book every day."
+	},
+	"泳ぐ": {
+		"order": "391",
+		"word": "泳ぐ",
+		"sentence": "私は毎週末、プールで・泳ぐ・ことが好きです。",
+		"furigana": [
+			"わたしはまいしゅうまつ",
+			"ぷーるで・およぐ・ことがすきです。"
+		],
+		"en": "I like to swim at the pool every weekend."
+	},
+	"灰皿": {
+		"order": "392",
+		"word": "灰皿",
+		"sentence": "このレストランには・灰皿・がありますか？",
+		"furigana": [
+			"せんせい",
+			"・はいざら・をどこにおけばいいですか？"
+		],
+		"en": "Teacher, where should I put the ashtray?"
+	},
+	"門": {
+		"order": "393",
+		"word": "門",
+		"sentence": "私は毎日・門・をくぐって学校に行きます。",
+		"furigana": [
+			"わたしはまいにち・もん・をくぐってがっこうにいきます。"
+		],
+		"en": "I pass through the gate every day to go to school."
+	},
+	"荷物": {
+		"order": "394",
+		"word": "荷物",
+		"sentence": "私は毎日、・荷物・を学校に持っていきます。",
+		"furigana": [
+			"わたしはまいにち",
+			"にものをがっこうにもっていきます。"
+		],
+		"en": "I take my luggage to school every day."
+	},
+	"書く": {
+		"order": "399",
+		"word": "書く",
+		"sentence": "私は毎日・書く・日記を楽しんでいます。",
+		"furigana": [
+			"わたしはまいにちかくにっきをたのしんでいます。"
+		],
+		"en": "I enjoy writing in my diary every day."
+	},
+	"毎年": {
+		"order": "400",
+		"word": "毎年",
+		"sentence": "・毎年・、私たちは夏休みに旅行します。",
+		"furigana": [
+			"・まいとし・",
+			"わたしたちはなつやすみにりょこうします。"
+		],
+		"en": "Every year, we go on a trip during summer vacation."
+	},
+	"明日": {
+		"order": "401",
+		"word": "明日",
+		"sentence": "・明日・はテストがあります",
+		"furigana": [
+			"あしたはてすとがあります"
+		],
+		"en": "There is a test tomorrow."
+	},
+	"降りる": {
+		"order": "403",
+		"word": "降りる",
+		"sentence": "私は毎朝、学校の前にバスから・降りる・のを楽しみにしています。",
+		"furigana": [
+			"わたしはまいあさ",
+			"がっこうのまえにばすから・おりる・のをたのしみにしています。"
+		],
+		"en": "I look forward to getting off the bus in front of the school every morning."
+	},
+	"重い": {
+		"order": "404",
+		"word": "重い",
+		"sentence": "今日の宿題は・重い・ですね",
+		"furigana": [
+			"きょうのしゅくだいは・おもい・ですね"
+		],
+		"en": "Today's homework is heavy, isn't it?"
+	},
+	"電車": {
+		"order": "405",
+		"word": "電車",
+		"sentence": "私は毎朝・電車・で学校に行きます。",
+		"furigana": [
+			"わたしはまいあさでんしゃでがっこうにいきます。"
+		],
+		"en": "I go to school by train every morning."
+	},
+	"痛い": {
+		"order": "406",
+		"word": "痛い",
+		"sentence": "昨日、足をひねって・痛い・から、今日は学校を休みました。",
+		"furigana": [
+			"きのう",
+			"あしをひねって・いたい・から",
+			"きょうはがっこうをやすみました。"
+		],
+		"en": "Yesterday, I twisted my ankle and it hurts, so I took the day off from school."
+	},
+	"話す": {
+		"order": "407",
+		"word": "話す",
+		"sentence": "私は毎日友達と・話す・時間が楽しいです",
+		"furigana": [
+			"わたしはまいにちともだちと・はなす・じかんがたのしいです"
+		],
+		"en": "I enjoy the time I spend talking with my friends every day."
+	},
+	"嫌": {
+		"order": "409",
+		"word": "嫌",
+		"sentence": "私は・嫌・なものを食べるのが好きではありません",
+		"furigana": [
+			"わたしはきらいなものをたべるのがすきではありません"
+		],
+		"en": "I don't like to eat things I dislike."
+	},
+	"宿題": {
+		"order": "410",
+		"word": "宿題",
+		"sentence": "今日は・宿題・がたくさんあります",
+		"furigana": [
+			"きょうは・しゅくだい・がたくさんあります"
+		],
+		"en": "Today I have a lot of homework."
+	},
+	"死ぬ": {
+		"order": "412",
+		"word": "死ぬ",
+		"sentence": "私は・死ぬ・のが怖いです",
+		"furigana": [
+			"わたしは・しぬ・のがこわいです"
+		],
+		"en": "I am afraid of dying."
+	},
+	"万": {
+		"order": "413",
+		"word": "万",
+		"sentence": "彼は十・万・円を使って新しい自転車を買いました。",
+		"furigana": [
+			"かれはまんえんをつかってあたらしいじてんしゃをかいました"
+		],
+		"en": "He bought a new bicycle using 10,000 yen."
+	},
+	"映画": {
+		"order": "414",
+		"word": "映画",
+		"sentence": "私は週末に・映画・を見に行きます",
+		"furigana": [
+			"わたしはしゅうまつにえいがをみにいきます"
+		],
+		"en": "I will go to see a movie on the weekend."
+	},
+	"遅い": {
+		"order": "417",
+		"word": "遅い",
+		"sentence": "今日の電車は・遅い・ですね",
+		"furigana": [
+			"きょうのでんしゃはおそいですね"
+		],
+		"en": "Today's train is slow, isn't it?"
+	},
+	"耳": {
+		"order": "418",
+		"word": "耳",
+		"sentence": "私は毎朝、・耳・を掃除します。",
+		"furigana": [
+			"わたしはまいあさ",
+			"みみをそうじします。"
+		],
+		"en": "I clean my ears every morning."
+	},
+	"四つ": {
+		"order": "420",
+		"word": "四つ",
+		"sentence": "私は・四つ・のりんごを持っています",
+		"furigana": [
+			"わたしは・よつ・のりんごをもっています"
+		],
+		"en": "I have four apples."
+	},
+	"机": {
+		"order": "421",
+		"word": "机",
+		"sentence": "・机・の上に本があります",
+		"furigana": [
+			"・つくえ・のうえにほんがあります"
+		],
+		"en": "There is a book on the desk."
+	},
+	"買う": {
+		"order": "423",
+		"word": "買う",
+		"sentence": "私は毎週・買う・新しい本を楽しみにしています。",
+		"furigana": [
+			"わたしはまいしゅうかうあたらしいほんをたのしみにしています。"
+		],
+		"en": "I look forward to buying new books every week."
+	},
+	"開く": {
+		"order": "425",
+		"word": "開く",
+		"sentence": "毎朝、私は窓を・開く・ためにベッドから起きます。",
+		"furigana": [
+			"まいあさ",
+			"わたしはまどを・ひらく・ためにべっどからおきます。"
+		],
+		"en": "Every morning, I get out of bed to open the window."
+	},
+	"教室": {
+		"order": "430",
+		"word": "教室",
+		"sentence": "今日は・教室・で新しい先生に会いました",
+		"furigana": [
+			"きょうは・きょうしつ・であたらしいせんせいにあいました"
+		],
+		"en": "Today I met a new teacher in the classroom."
+	},
+	"短い": {
+		"order": "431",
+		"word": "短い",
+		"sentence": "今日の授業は・短い・時間で終わりました",
+		"furigana": [
+			"きょうのじゅぎょうは・たんい・じかんでおわりました"
+		],
+		"en": "Today's class ended in a short time."
+	},
+	"姉": {
+		"order": "432",
+		"word": "姉",
+		"sentence": "私の・姉・は料理が上手です",
+		"furigana": [
+			"わたしの・あね・はりょうりがじょうずです"
+		],
+		"en": "My older sister is good at cooking."
+	},
+	"大勢": {
+		"order": "433",
+		"word": "大勢",
+		"sentence": "今日のパーティーには・大勢・の人が来ると思います",
+		"furigana": [
+			"きょうのぱーてぃーには・おおぜい・のひとがくるとおもいます"
+		],
+		"en": "I think a lot of people will come to today's party."
+	},
+	"開ける": {
+		"order": "436",
+		"word": "開ける",
+		"sentence": "私は毎朝、窓を・開ける・ためにベッドから起きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"まどを・あける・ためにべっどからおきます。"
+		],
+		"en": "I get out of bed every morning to open the window."
+	},
+	"忙しい": {
+		"order": "438",
+		"word": "忙しい",
+		"sentence": "今日は・忙しい・から、宿題ができませんでした。",
+		"furigana": [
+			"きょうは・いそがしい・から",
+			"しゅくだいができませんでした。"
+		],
+		"en": "Today I was busy, so I couldn't do my homework."
+	},
+	"店": {
+		"order": "440",
+		"word": "店",
+		"sentence": "私はよく・店・で友達と待ち合わせます。",
+		"furigana": [
+			"わたしはよく・みせ・でともだちとまちあわせます。"
+		],
+		"en": "I often meet my friends at the store."
+	},
+	"北": {
+		"order": "441",
+		"word": "北",
+		"sentence": "私は・北・海道に住んでいます",
+		"furigana": [
+			"わたしはほっかいどうにすんでいます"
+		],
+		"en": "I live in Hokkaido."
+	},
+	"全部": {
+		"order": "442",
+		"word": "全部",
+		"sentence": "・全部・使ってください",
+		"furigana": [
+			"・ぜんぶ・つかってください"
+		],
+		"en": "Please use everything."
+	},
+	"橋": {
+		"order": "443",
+		"word": "橋",
+		"sentence": "私は毎朝、・橋・を渡って学校に行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・はし・をわたってがっこうにいきます。"
+		],
+		"en": "I cross the bridge every morning to go to school."
+	},
+	"川": {
+		"order": "444",
+		"word": "川",
+		"sentence": "私は毎朝、・川・の近くを散歩します。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・かわ・のちかくをさんぽします。"
+		],
+		"en": "I take a walk near the river every morning."
+	},
+	"河": {
+		"order": "445",
+		"word": "河",
+		"sentence": "私は毎朝、・河・を眺めながら散歩します。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・かわ・をながめながらさんぽします。"
+		],
+		"en": "I take a walk every morning while gazing at the river."
+	},
+	"入口": {
+		"order": "447",
+		"word": "入口",
+		"sentence": "学校の・入口・はいつも混んでいます",
+		"furigana": [
+			"がっこうの・いりぐち・はいつもこんでいます"
+		],
+		"en": "The entrance to the school is always crowded."
+	},
+	"太い": {
+		"order": "448",
+		"word": "太い",
+		"sentence": "彼の腕は・太い・ですね",
+		"furigana": [
+			"かれのうでは・ふとい・ですね"
+		],
+		"en": "His arms are thick, aren't they?"
+	},
+	"自動車": {
+		"order": "449",
+		"word": "自動車",
+		"sentence": "私は毎日・自動車・で学校に通っています",
+		"furigana": [
+			"わたしはまいにちじどうしゃでがっこうにつうっています"
+		],
+		"en": "I go to school by car every day."
+	},
+	"昼": {
+		"order": "450",
+		"word": "昼",
+		"sentence": "今日の・昼・はおにぎりを食べました",
+		"furigana": [
+			"きょうのひるはおにぎりをたべました"
+		],
+		"en": "I ate onigiri for lunch today."
+	},
+	"色": {
+		"order": "452",
+		"word": "色",
+		"sentence": "私は・色・が好きです",
+		"furigana": [
+			"わたしは・いろ・がすきです"
+		],
+		"en": "I like colors."
+	},
+	"黄色": {
+		"order": "453",
+		"word": "黄色",
+		"sentence": "今日、私は・黄色・の花を見ました",
+		"furigana": [
+			"きょう",
+			"わたしは・きいろ・のはなをみました"
+		],
+		"en": "Today, I saw a yellow flower."
+	},
+	"左": {
+		"order": "454",
+		"word": "左",
+		"sentence": "私の・左・手は怪我をしています",
+		"furigana": [
+			"わたしの・ひだり・てはけがをしています"
+		],
+		"en": "My left hand is injured."
+	},
+	"野菜": {
+		"order": "455",
+		"word": "野菜",
+		"sentence": "私は毎日・野菜・を食べます",
+		"furigana": [
+			"わたしはまいにち・やさい・をたべます"
+		],
+		"en": "I eat vegetables every day."
+	},
+	"散歩": {
+		"order": "458",
+		"word": "散歩",
+		"sentence": "私は毎朝、公園で・散歩・をします。",
+		"furigana": [
+			"わたしはまいあさ",
+			"こうえんで・さんぽ・をします。"
+		],
+		"en": "I take a walk in the park every morning."
+	},
+	"消える": {
+		"order": "459",
+		"word": "消える",
+		"sentence": "昨日の夢はすぐに・消える・ことが多いです",
+		"furigana": [
+			"きのうのゆめはすぐに・きえる・ことがおおいです"
+		],
+		"en": "Yesterday's dream often disappears quickly."
+	},
+	"映画館": {
+		"order": "460",
+		"word": "映画館",
+		"sentence": "昨日、友達と・映画館・に行って、新しい映画を見ました。",
+		"furigana": [
+			"きのう",
+			"ともだちと・えいがかん・にいって",
+			"あたらしいえいがをみました。"
+		],
+		"en": "Yesterday, I went to the movie theater with my friend and watched a new movie."
+	},
+	"誕生日": {
+		"order": "461",
+		"word": "誕生日",
+		"sentence": "今日は私の・誕生日・です",
+		"furigana": [
+			"きょうはわたしの・たんじょうび・です"
+		],
+		"en": "Today is my birthday."
+	},
+	"切る": {
+		"order": "462",
+		"word": "切る",
+		"sentence": "私は包丁で野菜を・切る・ことができます。",
+		"furigana": [
+			"わたしはほうちょうでやさいを・きる・ことができます。"
+		],
+		"en": "I can cut vegetables with a kitchen knife."
+	},
+	"七日": {
+		"order": "464",
+		"word": "七日",
+		"sentence": "私は・七日・後に試験があります。",
+		"furigana": [
+			"わたしは・なのか・あとにしけんがあります。"
+		],
+		"en": "I have an exam in seven days."
+	},
+	"洗う": {
+		"order": "465",
+		"word": "洗う",
+		"sentence": "私は毎朝、顔を・洗う・前に歯を磨きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"かおを・あらう・まえにはをみがきます。"
+		],
+		"en": "I brush my teeth before washing my face every morning."
+	},
+	"習う": {
+		"order": "466",
+		"word": "習う",
+		"sentence": "私は日本語を・習う・ために毎日勉強しています",
+		"furigana": [
+			"わたしはにほんごを・ならう・ためにまいにちべんきょうしています"
+		],
+		"en": "I study every day to learn Japanese."
+	},
+	"後": {
+		"order": "468",
+		"word": "後",
+		"sentence": "私は授業の・後・に友達と遊ぶ予定です",
+		"furigana": [
+			"わたしはじゅぎょうの・ご・にともだちとあそぶよていです"
+		],
+		"en": "I plan to hang out with friends after class."
+	},
+	"猫": {
+		"order": "473",
+		"word": "猫",
+		"sentence": "私は・猫・が大好きです",
+		"furigana": [
+			"わたしはねこがだいすきです"
+		],
+		"en": "I love cats."
+	},
+	"図書館": {
+		"order": "474",
+		"word": "図書館",
+		"sentence": "私は毎週末、・図書館・で本を借ります。",
+		"furigana": [
+			"わたしはまいしゅうまつ",
+			"・としょかん・でほんをかります。"
+		],
+		"en": "I borrow books from the library every weekend."
+	},
+	"並べる": {
+		"order": "475",
+		"word": "並べる",
+		"sentence": "私は教室で机を・並べる・ように頼まれました。",
+		"furigana": [
+			"わたしはきょうしつでつくえを・ならべる・ようにたのまれました。"
+		],
+		"en": "I was asked to arrange the desks in the classroom."
+	},
+	"大きい": {
+		"order": "477",
+		"word": "大きい",
+		"sentence": "私の学校は・大きい・です。",
+		"furigana": [
+			"わたしのがっこうは・おおきい・です。"
+		],
+		"en": "My school is big."
+	},
+	"八日": {
+		"order": "478",
+		"word": "八日",
+		"sentence": "私は・八日・後にテストがあります",
+		"furigana": [
+			"わたしははちにちごにてすとがあります"
+		],
+		"en": "I have a test in eight days."
+	},
+	"歩く": {
+		"order": "479",
+		"word": "歩く",
+		"sentence": "私は毎朝・歩く・ために公園に行きます",
+		"furigana": [
+			"わたしはまいあさあるくためにこうえんにいきます"
+		],
+		"en": "I go to the park every morning to walk."
+	},
+	"九日": {
+		"order": "480",
+		"word": "九日",
+		"sentence": "私は・九日・後にテストがあります。",
+		"furigana": [
+			"わたしは・くにち・ごにてすとがあります。"
+		],
+		"en": "I have a test in nine days."
+	},
+	"頼む": {
+		"order": "481",
+		"word": "頼む",
+		"sentence": "友達に宿題を・頼む・ことができますか？",
+		"furigana": [
+			"ともだちにしゅくだいを・たのむ・ことができますか？"
+		],
+		"en": "Can I ask my friend to do my homework?"
+	},
+	"お兄さん": {
+		"order": "483",
+		"word": "お兄さん",
+		"sentence": "・お兄さん・は元気です",
+		"furigana": [
+			"・おにいさん・はげんきです"
+		],
+		"en": "My older brother is energetic."
+	},
+	"手": {
+		"order": "484",
+		"word": "手",
+		"sentence": "・手・を洗いましょう。",
+		"furigana": [
+			"てをあらいましょう"
+		],
+		"en": "Let's wash our hands."
+	},
+	"毎日": {
+		"order": "486",
+		"word": "毎日",
+		"sentence": "私は・毎日・学校に行きます。",
+		"furigana": [
+			"わたしはまいにちがっこうにいきます。"
+		],
+		"en": "I go to school every day."
+	},
+	"花": {
+		"order": "488",
+		"word": "花",
+		"sentence": "私は・花・が大好きです",
+		"furigana": [
+			"わたしははながだいすきです"
+		],
+		"en": "I love flowers."
+	},
+	"居る": {
+		"order": "489",
+		"word": "居る",
+		"sentence": "今日、学校に友達が・居る・から、一緒に帰りましょう。",
+		"furigana": [
+			"きょう",
+			"がっこうにともだちが・いる・から",
+			"いっしょにかえりましょう。"
+		],
+		"en": "Today, since my friend is at school, let's go home together."
+	},
+	"砂糖": {
+		"order": "490",
+		"word": "砂糖",
+		"sentence": "私はお茶に・砂糖・を入れるのが好きです。",
+		"furigana": [
+			"わたしはおちゃに・さとう・をいれるのがすきです。"
+		],
+		"en": "I like to put sugar in my tea."
+	},
+	"今": {
+		"order": "491",
+		"word": "今",
+		"sentence": "今日は・今・から忙しいです",
+		"furigana": [
+			"きょうは・いま・からいそがしいです"
+		],
+		"en": "Today I will be busy from now on."
+	},
+	"旅行": {
+		"order": "492",
+		"word": "旅行",
+		"sentence": "私は夏休みに・旅行・に行くつもりです。",
+		"furigana": [
+			"わたしはなつやすみにりょこうにいくつもりです。"
+		],
+		"en": "I plan to go on a trip during the summer vacation."
+	},
+	"春": {
+		"order": "495",
+		"word": "春",
+		"sentence": "・春・は花が咲く季節です",
+		"furigana": [
+			"・はる・ははながさくきせつです"
+		],
+		"en": "Spring is the season when flowers bloom."
+	},
+	"八つ": {
+		"order": "497",
+		"word": "八つ",
+		"sentence": "私は・八つ・のりんごを食べました",
+		"furigana": [
+			"わたしは・はちつ・のりんごをたべました"
+		],
+		"en": "I ate eight apples."
+	},
+	"町": {
+		"order": "498",
+		"word": "町",
+		"sentence": "私の・町・はとても静かです",
+		"furigana": [
+			"わたしのまちはとてもしずかです"
+		],
+		"en": "My town is very quiet."
+	},
+	"渡す": {
+		"order": "499",
+		"word": "渡す",
+		"sentence": "私は友達に・渡す・プレゼントを買いました",
+		"furigana": [
+			"わたしはともだちに・わたす・ぷれぜんとをかいました"
+		],
+		"en": "I bought a present to give to my friend."
+	},
+	"青": {
+		"order": "502",
+		"word": "青",
+		"sentence": "今日は・青・空がとてもきれいですね。",
+		"furigana": [
+			"きょうは・あお・そらがとてもきれいですね。"
+		],
+		"en": "Today, the blue sky is very beautiful, isn't it?"
+	},
+	"白": {
+		"order": "503",
+		"word": "白",
+		"sentence": "私の好きな色は・白・です。",
+		"furigana": [
+			"わたしのすきないろは・しろ・です。"
+		],
+		"en": "My favorite color is white."
+	},
+	"水": {
+		"order": "504",
+		"word": "水",
+		"sentence": "今日は・水・をたくさん飲みました",
+		"furigana": [
+			"きょうは・みず・をたくさんのみました"
+		],
+		"en": "I drank a lot of water today."
+	},
+	"楽しい": {
+		"order": "506",
+		"word": "楽しい",
+		"sentence": "今日のパーティーは・楽しい・だったね",
+		"furigana": [
+			"きょうのぱーてぃーはたのしかったね"
+		],
+		"en": "Today's party was fun"
+	},
+	"御飯": {
+		"order": "507",
+		"word": "御飯",
+		"sentence": "今日の・御飯・は何ですか",
+		"furigana": [
+			"きょうの・ごはん・はなんですか"
+		],
+		"en": "What is today's meal?"
+	},
+	"皆さん": {
+		"order": "508",
+		"word": "皆さん",
+		"sentence": "・皆さん・は元気ですか？",
+		"furigana": [
+			"・みなさん・はげんきですか？"
+		],
+		"en": "Is everyone doing well?"
+	},
+	"外": {
+		"order": "509",
+		"word": "外",
+		"sentence": "今日は・外・で遊びます",
+		"furigana": [
+			"きょうはそとであそびます"
+		],
+		"en": "Today we will play outside."
+	},
+	"前": {
+		"order": "510",
+		"word": "前",
+		"sentence": "私は・前・の席に座っています",
+		"furigana": [
+			"わたしは・まえ・のせきにすわっています"
+		],
+		"en": "I am sitting in the front seat."
+	},
+	"来る": {
+		"order": "511",
+		"word": "来る",
+		"sentence": "明日、友達が・来る・から、一緒に遊びましょう。",
+		"furigana": [
+			"あした",
+			"ともだちが・くる・から",
+			"いっしょにあそびましょう。"
+		],
+		"en": "Tomorrow, since my friend is coming, let's play together."
+	},
+	"貸す": {
+		"order": "512",
+		"word": "貸す",
+		"sentence": "私は友達に・貸す・ことがよくあります",
+		"furigana": [
+			"わたしはともだちに・かす・ことがよくあります"
+		],
+		"en": "I often lend things to my friends."
+	},
+	"早い": {
+		"order": "513",
+		"word": "早い",
+		"sentence": "彼は・早い・ランナーです",
+		"furigana": [
+			"かれは・はやい・らんなーです"
+		],
+		"en": "He is a fast runner."
+	},
+	"弱い": {
+		"order": "514",
+		"word": "弱い",
+		"sentence": "私は・弱い・体をしているので、運動が苦手です。",
+		"furigana": [
+			"わたしは・よわい・からだをしているので",
+			"うんどうがにがてです。"
+		],
+		"en": "I have a weak body, so I'm not good at sports."
+	},
+	"洗濯": {
+		"order": "515",
+		"word": "洗濯",
+		"sentence": "今日は天気がいいので、・洗濯・を外でしました。",
+		"furigana": [
+			"きょうはてんきがいいので",
+			"・せんたく・をそとでしました。"
+		],
+		"en": "Today the weather was nice, so I did the laundry outside."
+	},
+	"九つ": {
+		"order": "516",
+		"word": "九つ",
+		"sentence": "私は・九つ・の誕生日を楽しみにしています",
+		"furigana": [
+			"わたしは・ここのつ・のたんじょうびをたのしみにしています"
+		],
+		"en": "I am looking forward to my ninth birthday."
+	},
+	"来年": {
+		"order": "517",
+		"word": "来年",
+		"sentence": "来年・の夏休みは、海外旅行に行きたいです。",
+		"furigana": [
+			"らいねんのなつやすみは",
+			"かいがいりょこうにいきたいです。"
+		],
+		"en": "I want to go on an overseas trip during next year's summer vacation."
+	},
+	"眼鏡": {
+		"order": "518",
+		"word": "眼鏡",
+		"sentence": "私の父はいつも・眼鏡・をかけています",
+		"furigana": [
+			"わたしのちちはいつもめがねをかけています"
+		],
+		"en": "My father always wears glasses."
+	},
+	"背": {
+		"order": "519",
+		"word": "背",
+		"sentence": "彼の・背・がとても高くて、バスケットボールが得意です。",
+		"furigana": [
+			"かれの・せ・がとてもたかくて",
+			"ばすけっとぼーるがとくいです。"
+		],
+		"en": "His height is very tall, and he is good at basketball."
+	},
+	"水曜日": {
+		"order": "520",
+		"word": "水曜日",
+		"sentence": "・水曜日・はいつも英語のクラスがあります",
+		"furigana": [
+			"・すいようび・はいつもえいごのクラスがあります"
+		],
+		"en": "On Wednesdays, there is always an English class."
+	},
+	"お金": {
+		"order": "521",
+		"word": "お金",
+		"sentence": "私は・お金・をためて、自転車を買いたいです。",
+		"furigana": [
+			"わたしはおかねをためて",
+			"じてんしゃをかいたいです。"
+		],
+		"en": "I want to save money to buy a bicycle."
+	},
+	"同じ": {
+		"order": "522",
+		"word": "同じ",
+		"sentence": "私たちは・同じ・クラスにいます",
+		"furigana": [
+			"わたしたちは・おなじ・クラスにいます"
+		],
+		"en": "We are in the same class."
+	},
+	"弾く": {
+		"order": "523",
+		"word": "弾く",
+		"sentence": "私は毎日ピアノを・弾く・ようにしています。",
+		"furigana": [
+			"わたしはまいにちぴあのを・ひく・ようにしています。"
+		],
+		"en": "I play the piano every day."
+	},
+	"土曜日": {
+		"order": "524",
+		"word": "土曜日",
+		"sentence": "・土曜日・に、学校のクラブ活動があります。",
+		"furigana": [
+			"・どようび・に",
+			"がっこうのくらぶかつどうがあります。"
+		],
+		"en": "On Saturday, there are school club activities."
+	},
+	"階段": {
+		"order": "525",
+		"word": "階段",
+		"sentence": "私は毎朝、・階段・を上って学校に行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・かいだん・をのぼってがっこうにいきます。"
+		],
+		"en": "I climb the stairs every morning to go to school."
+	},
+	"煩い": {
+		"order": "526",
+		"word": "煩い",
+		"sentence": "今日の授業は・煩い・から、集中できませんでした",
+		"furigana": [
+			"きょうのじゅぎょうはうるさいから",
+			"しゅうちゅうできませんでした"
+		],
+		"en": "Today's class was noisy, so I couldn't concentrate."
+	},
+	"半分": {
+		"order": "527",
+		"word": "半分",
+		"sentence": "私はこのケーキを・半分・食べました。",
+		"furigana": [
+			"わたしはこのけーきを・はんぶん・たべました。"
+		],
+		"en": "I ate half of this cake."
+	},
+	"背広": {
+		"order": "528",
+		"word": "背広",
+		"sentence": "今日のパーティーには・背広・を着ていくつもりです",
+		"furigana": [
+			"きょうのぱーてぃーにはせびろをきていくつもりです"
+		],
+		"en": "I plan to wear a suit to today's party."
+	},
+	"晴れ": {
+		"order": "529",
+		"word": "晴れ",
+		"sentence": "今日は・晴れ・で、ピクニックに行きましょう。",
+		"furigana": [
+			"きょうは・はれ・で",
+			"ぴくにっくにいきましょう。"
+		],
+		"en": "Today is sunny, let's go on a picnic."
+	},
+	"見せる": {
+		"order": "530",
+		"word": "見せる",
+		"sentence": "私は友達に・見せる・ために新しい本を買いました。",
+		"furigana": [
+			"わたしはともだちに・みせる・ためにあたらしいほんをかいました。"
+		],
+		"en": "I bought a new book to show it to my friend."
+	},
+	"飲み物": {
+		"order": "532",
+		"word": "飲み物",
+		"sentence": "今日のパーティーでは、いろいろな・飲み物・が用意されています",
+		"furigana": [
+			"きょうのぱーてぃーでは",
+			"いろいろな・のみもの・がよういされています"
+		],
+		"en": "At today's party, various drinks are prepared."
+	},
+	"雪": {
+		"order": "533",
+		"word": "雪",
+		"sentence": "今日は・雪・が降っています",
+		"furigana": [
+			"きょうは・ゆき・がふっています"
+		],
+		"en": "Today it is snowing."
+	},
+	"買い物": {
+		"order": "534",
+		"word": "買い物",
+		"sentence": "今日は・買い物・に行きます",
+		"furigana": [
+			"きょうは・かいもの・にいきます"
+		],
+		"en": "I will go shopping today."
+	},
+	"交差点": {
+		"order": "537",
+		"word": "交差点",
+		"sentence": "私は毎日、・交差点・で友達と待ち合わせをします。",
+		"furigana": [
+			"わたしはまいにち",
+			"・こうさてん・でともだちとまちあわせをします。"
+		],
+		"en": "I meet my friends at the intersection every day."
+	},
+	"駅": {
+		"order": "538",
+		"word": "駅",
+		"sentence": "私は毎朝、・駅・まで自転車で行きます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・えき・までじてんしゃでいきます。"
+		],
+		"en": "I go to the station by bicycle every morning."
+	},
+	"大丈夫": {
+		"order": "540",
+		"word": "大丈夫",
+		"sentence": "今日のテストは・大丈夫・だったよ",
+		"furigana": [
+			"きょうのてすとは・だいじょうぶ・だったよ"
+		],
+		"en": "Today's test was okay."
+	},
+	"勉強": {
+		"order": "542",
+		"word": "勉強",
+		"sentence": "今日は・勉強・をたくさんしました。",
+		"furigana": [
+			"きょうは・べんきょう・をたくさんしました。"
+		],
+		"en": "I did a lot of studying today."
+	},
+	"兄弟": {
+		"order": "543",
+		"word": "兄弟",
+		"sentence": "私の・兄弟・は三人います",
+		"furigana": [
+			"わたしのきょうだいはさんにんいます"
+		],
+		"en": "I have three siblings."
+	},
+	"封筒": {
+		"order": "544",
+		"word": "封筒",
+		"sentence": "今日は・封筒・に手紙を入れて郵便局に行きました",
+		"furigana": [
+			"きょうは・ふうとう・にてがみをいれてゆうびんきょくにいきました"
+		],
+		"en": "Today I put a letter in an envelope and went to the post office."
+	},
+	"漢字": {
+		"order": "546",
+		"word": "漢字",
+		"sentence": "今日の授業では、・漢字・を練習します。",
+		"furigana": [
+			"きょうのじゅぎょうでは",
+			"・かんじ・をれんしゅうします。"
+		],
+		"en": "Today in class, we will practice kanji."
+	},
+	"喫茶店": {
+		"order": "547",
+		"word": "喫茶店",
+		"sentence": "私はよく・喫茶店・で友達と勉強します",
+		"furigana": [
+			"わたしはよく・きっさてん・でともだちとべんきょうします"
+		],
+		"en": "I often study with friends at a cafe."
+	},
+	"子供": {
+		"order": "548",
+		"word": "子供",
+		"sentence": "私の・子供・は元気です",
+		"furigana": [
+			"わたしのこどもはげんきです"
+		],
+		"en": "My child is healthy."
+	},
+	"女の子": {
+		"order": "549",
+		"word": "女の子",
+		"sentence": "私のクラスには元気な・女の子・がいます",
+		"furigana": [
+			"わたしのクラスにはげんきな・おんなのこ・がいます"
+		],
+		"en": "There is an energetic girl in my class."
+	},
+	"紙": {
+		"order": "552",
+		"word": "紙",
+		"sentence": "私は・紙・に絵を描きました",
+		"furigana": [
+			"わたしはかみにえをかきました"
+		],
+		"en": "I drew a picture on paper."
+	},
+	"字引": {
+		"order": "556",
+		"word": "字引",
+		"sentence": "今日の授業で、先生が・字引・を使って新しい言葉を教えてくれました",
+		"furigana": [
+			"きょうのじゅぎょうで",
+			"せんせいが・じびき・をつかってあたらしいことばをおしえてくれました"
+		],
+		"en": "Today in class, the teacher taught us new words using a dictionary."
+	},
+	"嫌い": {
+		"order": "556",
+		"word": "嫌い",
+		"sentence": "私は・嫌い・な食べ物がたくさんあります",
+		"furigana": [
+			"わたしはきらいなたべものがたくさんあります"
+		],
+		"en": "I have a lot of foods that I dislike."
+	},
+	"先": {
+		"order": "557",
+		"word": "先",
+		"sentence": "・先・週、私は友達と映画を見ました。",
+		"furigana": [
+			"せんしゅう",
+			"わたしはともだちとえいがをみました。"
+		],
+		"en": "Last week, I watched a movie with my friend."
+	},
+	"答える": {
+		"order": "559",
+		"word": "答える",
+		"sentence": "先生の質問に・答える・ことができませんでした",
+		"furigana": [
+			"せんせいのしつもんに・こたえる・ことができませんでした"
+		],
+		"en": "I couldn't answer the teacher's question."
+	},
+	"食堂": {
+		"order": "560",
+		"word": "食堂",
+		"sentence": "今日は・食堂・でお昼を食べました。",
+		"furigana": [
+			"きょうは・しょくどう・でおひるをたべました。"
+		],
+		"en": "Today I ate lunch at the cafeteria."
+	},
+	"働く": {
+		"order": "561",
+		"word": "働く",
+		"sentence": "私は毎日・働く・ために頑張っています",
+		"furigana": [
+			"わたしはまいにちはたらくためにがんばっています"
+		],
+		"en": "I work hard every day to achieve my goals."
+	},
+	"見る": {
+		"order": "562",
+		"word": "見る",
+		"sentence": "私は毎日テレビを・見る・ことが好きです。",
+		"furigana": [
+			"わたしはまいにちてれびを・みる・ことがすきです。"
+		],
+		"en": "I like to watch TV every day."
+	},
+	"観る": {
+		"order": "564",
+		"word": "観る",
+		"sentence": "私は毎週末、家族と一緒に・観る・映画を楽しんでいます。",
+		"furigana": [
+			"わたしはまいしゅうまつ",
+			"かぞくといっしょに・みる・えいがをたのしんでいます。"
+		],
+		"en": "I enjoy watching movies with my family every weekend."
+	},
+	"交番": {
+		"order": "566",
+		"word": "交番",
+		"sentence": "私の家から学校に行く途中で、・交番・があります。",
+		"furigana": [
+			"わたしのいえからがっこうにいくとちゅうで",
+			"・こうばん・があります。"
+		],
+		"en": "On my way from home to school, there is a police box."
+	},
+	"辛い": {
+		"order": "569",
+		"word": "辛い",
+		"sentence": "今日の試験は・辛い・かったですね。",
+		"furigana": [
+			"きょうのしけんはつらいかったですね。"
+		],
+		"en": "Today's exam was tough, wasn't it?"
+	},
+	"洋服": {
+		"order": "570",
+		"word": "洋服",
+		"sentence": "私は新しい・洋服・を買いたいです",
+		"furigana": [
+			"わたしはあたらしい・ようふく・をかいたいです"
+		],
+		"en": "I want to buy new clothes."
+	},
+	"晩御飯": {
+		"order": "571",
+		"word": "晩御飯",
+		"sentence": "今日の・晩御飯・は何にしようかな？",
+		"furigana": [
+			"きょうの・ばんごはん・はなんにしようかな？"
+		],
+		"en": "What should I have for dinner today?"
+	},
+	"車": {
+		"order": "572",
+		"word": "車",
+		"sentence": "私の父は毎朝・車・で会社に行きます",
+		"furigana": [
+			"わたしのちちはまいあさくるまでかいしゃにいきます"
+		],
+		"en": "My father goes to work by car every morning."
+	},
+	"もう一度": {
+		"order": "573",
+		"word": "もう一度",
+		"sentence": "もう一度やってみましょう。",
+		"furigana": [
+			"もういちどやってみましょう。"
+		],
+		"en": "Let's try it one more time."
+	},
+	"服": {
+		"order": "574",
+		"word": "服",
+		"sentence": "今日は新しい・服・を買いました",
+		"furigana": [
+			"きょうはあたらしい・ふく・をかいました"
+		],
+		"en": "I bought new clothes today."
+	},
+	"半": {
+		"order": "575",
+		"word": "半",
+		"sentence": "私は毎日・半・時間、勉強しています。",
+		"furigana": [
+			"わたしはまいにちはんじかん",
+			"べんきょうしています。"
+		],
+		"en": "I study for half an hour every day."
+	},
+	"若い": {
+		"order": "578",
+		"word": "若い",
+		"sentence": "私の・若い・友達は元気です。",
+		"furigana": [
+			"わたしの・わかい・ともだちはげんきです。"
+		],
+		"en": "My young friend is energetic."
+	},
+	"食べる": {
+		"order": "580",
+		"word": "食べる",
+		"sentence": "私は毎日・食べる・おにぎりが大好きです",
+		"furigana": [
+			"わたしはまいにちたべるおにぎりがだいすきです"
+		],
+		"en": "I love eating onigiri every day."
+	},
+	"四日": {
+		"order": "584",
+		"word": "四日",
+		"sentence": "私は・四日・後に試験があります。",
+		"furigana": [
+			"わたしは・よっか・ごにしけんがあります。"
+		],
+		"en": "I have an exam in four days."
+	},
+	"警官": {
+		"order": "585",
+		"word": "警官",
+		"sentence": "・警官・は街を守るために働いています",
+		"furigana": [
+			"けいかんはまちをまもるためにはたらいています"
+		],
+		"en": "The police officer works to protect the city."
+	},
+	"伯父": {
+		"order": "586",
+		"word": "伯父",
+		"sentence": "私の・伯父・はとても優しい人です",
+		"furigana": [
+			"わたしの・おじ・はとてもやさしいひとです"
+		],
+		"en": "My uncle is a very kind person."
+	},
+	"叔父": {
+		"order": "587",
+		"word": "叔父",
+		"sentence": "私の・叔父・は毎週日曜日に家族と公園に行きます。",
+		"furigana": [
+			"わたしの・おじ・はまいしゅうにちようびにかぞくとこうえんにいきます。"
+		],
+		"en": "My uncle goes to the park with his family every Sunday."
+	},
+	"鳥": {
+		"order": "588",
+		"word": "鳥",
+		"sentence": "私は公園で・鳥・を見ました",
+		"furigana": [
+			"わたしはこうえんで・とり・をみました"
+		],
+		"en": "I saw a bird in the park."
+	},
+	"方": {
+		"order": "589",
+		"word": "方",
+		"sentence": "私は毎日、・方・を勉強しています。",
+		"furigana": [
+			"わたしはまいにち",
+			"ほうをべんきょうしています。"
+		],
+		"en": "I study \"way\/method\" every day."
+	},
+	"少ない": {
+		"order": "590",
+		"word": "少ない",
+		"sentence": "私の部屋には・少ない・本しかありません",
+		"furigana": [
+			"わたしのへやには・すくない・ほんしかありません"
+		],
+		"en": "There are only a few books in my room."
+	},
+	"白い": {
+		"order": "592",
+		"word": "白い",
+		"sentence": "私の猫は・白い・くまのぬいぐるみが大好きです",
+		"furigana": [
+			"わたしのねこは・しろい・くまのぬいぐるみがだいすきです"
+		],
+		"en": "My cat loves the white bear stuffed animal."
+	},
+	"待つ": {
+		"order": "593",
+		"word": "待つ",
+		"sentence": "友達が来るまで・待つ・ことができます。",
+		"furigana": [
+			"ともだちがくるまでまつことができます。"
+		],
+		"en": "I can wait until my friend comes."
+	},
+	"次": {
+		"order": "594",
+		"word": "次",
+		"sentence": "私は・次・の授業が楽しみです",
+		"furigana": [
+			"わたしは・つぎ・のじゅぎょうがたのしみです"
+		],
+		"en": "I am looking forward to the next class."
+	},
+	"行く": {
+		"order": "595",
+		"word": "行く",
+		"sentence": "今日は学校に・行く・つもりです",
+		"furigana": [
+			"きょうはがっこうに・いく・つもりです"
+		],
+		"en": "I plan to go to school today."
+	},
+	"角": {
+		"order": "596",
+		"word": "角",
+		"sentence": "私は・角・を曲がって学校に行きます。",
+		"furigana": [
+			"わたしは・かど・をまがってがっこうにいきます。"
+		],
+		"en": "I turn at the corner and go to school."
+	},
+	"男": {
+		"order": "597",
+		"word": "男",
+		"sentence": "・男・は元気です",
+		"furigana": [
+			"おとこはげんきです"
+		],
+		"en": "The man is energetic."
+	},
+	"聞く": {
+		"order": "598",
+		"word": "聞く",
+		"sentence": "私は毎日、先生の話を・聞く・ために学校に行きます。",
+		"furigana": [
+			"わたしはまいにち",
+			"せんせいのはなしを・きく・ためにがっこうにいきます。"
+		],
+		"en": "I go to school every day to listen to the teacher's talk."
+	},
+	"走る": {
+		"order": "599",
+		"word": "走る",
+		"sentence": "毎朝、私は公園で・走る・ことが好きです。",
+		"furigana": [
+			"まいあさ",
+			"わたしはこうえんで・はしる・ことがすきです。"
+		],
+		"en": "Every morning, I like to run in the park."
+	},
+	"お母さん": {
+		"order": "600",
+		"word": "お母さん",
+		"sentence": "・お母さん・は元気です。",
+		"furigana": [
+			"・おかあさん・はげんきです。"
+		],
+		"en": "My mother is healthy."
+	},
+	"意味": {
+		"order": "601",
+		"word": "意味",
+		"sentence": "今日の授業で先生が説明した・意味・がよく分かりませんでした",
+		"furigana": [
+			"きょうのじゅぎょうでせんせいがせつめいしたいみがよくわかりませんでした"
+		],
+		"en": "I didn't understand well the meaning that the teacher explained in today's class."
+	},
+	"物": {
+		"order": "602",
+		"word": "物",
+		"sentence": "これは私の・物・です",
+		"furigana": [
+			"これはわたしのものです"
+		],
+		"en": "This is my thing."
+	},
+	"強い": {
+		"order": "603",
+		"word": "強い",
+		"sentence": "今日は・強い・風が吹いています",
+		"furigana": [
+			"きょうは・つよい・かぜがふいています"
+		],
+		"en": "Today, there is a strong wind blowing."
+	},
+	"魚": {
+		"order": "604",
+		"word": "魚",
+		"sentence": "今日のお昼ごはんは、・魚・を使った料理を食べました。",
+		"furigana": [
+			"きょうのおひるごはんは",
+			"・さかな・をつかったりょうりをたべました。"
+		],
+		"en": "Today for lunch, I ate a dish made with fish."
+	},
+	"切手": {
+		"order": "605",
+		"word": "切手",
+		"sentence": "私は・切手・を集めるのが好きです",
+		"furigana": [
+			"わたしはきってをあつめるのがすきです"
+		],
+		"en": "I like to collect stamps."
+	},
+	"暗い": {
+		"order": "607",
+		"word": "暗い",
+		"sentence": "今日の教室は・暗い・ので、目が疲れました。",
+		"furigana": [
+			"きょうのきょうしつは・くらい・ので",
+			"めがつかれました。"
+		],
+		"en": "Today's classroom was dark, so my eyes got tired."
+	},
+	"出る": {
+		"order": "608",
+		"word": "出る",
+		"sentence": "今日は試験が・出る・ので、しっかり勉強しないとね。",
+		"furigana": [
+			"きょうはしけんがでるので",
+			"しっかりべんきょうしないとね。"
+		],
+		"en": "Today there's an exam coming up, so I need to study hard."
+	},
+	"犬": {
+		"order": "609",
+		"word": "犬",
+		"sentence": "私は毎日・犬・と散歩します。",
+		"furigana": [
+			"わたしはまいにちいぬとさんぽします。"
+		],
+		"en": "I walk with my dog every day."
+	},
+	"女": {
+		"order": "610",
+		"word": "女",
+		"sentence": "・女・は元気です",
+		"furigana": [
+			"おんなはげんきです"
+		],
+		"en": "The woman is energetic."
+	},
+	"飛行機": {
+		"order": "611",
+		"word": "飛行機",
+		"sentence": "今日、私は・飛行機・に乗って旅行に行きます。",
+		"furigana": [
+			"きょう",
+			"わたしは・ひこうき・にのってりょこうにいきます。"
+		],
+		"en": "Today, I will take a plane and go on a trip."
+	},
+	"日曜日": {
+		"order": "612",
+		"word": "日曜日",
+		"sentence": "・日曜日・に、わたしはともだちとこうえんへいきます。",
+		"furigana": [
+			"・にちようび・に",
+			"わたしはともだちとこうえんへいきます。"
+		],
+		"en": "On Sunday, I will go to the park with my friends."
+	},
+	"午前": {
+		"order": "613",
+		"word": "午前",
+		"sentence": "私は・午前・の授業が好きです。",
+		"furigana": [
+			"わたしは・ごぜん・のじゅぎょうがすきです。"
+		],
+		"en": "I like the morning classes."
+	},
+	"名前": {
+		"order": "615",
+		"word": "名前",
+		"sentence": "私の・名前・はさくらです",
+		"furigana": [
+			"わたしの・なまえ・はさくらです"
+		],
+		"en": "My name is Sakura."
+	},
+	"丸い": {
+		"order": "616",
+		"word": "丸い",
+		"sentence": "地球は・丸い・形をしています",
+		"furigana": [
+			"ちきゅうは・まるい・かたちをしています"
+		],
+		"en": "The Earth has a round shape."
+	},
+	"円い": {
+		"order": "617",
+		"word": "円い",
+		"sentence": "空を見上げると、・円い・月が輝いていました",
+		"furigana": [
+			"そらをみあげると",
+			"・まるい・つきがかがやいていました"
+		],
+		"en": "The moon was round and shining brightly when I looked up at the sky."
+	},
+	"曲る": {
+		"order": "618",
+		"word": "曲る",
+		"sentence": "信号を右に・曲る・と、公園があります。",
+		"furigana": [
+			"しんごうをみぎに・まがる・と",
+			"こうえんがあります。"
+		],
+		"en": "When you turn right at the traffic light, there is a park."
+	},
+	"鼻": {
+		"order": "619",
+		"word": "鼻",
+		"sentence": "今日は・鼻・がかゆいです。",
+		"furigana": [
+			"きょうははながかゆいです。"
+		],
+		"en": "My nose is itchy today."
+	},
+	"お弁当": {
+		"order": "621",
+		"word": "お弁当",
+		"sentence": "今日の・お弁当・は何が入っているのかな？",
+		"furigana": [
+			"きょうの・おべんとう・はなにがはいっているのかな？"
+		],
+		"en": "What's in today's bento?"
+	},
+	"結婚": {
+		"order": "622",
+		"word": "結婚",
+		"sentence": "彼は来年、・結婚・する予定です",
+		"furigana": [
+			"かのじょはらいねん",
+			"・けっこん・するよていです"
+		],
+		"en": "He plans to get married next year."
+	},
+	"置く": {
+		"order": "626",
+		"word": "置く",
+		"sentence": "机の上に本を・置く・んだよ",
+		"furigana": [
+			"つくえのうえにほんを・おく・んだよ"
+		],
+		"en": "I put the book on the desk."
+	},
+	"渡る": {
+		"order": "628",
+		"word": "渡る",
+		"sentence": "私は毎日、学校に行くために川を・渡る・ことがあります。",
+		"furigana": [
+			"わたしはまいにち",
+			"がっこうにいくためにかわを・わたる・ことがあります。"
+		],
+		"en": "I cross the river every day to go to school."
+	},
+	"伯母さん": {
+		"order": "629",
+		"word": "伯母さん",
+		"sentence": "私の・伯母さん・はとても優しい人です",
+		"furigana": [
+			"わたしの・おばさん・はとてもやさしいひとです"
+		],
+		"en": "My aunt is a very kind person."
+	},
+	"叔母さん": {
+		"order": "632",
+		"word": "叔母さん",
+		"sentence": "・叔母さん・は元気です",
+		"furigana": [
+			"・おばさん・はげんきです"
+		],
+		"en": "My aunt is healthy."
+	},
+	"明い": {
+		"order": "633",
+		"word": "明い",
+		"sentence": "今日の教室は・明い・雰囲気で、とても勉強しやすいです。",
+		"furigana": [
+			"きょうのきょうしつは・あかるい・ふんいきで",
+			"てもべんきょうしやすいです。"
+		],
+		"en": "Today's classroom has a bright atmosphere, making it very easy to study."
+	},
+	"家庭": {
+		"order": "636",
+		"word": "家庭",
+		"sentence": "私の・家庭・はとてもあたたかいです",
+		"furigana": [
+			"わたしの・かてい・はとてもあたたかいです"
+		],
+		"en": "My family is very warm and welcoming."
+	},
+	"靴": {
+		"order": "637",
+		"word": "靴",
+		"sentence": "私は新しい・靴・を買いました",
+		"furigana": [
+			"わたしはあたらしいくつをかいました"
+		],
+		"en": "I bought new shoes."
+	},
+	"今月": {
+		"order": "640",
+		"word": "今月",
+		"sentence": "・今月・は忙しいです。",
+		"furigana": [
+			"・こんげつ・は",
+			"いそがしいです。"
+		],
+		"en": "This month is busy."
+	},
+	"返す": {
+		"order": "641",
+		"word": "返す",
+		"sentence": "友達に借りた本を・返す・時、ちゃんとお礼を言いました。",
+		"furigana": [
+			"ともだちにかりたほんを・かえす・とき",
+			"ちゃんとおれいをいました。"
+		],
+		"en": "When I returned the book I borrowed from my friend, I made sure to thank them properly."
+	},
+	"二人": {
+		"order": "643",
+		"word": "二人",
+		"sentence": "・二人・で映画を見に行きました",
+		"furigana": [
+			"ふたりでえいがをみにいきました"
+		],
+		"en": "We went to see a movie together, just the two of us."
+	},
+	"起きる": {
+		"order": "645",
+		"word": "起きる",
+		"sentence": "毎朝、６時に・起きる・のが私の習慣です。",
+		"furigana": [
+			"まいあさ",
+			"ろくじに・おきる・のがわたしのしゅうかんです。"
+		],
+		"en": "Every morning, it is my habit to wake up at 6 o'clock."
+	},
+	"古い": {
+		"order": "646",
+		"word": "古い",
+		"sentence": "私の家には・古い・本がたくさんあります",
+		"furigana": [
+			"わたしのいえには・ふるい・ほんがたくさんあります"
+		],
+		"en": "There are many old books in my house."
+	},
+	"黄色い": {
+		"order": "647",
+		"word": "黄色い",
+		"sentence": "私の好きな色は・黄色い・です",
+		"furigana": [
+			"わたしのすきないろはきいろいです"
+		],
+		"en": "My favorite color is yellow."
+	},
+	"飴": {
+		"order": "649",
+		"word": "飴",
+		"sentence": "今日のおやつは・飴・です",
+		"furigana": [
+			"きょうのおやつは・あめ・です"
+		],
+		"en": "Today's snack is candy."
+	},
+	"寝る": {
+		"order": "650",
+		"word": "寝る",
+		"sentence": "私は毎晩・寝る・前に本を読みます",
+		"furigana": [
+			"わたしはまいばん・ねる・まえにほんをよみます"
+		],
+		"en": "I read a book every night before I go to bed."
+	},
+	"質問": {
+		"order": "651",
+		"word": "質問",
+		"sentence": "先生、・質問・があります",
+		"furigana": [
+			"",
+			"せんせい",
+			"・しつもん・があります",
+			""
+		],
+		"en": "Teacher, I have a question."
+	},
+	"牛乳": {
+		"order": "652",
+		"word": "牛乳",
+		"sentence": "私は毎朝、・牛乳・を飲んでいます。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・ぎゅうにゅう・をのんでいます。"
+		],
+		"en": "I drink milk every morning."
+	},
+	"紅茶": {
+		"order": "653",
+		"word": "紅茶",
+		"sentence": "私は毎朝、・紅茶・を飲むのが好きです。",
+		"furigana": [
+			"わたしはまいあさ",
+			"・こうちゃ・をのむのがすきです。"
+		],
+		"en": "I like to drink black tea every morning."
+	},
+	"出かける": {
+		"order": "654",
+		"word": "出かける",
+		"sentence": "今日は友達と・出かける・予定があります。",
+		"furigana": [
+			"きょうはともだちと・でかける・よていがあります。"
+		],
+		"en": "I have plans to go out with my friends today."
+	},
+	"兄": {
+		"order": "655",
+		"word": "兄",
+		"sentence": "私の・兄・はサッカーが好きです",
+		"furigana": [
+			"わたしの・あに・はさっかーがすきです"
+		],
+		"en": "My older brother likes soccer."
+	},
+	"月曜日": {
+		"order": "656",
+		"word": "月曜日",
+		"sentence": "・月曜日・は学校に行きます",
+		"furigana": [
+			"・げつようび・はがっこうにいきます"
+		],
+		"en": "I go to school on Mondays."
+	},
+	"締める": {
+		"order": "657",
+		"word": "締める",
+		"sentence": "今日の会議は、部長が・締める・予定です。",
+		"furigana": [
+			"きょうのかいぎは",
+			"ぶちょうが・しめる・よていです。"
+		],
+		"en": "Today's meeting is scheduled to be concluded by the department head."
+	},
+	"熱い": {
+		"order": "658",
+		"word": "熱い",
+		"sentence": "今日のラーメンは・熱い・ですね",
+		"furigana": [
+			"きょうのらーめんはあついですね"
+		],
+		"en": "Today's ramen is hot, isn't it?"
+	},
+	"郵便局": {
+		"order": "659",
+		"word": "郵便局",
+		"sentence": "私は・郵便局・へ手紙を出しに行きました",
+		"furigana": [
+			"わたしはゆうびんきょくへてがみをだしにいきました"
+		],
+		"en": "I went to the post office to mail a letter."
+	},
+	"細い": {
+		"order": "661",
+		"word": "細い",
+		"sentence": "彼女の・細い・指がとても美しいです。",
+		"furigana": [
+			"かのじょの・ほそい・ゆびがとてもうつくしいです。"
+		],
+		"en": "Her slender fingers are very beautiful."
+	},
+	"本棚": {
+		"order": "662",
+		"word": "本棚",
+		"sentence": "私の部屋にはたくさんの・本棚・があります。",
+		"furigana": [
+			"わたしのへやにはたくさんのほんだながあります。"
+		],
+		"en": "There are many bookshelves in my room."
+	},
+	"結構": {
+		"order": "663",
+		"word": "結構",
+		"sentence": "今日の天気は・結構・いいですね",
+		"furigana": [
+			"きょうのてんきは・けっこう・いいですね"
+		],
+		"en": "The weather today is quite good, isn't it?"
+	},
+	"絵": {
+		"order": "664",
+		"word": "絵",
+		"sentence": "私は美術の授業で・絵・を描くのが好きです",
+		"furigana": [
+			"わたしはびじゅつのじゅぎょうでえをかくのがすきです"
+		],
+		"en": "I like to draw pictures in art class."
+	},
+	"使う": {
+		"order": "665",
+		"word": "使う",
+		"sentence": "私は毎日・使う・インターネットで勉強します。",
+		"furigana": [
+			"わたしはまいにちつかうインターネットでべんきょうします。"
+		],
+		"en": "I study every day using the internet."
+	},
+	"休む": {
+		"order": "667",
+		"word": "休む",
+		"sentence": "今日は学校で忙しかったから、家に帰って・休む・つもりです。",
+		"furigana": [
+			"きょうはがっこうでいそがしかったから",
+			"いえにかえって・やすむ・つもりです。"
+		],
+		"en": "Today was busy at school, so I plan to go home and rest."
+	},
+	"貼る": {
+		"order": "669",
+		"word": "貼る",
+		"sentence": "私はポスターを壁に・貼る・ことが好きです",
+		"furigana": [
+			"わたしはぽすたーをかべに・はる・ことがすきです"
+		],
+		"en": "I like to stick posters on the wall."
+	},
+	"涼しい": {
+		"order": "670",
+		"word": "涼しい",
+		"sentence": "今日は・涼しい・風が吹いています",
+		"furigana": [
+			"きょうは・すずしい・かぜがふいています"
+		],
+		"en": "Today, a cool breeze is blowing."
+	},
+	"昨日": {
+		"order": "672",
+		"word": "昨日",
+		"sentence": "昨日は楽しかったです。",
+		"furigana": [
+			"きのうはたのしかったです。"
+		],
+		"en": "Yesterday was fun."
+	},
+	"初め": {
+		"order": "673",
+		"word": "初め",
+		"sentence": "・初め・の挨拶は大切です",
+		"furigana": [
+			"・はじめ・のあいさつはたいせつです"
+		],
+		"en": "The initial greeting is important."
+	},
+	"始め": {
+		"order": "674",
+		"word": "始め",
+		"sentence": "今日は・始め・から日本語を勉強します",
+		"furigana": [
+			"きょうは・はじめ・からにほんごをべんきょうします"
+		],
+		"en": "Today I will start studying Japanese from the beginning."
+	}
+}

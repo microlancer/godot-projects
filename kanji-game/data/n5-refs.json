@@ -1,0 +1,353 @@
+{
+	"てんてん": {
+		"strokes": [["DR","D","R"],["DR","D","R"]]
+	},
+	"あ": {
+		"strokes": []
+	},
+	"い": {
+		"strokes": [["D","DR","R"],["D","DR","DL"]]
+	},
+	"う": {
+		"strokes": [["R","DR","D"], ["D","DR"]]
+	},
+	"え": {
+		"strokes": []
+	},
+	"お": {
+		"strokes": [["R","UR"],["D","DR"],["R","D","DR"]]
+	},
+	"か": {
+		"strokes": [["DR","R","D"],["D","DL"],["DR","D"]]
+	},
+	"き": {
+		"strokes": [["R","UR"],["R","UR"],["D","DR"],["R","DR"]]
+	},
+	"く": {
+		"strokes": [["D","DR"]]
+	},
+	"け": {
+		"strokes": []
+	},
+	"こ": {
+		"strokes": [["R","DR","UR"],["R","DR"]]
+	},
+	"が": {
+		"small": false,
+		"strokes": ["か","てんてん"]
+	},
+	"ぎ": {
+		"strokes": []
+	},
+	"ぐ": {
+		"strokes": []
+	},
+	"げ": {
+		"strokes": []
+	},
+	"ご": {
+		"strokes": ["こ","てんてん"]
+	},
+	"さ": {
+		"strokes": [["R","UR"],["D","DR"],["DR","R"]]
+	},
+	"し": {
+		"strokes": [["D","DR"]]
+	},
+	"す": {
+		"strokes": [["R"],["D","DL"]]
+	},
+	"せ": {
+		"strokes": []
+	},
+	"そ": {
+		"strokes": []
+	},
+	"ざ": {
+		"strokes": []
+	},
+	"じ": {
+		"strokes": [["D","DR"],"てんてん"]
+	},
+	"ず": {
+		"strokes": [["R","UR"],["DL","D"],"てんてん"]
+	},
+	"ぜ": {
+		"strokes": []
+	},
+	"ぞ": {
+		"strokes": []
+	},
+	"た": {
+		"strokes": [["R","UR"],["D","DL"],"こ"]
+	},
+	"ち": {
+		"strokes": [["R","UR"],["D"]]
+	},
+	"つ": {
+		"strokes": []
+	},
+	"て": {
+		"strokes": [["DR"]]
+	},
+	"と": {
+		"strokes": []
+	},
+	"な": {
+		"strokes": []
+	},
+	"に": {
+		"small": false,
+		"strokes": [["D"], ["R","UR"], ["R","DR"]]
+	},
+	"ぬ": {
+		"strokes": []
+	},
+	"ね": {
+		"strokes": []
+	},
+	"の": {
+		"strokes": []
+	},
+	"は": {
+		"strokes": [["D"],["R","UR"],["D","DR"]]
+	},
+	"ひ": {
+		"strokes": [["R","DR"]]
+	},
+	"ふ": {
+		"strokes": []
+	},
+	"へ": {
+		"strokes": []
+	},
+	"ほ": {
+		"small": false,
+		"strokes": [["D"],["R","UR"],["R","UR"],["DR","D"]]
+	},
+	"ま": {
+		"strokes": [["R","UR"],["R","UR"],["D","DR"]]
+	},
+	"み": {
+		"strokes": []
+	},
+	"む": {
+		"strokes": []
+	},
+	"め": {
+		"strokes": []
+	},
+	"も": {
+		"strokes": []
+	},
+	"ム": {
+		"strokes": [["DR","D"],["DR","D"]]
+	},
+	"メ": {
+		"strokes": [["DL","D"],["R","DR"]]
+	},
+	"ら": {
+		"strokes": []
+	},
+	"り": {
+		"strokes": [["D"],["DL","D"]]
+	},
+	"る": {
+		"strokes": [["D","DR"]]
+	},
+	"れ": {
+		"strokes": []
+	},
+	"ろ": {
+		"strokes": [["D","DR","DL"]]
+	},
+	"や": {
+		"strokes": []
+	},
+	"ゆ": {
+		"strokes": [["D","DR"], ["D","DL"]]
+	},
+	"よ": {
+		"strokes": [["R","UR"],["D","DR","R"]]
+	},
+	"ゅ": {
+		"small": true,
+		"strokes": ["ゆ"]
+	},
+	"ょ": {
+		"small": true,
+		"strokes": ["よ"]
+	},
+	"ん": {
+		"strokes": [["D","DR"]]
+	},
+	"なべぶた": {
+		"radical": true,
+		"stroke_count": 2,
+		"strokes": [["D","DR","R"],["R","UR"]]
+	},
+	"てへん": {
+		"stroke_count": 3,
+		"strokes": [["R","UR"],["D","DL"],["R","UR"]],
+	},
+	"うかんむり": {
+		"stroke_count": 3,
+		"strokes": [["D","DR"], ["D","DL"], ["R","DR"]],
+	},
+	"あしあと": {
+		"radical": true,
+		"strokes": [["D"],["DR"],["DL","D"],["UR","R"],["DR","D","R"]]
+	},
+	"きょりへん": {
+		"radical": true,
+		"strokes": ["なべぶた","凶","あしあと"],
+	},
+	"さいづくり": {
+		"radical": true,
+		"strokes": [["DL","D"],["D"],["DL","D"],["R","UR"],["D"],["R","UR"],["R","UR"],["R","UR"]]
+	},
+	"ろうへん": {
+		"readings": ["ろう"],
+		"strokes": [["D","DR"],["DR","R"],["R","UR"],["R","UR"],["D","DR"],["DR","R"]]
+	},
+	"一": {
+		"unicode": 19968,
+		"readings": ["いち"],
+		"stroke_count": 1,
+		"strokes": [["R","UR"]]
+	},
+	"二": {
+		"unicode": 20108,
+		"readings": ["に"],
+		"stroke_count": 2,
+		"strokes": [["R","UR"],["R","UR"]]
+	},
+	"三": {
+		"unicode": 19977,
+		"readings": ["さん"],
+		"strokes": [["R","UR"],["R","UR"],["R","DR"]]
+	},
+	"四": {
+		"unicode": 22235,
+		"readings": ["よん"],
+		"strokes": [["D"],["DR","R"],["DL","D"],["D","DR","R"],["R","UR"]]
+	},
+	"五": {
+		"unicode": 20116,
+		"readings": ["ご"],
+		"strokes": [["R","UR"],["DL","D"],["DR","R"],["R","DR"]]
+	},
+	"六": {
+		"unicode": 20845,
+		"readings": ["ろく"],
+		"strokes": [["D","DR"],["R","UR"],["DL","D","L"],["D","DR","R"]]
+	},
+	"七": {
+		"unicode": 19971,
+		"readings": ["しち"],
+		"strokes": [["R","UR"],["DR","D"]]
+	},
+	"八": {
+		"unicode": 20843,
+		"readings": ["はち"],
+		"strokes": [["L","DL","D"],["DR","R","D"]]
+	},
+	"九": {
+		"unicode": 20061,
+		"readings": ["きゅう"],
+		"strokes": [["DL","D"],["DR","R"]]
+	},
+	"十": {
+		"unicode": 21313,
+		"readings": ["とお","じゅう"],
+		"strokes": [["R","UR"], ["D"]]
+	},
+	"日": {
+		"unicode": 26085,
+		"JLPT": "N5",
+		"strokes": [["D","DR"],["DR","D","R"], ["R","UR"],["R","UR"]]
+	},
+	"王": {
+		"unicode": 29579,
+		"JLPT": "N2",
+		"adjusted_JLPT": "N5",
+		"strokes": [["R","UR"],["D"], ["R","UR"],["R"]]
+	},
+	"玉": {
+		"unicode": 29577,
+		"JLPT": "N2",
+		"adjusted_JLPT": "N5",
+		"depends_on": ["王"],
+		"strokes": ["王", ["DR","R", "D"]]
+	},
+	"国": {
+		"unicode": 22269,
+		"JLPT": "N5",
+		"depends_on": ["玉"],
+		"strokes": [["D"],["DR"],"玉",["R","UR"]]
+	},
+	"艮": {
+	},
+	"月": {
+		"unicode": 26376,
+		"readings": ["つき"],
+		"strokes": [["DL","D"], ["DR","D"],["R","UR"],["R","UR"]]
+	},
+	"朗": {
+		"unicode": 26391,
+		"readings": ["ほが"],
+		"depends_on": ["ろうへん", "月"],
+		"strokes": ["ろうへん", "月"]
+	},
+	"口": {
+		"unicode": 21475,
+		"stroke_count": 3,
+		"strokes": [["D"],["DR","R"],["R","UR"]]
+	},
+	"足": {
+		"unicode": 36275,
+		"stroke_count": 7,
+		"strokes": ["口", ["D"],["R","UR"],["DL","D"],["R","DR","UR"]]
+	},
+	"巨": {
+		"unicode": 24040,
+		"strokes": [["D"],["R","UR"],["R","DR"],["R","UR"],["R","UR"]]
+	},
+	"臣": {
+		"unicode": 33251,
+		"strokes": [["D"],["R","UR"],["D"],["R","DR"],["R","UR"],["D"],["R","UR"]]
+	},
+	"距": {
+		"unicode": 36317,
+		"strokes": ["足","巨"]
+	},
+	"凶": {
+		"unicode": 20982,
+		"strokes": ["メ",["DR","D","R"],["D"]]
+	},
+	"離": {
+		"unicode": 38626,
+		"strokes": ["きょりへん","さいづくり"]
+	},
+	"推": {
+		"strokes": ["てへん", ["DL","D"], ["D"], ["DL","D"], ["R"], ["D"], ["R"], ["R"], ["R"]]
+	},
+	"正": {
+		"strokes": [["R"], ["D"], ["R"], ["DL","D"], ["R","DR"]]
+	},
+	"定": {
+		"strokes": ["うかんむり", "正"]
+	},
+	"りっしんべん": {
+		"strokes": [["D","DL"], ["DR","D"], ["D"]]
+	},
+	"よこめ": {
+		"strokes": [["D","DL","DR"], ["R","DR"], ["D"], ["D"], ["R","UR"]]
+	},
+	"又": {
+		"strokes": [["D","DL","DR"], ["DR","D","R"]]
+	},
+	"慢": {
+		"strokes": ["りっしんべん", "日", "よこめ", "又"]
+	}
+}
