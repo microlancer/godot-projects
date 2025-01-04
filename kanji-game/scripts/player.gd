@@ -3,10 +3,12 @@ class_name Player
 
 @onready var _label: Label = $UI/Label
 @onready var _inventory_ui: GridContainer = $Control/InventoryUI
+var weapon_dmg = 1
 
 signal used_item
 signal test
- 
+
+
 var player_gold: int = 0:
 	set(new_amount):
 		player_gold = new_amount

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://druqgxqcx6xj0"
-path="res://.godot/imported/adventurer-Sheet.png-d4e86664348708d6328e89a4df7336d6.ctex"
+path="res://.godot/imported/adventurer-Sheet.png-aff34d475625c68d63e83db6e9f70668.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/animated-pixel-adventurer/Adventurer/adventurer-Sheet.png"
-dest_files=["res://.godot/imported/adventurer-Sheet.png-d4e86664348708d6328e89a4df7336d6.ctex"]
+source_file="res://assets/graphics/animated-pixel-adventurer/Adventurer/Individual Sprites/adventurer-Sheet.png"
+dest_files=["res://.godot/imported/adventurer-Sheet.png-aff34d475625c68d63e83db6e9f70668.ctex"]
 
 [params]
 

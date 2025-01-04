@@ -67,3 +67,28 @@ func _on_inventory_button_pressed(selected_item: InventoryItem) -> void:
 
 func _on_menu_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/town.tscn")
+
+
+
+
+	
+func show_weapon_stats(): 
+	var dmg = _player.weapon_dmg
+	$CanvasLayer2/Panel/VBoxContainer/Label.text = "Sword: +" + str(dmg) + " damage"
+	$CanvasLayer2/Panel/VBoxContainer/UpgradeButton.text = "Upgrade cost: " + str(dmg * 10)
+	$CanvasLayer2/Panel.visible = true
+
+func _on_show_upgrade_pressed() -> void:
+	if !$CanvasLayer2/Panel.visible: 
+		show_weapon_stats()
+	else: 
+		$CanvasLayer2/Panel.hide()
+
+
+func _on_upgrade_button_pressed() -> void:
+	var cost = 10 * _player.weapon_dmg
+	if _player.player_gold < cost:
+		return
+	_player.player_gold -= cost
+	_player.weapon_dmg += 1 
+	show_weapon_stats()

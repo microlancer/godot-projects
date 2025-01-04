@@ -66,7 +66,7 @@ var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
 
 @export var world: World
-@onready var animated_player: AnimatedSprite2D = world.Player
+@onready var animated_player: Player = world.Player
 var animated_enemy:AnimatedSprite2D = null
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
@@ -869,7 +869,7 @@ func play_enemy_hurt():
 	#audio_player2.volume_db = 8
 	audio_player2.play()
 	
-	var damage_points = randi_range(player_dmg_min, player_dmg_max)
+	var damage_points = randi_range(player_dmg_min, player_dmg_max) + animated_player.weapon_dmg
 	
 	enemy_hp -= damage_points
 	update_hp()
