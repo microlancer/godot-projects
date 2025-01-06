@@ -2,6 +2,7 @@ extends Node
 var lvl_to_load = 1
 var purchased_lvls = [1,2,3,4,5] # this should be the purchased levels, loaded from external databases
 var player_inven = {}
+var player_weap_dmg = 1
 
 const REPLACE_TYPE_HIRAGANA = "hiragana"
 const REPLACE_TYPE_KANJI = "kanji"

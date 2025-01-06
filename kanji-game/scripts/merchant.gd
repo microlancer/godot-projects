@@ -89,7 +89,9 @@ func _on_show_upgrade_pressed() -> void:
 func _on_upgrade_button_pressed() -> void:
 	var cost = 10 * _player.weapon_dmg
 	if _player.player_gold < cost:
+		print("not enough gold to upgrade weapon")
 		return
 	_player.player_gold -= cost
 	_player.weapon_dmg += 1 
+	Globals.player_weap_dmg = _player.weapon_dmg
 	show_weapon_stats()

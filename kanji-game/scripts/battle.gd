@@ -95,6 +95,7 @@ func _ready() -> void:
 	animated_player.used_item.connect(_on_player_used_item)
 	animated_player.holding_items = Globals.player_inven 
 	animated_player.update_inventory_ui()
+	animated_player.weapon_dmg = Globals.player_weap_dmg
 	
 	animated_player.connect("animation_finished", Callable(self, "_animation_finished"))
 	animated_player.connect("animation_looped", Callable(self, "_animation_looped_player"))
@@ -298,7 +299,7 @@ func pick_random_sentence():
 			"value": int(progress[item_key].w)
 		})
 		
-	print({"items":items,"kanji_sentences":kanji_sentences})
+	#print({"items":items,"kanji_sentences":kanji_sentences})
 	
 	# Example usage
 	var randomly_selected_option = pick_random_based_on_value(items)
@@ -590,7 +591,6 @@ func _animation_finished_enemy():
 		animated_player.play()
 
 func show_kanji_progress():
-	
 	var kp_progress = get_kp_progress()
 	
 	if kp_progress.first.kanji == "":

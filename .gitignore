@@ -3,4 +3,5 @@
 /android/
 exports
 localdev.md
+android/build
 android

@@ -148,4 +148,4 @@ func run_to_next_npc():
 	tween.parallel().tween_property(Decor1, "position:x", 80, time_sec)
 	tween.parallel().tween_property(Decor2, "position:x", -80, time_sec)
 
-	tween.parallel().tween_property(NonPlayableCharacter, "position:x", 76, time_sec)
+	tween.parallel().tween_property(NonPlayableCharacter, "global_position:x", $EnemyPos.global_position.x, time_sec)
