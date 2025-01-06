@@ -15,3 +15,4 @@ price = 5
 health_given = 5
 displayTexture = SubResource("AtlasTexture_2hckx")
 item_name = "apple"
+turns_left = 1

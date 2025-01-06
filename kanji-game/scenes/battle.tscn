@@ -3408,8 +3408,9 @@ follow_viewport_scale = 3.0
 [node name="Control3" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 32.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 72.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
@@ -3417,16 +3418,17 @@ size_flags_vertical = 0
 z_index = 3
 layout_mode = 1
 offset_left = 1.0
-offset_top = 1.0
+offset_top = -15.0
 offset_right = 35.0
-offset_bottom = 35.0
+offset_bottom = 19.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
 
 [node name="LevelLabel" type="Label" parent="CanvasLayer"]
 offset_left = 24.0
+offset_top = 24.0
 offset_right = 76.0
-offset_bottom = 12.0
+offset_bottom = 36.0
 text = "Current level: 0"
 
 [node name="LevelContainer" type="Node" parent="."]

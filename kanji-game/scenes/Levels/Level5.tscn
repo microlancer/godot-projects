@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://cc7hyununn8vg" path="res://scenes/Levels/BaseLevel.tscn" id="1_d87ht"]
 [ext_resource type="Script" path="res://resources/Enemies/EnemyResourceScript.gd" id="2_0aw3v"]
-[ext_resource type="SpriteFrames" uid="uid://c3okfe721512t" path="res://resources/Enemies/skeleton.tres" id="3_wqw1s"]
+[ext_resource type="SpriteFrames" uid="uid://dwctcqaqf6u7t" path="res://resources/Enemies/tree.tres" id="3_s314m"]
 [ext_resource type="JSON" path="res://data/n5-refs.json" id="4_s2ufy"]
 [ext_resource type="JSON" path="res://data/n5.json" id="5_3kl6x"]
 
-[node name="Level1" instance=ExtResource("1_d87ht")]
-enemies = Array[ExtResource("2_0aw3v")]([ExtResource("3_wqw1s")])
+[node name="Level5" instance=ExtResource("1_d87ht")]
+enemies = Array[ExtResource("2_0aw3v")]([ExtResource("3_s314m")])
 ref_json = ExtResource("4_s2ufy")
 sentence_json = ExtResource("5_3kl6x")

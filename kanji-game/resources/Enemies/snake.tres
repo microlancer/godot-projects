@@ -100,3 +100,5 @@ script = ExtResource("18_c00b0")
 base_dmg = 0
 base_hp = 0
 flip_h = true
+isBoss = false
+enemy_pos = Vector2(74, -20)

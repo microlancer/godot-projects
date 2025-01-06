@@ -2,8 +2,9 @@ extends AnimatedSprite2D
 class_name Player
 
 @onready var _label: Label = $UI/Label
-@onready var _inventory_ui: GridContainer = $Control/InventoryUI
+@onready var _inventory_ui: GridContainer = $UI/Control/InventoryUI
 var weapon_dmg = 1
+var hp = 4
 
 signal used_item
 signal test
@@ -22,11 +23,7 @@ var holding_items = {
 		#"item_obj":InventoryItem, 
 		#"amount":0
 	#}
-}
-#var holding_items: Dictionary
-#var max_inven_size = 9
-
-
+} 
 
 func _ready() -> void:
 	player_gold = 75
@@ -38,38 +35,44 @@ func _on_item_pressed(idx: int):
 	for item in holding_items.values():
 		if item["ui_idx"] == idx: 
 			# use item 
-			used_item.emit(item["item_obj"])
+			var item_obj:InventoryItem = item["item_obj"]
+			used_item.emit(item_obj)
 			
 			# after use 
 			item["amount"] -= 1
 
 			# update dict and ui 
-			update_inventory_ui(item["item_obj"].item_name)
+			update_inventory_ui(item_obj.item_name)
 			if item["amount"] == 0: 
-				holding_items.erase(item["item_obj"].item_name)	
+				holding_items.erase(item_obj.item_name)	
 	
-func update_inventory_ui(item_name: String) -> void:
-	var item_to_update = holding_items.get(item_name)
-	if item_to_update != null:
-		var current_button: Button = _inventory_ui.get_child(item_to_update["ui_idx"])
-		var current_sprite: Sprite2D = current_button.get_child(0)
+func update_inventory_ui(item_name: String = "") -> void:
+	# by default if no item_name specified, update all
+	var update_fields = holding_items.keys() 
+	if item_name != "": 
+		# if specified, only update that item 
+		update_fields = [item_name]
+		
+	for key in update_fields: 
+		var item_to_update = holding_items.get(key)
+		if item_to_update != null:
+			var current_button: Button = _inventory_ui.get_child(item_to_update["ui_idx"])
+			var current_sprite: Sprite2D = current_button.get_child(0)
 
-		var amount = item_to_update["amount"]
-		if amount == 0: 
-			current_sprite.texture = null
-			current_button.get_child(1).text = ""
-			return 
-			
-		current_button.get_child(1).text = str(amount)
-		current_sprite.texture = item_to_update["item_obj"].displayTexture
-		#current_sprite.region_enabled = sprite.region_enabled
-		#current_sprite.region_rect = sprite.region_rect
-		current_sprite.scale = Vector2.ONE * 0.5
-
+			var amount = item_to_update["amount"]
+			if amount == 0: 
+				current_sprite.texture = null
+				current_button.get_child(1).text = ""
+				return 
+				
+			current_button.get_child(1).text = str(amount)
+			current_sprite.texture = item_to_update["item_obj"].displayTexture
+			#current_sprite.region_enabled = sprite.region_enabled
+			#current_sprite.region_rect = sprite.region_rect
+			current_sprite.scale = Vector2.ONE * 0.5
+		
 func _on_inventory_button_pressed() -> void:
 	_inventory_ui.visible = not _inventory_ui.visible
-
-
 
 
 func get_empty_idx(): 

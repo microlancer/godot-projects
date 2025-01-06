@@ -67,3 +67,6 @@ animations = [{
 script = ExtResource("11_jaxt6")
 base_dmg = 0
 base_hp = 0
+flip_h = true
+isBoss = false
+enemy_pos = Vector2(0, 0)

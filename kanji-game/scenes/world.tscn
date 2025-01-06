@@ -68,9 +68,9 @@
 [ext_resource type="Texture2D" uid="uid://4424xvsxt6gs" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-01.png" id="71_s0kqi"]
 [ext_resource type="Texture2D" uid="uid://bxwhbcqt521c8" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-02.png" id="72_f5br7"]
 [ext_resource type="Texture2D" uid="uid://6f1b1jmly2dy" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-shte-03.png" id="73_24q45"]
+[ext_resource type="SpriteFrames" uid="uid://dy8kpcjmo0p25" path="res://resources/Enemies/bat.tres" id="74_5l35y"]
 [ext_resource type="Texture2D" uid="uid://cuwwy2yksckda" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-00.png" id="74_jdpno"]
 [ext_resource type="Script" path="res://scripts/Enemies/enemy_util.gd" id="74_ke3v7"]
-[ext_resource type="SpriteFrames" uid="uid://c3okfe721512t" path="res://resources/Enemies/skeleton.tres" id="74_u4g3a"]
 [ext_resource type="Texture2D" uid="uid://olq8xxamcn2b" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-01.png" id="75_cp134"]
 [ext_resource type="Script" path="res://scripts/Enemies/base_enemy.gd" id="75_l2cya"]
 [ext_resource type="Texture2D" uid="uid://cnrvkhhr4owqy" path="res://assets/graphics/animated-pixel-adventurer/Adventurer-1.5/Individual Sprites/adventurer-swrd-drw-02.png" id="76_sav1y"]
@@ -4228,11 +4228,11 @@ sprite_frames = SubResource("SpriteFrames_v1esm")
 volume_db = 3.377
 
 [node name="EnemyPos" type="Marker2D" parent="."]
-position = Vector2(84, 12)
+position = Vector2(80, 12)
 
 [node name="BaseEnemy" type="AnimatedSprite2D" parent="EnemyPos"]
 visible = false
-sprite_frames = ExtResource("74_u4g3a")
+sprite_frames = ExtResource("74_5l35y")
 animation = &"enemy_idle"
 centered = false
 script = ExtResource("75_l2cya")

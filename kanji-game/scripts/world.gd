@@ -48,7 +48,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func spawn_enemy(elist: Array[EnemyResource] ):
+func spawn_enemy(elist: Array[EnemyResource], spawnBoss = false):
+	# spawn bosses or normal enemies
+	if(!spawnBoss):
+		elist = elist.filter(func(e): return !e.isBoss)
+	else:
+		elist = elist.filter(func(e): return e.isBoss)
+		
+	
 	if elist.size() == 0: 
 		printerr("Enemies options must be more than 1!")
 		return null
@@ -58,8 +65,8 @@ func spawn_enemy(elist: Array[EnemyResource] ):
 
 	# spawn enemy
 	NonPlayableCharacter = $EnemyUtil.create_enemy_from_res(enem)	
-	add_child(NonPlayableCharacter)
-	NonPlayableCharacter.global_position = $EnemyPos.global_position 
+	$EnemyPos.position = enem.enemy_pos
+	$EnemyPos.add_child(NonPlayableCharacter)
 	NonPlayableCharacter.animation = "enemy_idle"
 	NonPlayableCharacter.play()
 	return NonPlayableCharacter

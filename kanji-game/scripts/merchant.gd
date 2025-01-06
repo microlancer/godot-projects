@@ -66,6 +66,7 @@ func _on_inventory_button_pressed(selected_item: InventoryItem) -> void:
 		_error_sound.play()
 
 func _on_menu_menu_button_pressed() -> void:
+	Globals.player_inven = _player.holding_items
 	get_tree().change_scene_to_file("res://scenes/town.tscn")
 
 

@@ -34,11 +34,17 @@ func load_kanji():
 	if pool_json != null: 
 		# load pool here 
 		pass 
-
+	var sentences = null
+	
+	if sentence_json:
+		sentences = JSON.parse_string(JSON.stringify(sentence_json.data))
+	var refs = null 
+	if ref_json:
+		refs = JSON.parse_string(JSON.stringify(ref_json.data))
 	var res = { 
 		"pool": pool, 
-		"sentences": JSON.parse_string(JSON.stringify(sentence_json.data)),
-		"refs": JSON.parse_string(JSON.stringify(ref_json.data))
+		"sentences":sentences,
+		"refs": refs
 	} 
 	
 	return res

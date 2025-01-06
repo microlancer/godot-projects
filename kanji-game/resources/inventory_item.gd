@@ -10,7 +10,22 @@ class_name InventoryItem
 	set(new_name):
 		new_name = new_name.to_lower()
 		item_name = new_name
-	
-func applyEffect(): 
-	print("please applyEffect this")
-	pass 
+# number of turn before expiry
+@export var turns_left = 1 : set = set_turns_left
+signal expired 
+
+
+
+func set_turns_left(val): 
+	turns_left = val 
+	if turns_left < 0: 
+		expired.emit() 
+
+func customEffect(payload): 
+	pass
+
+func cleanupEffect(context):
+	pass
+
+func applyEffect(context): 
+	pass

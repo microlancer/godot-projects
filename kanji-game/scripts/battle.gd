@@ -64,7 +64,7 @@ var init_progress =  {"一":{"r":0,"w":0}}
 var progress = init_progress
 var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
-
+var active_item: InventoryItem = null
 @export var world: World
 @onready var animated_player: Player = world.Player
 @onready var LevelManager = $LevelContainer
@@ -79,11 +79,12 @@ var animated_enemy:AnimatedSprite2D = null
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	current_level = LevelManager.load_level(Globals.lvl_to_load)
 	$CanvasLayer/LevelLabel.text = "Current level: " + str(Globals.lvl_to_load)
-	
+	print(current_level)
 	animated_enemy = world.spawn_enemy(current_level.enemies)
 	
 	$UI.hide()
@@ -92,7 +93,8 @@ func _ready() -> void:
 	world.connect("end_run_to_npc", Callable(self, "_end_run"))
 	animated_player.connect("animation_changed", Callable(self, "_animation_changed"))
 	animated_player.used_item.connect(_on_player_used_item)
-	animated_player.test.connect(_on_player_used_item)
+	animated_player.holding_items = Globals.player_inven 
+	animated_player.update_inventory_ui()
 	
 	animated_player.connect("animation_finished", Callable(self, "_animation_finished"))
 	animated_player.connect("animation_looped", Callable(self, "_animation_looped_player"))
@@ -140,7 +142,15 @@ func _ready() -> void:
 	$UI/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
 func _on_player_used_item(item): 
-	print("used item")
+	if item.item_name == "potion":
+		item.applyEffect(self)
+	if item.turns_left > 0: 
+		active_item = item
+		active_item.expired.connect(_on_item_expired)
+		# currently only 1 item at a time
+		
+func _on_item_expired(): 
+	active_item = null
 	pass 
 
 func _end_run() -> void:
@@ -647,6 +657,8 @@ func get_gold():
 	
 	$Prize/TextureRectCoin/GoldAmount.text = str(gold_amount)
 	
+	if active_item and active_item.item_name == "luckycharm": 
+		active_item.applyEffect(self)
 	player_gold += gold_amount
 	
 	update_hp()
@@ -944,7 +956,14 @@ func play_player_hurt():
 	audio_player2.play()
 	
 	var damage_points = randi_range(enemy_dmg_min, enemy_dmg_max)
-	player_hp -= damage_points
+	
+	if active_item and active_item.item_name == "shield": 
+		active_item.applyEffect(self)
+	elif active_item and active_item.item_name == "luckycharm": 
+		active_item.customEffect("lose_streak")
+	else: 
+		player_hp -= damage_points
+	
 	update_hp()
 	
 	var tween = create_tween()

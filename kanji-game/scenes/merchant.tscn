@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dl8e7gqy7b4f6"]
+[gd_scene load_steps=23 format=4 uid="uid://dl8e7gqy7b4f6"]
 
 [ext_resource type="Script" path="res://scripts/merchant.gd" id="1_v6ses"]
 [ext_resource type="Texture2D" uid="uid://cydw23ljdluvu" path="res://assets/graphics/NPCs/Idle1/1.png" id="1_wpddl"]
@@ -8,6 +8,8 @@
 [ext_resource type="Resource" uid="uid://c7solq6cd7mpl" path="res://resources/apple.tres" id="3_ci57k"]
 [ext_resource type="Texture2D" uid="uid://c4gniw865uhnn" path="res://assets/graphics/NPCs/Idle1/4.png" id="4_58kw3"]
 [ext_resource type="Resource" uid="uid://qlw4h5k1efsc" path="res://resources/Items/potion.tres" id="4_spl28"]
+[ext_resource type="Resource" uid="uid://bakqly1bkplhi" path="res://resources/Items/shield.tres" id="5_apsub"]
+[ext_resource type="Resource" uid="uid://lbkttneadl1f" path="res://resources/Items/luckycharm.tres" id="6_67fkq"]
 [ext_resource type="PackedScene" uid="uid://dgs2gpy70wl21" path="res://scenes/player.tscn" id="7_cjkvi"]
 [ext_resource type="PackedScene" uid="uid://bvsluir5culfp" path="res://scenes/InventoryButton.tscn" id="10_28lam"]
 [ext_resource type="AudioStream" uid="uid://drj4g5cqgib1i" path="res://assets/sound_fx/cash-register-purchase-87313.mp3" id="10_bgg52"]
@@ -93,7 +95,7 @@ sources/0 = SubResource("TileSetAtlasSource_q1yy4")
 [node name="Merchant" type="Area2D"]
 position = Vector2(368, 88)
 script = ExtResource("1_v6ses")
-item_resources = Array[ExtResource("2_kbcex")]([ExtResource("3_ci57k"), ExtResource("4_spl28")])
+item_resources = Array[ExtResource("2_kbcex")]([ExtResource("3_ci57k"), ExtResource("4_spl28"), ExtResource("5_apsub"), ExtResource("6_67fkq")])
 
 [node name="Panel" type="Panel" parent="."]
 z_index = -3
