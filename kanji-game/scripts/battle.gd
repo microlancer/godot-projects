@@ -81,7 +81,9 @@ var animated_enemy:AnimatedSprite2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	current_level = LevelManager.load_level()
+	current_level = LevelManager.load_level(Globals.lvl_to_load)
+	$CanvasLayer/LevelLabel.text = "Current level: " + str(Globals.lvl_to_load)
+	
 	animated_enemy = world.spawn_enemy(current_level.enemies)
 	
 	$UI.hide()

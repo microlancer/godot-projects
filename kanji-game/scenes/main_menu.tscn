@@ -207,6 +207,47 @@ offset_right = 128.0
 offset_bottom = 88.0
 text = "Yes"
 
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 76.0
+offset_right = 214.0
+offset_bottom = 96.0
+text = "Select levels"
+
+[node name="Panel" type="Panel" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 162.0
+offset_top = 104.0
+offset_right = 202.0
+offset_bottom = 144.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Button4" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "5"
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 volume_db = 2.0
@@ -227,3 +268,4 @@ editor_draw_drag_margin = true
 [connection signal="button_up" from="Control/ButtonQuitGame" to="." method="_on_button_quit_game_button_up"]
 [connection signal="button_up" from="Control/PanelDeleteWarning/ButtonCancel" to="." method="_on_button_cancel_button_up"]
 [connection signal="button_up" from="Control/PanelDeleteWarning/ButtonYesDelete" to="." method="_on_button_yes_delete_button_up"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

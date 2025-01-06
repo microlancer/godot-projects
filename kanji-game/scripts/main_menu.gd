@@ -2,8 +2,23 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func load_levels_panel(): 
+	for b: Button in $Control/Panel/VBoxContainer.get_children(): 
+		b.pressed.connect(level_btn_pressed.bind(b.get_index()))
+func level_btn_pressed(idx): 
+	var lvl_to_load = idx+1
+	if(!Globals.purchased_lvls.has(lvl_to_load)):
+		print("Please purchase the level: ", lvl_to_load)
+		return 
+	Globals.lvl_to_load = lvl_to_load
+	# change scene
+	Globals.AudioStreamPlayerSoundFx.stream = Globals.fx_chop1
+	Globals.AudioStreamPlayerSoundFx.play(0.3)
+	get_tree().change_scene_to_file("res://scenes/battle.tscn")
 
+func _ready() -> void:
+	load_levels_panel()
+	
 	var file_path = "user://settings.json"
 	var save_json_as_text = FileAccess.get_file_as_string(file_path)
 
@@ -99,3 +114,7 @@ func _on_button_settings_button_up() -> void:
 	Globals.AudioStreamPlayerSoundFx.stream = Globals.fx_chop1
 	Globals.AudioStreamPlayerSoundFx.play(0.3)
 	get_tree().change_scene_to_file("res://scenes/settings.tscn")
+
+
+func _on_button_pressed() -> void:
+	$Control/Panel.visible = !$Control/Panel.visible

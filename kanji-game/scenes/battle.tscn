@@ -3423,6 +3423,12 @@ offset_bottom = 35.0
 scale = Vector2(0.5, 0.5)
 icon = SubResource("AtlasTexture_j2kio")
 
+[node name="LevelLabel" type="Label" parent="CanvasLayer"]
+offset_left = 24.0
+offset_right = 76.0
+offset_bottom = 12.0
+text = "Current level: 0"
+
 [node name="LevelContainer" type="Node" parent="."]
 script = ExtResource("13_almlr")
 default_level = 1

@@ -1,5 +1,6 @@
 extends Node
-
+var lvl_to_load = 1
+var purchased_lvls = [1] # this should be the purchased levels, loaded from external databases
 
 const REPLACE_TYPE_HIRAGANA = "hiragana"
 const REPLACE_TYPE_KANJI = "kanji"
