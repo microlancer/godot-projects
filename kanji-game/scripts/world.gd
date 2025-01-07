@@ -1,11 +1,13 @@
 extends Node2D
+class_name  World 
 
-@export var Player:AnimatedSprite2D
+@export var Player: Player 
 @export var NonPlayableCharacter:AnimatedSprite2D
 @export var Player_health_label:Label
 @export var Enemy_health_label:Label
 @export var player_health_bar:ProgressBar
 @export var enemy_health_bar:ProgressBar
+@export var level:int = 0
 
 @onready var world_tile_map_layer:TileMapLayer = $TileMapLayer
 @onready var Decor1:Sprite2D = $Decors
@@ -13,14 +15,15 @@ extends Node2D
 
 @onready var AudioPlayer:AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var UI:Control = $UI
+@onready var rng = RandomNumberGenerator.new()
 
 signal end_run_to_npc()
 signal end_run_from_npc()
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Player.position.x = -50
-	NonPlayableCharacter.position.x = 300
 	reset_decor_positions()
 	UI.hide()
 	fade_in_and_run_to_npc()
@@ -44,12 +47,36 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func spawn_enemy(elist: Array[EnemyResource], spawnBoss = false):
+	# spawn bosses or normal enemies
+	if(!spawnBoss):
+		elist = elist.filter(func(e): return !e.isBoss)
+	else:
+		elist = elist.filter(func(e): return e.isBoss)
+		
+	
+	if elist.size() == 0: 
+		printerr("Enemies options must be more than 1!")
+		return null
+	
+	# pick enemy
+	var enem = elist[rng.randi()%elist.size()]
+
+	# spawn enemy
+	NonPlayableCharacter = $EnemyUtil.create_enemy_from_res(enem)	
+	$EnemyPos.position = enem.enemy_pos
+	$EnemyPos.add_child(NonPlayableCharacter)
+	NonPlayableCharacter.animation = "enemy_idle"
+	NonPlayableCharacter.play()
+	return NonPlayableCharacter
+	 
+
 	
 func fade_in_and_run_to_npc() -> void:
 	Player.animation = "run"
 	Player.play()
-	NonPlayableCharacter.animation = "enemy_idle"
-	NonPlayableCharacter.play()
+
 	AudioPlayer.stream = Globals.fx_dirt_run1
 	AudioPlayer.stream.loop = true
 	AudioPlayer.play()
@@ -121,4 +148,4 @@ func run_to_next_npc():
 	tween.parallel().tween_property(Decor1, "position:x", 80, time_sec)
 	tween.parallel().tween_property(Decor2, "position:x", -80, time_sec)
 
-	tween.parallel().tween_property(NonPlayableCharacter, "position:x", 76, time_sec)
+	tween.parallel().tween_property(NonPlayableCharacter, "global_position:x", $EnemyPos.global_position.x, time_sec)

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bakqly1bkplhi"]
+
+[ext_resource type="Script" path="res://resources/Items/shieldEffect.gd" id="1_apfgd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m6uif"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-33d3429058846de1f75f6fb1df467973.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys4un"]
+atlas = SubResource("CompressedTexture2D_m6uif")
+region = Rect2(68, 195, 24, 26)
+
+[resource]
+script = ExtResource("1_apfgd")
+price = 5
+health_given = 5
+displayTexture = SubResource("AtlasTexture_ys4un")
+item_name = "shield"
+turns_left = 2

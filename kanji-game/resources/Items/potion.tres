@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://qlw4h5k1efsc"]
+
+[ext_resource type="Script" path="res://resources/Items/potionEffect.gd" id="1_gab3p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3kc5v"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-33d3429058846de1f75f6fb1df467973.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpid3"]
+atlas = SubResource("CompressedTexture2D_3kc5v")
+region = Rect2(134, 609, 21, 30)
+
+[resource]
+script = ExtResource("1_gab3p")
+price = 5
+health_given = 3
+displayTexture = SubResource("AtlasTexture_mpid3")
+item_name = "potion"
+turns_left = 1

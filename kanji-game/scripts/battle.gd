@@ -64,10 +64,12 @@ var init_progress =  {"一":{"r":0,"w":0}}
 var progress = init_progress
 var debug_detector_mode: bool = false
 var debug_detector_kanji: String = "慢"
-
-@export var world:Node2D
-@onready var animated_player:AnimatedSprite2D = world.Player
-@onready var animated_enemy:AnimatedSprite2D = world.NonPlayableCharacter
+var active_item: InventoryItem = null
+@export var world: World
+@onready var animated_player: Player = world.Player
+@onready var LevelManager = $LevelContainer
+var current_level: BaseLevel = null
+var animated_enemy:AnimatedSprite2D = null
 @onready var enemy_damage_label:Label = world.Player_health_label
 @onready var player_damage_label:Label = world.Enemy_health_label
 @onready var Health_bar_player:ProgressBar = world.player_health_bar
@@ -77,14 +79,24 @@ var debug_detector_kanji: String = "慢"
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
 
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	current_level = LevelManager.load_level(Globals.lvl_to_load)
+	$CanvasLayer/LevelLabel.text = "Current level: " + str(Globals.lvl_to_load)
+	print(current_level)
+	animated_enemy = world.spawn_enemy(current_level.enemies)
 	
 	$UI.hide()
 	$UI2.hide()
 	
 	world.connect("end_run_to_npc", Callable(self, "_end_run"))
 	animated_player.connect("animation_changed", Callable(self, "_animation_changed"))
+	animated_player.used_item.connect(_on_player_used_item)
+	animated_player.holding_items = Globals.player_inven 
+	animated_player.update_inventory_ui()
+	animated_player.weapon_dmg = Globals.player_weap_dmg
+	
 	animated_player.connect("animation_finished", Callable(self, "_animation_finished"))
 	animated_player.connect("animation_looped", Callable(self, "_animation_looped_player"))
 	animated_enemy.connect("animation_finished", Callable(self, "_animation_finished_enemy"))
@@ -102,14 +114,17 @@ func _ready() -> void:
 	enemy_hp = enemy_hp_max
 	
 	update_hp()
-	var file_path = "res://data/kanji_data.json"
-	var json_as_text = FileAccess.get_file_as_string(file_path)
-	var kanji_data = JSON.parse_string(json_as_text)
-	kanji_sentences = kanji_data.sentences
-	complete_pool = kanji_data.pool
+	
+	# load kanji
+	#var file_path = "res://data/kanji_data.json"
+	#var json_as_text = FileAccess.get_file_as_string(file_path)
+	#var kanji_data = JSON.parse_string(json_as_text)
+	var kanji_data = current_level.load_kanji()
+	kanji_sentences = kanji_data["sentences"]
+	complete_pool = kanji_data["pool"]
 	#kanji_refs = kanji_data.refs
 	
-	$UI/KanjiDrawPanel.kanji_refs = kanji_data.refs
+	$UI/KanjiDrawPanel.kanji_refs = kanji_data["refs"]
 	
 	pick_random_sentence()
 	save_game()
@@ -127,7 +142,18 @@ func _ready() -> void:
 	
 	$UI/KanjiDrawPanel.draw_panel.connect("stroke_started", Callable(self, "_on_stroke_started"))
 	
-	
+func _on_player_used_item(item): 
+	if item.item_name == "potion":
+		item.applyEffect(self)
+	if item.turns_left > 0: 
+		active_item = item
+		active_item.expired.connect(_on_item_expired)
+		# currently only 1 item at a time
+		
+func _on_item_expired(): 
+	active_item = null
+	pass 
+
 func _end_run() -> void:
 	animated_player.animation = "idle"
 	animated_player.play()
@@ -273,7 +299,7 @@ func pick_random_sentence():
 			"value": int(progress[item_key].w)
 		})
 		
-	print({"items":items,"kanji_sentences":kanji_sentences})
+	#print({"items":items,"kanji_sentences":kanji_sentences})
 	
 	# Example usage
 	var randomly_selected_option = pick_random_based_on_value(items)
@@ -569,7 +595,6 @@ func _animation_finished_enemy():
 		animated_player.play()
 
 func show_kanji_progress():
-	
 	var kp_progress = get_kp_progress()
 	
 	if kp_progress.first.kanji == "":
@@ -635,8 +660,13 @@ func get_gold():
 	var gold_amount = randi_range(1, enemy_level)
 	
 	$Prize/TextureRectCoin/GoldAmount.text = str(gold_amount)
+	
+	if active_item and active_item.item_name == "luckycharm": 
+		active_item.applyEffect(self)
+
 	$Prize/PlayerGold_Graphic/PlayerGold.text = str(player_gold)
 	$Prize/PlayerEXP_Graphic/Playerexperience.text = str(player_kp)
+
 	player_gold += gold_amount
 	
 	update_hp()
@@ -866,7 +896,7 @@ func play_enemy_hurt():
 	#audio_player2.volume_db = 8
 	audio_player2.play()
 	
-	var damage_points = randi_range(player_dmg_min, player_dmg_max)
+	var damage_points = randi_range(player_dmg_min, player_dmg_max) + animated_player.weapon_dmg
 	
 	enemy_hp -= damage_points
 	update_hp()
@@ -934,7 +964,14 @@ func play_player_hurt():
 	audio_player2.play()
 	
 	var damage_points = randi_range(enemy_dmg_min, enemy_dmg_max)
-	player_hp -= damage_points
+	
+	if active_item and active_item.item_name == "shield": 
+		active_item.applyEffect(self)
+	elif active_item and active_item.item_name == "luckycharm": 
+		active_item.customEffect("lose_streak")
+	else: 
+		player_hp -= damage_points
+	
 	update_hp()
 	
 	var tween = create_tween()

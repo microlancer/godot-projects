@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcacnf1u1vtsx"]
+
+[ext_resource type="Script" path="res://scripts/KanjiAds.gd" id="1_eg4mq"]
+
+[node name="AdUtils" type="Node2D"]
+script = ExtResource("1_eg4mq")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://druqgxqcx6xj0"
-path="res://.godot/imported/adventurer-Sheet.png-d4e86664348708d6328e89a4df7336d6.ctex"
+uid="uid://bby3cd1lppkf8"
+path="res://.godot/imported/format-interstitial.svg-068610673c8c89ff9e1c9b26ba7eac17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/animated-pixel-adventurer/Adventurer/adventurer-Sheet.png"
-dest_files=["res://.godot/imported/adventurer-Sheet.png-d4e86664348708d6328e89a4df7336d6.ctex"]
+source_file="res://addons/admob/assets/format-interstitial.svg"
+dest_files=["res://.godot/imported/format-interstitial.svg-068610673c8c89ff9e1c9b26ba7eac17.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -1,4 +1,8 @@
 extends Node
+var lvl_to_load = 1
+var purchased_lvls = [1,2,3,4,5] # this should be the purchased levels, loaded from external databases
+var player_inven = {}
+var player_weap_dmg = 1
 
 const REPLACE_TYPE_HIRAGANA = "hiragana"
 const REPLACE_TYPE_KANJI = "kanji"
@@ -39,6 +43,7 @@ var KANA_REGULAR = \
 	"ワヲン"
 var KANA_SMALL = "ぁぃぅぇぉっゃゅょァィゥェォッャュョ"
 var KANA_SYMBOLS = "ー。！？、「」　・｜"
+var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,6 +51,9 @@ func _ready() -> void:
 	add_child(AudioStreamPlayerBgMusic)
 	AudioStreamPlayerSoundFx = AudioStreamPlayer2D.new()
 	add_child(AudioStreamPlayerSoundFx)
+
+	rng.randomize()
+	
 
 
 # From https://drtwelele.itch.io/casual-game-fx-one-shot
@@ -93,5 +101,15 @@ func save_settings():
 	print({"save_data":save_data})
 	file.store_string(JSON.stringify(save_data))
 
+static func get_json_in_dict(file_path: String):
+	var json_as_text = FileAccess.get_file_as_string(file_path)
+	var kanji_data = JSON.parse_string(json_as_text)
+	return kanji_data
+
+func pick_percent(per: float): 
+	if rng.randf_range(1.0,100.0) <= per:
+		return true
+	return false
+	
 func _process(delta: float) -> void:
 	time += delta
