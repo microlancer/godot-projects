@@ -8,6 +8,8 @@ const REPLACE_TYPE_HIRAGANA = "hiragana"
 const REPLACE_TYPE_KANJI = "kanji"
 const REPLACE_TYPES = [REPLACE_TYPE_HIRAGANA, REPLACE_TYPE_KANJI]
 
+var time: float = 0.0
+
 var KANA_REGULAR = \
 	"あいうえお" + \
 	"アイウエオ" + \
@@ -109,3 +111,5 @@ func pick_percent(per: float):
 		return true
 	return false
 	
+func _process(delta: float) -> void:
+	time += delta

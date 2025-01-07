@@ -1,0 +1,2324 @@
+Processing 七つ
+Generated Sentence: 
+私は・七つ・の誕生日を楽しみにしています, わたしは・ななつ・のたんじょうびをたのしみにしています, I am looking forward to my seventh birthday.
+Processing 六日
+Generated Sentence: 
+私は来週の・六日・に試験があります, わたしはらいしゅうの・むいか・にしけんがあります, I have an exam next week on the sixth.
+Processing 違う
+Generated Sentence: 
+これは・違う・色です, これはちがういろです, This is a different color.
+Processing 分かる
+Generated Sentence: 
+先生の説明を聞いて、この問題が・分かる・ようになりました, せんせいのせつめいをきいて、このもんだいが・わかる・ようになりました, After listening to the teacher's explanation, I was able to understand this problem.
+Processing 言う
+Generated Sentence: 
+先生が「これは難しいです」と・言う・、せんせいが「これはむずかしいです」と・いう・, The teacher says, "This is difficult."
+Processing 黒い
+Generated Sentence: 
+私の猫は・黒い・色をしています, わたしのねこは・くろい・いろをしています, My cat is black.
+Processing 要る
+Generated Sentence: 
+今日の宿題は難しいから、・要る・時間が多いです。, きょうのしゅくだいはむずかしいから、・いる・じかんがおおいです。, Today's homework is difficult, so it takes a lot of time.
+Processing 差す
+Generated Sentence: 
+今日は天気が良くて、太陽が・差す・光がとてもきれいです。, きょうはてんきがよくて、たいようが・さす・ひかりがとてもきれいです。, Today the weather is nice, and the sunlight that the sun・shines・is very beautiful.
+Processing 辺
+Generated Sentence: 
+私は公園の・辺・を散歩するのが好きです, わたしはこうえんの・へん・をさんぽするのがすきです, I like to take walks around the edge of the park.
+Processing 六
+Generated Sentence: 
+私は・六・時から勉強を始めます, わたしは・ろく・じからべんきょうをはじめます, I will start studying from six o'clock.
+Processing 今年
+Generated Sentence: 
+・今年・は、とても忙しかったです。, ・ことし・は、とてもいそがしかったです。, This year was very busy.
+Processing 初めて
+Generated Sentence: 
+私は・初めて・日本語の授業を受けました, わたしははじめてにほんごのじゅぎょうをうけました, I took a Japanese class for the first time.
+Processing 赤い
+Generated Sentence: 
+私の・赤い・自転車はとても目立ちます, わたしの・あかい・じてんしゃはとてもめだちます, My red bicycle stands out a lot.
+Processing 甘い
+Generated Sentence: 
+今日のお菓子は・甘い・ですね, きょうのおかしは・あまい・ですね, Today's sweets are sweet, aren't they?
+Processing 毎週
+Generated Sentence: 
+私は・毎週・日曜日におばあちゃんの家に行きます。, わたしはまいしゅうにちようびにおばあちゃんのいえにいきます。, I go to my grandmother's house every Sunday.
+Processing 五つ
+Generated Sentence: 
+私は・五つ・のりんごを持っています, わたしは・いつつ・のりんごをもっています, I have five apples.
+Processing 曇る
+Generated Sentence: 
+今日は空が・曇る・ので、外で遊べません。, きょうはそらが・くもる・ので、そとであそべません。, Today the sky is cloudy, so we can't play outside.
+Processing 夕方
+Generated Sentence: 
+私は・夕方・に公園で友達と遊ぶのが好きです, わたしはゆうがたにこうえんでともだちとあそぶのがすきです, I like to play with my friends in the park in the evening.
+Processing 撮る
+Generated Sentence: 
+今日、友達と一緒に公園で・撮る・写真がたくさんありました。, きょう、ともだちといっしょにこうえんで・とる・しゃしんがたくさんありました。, Today, I took a lot of photos with my friends at the park.
+Processing 人
+Generated Sentence: 
+私の家族は４・人・です, わたしのkazokuはよにんです, My family has 4 people.
+Processing 困る
+Generated Sentence: 
+今日の宿題が多すぎて・困る・よ, きょうのしゅくだいがたすぎてこまるよ, I'm troubled because today's homework is too much.
+Processing 疲れる
+Generated Sentence: 
+今日の授業で・疲れる・から、早く帰りたいです。, きょうのじゅぎょうで・つかれる・から、はやくかえりたいです。, I want to go home early because today's class is tiring.
+Processing 一つ
+Generated Sentence: 
+私は・一つ・のりんごを食べました, わたしは・いっつ・のりんごをたべました, I ate one apple.
+Processing 来週
+Generated Sentence: 
+来週・旅行・に・行きます, らいしゅう・りょこう・に・いきます, I will go on a trip next week.
+Processing 知る
+Generated Sentence: 
+私は毎日新しいことを・知る・ために勉強しています。, わたしはまいにちあたらしいことをしるためにべんきょうしています。, I study every day to learn new things.
+Processing 言葉
+Generated Sentence: 
+私は毎日、新しい・言葉・を覚えています, わたしはまいにち、 あたらしい・ことば・をおぼえています, I learn new words every day.
+Processing 赤
+Generated Sentence: 
+今日は・赤・い服を着ています, きょうは・あか・いふくをきています, Today I am wearing red clothes.
+Processing 自分
+Generated Sentence: 
+・自分・で勉強するのが好きです, ・じぶん・でべんきょうするのがすきです, I like studying by myself.
+Processing 低い
+Generated Sentence: 
+彼の声は・低い・ので、聞き取りにくいです。, かれのこえは・ひくい・ので、ききとりにくいです。, His voice is low, so it's hard to hear.
+Processing 小さな
+Generated Sentence: 
+・小さな・犬が公園で遊んでいます, ・ちいさな・いぬがこうえんであそんでいます, A small dog is playing in the park.
+Processing 時間
+Generated Sentence: 
+今日は・時間・があまりないので、早く帰りたいです。, きょうは・じかん・があまりないので、はやくかえりたいです。, Today I don't have much time, so I want to go home early.
+Processing 上げる
+Generated Sentence: 
+私は毎朝、国旗を・上げる・ために学校に行きます。, わたしはまいあさ、こっきを・あげる・ためにがっこうにいきます。, I go to school every morning to raise the flag.
+Processing 出す
+Generated Sentence: 
+毎朝、新聞を・出す・前にコーヒーを飲みます, まいあさ、しんぶんを・だす・まえにこーひーをのみます, I drink coffee every morning before taking out the newspaper.
+Processing 音楽
+Generated Sentence: 
+私は毎朝、・音楽・を聴きながら学校に行きます。, わたしはまいあさ、・おんがく・をききながらがっこうにいきます。, I listen to music every morning while going to school.
+Processing 歌
+Generated Sentence: 
+私は毎朝、・歌・を聴きながら学校に行きます。, わたしはまいあさ、うたをききながらがっこうにいきます。, I listen to songs every morning while going to school.
+Processing 咲く
+Generated Sentence: 
+春になると、公園の桜が・咲く・とてもきれいです。, はるになると、こうえんのさくらが・さく・とてもきれいです。, When spring comes, the cherry blossoms in the park bloom and it's very beautiful.
+Processing 山
+Generated Sentence: 
+私は夏休みに・山・に登りました。, わたしはなつやすみに・やま・にのぼりました。, I climbed a mountain during my summer vacation.
+Processing 学校
+Generated Sentence: 
+私は毎日・学校・へ行きます, わたしはまいにちがっこうへいきます, I go to school every day.
+Processing 入る
+Generated Sentence: 
+私は毎朝・入る・教室で友達と話します, わたしはまいあさ・いる・きょうしつでともだちとはなします, I talk with my friends in the classroom I enter every morning.
+Processing 曇り
+Generated Sentence: 
+今日は・曇り・の天気です。, きょうは・くもり・のてんきです。, Today the weather is cloudy.
+Processing 外国
+Generated Sentence: 
+私は・外国・の文化に興味があります, わたしはがいこくのぶんかにきょうみがあります, I am interested in the culture of foreign countries.
+Processing 温い
+Generated Sentence: 
+今日の風呂の水は・温い・ので、ちょうど良かったです。, きょうのふろのみずは・ぬるい・ので、ちょうどよかったです。, The bathwater today was lukewarm, so it was just right.
+Processing 仕事
+Generated Sentence: 
+私は毎日・仕事・の後に勉強します。, わたしはまいにちしごとのあとにべんきょうします。, I study every day after work.
+Processing 窓
+Generated Sentence: 
+私は毎朝・窓・を開けて新鮮な空気を入れます。, わたしはまいあさまどをあけてしんせんなくうきをいれます。, I open the window every morning to let in fresh air.
+Processing 晩
+Generated Sentence: 
+今日の・晩・は友達と映画を見に行きます, きょうの・ばん・はともだちとえいがをみにいきます, Tonight I'm going to watch a movie with my friends.
+Processing 村
+Generated Sentence: 
+私の祖父は・村・で農業をしていました, わたしのそふはむらで のうぎょうをしていました, My grandfather did farming in the village.
+Processing 長い
+Generated Sentence: 
+今日の授業は・長い・時間がかかりました, きょうのじゅぎょうは・ながい・じかんがかかりました, Today's class took a long time.
+Processing 生まれる
+Generated Sentence: 
+私は・生まれる・前に母のおなかの中で成長しました, わたしは・うまれる・まえにおかあさんのおなかの中でせいちょうしました, I grew inside my mother's womb before I was born.
+Processing 雑誌
+Generated Sentence: 
+私は毎月・雑誌・を読んでいます, わたしはまいつきざっしをよんでいます, I read magazines every month.
+Processing 今朝
+Generated Sentence: 
+・今朝・はとてもさむかったです, きょうあさはとてもさむかったです, This morning was very cold.
+Processing 晴れる
+Generated Sentence: 
+今日は・晴れる・から、ピクニックに行こう。, きょうは・はれる・から、ぴくにっくにいこう。, Today it will be sunny, so let's go on a picnic.
+Processing 夕飯
+Generated Sentence: 
+今日の・夕飯・は何にしようかな、きょうのゆうはんはなんにしようかな,Today's dinner, what should I have?
+Processing 一緒
+Generated Sentence: 
+今日は・一緒・に公園に行きましょう。, きょうは・いっしょ・にこうえんにいきましょう。, Let's go to the park together today.
+Processing 立つ
+Generated Sentence: 
+毎朝、私は早く起きて・立つ・ためにベッドから出ます。, まいあさ、わたしははやくおきて・たつ・ためにべっどからでます。, Every morning, I get out of bed early to stand up.
+Processing 元気
+Generated Sentence: 
+今日は・元気・ですね, きょうは・げんき・ですね, Today you seem energetic, don't you?
+Processing 天気
+Generated Sentence: 
+今日の・天気・はどうですか？, きょうの・てんき・はどうですか？, How is the weather today?
+Processing 医者
+Generated Sentence: 
+私の父は・医者・です, わたしのちちは・いしゃ・です, My father is a doctor.
+Processing 戸
+Generated Sentence: 
+私は毎朝、・戸・を開けて外に出ます。, わたしはまいあさ、・と・をあけてそとにでます。, I open the door every morning and go outside.
+Processing 今日
+Generated Sentence: 
+・今日・は学校に行きます, きょうはがっこうにいきます, Today I will go to school.
+Processing 一昨年
+Generated Sentence: 
+・一昨年・、私は初めて海外旅行に行きました。, ・いっさくねん・、わたしははじめてかいがいりょこうにいきました。, The year before last, I went on my first trip abroad.
+Processing 文章
+Generated Sentence: 
+先生は、・文章・を書く練習を毎日させます。, せんせいは、ぶんしょうをかくれんしゅうをまいにちさせます。, The teacher makes us practice writing compositions every day.
+Processing 公園
+Generated Sentence: 
+私は毎週末、・公園・で友達と遊びます。, わたしはまいしゅうまつ、・こうえん・でともだちとあそびます。, I play with my friends at the park every weekend.
+Processing 借りる
+Generated Sentence: 
+私は友達から・借りる・ことがよくあります, わたしはともだちから・かりる・ことがよくあります, I often borrow things from my friends.
+Processing 口
+Generated Sentence: 
+私の・口・は大きくて、よく笑います。, わたしのくちはおおきくて、よくわらいます。, My mouth is big and I often laugh.
+Processing 持つ
+Generated Sentence: 
+私は毎日・持つ・かばんが重いです, わたしはまいにち・もつ・かばんがおもいです, I carry a heavy bag every day.
+Processing 上着
+Generated Sentence: 
+今日は寒いので、・上着・を着て学校に行きます。, きょうはさむいので、・うわぎ・をきてがっこうにいきます。, Today it's cold, so I will wear a jacket and go to school.
+Processing 秋
+Generated Sentence: 
+・秋・は涼しくて、紅葉がきれいです。, ・あき・はすずしくて、もみじがきれいです。, Autumn is cool and the autumn leaves are beautiful.
+Processing 悪い
+Generated Sentence: 
+彼は・悪い・ことをしたね。, かれはわるいことをしたね。, He did a bad thing, didn't he?
+Processing 青い
+Generated Sentence: 
+今日は・青い・空を見ました, きょうは・あおい・そらをみました, Today I saw a blue sky.
+Processing 住む
+Generated Sentence: 
+私は東京に・住む・つもりです。, わたしはとうきょうに・すむ・つもりです。, I plan to live in Tokyo.
+Processing 木曜日
+Generated Sentence: 
+私は・木曜日・に学校のクラブ活動があります, わたしはきょくじつにがっこうのくらぶかつどうがあります, I have school club activities on Thursday.
+Processing 忘れる
+Generated Sentence: 
+今日の宿題を・忘れる・と、先生に怒られるよ, きょうのしゅくだいを・わすれる・と、せんせいにおこられるよ, If you forget today's homework, the teacher will scold you.
+Processing お手洗い
+Generated Sentence: 
+・お手洗い・はどこですか, おてあらいはどこですか, Where is the bathroom?
+Processing 写真
+Generated Sentence: 
+私は昨日のパーティーの・写真・を友達に見せました。, わたしはきのうのぱーてぃーの・しゃしん・をともだちにみせました。, I showed my friends the photos from yesterday's party.
+Processing 会う
+Generated Sentence: 
+今日、友達と公園で・会う・つもりです, きょう、ともだちとこうえんで・あう・つもりです, I plan to meet my friend at the park today.
+Processing 南
+Generated Sentence: 
+私は・南・アメリカに行きたいです, わたしは・みなみ・あめりかにいきたいです, I want to go to South America.
+Processing 五日
+Generated Sentence: 
+私は・五日・後に試験があります。, わたしはごにちごにちあとにしけんがあります。, I have an exam in five days.
+Processing 着る
+Generated Sentence: 
+今日は新しい服を・着る・つもりです, きょうはあたらしいふくを・きる・つもりです, I plan to wear new clothes today.
+Processing 終る
+Generated Sentence: 
+今日の授業は・終る・と、みんながほっとしたね。, きょうのじゅぎょうは・おわる・と、みんながほっとしたね。, When today's class・ends・, everyone feels relieved, right?
+Processing 読む
+Generated Sentence: 
+私は毎日新聞を・読む・ために時間を取っています, わたしはまいにちしんぶんを・よむ・ためにじかんをとっています, I take time every day to read the newspaper.
+Processing 来月
+Generated Sentence: 
+来月・旅行・に・行きます, らいげつ・りょこう・に・いきます, I will go on a trip next month.
+Processing 果物
+Generated Sentence: 
+私は毎朝、・果物・を食べます。, わたしはまいあさ、くだものをたべます。, I eat fruit every morning.
+Processing 止まる
+Generated Sentence: 
+電車が・止まる・駅で降ります, でんしゃが・とまる・えきでおります, I will get off at the station where the train stops.
+Processing 着く
+Generated Sentence: 
+私は電車で東京に・着く・予定です, わたしはでんしゃでとうきょうに・つく・よていです, I plan to arrive in Tokyo by train.
+Processing 大好き
+Generated Sentence: 
+私は・大好き・なアニメを見るのが楽しみです, わたしはだいすきなあにめをみるのがたのしみです, I enjoy watching my favorite anime.
+Processing 妹
+Generated Sentence: 
+私の・妹・はとても元気です, わたしのいもうとはとてもげんきです, My little sister is very energetic.
+Processing 夏
+Generated Sentence: 
+・夏・は暑い季節です, なつはあついきせつです, Summer is a hot season.
+Processing 今晩
+Generated Sentence: 
+・今晩・は何をしますか？, こんばんはなにをしますか？, What will you do tonight?
+Processing 塩
+Generated Sentence: 
+今日のお味噌汁には・塩・を少し足しました, きょうのおみそしるには・しお・をすこしそいました, I added a little bit of salt to today's miso soup.
+Processing 先週
+Generated Sentence: 
+・先週・は、友達と映画を見に行きました。, ・せんしゅう・は、ともだちとえいがをみにいきました。, Last week, I went to see a movie with my friend.
+Processing 欲しい
+Generated Sentence: 
+私は新しい自転車が・欲しい・です。, わたしはあたらしいじてんしゃが・ほしい・です。, I want a new bicycle.
+Processing 木
+Generated Sentence: 
+私は公園で・木・の下で本を読むのが好きです, わたしはこうえんで・き・のしたでほんをよむのがすきです, I like to read books under the trees in the park.
+Processing 薬
+Generated Sentence: 
+今日は頭が痛いので、・薬・を飲みました。, きょうはあたまがいたいので、・くすり・をのみました。, Today I had a headache, so I took some medicine.
+Processing お菓子
+Generated Sentence: 
+今日のおやつは・お菓子・が食べたいです。, きょうのおやつは・おかし・がたべたいです。, I want to eat snacks for today's snack time.
+Processing 金曜日
+Generated Sentence: 
+・金曜日・は学校が終わった後、友達と遊ぶ予定です。, きんようびはがっこうがおわったあと、ともだちとあそぶよていです。, On Friday, after school is over, I plan to hang out with my friends.
+Processing お酒
+Generated Sentence: 
+私は・お酒・を飲むのが好きです, わたしはおさけをのむのがすきです, I like to drink alcohol.
+Processing 多い
+Generated Sentence: 
+彼の部屋には・多い・本があります, かれのへやには・おおい・ほんがあります, There are many books in his room.
+Processing 動物
+Generated Sentence: 
+私は・動物・が大好きです, わたしはどうぶつがだいすきです, I love animals.
+Processing 切符
+Generated Sentence: 
+今日は電車に乗るために・切符・を買いました, きょうはでんしゃにのるために・きっぷ・をかいました, Today I bought a ticket to ride the train.
+Processing 呼ぶ
+Generated Sentence: 
+今日のパーティーには友達を・呼ぶ・つもりです, きょうのぱーてぃーにはともだちを・よぶ・つもりです, I plan to invite friends to today's party.
+Processing 体
+Generated Sentence: 
+今日は・体・がだるくて、学校に行きたくないです。, きょうは・からだ・がだるくて、がっこうにいきたくないです。, Today my body feels sluggish and I don't want to go to school.
+Processing 二日
+Generated Sentence: 
+私は・二日・前に宿題を終えました。, わたしはにちまえにしゅくだいをおえました。, I finished my homework two days ago.
+Processing 大人
+Generated Sentence: 
+私は・大人・になりたいと思っています, わたしは・おとな・になりたいとおもっています, I want to become an adult.
+Processing 歯
+Generated Sentence: 
+私は毎朝、・歯・を磨きます。, わたしはまいあさ、・は・をみがきます。, I brush my teeth every morning.
+Processing 冬
+Generated Sentence: 
+・冬・が好きです、ふゆがすきです, I like winter.
+Processing 所
+Generated Sentence: 
+私の・所・から学校まで歩いて30分かかります。, わたしのところからがっこうまであるいて30ふんかかります。, It takes 30 minutes to walk from my place to school.
+Processing 吹く
+Generated Sentence: 
+今日は風が・吹く・ので、外で遊ぶのはやめましょう。, きょうはかぜが・ふく・ので、そとであそぶのはやめましょう。, Let's not play outside today because the wind is blowing.
+Processing 足
+Generated Sentence: 
+私の・足・がとても疲れています, わたしの・あし・がとてもつかれています, My feet are very tired.
+Processing 箱
+Generated Sentence: 
+私は・箱・にプレゼントを入れました, わたしははこにぷれぜんとをいれました, I put a present in the box.
+Processing 朝
+Generated Sentence: 
+今日は・朝・早く起きました, きょうは・あさ・はやくおきました, I woke up early this morning.
+Processing 一昨日
+Generated Sentence: 
+・一昨日・のテストは難しかったですね, おとといのてすとはむずかしかったですね, The test the day before yesterday was difficult, wasn't it?
+Processing 有名
+Generated Sentence: 
+彼は・有名・な俳優になりたいと思っています, かれは・ゆうめい・なはいゆうになりたいとおもっています, He wants to become a famous actor.
+Processing 二十日
+Generated Sentence: 
+・二十日・までにレポートを提出しなければなりません, にじゅうにち までに れぽーとを ていしゅつ しなければ なりません, You must submit the report by the 20th.
+Processing 近い
+Generated Sentence: 
+私の家は学校に・近い・です, わたしのいえはがっこうにちかいです, My house is close to the school.
+Processing 時計
+Generated Sentence: 
+私の・時計・は朝6時に鳴ります, わたしの・とき・はあさろくじになります, My watch rings at 6 AM.
+Processing 午後
+Generated Sentence: 
+今日は・午後・から雨が降るそうです, きょうは・ごご・からあめがふるそうです, It seems that it will rain from this afternoon.
+Processing 食べ物
+Generated Sentence: 
+私は毎日色々な・食べ物・を試しています, わたしはまいにちいろいろなたべものをためしています, I try various foods every day.
+Processing 降る
+Generated Sentence: 
+今日は雨が・降る・予報です, きょうはあめが・ふる・よほうです, Today's forecast says it will rain.
+Processing 易しい
+Generated Sentence: 
+今日の漢字の宿題は・易しい・ですね。, きょうのkanjiのしゅくだいは・やさしい・ですね。, Today's kanji homework is easy, isn't it?
+Processing 大使館
+Generated Sentence: 
+私は・大使館・に行ってビザを申請しました, わたしはたいしかんにいってびざをしんせいしました, I went to the embassy to apply for a visa.
+Processing 誰
+Generated Sentence: 
+・誰・が教室にいますか、だれがきょうしつにいますか、Who is in the classroom?
+Processing 上
+Generated Sentence: 
+私は・上・の段ボールに本を置きました, わたしは・うえ・のだんぼうるにほんをおきました, I placed the book on top of the cardboard box.
+Processing 十日
+Generated Sentence: 
+私は・十日・後に試験があります。, わたしはとおかごにしけんがあります。, I have an exam in ten days.
+Processing 小さい
+Generated Sentence: 
+私の猫は・小さい・です, わたしのねこはちいさいです, My cat is small.
+Processing 今週
+Generated Sentence: 
+・今週・はテストがあります, ・こんしゅう・はてすとがあります, This week there is a test.,
+Processing 肉
+Generated Sentence: 
+今日の夕食は・肉・を使った料理を作ります, きょうのゆうしょくは・にく・をつかったりょうりをつくります, Today's dinner will be a dish made with meat.
+Processing 零
+Generated Sentence: 
+今日の気温は・零・度で、とても寒かったです。, きょうのきおんは・れい・どで、とてもさむかったです。, Today's temperature was zero degrees, and it was very cold.
+Processing 豚肉
+Generated Sentence: 
+今日の夕食は・豚肉・を使った料理を作ります, きょうのゆうしょくは・ぶたにく・をつかったりょうりをつくります, Today's dinner will be a dish made with pork.
+Processing 広い
+Generated Sentence: 
+私の学校の教室は・広い・です。, わたしのがっこうのきょうしつは・ひろい・です。, My school's classroom is spacious.
+Processing 靴下
+Generated Sentence: 
+私は毎朝、・靴下・を履いて学校に行きます。, わたしはまいあさ、くつしたをはいてがっこうにいきます。, I put on socks every morning and go to school.
+Processing 一人
+Generated Sentence: 
+今日は・一人・で映画を見に行きます。, きょうは・ひとり・でえいがをみにいきます。, Today, I will go to watch a movie alone.
+Processing 向こう
+Generated Sentence: 
+・向こう・の公園で友達と遊ぶのが好きです。, むこうのこうえんでともだちとあそぶのがすきです。, I like to play with my friends at the park over there.
+Processing 上手
+Generated Sentence: 
+彼はピアノを・上手・に弾きます。, かれはぴあのを・じょうず・にときます。, He plays the piano skillfully.
+Processing 牛肉
+Generated Sentence: 
+私は・牛肉・を使った料理が大好きです。, わたしは・ぎゅうにく・をつかったりょうりがだいすきです。, I love dishes made with beef.
+Processing 話
+Generated Sentence: 
+今日の授業で・話・をするのが楽しみです, きょうのじゅぎょうで・はな・をするのがたのしみです, I am looking forward to having a discussion in today's class.
+Processing 毎晩
+Generated Sentence: 
+私は・毎晩・勉強しています, わたしはまいばんべんきょうしています, I study every night.
+Processing 三つ
+Generated Sentence: 
+私は・三つ・のりんごを食べました, わたしは・みっつ・のりんごをたべました, I ate three apples.
+Processing 吸う
+Generated Sentence: 
+彼は毎日タバコを・吸う・ことが習慣になっています, かれはまいにちたばこを・すう・ことがしゅうかんになっています, He smokes cigarettes every day and it has become a habit.
+Processing 銀行
+Generated Sentence: 
+私は毎月・銀行・に給料を預けています。, わたしはまいつきぎんこうにきゅうりょうをあずけています。, I deposit my salary into the bank every month.
+Processing 大切
+Generated Sentence: 
+家族は・大切・な存在です, かぞくは・たいせつ・なそんざいです, Family is an important existence.
+Processing 学生
+Generated Sentence: 
+私の妹は・学生・です, わたしのいもうとはがくせいです, My younger sister is a student.
+Processing 部屋
+Generated Sentence: 
+今日は、・部屋・を掃除しました。, きょうは、へやをそうじしました。, Today, I cleaned my room.
+Processing 昼御飯
+Generated Sentence: 
+今日の・昼御飯・は何にしようかな。, きょうの・ひるごはん・はなんにしようかな。, What should I have for lunch today?
+Processing 下
+Generated Sentence: 
+私は毎朝、・下・の階に行って朝食を食べます。, わたしはまいあさ、・した・のかいにいってちょうしょくをたべます。, I go downstairs every morning to eat breakfast.
+Processing 二つ
+Generated Sentence: 
+私は・二つ・のアップルを買いました, わたしは・につ・のあっぷるをかいました, I bought two apples.
+Processing 百
+Generated Sentence: 
+私は・百・ページの本を読みました。, わたしは・ひゃく・ぺーじのほんをよみました。, I read a book that has 100 pages.
+Processing 地図
+Generated Sentence: 
+私は・地図・を見て学校までの道を確認しました。, わたしはちずをみてがっこうまでのみちをかくにんしました。, I looked at the map and confirmed the way to school.
+Processing 八百屋
+Generated Sentence: 
+私はよく・八百屋・で野菜を買います, わたしはよくやおやでやさいをかいます, I often buy vegetables at the greengrocer.
+Processing 去年
+Generated Sentence: 
+・去年・の夏休みはとても楽しかったです, ・きょねん・のなつやすみはとてもたのしかったです, Last year's summer vacation was a lot of fun.
+Processing 火曜日
+Generated Sentence: 
+私は・火曜日・に学校に行きます, わたしはかようびにがっこうにいきます, I go to school on Tuesday.
+Processing 乗る
+Generated Sentence: 
+私は毎日自転車に・乗る・ことを楽しんでいます。, わたしはまいにちじてんしゃに・のる・ことをたのしんでいます。, I enjoy riding my bike every day.
+Processing 弟
+Generated Sentence: 
+私の・弟・はサッカーが好きです, わたしの・おとうと・はさっかーがすきです, My younger brother likes soccer.
+Processing あなた
+Generated Sentence: 
+・あなた・は元気ですか？, あなたはげんきですか？, Are you well?
+Processing 千
+Generated Sentence: 
+私は・千・円でお菓子を買いました, わたしはせんえんでおかしをかいました, I bought snacks for 1,000 yen.
+Processing 緑
+Generated Sentence: 
+私の家の近くには・緑・がたくさんあります。, わたしのいえのちかくには・みどり・がたくさんあります。, There is a lot of greenery near my house.
+Processing とり肉
+Generated Sentence: 
+今日の夕食は・とり肉・を使った料理を作ります。, きょうのゆうしょくは・とりにく・をつかったりょうりをつくります。, Today's dinner will be a dish made with chicken meat.
+Processing 軽い
+Generated Sentence: 
+今日の宿題は・軽い・から、すぐに終わると思います, きょうのしゅくだいは・かるい・から、すぐにおわるっとおもいます, I think today's homework is light, so I'll finish it quickly.
+Processing あまり
+Generated Sentence: 
+私は・あまり・勉強しません、わたしはあまりべんきょうしません、I don't study much.
+Processing 帽子
+Generated Sentence: 
+今日は・帽子・をかぶって学校に行きました, きょうは・ぼうし・をかぶってがっこうにいきました, I wore a hat to school today.
+Processing 丈夫
+Generated Sentence: 
+彼の・丈夫・な体格はスポーツに有利です, かれの・じょうぶ・なたいかくはスポーツにゆうりです, His sturdy physique is advantageous for sports.
+Processing 入れる
+Generated Sentence: 
+私は毎朝、牛乳を・入れる・前にコーヒーを温めます。, わたしはまいあさ、ぎゅうにゅうを・いれる・まえにこーひーをあたためます。, I warm up the coffee every morning before I・put in・the milk.
+Processing 二十歳
+Generated Sentence: 
+私は来年・二十歳・になります, わたしはらいねんはたちになります, I will turn 20 years old next year.
+Processing 三日
+Generated Sentence: 
+私は・三日・前に宿題を終えました。, わたしは みっか まえに しゅくだいを おえました。, I finished my homework three days ago.
+Processing 遠い
+Generated Sentence: 
+私の家は学校から・遠い・です。, わたしのいえはがっこうから・とおい・です。, My house is far from school.
+Processing 夏休み
+Generated Sentence: 
+・夏休み・の間、友達と海に行きました。, ・なつやすみ・のあいだ、ともだちとうみにいきました。, During summer vacation, I went to the beach with my friends.
+Processing 友達
+Generated Sentence: 
+私の・友達・は元気です, わたしの・ともだち・はげんきです, My friend is energetic.
+Processing 横
+Generated Sentence: 
+私の家は川の・横・にあります。, わたしのいえはかわのよこにあります。, My house is next to the river.
+Processing 冷たい
+Generated Sentence: 
+今日の風は・冷たい・ですね, きょうのかぜは・つめたい・ですね, The wind today is cold, isn't it?
+Processing 夜
+Generated Sentence: 
+今日は・夜・遅くまで勉強しました, きょうは・よる・おそくまでべんきょうしました, I studied until late at night today.
+Processing おなか
+Generated Sentence: 
+・おなか・がすいています, おなかがすいています, My stomach is empty.
+Processing どこ
+Generated Sentence: 
+今日の授業は・どこ・で行われますか？, きょうのじゅぎょうはどこでおこなわれますか？, Where will today's class be held?
+Processing 暇
+Generated Sentence: 
+今日は・暇・だから、友達と遊びに行くよ。, きょうは・ひま・だから、ともだちとあそびにいくよ。, Today I have free time, so I'm going out to play with friends.
+Processing 鳴く
+Generated Sentence: 
+毎朝、公園で鳥が・鳴く・のを聞くのが好きです。, まいあさ、こうえんでとりが・なく・のをきくのがすきです。, I like to listen to the birds・鳴く・in the park every morning.
+Processing 隣
+Generated Sentence: 
+私の・隣・の席に座っているのは、田中さんです。, わたしのとなり のせきにすわっているのは、たなかさんです。, The person sitting in the seat next to mine is Tanaka-san.
+Processing 先生
+Generated Sentence: 
+・先生・はとてもやさしいです, せんせいはとてもやさしいです, The teacher is very kind.
+Processing 出口
+Generated Sentence: 
+教室の・出口・はあそこです, きょうしつのでぐちはあそこです, The exit of the classroom is over there.
+Processing 後ろ
+Generated Sentence: 
+先生は黒板の・後ろ・に立っています, せんせいはこくばんのうしろにたっています, The teacher is standing behind the blackboard.
+Processing 先月
+Generated Sentence: 
+・先月・はとても忙しかったです, ・せんげつ・はとてもいそがしかったです, Last month was very busy.
+Processing お姉さん
+Generated Sentence: 
+・お姉さん・は毎日学校に自転車で行きます, おねえさんはまいにちがっこうにじてんしゃでいきます, My older sister goes to school by bicycle every day.
+Processing 本
+Generated Sentence: 
+私は毎日・本・を読みます, わたしはまいにちほんをよみます, I read a book every day.
+Processing 泳ぐ
+Generated Sentence: 
+私は毎週末、プールで・泳ぐ・ことが好きです。, わたしはまいしゅうまつ、ぷーるで・およぐ・ことがすきです。, I like to swim at the pool every weekend.
+Processing 灰皿
+Generated Sentence: 
+先生、・灰皿・をどこに置けばいいですか？,せんせい、・はいざら・をどこにおけばいいですか？,Teacher, where should I put the ashtray?
+Processing 門
+Generated Sentence: 
+私は毎日・門・をくぐって学校に行きます。, わたしはまいにち・もん・をくぐってがっこうにいきます。, I pass through the gate every day to go to school.
+Processing 荷物
+Generated Sentence: 
+私は毎日、・荷物・を学校に持っていきます。, わたしはまいにち、にものをがっこうにもっていきます。, I take my luggage to school every day.
+Processing この
+Generated Sentence: 
+・この・本は面白いですね, ・この・ほんはおもしろいですね, This book is interesting, isn't it?
+Processing 書く
+Generated Sentence: 
+私は毎日・書く・日記を楽しんでいます。, わたしはまいにちかくにっきをたのしんでいます。, I enjoy writing in my diary every day.
+Processing 毎年
+Generated Sentence: 
+・毎年・、私たちは夏休みに旅行します。, ・まいとし・、わたしたちはなつやすみにりょこうします。, Every year, we go on a trip during summer vacation.
+Processing 明日
+Generated Sentence: 
+・明日・はテストがあります, あしたはてすとがあります, There is a test tomorrow.
+Processing 降りる
+Generated Sentence: 
+私は毎朝、学校の前にバスから・降りる・のを楽しみにしています。, わたしはまいあさ、がっこうのまえにばすから・おりる・のをたのしみにしています。, I look forward to getting off the bus in front of the school every morning.
+Processing 重い
+Generated Sentence: 
+今日の宿題は・重い・ですね, きょうのしゅくだいは・おもい・ですね, Today's homework is heavy, isn't it?
+Processing 電車
+Generated Sentence: 
+私は毎朝・電車・で学校に行きます。, わたしはまいあさでんしゃでがっこうにいきます。, I go to school by train every morning.
+Processing 痛い
+Generated Sentence: 
+昨日、足をひねって・痛い・から、今日は学校を休みました。, きのう、 あしをひねって・いたい・から、 きょうはがっこうをやすみました。, Yesterday, I twisted my ankle and it hurts, so I took the day off from school.
+Processing 話す
+Generated Sentence: 
+私は毎日友達と・話す・時間が楽しいです, わたしはまいにちともだちと・はなす・じかんがたのしいです, I enjoy the time I spend talking with my friends every day.
+Processing 嫌
+Generated Sentence: 
+私は・嫌・なものを食べるのが好きではありません, わたしはきらいなものをたべるのがすきではありません, I don't like to eat things I dislike.
+Processing 宿題
+Generated Sentence: 
+今日は・宿題・がたくさんあります, きょうは・しゅくだい・がたくさんあります, Today I have a lot of homework.
+Processing 死ぬ
+Generated Sentence: 
+私は・死ぬ・のが怖いです, わたしは・しぬ・のがこわいです, I am afraid of dying.
+Processing 万
+Generated Sentence: 
+彼は・万・円を使って新しい自転車を買いました, かれは まん えんをつかって あたらしいじてんしゃをかいました, He bought a new bicycle using 10,000 yen.
+Processing 映画
+Generated Sentence: 
+私は週末に・映画・を見に行きます, わたしはしゅうまつにえいがをみにいきます, I will go to see a movie on the weekend.
+Processing 遅い
+Generated Sentence: 
+今日の電車は・遅い・ですね, きょうのでんしゃはおそいですね, Today's train is slow, isn't it?
+Processing 耳
+Generated Sentence: 
+私は毎朝、・耳・を掃除します。, わたしはまいあさ、みみをそうじします。, I clean my ears every morning.
+Processing かかる
+Generated Sentence: 
+今日の授業は・かかる・時間が長いです, きょうのじゅぎょうは・かかる・じかんがながいです, Today's class takes a long time.
+Processing 四つ
+Generated Sentence: 
+私は・四つ・のりんごを持っています, わたしは・よつ・のりんごをもっています, I have four apples.
+Processing 机
+Generated Sentence: 
+・机・の上に本があります, ・つくえ・のうえにほんがあります, There is a book on the desk.
+Processing 買う
+Generated Sentence: 
+私は毎週・買う・新しい本を楽しみにしています。, わたしはまいしゅうかうあたらしいほんをたのしみにしています。, I look forward to buying new books every week.
+Processing 開く
+Generated Sentence: 
+毎朝、私は窓を・開く・ためにベッドから起きます。, まいあさ、わたしはまどを・ひらく・ためにべっどからおきます。, Every morning, I get out of bed to open the window.
+Processing 教室
+Generated Sentence: 
+今日は・教室・で新しい先生に会いました, きょうは・きょうしつ・であたらしいせんせいにあいました, Today I met a new teacher in the classroom.
+Processing 短い
+Generated Sentence: 
+今日の授業は・短い・時間で終わりました, きょうのじゅぎょうは・たんい・じかんでおわりました, Today's class ended in a short time.
+Processing 姉
+Generated Sentence: 
+私の・姉・は料理が上手です, わたしの・あね・はりょうりがじょうずです, My older sister is good at cooking.
+Processing 大勢
+Generated Sentence: 
+今日のパーティーには・大勢・の人が来ると思います, きょうのぱーてぃーには・おおぜい・のひとがくるとおもいます, I think a lot of people will come to today's party.
+Processing 開ける
+Generated Sentence: 
+私は毎朝、窓を・開ける・ためにベッドから起きます。, わたしはまいあさ、まどを・あける・ためにべっどからおきます。, I get out of bed every morning to open the window.
+Processing 忙しい
+Generated Sentence: 
+今日は・忙しい・から、宿題ができませんでした。, きょうは・いそがしい・から、しゅくだいができませんでした。, Today I was busy, so I couldn't do my homework.
+Processing 店
+Generated Sentence: 
+私はよく・店・で友達と待ち合わせます。, わたしはよく・みせ・でともだちとまちあわせます。, I often meet my friends at the store.
+Processing 北
+Generated Sentence: 
+私は・北・海道に住んでいます, わたしはほっかいどうにすんでいます, I live in Hokkaido.
+Processing 全部
+Generated Sentence: 
+・全部・使ってください, ・ぜんぶ・つかってください, Please use everything.
+
+Here's the breakdown:
+
+- ・全部・使ってください: The sentence in standard Japanese with the target word '全部' wrapped between `・` symbols.
+- ・ぜんぶ・つかってください: The same sentence written only in hiragana.
+- Please use everything: The English translation of the sentence.
+Processing 橋
+Generated Sentence: 
+私は毎朝、・橋・を渡って学校に行きます。, わたしはまいあさ、・はし・をわたってがっこうにいきます。, I cross the bridge every morning to go to school.
+Processing 川
+Generated Sentence: 
+私は毎朝、・川・の近くを散歩します。, わたしはまいあさ、・かわ・のちかくをさんぽします。, I take a walk near the river every morning.
+Processing 河
+Generated Sentence: 
+私は毎朝、・河・を眺めながら散歩します。, わたしはまいあさ、・かわ・をながめながらさんぽします。, I take a walk every morning while gazing at the river.
+Processing 入口
+Generated Sentence: 
+学校の・入口・はいつも混んでいます, がっこうの・いりぐち・はいつもこんでいます, The entrance to the school is always crowded.
+Processing 太い
+Generated Sentence: 
+彼の腕は・太い・ですね, かれのうでは・ふとい・ですね, His arms are thick, aren't they?
+Processing 自動車
+Generated Sentence: 
+私は毎日・自動車・で学校に通っています, わたしはまいにちじどうしゃでがっこうにつうっています, I go to school by car every day.
+Processing 昼
+Generated Sentence: 
+今日の・昼・はおにぎりを食べました, きょうのひるはおにぎりをたべました, I ate onigiri for lunch today.
+Processing 色
+Generated Sentence: 
+私は・色・が好きです, わたしは・いろ・がすきです, I like colors.
+Processing 黄色
+Generated Sentence: 
+今日、私は・黄色・の花を見ました, きょう、わたしは・きいろ・のはなをみました, Today, I saw a yellow flower.
+Processing 左
+Generated Sentence: 
+私の・左・手は怪我をしています, わたしの・ひだり・てはけがをしています, My left hand is injured.
+Processing 野菜
+Generated Sentence: 
+私は毎日・野菜・を食べます, わたしはまいにち・やさい・をたべます, I eat vegetables every day.
+Processing 散歩
+Generated Sentence: 
+私は毎朝、公園で・散歩・をします。, わたしはまいあさ、こうえんで・さんぽ・をします。, I take a walk in the park every morning.
+Processing 消える
+Generated Sentence: 
+昨日の夢はすぐに・消える・ことが多いです, きのうのゆめはすぐに・きえる・ことがおおいです, Yesterday's dream often disappears quickly.
+Processing 映画館
+Generated Sentence: 
+昨日、友達と・映画館・に行って、新しい映画を見ました。, きのう、ともだちと・えいがかん・にいって、あたらしいえいがをみました。, Yesterday, I went to the movie theater with my friend and watched a new movie.
+Processing 誕生日
+Generated Sentence: 
+今日は私の・誕生日・です, きょうはわたしの・たんじょうび・です, Today is my birthday.
+Processing 切る
+Generated Sentence: 
+私は包丁で野菜を・切る・ことができます。, わたしはほうちょうでやさいを・きる・ことができます。, I can cut vegetables with a kitchen knife.
+Processing 七日
+Generated Sentence: 
+私は・七日・後に試験があります。, わたしは・なのか・あとにしけんがあります。, I have an exam in seven days.
+Processing 洗う
+Generated Sentence: 
+私は毎朝、顔を・洗う・前に歯を磨きます。, わたしはまいあさ、かおを・あらう・まえにはをみがきます。, I brush my teeth before washing my face every morning.
+Processing 習う
+Generated Sentence: 
+私は日本語を・習う・ために毎日勉強しています, わたしはにほんごを・ならう・ためにまいにちべんきょうしています, I study every day to learn Japanese.
+Processing 後
+Generated Sentence: 
+私は授業の・後・に友達と遊ぶ予定です, わたしはじゅぎょうの・ご・にともだちとあそぶよていです, I plan to hang out with friends after class.
+Processing 猫
+Generated Sentence: 
+私は・猫・が大好きです, わたしはねこがだいすきです, I love cats.
+Processing 図書館
+Generated Sentence: 
+私は毎週末、・図書館・で本を借ります。, わたしはまいしゅうまつ、・としょかん・でほんをかります。, I borrow books from the library every weekend.
+Processing 並べる
+Generated Sentence: 
+私は教室で机を・並べる・ように頼まれました。, わたしはきょうしつでつくえを・ならべる・ようにたのまれました。, I was asked to arrange the desks in the classroom.
+Processing 大きい
+Generated Sentence: 
+私の学校は・大きい・です。, わたしのがっこうは・おおきい・です。, My school is big.
+Processing 八日
+Generated Sentence: 
+私は・八日・後にテストがあります, わたしははちにちごにてすとがあります, I have a test in eight days.
+Processing 歩く
+Generated Sentence: 
+私は毎朝・歩く・ために公園に行きます, わたしはまいあさあるくためにこうえんにいきます, I go to the park every morning to walk.
+Processing 九日
+Generated Sentence: 
+私は・九日・後にテストがあります。, わたしは・くにち・ごにてすとがあります。, I have a test in nine days.
+Processing 頼む
+Generated Sentence: 
+友達に宿題を・頼む・ことができますか？, ともだちにしゅくだいを・たのむ・ことができますか？, Can I ask my friend to do my homework?
+Processing お兄さん
+Generated Sentence: 
+・お兄さん・は元気です、・おにいさん・はげんきです、My older brother is energetic.
+Processing 手
+Generated Sentence: 
+・手・を洗いましょう, てをあらいましょう, Let's wash our hands.
+Processing 毎日
+Generated Sentence: 
+私は・毎日・学校に行きます。, わたしはまいにちがっこうにいきます。, I go to school every day.
+Processing 花
+Generated Sentence: 
+私は・花・が大好きです, わたしははながだいすきです, I love flowers.
+Processing 居る
+Generated Sentence: 
+今日、学校に友達が・居る・から、一緒に帰りましょう。, きょう、がっこうにともだちが・いる・から、いっしょにかえりましょう。, Today, since my friend is at school, let's go home together.
+Processing 砂糖
+Generated Sentence: 
+私はお茶に・砂糖・を入れるのが好きです。, わたしはおちゃに・さとう・をいれるのがすきです。, I like to put sugar in my tea.
+Processing 今
+Generated Sentence: 
+今日は・今・から忙しいです, きょうは・いま・からいそがしいです, Today I will be busy from now on.
+Processing 旅行
+Generated Sentence: 
+私は夏休みに・旅行・に行くつもりです。, わたしはなつやすみにりょこうにいくつもりです。, I plan to go on a trip during the summer vacation.
+Processing 春
+Generated Sentence: 
+・春・は花が咲く季節です, ・はる・ははながさくきせつです, Spring is the season when flowers bloom.
+Processing 八つ
+Generated Sentence: 
+私は・八つ・のりんごを食べました, わたしは・はちつ・のりんごをたべました, I ate eight apples.
+Processing 町
+Generated Sentence: 
+私の・町・はとても静かです, わたしのまちはとてもしずかです, My town is very quiet.
+Processing 渡す
+Generated Sentence: 
+私は友達に・渡す・プレゼントを買いました, わたしはともだちに・わたす・ぷれぜんとをかいました, I bought a present to give to my friend.
+Processing 青
+Generated Sentence: 
+今日は・青・空がとてもきれいですね。, きょうは・あお・そらがとてもきれいですね。, Today, the blue sky is very beautiful, isn't it?
+Processing 白
+Generated Sentence: 
+私の好きな色は・白・です。, わたしのすきないろは・しろ・です。, My favorite color is white.
+Processing 水
+Generated Sentence: 
+今日は・水・をたくさん飲みました, きょうは・みず・をたくさんのみました, I drank a lot of water today.
+Processing 楽しい
+Generated Sentence: 
+今日のパーティーは・楽しい・だったね, きょうのぱーてぃーはたのしかったね, Today's party was fun, wasn't it?
+Processing 御飯
+Generated Sentence: 
+今日の・御飯・は何ですか, きょうの・ごはん・はなんですか, What is today's meal?
+Processing 皆さん
+Generated Sentence: 
+・皆さん・は元気ですか？, ・みなさん・はげんきですか？, Is everyone doing well?
+Processing 外
+Generated Sentence: 
+今日は・外・で遊びます, きょうはそとであそびます, Today we will play outside.
+Processing 前
+Generated Sentence: 
+私は・前・の席に座っています, わたしは・まえ・のせきにすわっています, I am sitting in the front seat.
+Processing 来る
+Generated Sentence: 
+明日、友達が・来る・から、一緒に遊びましょう。, あした、ともだちが・くる・から、いっしょにあそびましょう。, Tomorrow, since my friend is coming, let's play together.
+Processing 貸す
+Generated Sentence: 
+私は友達に・貸す・ことがよくあります, わたしはともだちに・かす・ことがよくあります, I often lend things to my friends.
+Processing 早い
+Generated Sentence: 
+彼は・早い・ランナーです, かれは・はやい・らんなーです, He is a fast runner.
+Processing 弱い
+Generated Sentence: 
+私は・弱い・体をしているので、運動が苦手です。, わたしは・よわい・からだをしているので、うんどうがにがてです。, I have a weak body, so I'm not good at sports.
+Processing 洗濯
+Generated Sentence: 
+今日は天気がいいので、・洗濯・を外でしました。, きょうはてんきがいいので、・せんたく・をそとでしました。, Today the weather was nice, so I did the laundry outside.
+Processing 九つ
+Generated Sentence: 
+私は・九つ・の誕生日を楽しみにしています, わたしは・ここのつ・のたんじょうびをたのしみにしています, I am looking forward to my ninth birthday.
+Processing 来年
+Generated Sentence: 
+来年・の夏休みは、海外旅行に行きたいです。, らいねんのなつやすみは、かいがいりょこうにいきたいです。, I want to go on an overseas trip during next year's summer vacation.
+Processing 眼鏡
+Generated Sentence: 
+私の父はいつも・眼鏡・をかけています, わたしのちちはいつもめがねをかけています, My father always wears glasses.
+Processing 背
+Generated Sentence: 
+彼の・背・がとても高くて、バスケットボールが得意です。, かれの・せ・がとてもたかくて、ばすけっとぼーるがとくいです。, His height is very tall, and he is good at basketball.
+
+(Note: The word '背' (せ) is used here to refer to height, specifically in the context of someone's tall stature.)
+Processing 水曜日
+Generated Sentence: 
+・水曜日・はいつも英語のクラスがあります, ・すいようび・はいつもえいごのクラスがあります, On Wednesdays, there is always an English class.
+Processing お金
+Generated Sentence: 
+私は・お金・をためて、自転車を買いたいです。, わたしはおかねをためて、じてんしゃをかいたいです。, I want to save money to buy a bicycle.
+Processing 同じ
+Generated Sentence: 
+私たちは・同じ・クラスにいます, わたしたちは・おなじ・クラスにいます, We are in the same class.
+Processing 弾く
+Generated Sentence: 
+私は毎日ピアノを・弾く・ようにしています。, わたしはまいにちぴあのを・ひく・ようにしています。, I play the piano every day.
+Processing 土曜日
+Generated Sentence: 
+・土曜日・に、学校のクラブ活動があります。, ・どようび・に、がっこうのくらぶかつどうがあります。, On Saturday, there are school club activities.
+Processing 階段
+Generated Sentence: 
+私は毎朝、・階段・を上って学校に行きます。, わたしはまいあさ、・かいだん・をのぼってがっこうにいきます。, I climb the stairs every morning to go to school.
+Processing 煩い
+Generated Sentence: 
+今日の授業は・煩い・から、集中できませんでした, きょうのじゅぎょうはうるさいから、しゅうちゅうできませんでした, Today's class was noisy, so I couldn't concentrate.
+Processing 半分
+Generated Sentence: 
+私はこのケーキを・半分・食べました。, わたしはこのけーきを・はんぶん・たべました。, I ate half of this cake.
+Processing 背広
+Generated Sentence: 
+今日のパーティーには・背広・を着ていくつもりです, きょうのぱーてぃーにはせびろをきていくつもりです, I plan to wear a suit to today's party.
+Processing 晴れ
+Generated Sentence: 
+今日は・晴れ・で、ピクニックに行きましょう。, きょうは・はれ・で、ぴくにっくにいきましょう。, Today is sunny, let's go on a picnic.
+Processing 見せる
+Generated Sentence: 
+私は友達に・見せる・ために新しい本を買いました。, わたしはともだちに・みせる・ためにあたらしいほんをかいました。, I bought a new book to show it to my friend.
+Processing 飲み物
+Generated Sentence: 
+今日のパーティーでは、いろいろな・飲み物・が用意されています, きょうのぱーてぃーでは、いろいろな・のみもの・がよういされています, At today's party, various drinks are prepared.
+Processing 雪
+Generated Sentence: 
+今日は・雪・が降っています, きょうは・ゆき・がふっています, Today it is snowing.
+Processing 買い物
+Generated Sentence: 
+今日は・買い物・に行きます, きょうは・かいもの・にいきます, I will go shopping today.
+Processing 交差点
+Generated Sentence: 
+私は毎日、・交差点・で友達と待ち合わせをします。, わたしはまいにち、・こうさてん・でともだちとまちあわせをします。, I meet my friends at the intersection every day.
+Processing 駅
+Generated Sentence: 
+私は毎朝、・駅・まで自転車で行きます。, わたしはまいあさ、・えき・までじてんしゃでいきます。, I go to the station by bicycle every morning.
+Processing 大丈夫
+Generated Sentence: 
+今日のテストは・大丈夫・だったよ, きょうのてすとは・だいじょうぶ・だったよ, Today's test was okay.
+Processing 勉強
+Generated Sentence: 
+今日は・勉強・をたくさんしました。, きょうは・べんきょう・をたくさんしました。, I did a lot of studying today.
+Processing 兄弟
+Generated Sentence: 
+私の・兄弟・は三人います, わたしのきょうだいはさんにんいます, I have three siblings.
+Processing 封筒
+Generated Sentence: 
+今日は・封筒・に手紙を入れて郵便局に行きました, きょうは・ふうとう・にてがみをいれてゆうびんきょくにいきました, Today I put a letter in an envelope and went to the post office.
+Processing 漢字
+Generated Sentence: 
+今日の授業では、・漢字・を練習します。, きょうのじゅぎょうでは、・かんじ・をれんしゅうします。, Today in class, we will practice kanji.
+Processing 喫茶店
+Generated Sentence: 
+私はよく・喫茶店・で友達と勉強します, わたしはよく・きっさてん・でともだちとべんきょうします, I often study with friends at a cafe.
+Processing 子供
+Generated Sentence: 
+私の・子供・は元気です, わたしのこどもはげんきです, My child is healthy.
+Processing 女の子
+Generated Sentence: 
+私のクラスには元気な・女の子・がいます, わたしのクラスにはげんきな・おんなのこ・がいます, There is an energetic girl in my class.
+Processing 紙
+Generated Sentence: 
+私は・紙・に絵を描きました, わたしはかみにえをかきました, I drew a picture on paper.
+Processing 字引
+Generated Sentence: 
+今日の授業で、先生が・字引・を使って新しい言葉を教えてくれました, きょうのじゅぎょうで、せんせいが・じびき・をつかってあたらしいことばをおしえてくれました, Today in class, the teacher taught us new words using a dictionary.
+Processing 嫌い
+Generated Sentence: 
+私は・嫌い・な食べ物がたくさんあります, わたしはきらいなたべものがたくさんあります, I have a lot of foods that I dislike.
+Processing 先
+Generated Sentence: 
+・先・週、私は友達と映画を見ました。, せんしゅう、わたしはともだちとえいがをみました。, Last week, I watched a movie with my friend.
+Processing 答える
+Generated Sentence: 
+先生の質問に・答える・ことができませんでした, せんせいのしつもんに・こたえる・ことができませんでした, I couldn't answer the teacher's question.
+Processing 食堂
+Generated Sentence: 
+今日は・食堂・でお昼を食べました。, きょうは・しょくどう・でおひるをたべました。, Today I ate lunch at the cafeteria.
+Processing 働く
+Generated Sentence: 
+私は毎日・働く・ために頑張っています, わたしはまいにちはたらくためにがんばっています, I work hard every day to achieve my goals.
+Processing 見る
+Generated Sentence: 
+私は毎日テレビを・見る・ことが好きです。, わたしはまいにちてれびを・みる・ことがすきです。, I like to watch TV every day.
+Processing 観る
+Generated Sentence: 
+私は毎週末、家族と一緒に・観る・映画を楽しんでいます。, わたしはまいしゅうまつ、かぞくといっしょに・みる・えいがをたのしんでいます。, I enjoy watching movies with my family every weekend.
+Processing 交番
+Generated Sentence: 
+私の家から学校に行く途中で、・交番・があります。, わたしのいえからがっこうにいくとちゅうで、・こうばん・があります。, On my way from home to school, there is a police box.
+Processing 辛い
+Generated Sentence: 
+今日の試験は・辛い・かったですね。, きょうのしけんはつらいかったですね。, Today's exam was tough, wasn't it?
+Processing 洋服
+Generated Sentence: 
+私は新しい・洋服・を買いたいです, わたしはあたらしい・ようふく・をかいたいです, I want to buy new clothes.
+Processing 晩御飯
+Generated Sentence: 
+今日の・晩御飯・は何にしようかな？, きょうの・ばんごはん・はなんにしようかな？, What should I have for dinner today?
+Processing 車
+Generated Sentence: 
+私の父は毎朝・車・で会社に行きます, わたしのちちはまいあさくるまでかいしゃにいきます, My father goes to work by car every morning.
+Processing もう一度
+Generated Sentence: 
+もう一度やってみましょう。, もういちどやってみましょう。, Let's try it one more time.,
+Processing 服
+Generated Sentence: 
+今日は新しい・服・を買いました, きょうはあたらしい・ふく・をかいました, I bought new clothes today.
+Processing 半
+Generated Sentence: 
+私は毎日・半・時間、勉強しています。, わたしはまいにちはんじかん、べんきょうしています。, I study for half an hour every day.
+Processing 若い
+Generated Sentence: 
+私の・若い・友達は元気です。, わたしの・わかい・ともだちはげんきです。, My young friend is energetic.
+Processing 食べる
+Generated Sentence: 
+私は毎日・食べる・おにぎりが大好きです, わたしはまいにちたべるおにぎりがだいすきです, I love eating onigiri every day.
+Processing 四日
+Generated Sentence: 
+私は・四日・後に試験があります。, わたしは・よっか・ごにしけんがあります。, I have an exam in four days.
+Processing 警官
+Generated Sentence: 
+・警官・は街を守るために働いています, けいかんはまちをまもるためにはたらいています, The police officer works to protect the city.
+Processing 伯父
+Generated Sentence: 
+私の・伯父・はとても優しい人です, わたしの・おじ・はとてもやさしいひとです, My uncle is a very kind person.
+Processing 叔父
+Generated Sentence: 
+私の・叔父・は毎週日曜日に家族と公園に行きます。, わたしの・おじ・はまいしゅうにちようびにかぞくとこうえんにいきます。, My uncle goes to the park with his family every Sunday.
+Processing 鳥
+Generated Sentence: 
+私は公園で・鳥・を見ました, わたしはこうえんで・とり・をみました, I saw a bird in the park.
+Processing 方
+Generated Sentence: 
+私は毎日、・方・を勉強しています。, わたしはまいにち、ほうをべんきょうしています。, I study "way/method" every day.
+Processing 少ない
+Generated Sentence: 
+私の部屋には・少ない・本しかありません, わたしのへやには・すくない・ほんしかありません, There are only a few books in my room.
+Processing 白い
+Generated Sentence: 
+私の猫は・白い・くまのぬいぐるみが大好きです, わたしのねこは・しろい・くまのぬいぐるみがだいすきです, My cat loves the white bear stuffed animal.
+Processing 待つ
+Generated Sentence: 
+友達が来るまで・待つ・ことができます。, ともだちがくるまでまつことができます。, I can wait until my friend comes.
+Processing 次
+Generated Sentence: 
+私は・次・の授業が楽しみです, わたしは・つぎ・のじゅぎょうがたのしみです, I am looking forward to the next class.
+Processing 行く
+Generated Sentence: 
+今日は学校に・行く・つもりです, きょうはがっこうに・いく・つもりです, I plan to go to school today.
+Processing 角
+Generated Sentence: 
+私は・角・を曲がって学校に行きます。, わたしは・かど・をまがってがっこうにいきます。, I turn at the corner and go to school.
+Processing 男
+Generated Sentence: 
+・男・は元気です, おとこはげんきです, The man is energetic.
+Processing 聞く
+Generated Sentence: 
+私は毎日、先生の話を・聞く・ために学校に行きます。, わたしはまいにち、せんせいのはなしを・きく・ためにがっこうにいきます。, I go to school every day to listen to the teacher's talk.
+
+Note: The word '聞く' (to listen) is wrapped between `・` symbols in both the kanji and hiragana sentences.
+Processing 走る
+Generated Sentence: 
+毎朝、私は公園で・走る・ことが好きです。, まいあさ、わたしはこうえんで・はしる・ことがすきです。, Every morning, I like to run in the park.
+Processing お母さん
+Generated Sentence: 
+・お母さん・は元気です。, ・おかあさん・はげんきです。, My mother is healthy.
+Processing 意味
+Generated Sentence: 
+今日の授業で先生が説明した・意味・がよく分かりませんでした, きょうのじゅぎょうでせんせいがせつめいしたいみがよくわかりませんでした, I didn't understand well the meaning that the teacher explained in today's class.
+Processing 物
+Generated Sentence: 
+これは私の・物・です, これはわたしのものです, This is my thing.
+Processing 強い
+Generated Sentence: 
+今日は・強い・風が吹いています, きょうは・つよい・かぜがふいています, Today, there is a strong wind blowing.
+Processing 魚
+Generated Sentence: 
+今日のお昼ごはんは、・魚・を使った料理を食べました。, きょうのおひるごはんは、・さかな・をつかったりょうりをたべました。, Today for lunch, I ate a dish made with fish.
+Processing 切手
+Generated Sentence: 
+私は・切手・を集めるのが好きです, わたしはきってをあつめるのがすきです, I like to collect stamps.
+Processing 暗い
+Generated Sentence: 
+今日の教室は・暗い・ので、目が疲れました。, きょうのきょうしつは・くらい・ので、めがつかれました。, Today's classroom was dark, so my eyes got tired.
+Processing 出る
+Generated Sentence: 
+今日は試験が・出る・ので、しっかり勉強しないとね。, きょうはしけんがでるので、しっかりべんきょうしないとね。, Today there's an exam coming up, so I need to study hard.
+Processing 犬
+Generated Sentence: 
+私は毎日・犬・と散歩します。, わたしはまいにちいぬとさんぽします。, I walk with my dog every day.
+Processing 女
+Generated Sentence: 
+・女・は元気です, おんなはげんきです, The woman is energetic.
+Processing 飛行機
+Generated Sentence: 
+今日、私は・飛行機・に乗って旅行に行きます。, きょう、わたしは・ひこうき・にのってりょこうにいきます。, Today, I will take a plane and go on a trip.
+Processing 日曜日
+Generated Sentence: 
+・日曜日・に、わたしはともだちとこうえんへいきます。, ・にちようび・に、わたしはともだちとこうえんへいきます。, On Sunday, I will go to the park with my friends.
+Processing 午前
+Generated Sentence: 
+私は・午前・の授業が好きです。, わたしは・ごぜん・のじゅぎょうがすきです。, I like the morning classes.
+Processing 名前
+Generated Sentence: 
+私の・名前・はさくらです, わたしの・なまえ・はさくらです, My name is Sakura.
+Processing 丸い
+Generated Sentence: 
+地球は・丸い・形をしています, ちきゅうは・まるい・かたちをしています, The Earth has a round shape.
+Processing 円い
+Generated Sentence: 
+空を見上げると、・円い・月が輝いていました,そらをみあげると、・まるい・つきがかがやいていました,The moon was round and shining brightly when I looked up at the sky.
+Processing 曲る
+Generated Sentence: 
+信号を右に・曲る・と、公園があります。, しんごうをみぎに・まがる・と、こうえんがあります。, When you turn right at the traffic light, there is a park.
+Processing 鼻
+Generated Sentence: 
+今日は・鼻・がかゆいです。, きょうははながかゆいです。, My nose is itchy today.
+Processing お弁当
+Generated Sentence: 
+今日の・お弁当・は何が入っているのかな？, きょうの・おべんとう・はなにがはいっているのかな？, What's in today's bento?
+Processing 結婚
+Generated Sentence: 
+彼は来年、・結婚・する予定です, かのじょはらいねん、・けっこん・するよていです, He plans to get married next year.
+Processing 置く
+Generated Sentence: 
+机の上に本を・置く・んだよ, つくえのうえにほんを・おく・んだよ, I put the book on the desk.
+Processing 渡る
+Generated Sentence: 
+私は毎日、学校に行くために川を・渡る・ことがあります。, わたしはまいにち、がっこうにいくためにかわを・わたる・ことがあります。, I cross the river every day to go to school.
+Processing 伯母さん
+Generated Sentence: 
+私の・伯母さん・はとても優しい人です, わたしの・おばさん・はとてもやさしいひとです, My aunt is a very kind person.
+Processing 叔母さん
+Generated Sentence: 
+・叔母さん・は元気です, ・おばさん・はげんきです, My aunt is healthy.
+Processing 明い
+Generated Sentence: 
+今日の教室は・明い・雰囲気で、とても勉強しやすいです。, きょうのきょうしつは・あかるい・ふんいきで、てもべんきょうしやすいです。, Today's classroom has a bright atmosphere, making it very easy to study.
+Processing 家庭
+Generated Sentence: 
+私の・家庭・はとてもあたたかいです, わたしの・かてい・はとてもあたたかいです, My family is very warm and welcoming.
+Processing 靴
+Generated Sentence: 
+私は新しい・靴・を買いました, わたしはあたらしいくつをかいました, I bought new shoes.
+Processing 今月
+Generated Sentence: 
+・今月・は忙しいです。, ・こんげつ・は、いそがしいです。, This month is busy.
+Processing 返す
+Generated Sentence: 
+友達に借りた本を・返す・時、ちゃんとお礼を言いました。, ともだちにかりたほんを・かえす・とき、ちゃんとおれいをいました。, When I returned the book I borrowed from my friend, I made sure to thank them properly.
+Processing 二人
+Generated Sentence: 
+・二人・で映画を見に行きました, ふたりでえいがをみにいきました, We went to see a movie together, just the two of us.
+Processing 起きる
+Generated Sentence: 
+毎朝、６時に・起きる・のが私の習慣です。, まいあさ、ろくじに・おきる・のがわたしのしゅうかんです。, Every morning, it is my habit to wake up at 6 o'clock.
+Processing 古い
+Generated Sentence: 
+私の家には・古い・本がたくさんあります, わたしのいえには・ふるい・ほんがたくさんあります, There are many old books in my house.
+Processing 黄色い
+Generated Sentence: 
+私の好きな色は・黄色い・です, わたしのすきないろはきいろいです, My favorite color is yellow.
+Processing 飴
+Generated Sentence: 
+今日のおやつは・飴・です, きょうのおやつは・あめ・です, Today's snack is candy.
+Processing 寝る
+Generated Sentence: 
+私は毎晩・寝る・前に本を読みます, わたしはまいばん・ねる・まえにほんをよみます, I read a book every night before I go to bed.
+Processing 質問
+Generated Sentence: 
+先生、・質問・があります、せんせい、・しつもん・があります、Teacher, I have a question.
+Processing 牛乳
+Generated Sentence: 
+私は毎朝、・牛乳・を飲んでいます。, わたしはまいあさ、・ぎゅうにゅう・をのんでいます。, I drink milk every morning.
+Processing 紅茶
+Generated Sentence: 
+私は毎朝、・紅茶・を飲むのが好きです。, わたしはまいあさ、・こうちゃ・をのむのがすきです。, I like to drink black tea every morning.
+Processing 出かける
+Generated Sentence: 
+今日は友達と・出かける・予定があります。, きょうはともだちと・でかける・よていがあります。, I have plans to go out with my friends today.
+Processing 兄
+Generated Sentence: 
+私の・兄・はサッカーが好きです, わたしの・あに・はさっかーがすきです, My older brother likes soccer.
+Processing 月曜日
+Generated Sentence: 
+・月曜日・は学校に行きます, ・げつようび・はがっこうにいきます, I go to school on Mondays.
+Processing 締める
+Generated Sentence: 
+今日の会議は、部長が・締める・予定です。, きょうのかいぎは、ぶちょうが・しめる・よていです。, Today's meeting is scheduled to be concluded by the department head.
+Processing 熱い
+Generated Sentence: 
+今日のラーメンは・熱い・ですね, きょうのらーめんはあついですね, Today's ramen is hot, isn't it?
+Processing 郵便局
+Generated Sentence: 
+私は・郵便局・へ手紙を出しに行きました, わたしはゆうびんきょくへてがみをだしにいきました, I went to the post office to mail a letter.
+Processing 細い
+Generated Sentence: 
+彼女の・細い・指がとても美しいです。, かのじょの・ほそい・ゆびがとてもうつくしいです。, Her slender fingers are very beautiful.
+Processing 本棚
+Generated Sentence: 
+私の部屋にはたくさんの・本棚・があります。, わたしのへやにはたくさんのほんだながあります。, There are many bookshelves in my room.
+Processing 結構
+Generated Sentence: 
+今日の天気は・結構・いいですね, きょうのてんきは・けっこう・いいですね, The weather today is quite good, isn't it?
+Processing 絵
+Generated Sentence: 
+私は美術の授業で・絵・を描くのが好きです, わたしはびじゅつのじゅぎょうでえをかくのがすきです, I like to draw pictures in art class.
+Processing 使う
+Generated Sentence: 
+私は毎日・使う・インターネットで勉強します。, わたしはまいにちつかうインターネットでべんきょうします。, I study every day using the internet.
+Processing 休む
+Generated Sentence: 
+今日は学校で忙しかったから、家に帰って・休む・つもりです。, きょうはがっこうでいそがしかったから、いえにかえって・やすむ・つもりです。, Today was busy at school, so I plan to go home and rest.
+Processing 貼る
+Generated Sentence: 
+私はポスターを壁に・貼る・ことが好きです, わたしはぽすたーをかべに・はる・ことがすきです, I like to stick posters on the wall.
+Processing 涼しい
+Generated Sentence: 
+今日は・涼しい・風が吹いています, きょうは・すずしい・かぜがふいています, Today, a cool breeze is blowing.
+Processing 昨日
+Generated Sentence: 
+昨日は楽しかったです。，きのうはたのしかったです。，Yesterday was fun.,
+Processing 初め
+Generated Sentence: 
+・初め・の挨拶は大切です, ・はじめ・のあいさつはたいせつです, The initial greeting is important.
+Processing 始め
+Generated Sentence: 
+今日は・始め・から日本語を勉強します, きょうは・はじめ・からにほんごをべんきょうします, Today I will start studying Japanese from the beginning.
+Processing 取る
+Generated Sentence: 
+私は毎朝、新聞を・取る・習慣があります。, わたしはまいあさ、しんぶんを・とる・しゅうかんがあります。, I have a habit of taking the newspaper every morning.
+Processing 中
+Generated Sentence: 
+私は・中・学校で勉強しています, わたしはちゅうがっこうでべんきょうしています, I am studying in middle school.
+Processing 七つ
+Generated Sentence: 
+私は・七つ・の誕生日を友達とお祝いしました, わたしは・ななつ・のたんじょうびをともだちとおいわいしました, I celebrated my seventh birthday with my friends.
+Processing 六日
+Generated Sentence: 
+私は・六日・後にテストがあります。, わたしは・むいち・のちにてすとがあります。, I have a test six days from now.
+Processing 違う
+Generated Sentence: 
+先生、私の答えは・違う・と思います、せんせい、わたしのこたえは・ちがう・とおもいます、Teacher, I think my answer is wrong.
+Processing 分かる
+Generated Sentence: 
+先生の説明が・分かる・ので、嬉しいです。, せんせいのせつめいが・わかる・ので、うれしいです。, I'm happy because I can understand the teacher's explanation.
+Processing 言う
+Generated Sentence: 
+先生が「これは難しいです」と・言う・、せんせいが「これはむずかしいです」という、The teacher says, "This is difficult."
+Processing 黒い
+Generated Sentence: 
+私の猫は・黒い・色をしています, わたしのねこは・くろい・いろをしています, My cat is black in color.
+Processing 要る
+Generated Sentence: 
+今日の宿題には、この本が・要る・と思います。, きょうのしゅくだいにには、このほんが・いる・とおもいます。, I think this book is necessary for today's homework.
+Processing 差す
+Generated Sentence: 
+先生が・差す・指で黒板を指すとき、みんなが注目します。, せんせいが・さす・ゆびでこくばんをさすとき、みんながちゅうもくします。, When the teacher points at the blackboard with the finger he extends, everyone pays attention.
+Processing 辺
+Generated Sentence: 
+私は公園の・辺・を散歩するのが好きです, わたしはこうえんの・へん・をさんぽするのがすきです, I like to walk around the edge of the park.
+Processing 六
+Generated Sentence: 
+私は・六・歳のときに初めて自転車に乗りました, わたしは・ろく・さいのときにはじめてじてんしゃにのりました, I rode a bicycle for the first time when I was six years old.
+Processing 今年
+Generated Sentence: 
+・今年・は、初めて海外旅行に行きます。, ・ことし・は、はじめてかいがいりょこうにいきます。, This year, I will go on an overseas trip for the first time.
+Processing 初めて
+Generated Sentence: 
+私は・初めて・日本語のクラスに参加しました, わたしははじめてにほんごのくらすにさんかしました, I participated in a Japanese class for the first time.
+Processing 赤い
+Generated Sentence: 
+私の好きな色は・赤い・です, わたしのすきないろは・あかい・です, My favorite color is red.
+Processing 甘い
+Generated Sentence: 
+今日のおやつは・甘い・ケーキでした, きょうのおやつは・あまい・けーきでした, Today's snack was a sweet cake.
+Processing 毎週
+Generated Sentence: 
+私は・毎週・日曜日に図書館に行きます。, わたしはまいしゅうにちようびにとしたしょかんにいきます。, I go to the library every Sunday.
+Processing 五つ
+Generated Sentence: 
+私は・五つ・のりんごを持っています。, わたしは・いつつ・のりんごをもっています。, I have five apples.
+Processing 曇る
+Generated Sentence: 
+今日は空が・曇る・ので、雨が降るかもしれません。, きょうはそらが・くもる・ので、あめがふるかもしれません。, Today the sky is cloudy, so it might rain.
+Processing 夕方
+Generated Sentence: 
+今日は・夕方・に友達と公園で遊ぶ予定です, きょうはゆうがていにともだちとこうえんであそぶよていです, Today, I plan to play with my friends at the park in the evening.
+Processing 撮る
+Generated Sentence: 
+今日は友達と一緒に公園で写真を・撮る・つもりです, きょうはともだちといっしょにこうえんでしゃしんを・とる・つもりです, Today, I plan to take photos with my friends at the park.
+Processing 人
+Generated Sentence: 
+私の家族は四・人・です, わたしのkazokuはよにんです, My family has four people.
+Processing 困る
+Generated Sentence: 
+宿題が多すぎて・困る・、しゅくだけたすぎてこまる、I am troubled because I have too much homework.
+Processing 疲れる
+Generated Sentence: 
+今日の授業は長くて、・疲れる・から、早く終わってほしいです。, きょうのじゅぎょうはながくて、・つかれる・から、はやくおわってほしいです。, Today's class is long and tiring, so I hope it ends soon.
+Processing 一つ
+Generated Sentence: 
+私は・一つ・のりんごを食べました, わたしは・いっつ・のりんごをたべました, I ate one apple.
+Processing 来週
+Generated Sentence: 
+・来週・はテストがあります, ・らいしゅう・はてすとがあります, Next week there is a test.
+Processing 知る
+Generated Sentence: 
+私は友達の誕生日を・知る・ためにカレンダーを見ました。, わたしはともだちのたんじょうびを・しる・ためにかれんだーをみました。, I looked at the calendar to find out my friend's birthday.
+Processing 言葉
+Generated Sentence: 
+私は・言葉・を学ぶのが好きです, わたしはことばをまなぶのがすきです, I like to learn words.
+Processing 赤
+Generated Sentence: 
+私の好きな色は・赤・です, わたしのすきないろは・あか・です, My favorite color is red.
+Processing 自分
+Generated Sentence: 
+・自分・で勉強するのが好きです, ・じぶん・できょうしゅうするのがすきです, I like to study by myself.
+Processing 低い
+Generated Sentence: 
+彼の声は・低い・ので、よく聞こえません。, かれのこえは・ひくい・ので、よくきこえません。, His voice is low, so it's hard to hear.
+Processing 小さな
+Generated Sentence: 
+・小さな・子猫が庭で遊んでいます, ・ちいさな・こねこがにわであそんでいます, A small kitten is playing in the garden.
+Processing 時間
+Generated Sentence: 
+今日は・時間・があまりないので、早く帰りたいです。, きょうは・じかん・があまりないので、はやくかえりたいです。, Today I don't have much time, so I want to go home early.
+Processing 上げる
+Generated Sentence: 
+私は手を・上げる・と先生が気づいてくれました, わたしはてを・あげる・とせんせいがきづいてくれました, When I raised my hand, the teacher noticed me.
+Processing 出す
+Generated Sentence: 
+今日の授業で、先生が難しい問題を・出す・と言ったんだ。, きょうのじゅぎょうで、せんせいがむずかしいもんだいを・だす・といったんだ。, The teacher said they would give a difficult problem in today's class.
+Processing 音楽
+Generated Sentence: 
+私は毎日・音楽・を聴いてリラックスします。, わたしはまいにちおんがくをきいてりらっくします。, I listen to music every day to relax.
+Processing 歌
+Generated Sentence: 
+私は毎朝、・歌・を歌って元気になります。, わたしはまいあさ、うたをうたってげんきになります。, I sing a song every morning and it makes me feel energetic.
+Processing 咲く
+Generated Sentence: 
+春になると、公園の桜が・咲く・ようになります。,はるになると、こうえんのさくらが・さく・ようになります。,When spring comes, the cherry blossoms in the park start to bloom.
+Processing 山
+Generated Sentence: 
+私は毎年、家族と一緒に・山・に登ります。, わたしはまいとし、かぞくといっしょに・やま・にのぼります。, I climb a mountain with my family every year.
+Processing 学校
+Generated Sentence: 
+私は毎日・学校・に行きます, わたしはまいにちがっこうにいきます, I go to school every day.
+Processing 入る
+Generated Sentence: 
+私は毎朝・入る・教室で友達と話します, わたしはまいあさ・いる・きょうしつでともだちとはなします, I talk with my friends in the classroom that I enter every morning.
+Processing 曇り
+Generated Sentence: 
+今日は・曇り・で、少し寒いですね。, きょうは・くもり・で、すこしさむいですね。, Today it's cloudy and a bit cold, isn't it?
+Processing 外国
+Generated Sentence: 
+私は・外国・の文化に興味があります, わたしはがいこくのぶんかにきょうみがあります, I am interested in the culture of foreign countries.
+Processing 温い
+Generated Sentence: 
+今日の風呂の水は・温い・ので、ちょうどいい感じだった。, きょうのふろのみずは・ぬるい・ので、ちょうどいいかんじだった。, The bathwater today was lukewarm, so it felt just right.
+Processing 仕事
+Generated Sentence: 
+今日は・仕事・が忙しかったです, きょうは・しごと・がいそがしかったです, Today, work was busy.
+Processing 窓
+Generated Sentence: 
+私は毎朝、・窓・から外を見ます。, わたしはまいあさ、まどからそとをみます。, I look outside from the window every morning.
+Processing 晩
+Generated Sentence: 
+今日の・晩・は友達と映画を見に行きます, きょうの・ばん・はともだちとえいがをみにいきます, Today's evening, I will go to watch a movie with my friends.
+Processing 村
+Generated Sentence: 
+私の祖父母は・村・で農業をしています, わたしのそふぼはむらで のうぎょうをしています, My grandparents do farming in the village.
+Processing 長い
+Generated Sentence: 
+今日の授業は・長い・時間だったね, きょうのじゅぎょうはながいじかんだったね, Today's class was a long time, wasn't it?
+Processing 生まれる
+Generated Sentence: 
+私の弟は去年・生まれる・ました。, わたしの おとうと は きょねん うまれる ました。, My younger brother was born last year.
+Processing 雑誌
+Generated Sentence: 
+私は毎月・雑誌・を読んでいます, わたしはまいつきざっしをよんでいます, I read a magazine every month.
+Processing 今朝
+Generated Sentence: 
+・今朝・はとても寒かったです, ・けさ・はとてもさむかったです, This morning was very cold.
+Processing 晴れる
+Generated Sentence: 
+今日は・晴れる・だろうから、公園に行こう。, きょうは・はれる・だろうから、こうえんにいこう。, Today it will probably be sunny, so let's go to the park.
+Processing 夕飯
+Generated Sentence: 
+今日の・夕飯・は何にしようかな？, きょうの・ゆうはん・はなんにしようかな？, What shall I have for dinner today?
+Processing 一緒
+Generated Sentence: 
+今日は友達と・一緒・に遊びます, きょうはともだちと・いっしょ・にあそびます, Today I will play with my friends.
+Processing 立つ
+Generated Sentence: 
+私は毎朝早く・立つ・ために目覚まし時計を使っています, わたしはまいあさはやく・たつ・ためにめざましどけいをつかっています, I use an alarm clock every morning to get up early.
+Processing 元気
+Generated Sentence: 
+今日、友達に会って・元気・になって、とても嬉しかったです。, きょう、ともだちにあって・げんき・になって、とてもうれしかったです。, Today, I met my friend and became energetic, and I was very happy.
+Processing 天気
+Generated Sentence: 
+今日の・天気・は晴れです, きょうのてんきははれです, Today's weather is sunny.
+Processing 医者
+Generated Sentence: 
+私の父は・医者・です, わたしのちちは・いしゃ・です, My father is a doctor.
+Processing 戸
+Generated Sentence: 
+私は毎朝、・戸・を開けて外に出ます。, わたしはまいあさ、・と・をあけてそとにでます。, I open the door every morning and go outside.
+Processing 今日
+Generated Sentence: 
+・今日・は学校に行きます, きょうはがっこうにいきます, Today I will go to school.
+Processing 一昨年
+Generated Sentence: 
+・一昨年・、私は初めて海外旅行に行きました。, ・いっさくねん・、わたしははじめてかいがいりょこうにいきました。, The year before last, I went on my first trip abroad.
+Processing 文章
+Generated Sentence: 
+私は毎日・文章・を書く練習をしています, わたしはまいにちぶんしょうをかくれんしゅうをしています, I practice writing sentences every day.
+Processing 公園
+Generated Sentence: 
+私は毎週末、・公園・で友達と遊びます。, わたしはまいしゅうまつ、・こうえん・でともだちとあそびます。, I play with my friends at the park every weekend.
+Processing 借りる
+Generated Sentence: 
+私は友達から・借りる・ことがよくあります, わたしはともだちからかりることがよくあります, I often borrow things from my friends.
+Processing 口
+Generated Sentence: 
+私の・口・は大きくて、よく笑います。, わたしのくちはおおきくて、よくわらいます。, My mouth is big and I often laugh.
+Processing 持つ
+Generated Sentence: 
+私は毎日・持つ・重いカバンを持っています, わたしはまいにちもつおもいかばんをもっています, I carry a heavy bag every day.
+Processing 上着
+Generated Sentence: 
+今日は寒いから、・上着・を着て学校に行きます。, きょうはさむいから、・うわぎ・をきてがっこうにいきます。, Today it's cold, so I will wear a jacket and go to school.
+Processing 秋
+Generated Sentence: 
+・秋・は涼しくて過ごしやすい季節です, ・あき・はすずしくてすごしやすいきせつです, Autumn is a cool and comfortable season.
+Processing 悪い
+Generated Sentence: 
+彼は・悪い・ことをしたので、みんなが怒っています。, かれはわるいことをしたので、みんながおこっています。, He did something bad, so everyone is angry.
+Processing 青い
+Generated Sentence: 
+今日は・青い・空を見ました。, きょうは・あおい・そらをみました。, Today I saw a blue sky.
+Processing 住む
+Generated Sentence: 
+私は東京に・住む・つもりです, わたしはとうきょうに・すむ・つもりです, I plan to live in Tokyo.
+Processing 木曜日
+Generated Sentence: 
+私は・木曜日・に学校のクラブ活動があります。, わたしはきようびにがっこうのくらぶかつどうがあります。, I have school club activities on Thursday.
+Processing 忘れる
+Generated Sentence: 
+私はよく・忘れる・宿題をすることを、わたしはよくわすれるしゅくだいをすることを、I often forget to do my homework.
+Processing お手洗い
+Generated Sentence: 
+・お手洗い・はどこですか、・おてあらい・はどこですか、Where is the bathroom?
+Processing 写真
+Generated Sentence: 
+私は旅行で撮った・写真・を見せてもらいました, わたしはりょこうでとった・しゃしん・をみせてもらいました, I was shown the photos taken during the trip.
+Processing 会う
+Generated Sentence: 
+今日、友達と・会う・予定があります。, きょう、ともだちと・あう・よていがあります。, I have plans to meet with a friend today.
+Processing 南
+Generated Sentence: 
+私は夏休みに・南・の島に行きたいです。, わたしはなつやすみに・みなみ・のしまにいきたいです。, I want to go to an island in the south during summer vacation.
+Processing 五日
+Generated Sentence: 
+私は・五日・後に試験があります。, わたしは・ごにち・あとにしけんがあります。, I have an exam in five days.
+Processing 着る
+Generated Sentence: 
+今日は新しい服を・着る・つもりです, きょうはあたらしいふくを・きる・つもりです, I plan to wear new clothes today.
+Processing 終る
+Generated Sentence: 
+今日の授業は・終る・と、みんながほっとしたね。, きょうのじゅぎょうは・おわる・と、みんながほっとしたね。, When today's class・ends・, everyone feels relieved, right?
+Processing 読む
+Generated Sentence: 
+私は毎晩、・読む・前に本を一ページだけ読みます。, わたしはまいばん、・よむ・まえにほんをいちぺーじだけよみます。, I read only one page of a book every night before going to bed.
+Processing 来月
+Generated Sentence: 
+・来月・のテストは難しいらしいです, ・らいげつ・のてすとはむずかしいらしいです, It seems that the test next month will be difficult.
+Processing 果物
+Generated Sentence: 
+私は毎朝、・果物・を食べます。, わたしはまいあさ、くだものをたべます。, I eat fruit every morning.
+Processing 止まる
+Generated Sentence: 
+電車が・止まる・駅で降ります,でんしゃがとまるえきでおります,I will get off at the station where the train stops.
+Processing 着く
+Generated Sentence: 
+電車で東京に・着く・と、友達が迎えに来てくれました。, でんしゃでとうきょうに・つく・と、ともだちがむかえにきてくれました。, When I arrived in Tokyo by train, my friend came to pick me up.
+Processing 大好き
+Generated Sentence: 
+私は・大好き・なアニメを見るのが楽しみです, わたしはだいすきなあにめをみるのがたのしみです, I enjoy watching my favorite anime.
+Processing 妹
+Generated Sentence: 
+私の・妹・は元気です, わたしのいもうとはげんきです, My little sister is energetic.
+Processing 夏
+Generated Sentence: 
+・夏・は暑い季節です, なつはあついきせつです, Summer is a hot season.
+Processing 今晩
+Generated Sentence: 
+・今晩・は何を食べますか？, こんばんはなんをたべますか？, What will you eat tonight?
+Processing 塩
+Generated Sentence: 
+今日の料理には・塩・を少しだけ使いました, きょうのりょうりには・しお・をすこしだけつかいました, I used just a little bit of salt in today's dish.
+Processing 先週
+Generated Sentence: 
+・先週・のテストは難しかったです。, せんしゅうのてすとはむずかしかったです。, Last week's test was difficult.
+Processing 欲しい
+Generated Sentence: 
+私は新しい自転車が・欲しい・です。, わたしはあたらしいじてんしゃが・ほしい・です。, I want a new bicycle.
+Processing 木
+Generated Sentence: 
+私は公園で・木・の下で本を読むのが好きです, わたしはこうえんで・き・のしたでほんをよむのがすきです, I like to read books under the tree in the park.
+Processing 薬
+Generated Sentence: 
+今日、頭が痛いので・薬・を飲みました。, きょう、 あたまがいたいので・くすり・をのみました。, Today, I took medicine because I had a headache.
+Processing お菓子
+Generated Sentence: 
+今日は友達に・お菓子・をあげました。, きょうはともだちにおかしをあげました。, I gave sweets to my friend today.
+Processing 金曜日
+Generated Sentence: 
+今日は・金曜日・なので、学校が終わった後に友達と遊ぶ予定です。, きょうは・きんようび・なので、がっこうがおわったあとにともだちとあそぶよていです。, Today is Friday, so I plan to hang out with friends after school ends.
+Processing お酒
+Generated Sentence: 
+私は父と一緒に・お酒・を飲むことがあります, わたしはちちといっしょにおさけをのむことがあります, I sometimes drink alcohol with my father.
+Processing 多い
+Generated Sentence: 
+クラスに・多い・生徒がいます, くらすに・おおい・せいとがいます, There are many students in the class.
+Processing 動物
+Generated Sentence: 
+私は・動物・が大好きです, わたしはどうぶつがだいすきです, I love animals.
+Processing 切符
+Generated Sentence: 
+私は新幹線の・切符・を買いました, わたしはしんかんせんのきっぷをかいました, I bought a ticket for the Shinkansen.
+Processing 呼ぶ
+Generated Sentence: 
+今日のパーティーに友達を・呼ぶ・つもりです, きょうのぱーてぃーにともだちを・よぶ・つもりです, I plan to invite friends to today's party.
+Processing 体
+Generated Sentence: 
+・体・が元気だと、何でもできるね。, ・からだ・がげんきだとなんでもできるね。, When your body is healthy, you can do anything.
+Processing 二日
+Generated Sentence: 
+私は・二日・前に試験がありました。, わたしは にち まえに しけんがありました。, I had an exam two days ago.
+Processing 大人
+Generated Sentence: 
+私は・大人・になりたいと思っています, わたしは・おとな・になりたいとおもっています, I want to become an adult.
+Processing 歯
+Generated Sentence: 
+私は毎朝、・歯・を磨きます。, わたしはまいあさ、はをみがきます。, I brush my teeth every morning.
+Processing 冬
+Generated Sentence: 
+・冬・が近づいてきました, ふゆがちかづいてきました, Winter is approaching.
+Processing 所
+Generated Sentence: 
+私は毎日、・所・で勉強しています。, わたしはまいにち、・ところ・でべんきょうしています。, I study every day at the place.
+Processing 吹く
+Generated Sentence: 
+今日は風が・吹く・ので、外で遊ぶのは難しいですね。, きょうはかぜが・ふく・ので、そとであそぶのはむずかしいですね。, Today, it's difficult to play outside because the wind is blowing.
+Processing 足
+Generated Sentence: 
+私の・足・がとても疲れています, わたしの・あし・がとてもつかれています, My feet are very tired.
+Processing 箱
+Generated Sentence: 
+私は・箱・にプレゼントを入れました, わたしははこにぷれぜんとをいれました, I put the present in the box.
+Processing 朝
+Generated Sentence: 
+・朝・のごはんはおいしいですね, ・あさ・のごはんはおいしいですね, Good morning meals are delicious, aren't they?
+Processing 一昨日
+Generated Sentence: 
+・一昨日・、私は友達と映画を見ました。, ・おととい・、わたしはともだちとえいがをみました。, The day before yesterday, I watched a movie with my friend.
+Processing 有名
+Generated Sentence: 
+彼は・有名・な俳優になりたいと言っていました, かれは・ゆうめい・なはいゆうになりたいといっていました, He said he wants to become a famous actor.
+Processing 二十日
+Generated Sentence: 
+・二十日・はテストの日です, にじゅうにちはてすとのひです, The 20th is the day of the test.
+Processing 近い
+Generated Sentence: 
+私の家は学校に・近い・です。, わたしのいえはがっこうにちかいです。, My house is close to the school.
+Processing 時計
+Generated Sentence: 
+私の・時計・は机の上にあります, わたしのとけいはつくえのうえにあります, My watch is on the desk.
+Processing 午後
+Generated Sentence: 
+今日は・午後・から雨が降るそうです, きょうは・ごご・からあめがふるそうです, It seems that it will rain from this afternoon.
+Processing 食べ物
+Generated Sentence: 
+私は毎日、色々な・食べ物・を試してみたいです。, わたしはまいにち、いろいろな・たべもの・をためしてみたいです。, I want to try various types of food every day.
+Processing 降る
+Generated Sentence: 
+今日は雨が・降る・予報です, きょうはあめが・ふる・よほうです, Today's forecast says it will rain.
+Processing 易しい
+Generated Sentence: 
+今日の漢字の宿題は・易しい・ので、すぐに終わったよ, きょうのkanjiのしゅくだいは・やさしい・ので、すぐにおわったよ, Today's kanji homework was easy, so I finished it quickly.
+Processing 大使館
+Generated Sentence: 
+私は・大使館・に行ってビザをもらいました, わたしはたいしかんにいってびざをもらいました, I went to the embassy and got a visa.
+Processing 誰
+Generated Sentence: 
+・誰・が教室にいますか、だれがきょうしつにいますか、Who is in the classroom?
+Processing 上
+Generated Sentence: 
+私は毎朝、・上・の階に行って勉強します。, わたしはまいあさ、・うえ・のかいにいってべんきょうします。, I go to the upper floor every morning to study.
+Processing 十日
+Generated Sentence: 
+私は・十日・後に試験があります。, わたしは・とおか・ごにしけんがあります。, I have an exam in ten days.
+Processing 小さい
+Generated Sentence: 
+私の猫は・小さい・です。, わたしのねこは・ちいさい・です。, My cat is small.
+Processing 今週
+Generated Sentence: 
+・今週・はテストがあります, ・こんしゅう・はてすとがあります, There is a test this week.
+Processing 肉
+Generated Sentence: 
+私は・肉・が大好きです, わたしはにくがだいすきです, I love meat.
+Processing 零
+Generated Sentence: 
+今日の天気予報は・零・度と言っていました, きょうのてんきよほうは・れい・どといっていました, The weather forecast said it would be zero degrees today.
+Processing 豚肉
+Generated Sentence: 
+今日の夕食は・豚肉・を使った料理を作ります, きょうのゆうしょくは・ぶたにく・をつかったりょうりをつくります, Today's dinner will be a dish made with pork.
+Processing 広い
+Generated Sentence: 
+私の家の近くに・広い・公園があります。, わたしのいえのちかくに・ひろい・こうえんがあります。, There is a large park near my house.
+Processing 靴下
+Generated Sentence: 
+私は毎朝、・靴下・を履いて学校に行きます。, わたしはまいあさ、・くつした・をはいてがっこうにいきます。, I put on socks every morning and go to school.
+Processing 一人
+Generated Sentence: 
+今日は・一人・で映画を見に行きます, きょうは・ひとり・でえいがをみにいきます, Today, I will go to watch a movie alone.
+Processing 向こう
+Generated Sentence: 
+・向こう・の公園で友達と遊びます, ・むこう・のこうえんでともだちとあそびます, We will play with friends at the park over there.
+Processing 上手
+Generated Sentence: 
+彼女はピアノを・上手・に弾きます。, かのじょはぴあのを・じょうず・にひきます。, She plays the piano skillfully.
+Processing 牛肉
+Generated Sentence: 
+今日の夕食は・牛肉・を使った料理を作ります, きょうのゆうしょくは・ぎゅうにく・をつかったりょうりをつくります, Today's dinner will be a dish made with beef.
+Processing 話
+Generated Sentence: 
+先生は毎日面白い・話・をしてくれます, せんせいはまいにちおもしろいはなしをしてくれます, The teacher tells us interesting stories every day.
+Processing 毎晩
+Generated Sentence: 
+私は・毎晩・勉強しています, わたしはまいばんべんきょうしています, I study every night.
+Processing 三つ
+Generated Sentence: 
+私は・三つ・のりんごを持っています, わたしは・みっつ・のりんごをもっています, I have three apples.
+Processing 吸う
+Generated Sentence: 
+私は毎日・吸う・煙草をやめようと思っています, わたしはまいにち・すう・たばこをやめようとおもっています, I think about quitting smoking every day.
+Processing 銀行
+Generated Sentence: 
+私は毎月・銀行・に給料を預けています, わたしはまいつきぎんこうにきゅうりょうをあずけています, I deposit my salary into the bank every month.
+Processing 大切
+Generated Sentence: 
+家族は・大切・な存在です, かぞくは・たいせつ・なそんざいです, Family is an important existence.
+Processing 学生
+Generated Sentence: 
+私は毎日・学生・として勉強しています, わたしはまいにちがくせいとしてべんきょうしています, I study every day as a student.
+Processing 部屋
+Generated Sentence: 
+私の・部屋・はいつもきれいです, わたしのへやはいつもきれいです, My room is always clean.
+Processing 昼御飯
+Generated Sentence: 
+今日の・昼御飯・は何にしようかな。, きょうの・ちゅうごはん・はなんにしようかな。, What should I have for lunch today?
+Processing 下
+Generated Sentence: 
+私の家は山の・下・にあります, わたしのいえはやまのしたにあります, My house is at the bottom of the mountain.
+Processing 二つ
+Generated Sentence: 
+私は・二つ・のアップルを買いました, わたしは・にっつ・のあっぷるをかいました, I bought two apples.
+Processing 百
+Generated Sentence: 
+私は・百・年前の歴史を勉強しています, わたしは・ひゃく・ねんまえのれきしをべんきょうしています, I am studying history from a hundred years ago.
+Processing 地図
+Generated Sentence: 
+私は・地図・を見て、目的地まで行く方法を考えました。, わたしは・ちず・をみて、もくてきちまでいくほうほうをかんがえました。, I looked at the map and thought about how to get to my destination.
+Processing 八百屋
+Generated Sentence: 
+・八百屋・で野菜を買います, やおやでやさいをかいます, I buy vegetables at the greengrocer.
+Processing 去年
+Generated Sentence: 
+・去年・は夏休みに旅行しました, きょねんはなつやすみにりょこうしました, Last year, I traveled during the summer vacation.
+Processing 火曜日
+Generated Sentence: 
+・火曜日・はいつも英語の授業があります。, ・かようび・はいつもえいごのじゅぎょうがあります。, On Tuesdays, there is always an English class.
+Processing 乗る
+Generated Sentence: 
+私は毎日自転車に・乗る・ことが好きです。, わたしはまいにちじてんしゃに・のる・ことがすきです。, I like to ride my bike every day.
+Processing 弟
+Generated Sentence: 
+私の・弟・はサッカーが好きです, わたしの・おとうと・はさっかーがすきです, My younger brother likes soccer.
+Processing あなた
+Generated Sentence: 
+・あなた・は元気ですか？, ・あなた・はげんきですか？, How are you?
+Processing 千
+Generated Sentence: 
+私は・千・円でお菓子を買いました, わたしはせんえんでおかしをかいました, I bought sweets for 1,000 yen.
+Processing 緑
+Generated Sentence: 
+私は・緑・の葉っぱが好きです。, わたしは・みどり・のばっぱがすきです。, I like green leaves.
+Processing とり肉
+Generated Sentence: 
+今日の夕食は・とり肉・を使った料理を作ります, きょうのゆうしょくは・とりにく・をつかったりょうりをつくります, Today's dinner will be a dish made with chicken.
+Processing 軽い
+Generated Sentence: 
+今日の宿題は・軽い・から、すぐに終わると思う。, きょうのしゅくだいは・かるい・から、すぐにおわるるとおもう。, I think today's homework is light, so it will be finished quickly.
+Processing あまり
+Generated Sentence: 
+今日は・あまり・勉強したくないです, きょうは・あまり・べんきょうしたくないです, Today, I don't really feel like studying.
+Processing 帽子
+Generated Sentence: 
+私は夏に・帽子・をよくかぶります, わたしはなつに・ぼうし・をよくかぶります, I often wear a hat in the summer.
+Processing 丈夫
+Generated Sentence: 
+・丈夫・な体を作るために、毎日運動しています。, ・じょうぶ・なからだをつくるために、まいにちうんどうしています。, To build a strong body, I exercise every day.
+Processing 入れる
+Generated Sentence: 
+毎朝、トーストを・入れる・トースターで焼きます。, まいあさ、とーすとを・いれる・とーすたーでやきます。, Every morning, I toast bread by putting it in the toaster.
+Processing 二十歳
+Generated Sentence: 
+私の姉は・二十歳・になりました, わたしのおねえさんは・にじゅっさい・になりました, My older sister turned twenty years old.
+Processing 三日
+Generated Sentence: 
+私は・三日・前に宿題を終えました。, わたしは・みっか・まえにしゅくだいをおえました。, I finished my homework three days ago.
+Processing 遠い
+Generated Sentence: 
+私の家は学校から・遠い・です。, わたしのいえはがっこうから・とおい・です。, My house is far from school.
+Processing 夏休み
+Generated Sentence: 
+・夏休み・の宿題はまだ終わっていません, ・なつやすみ・のしゅくだいはまだおわっていません, I haven't finished my summer vacation homework yet.
+Processing 友達
+Generated Sentence: 
+私の・友達・は元気です, わたしのともだちはげんきです, My friend is energetic.
+Processing 横
+Generated Sentence: 
+私の家は川の・横・にあります, わたしのおうちはかわのよこにあります, My house is beside the river.
+Processing 冷たい
+Generated Sentence: 
+今日の風は・冷たい・ですね, きょうのふうは・つめたい・ですね, Today's wind is cold, isn't it?
+Processing 夜
+Generated Sentence: 
+今日は・夜・遅くまで勉強します, きょうは・よる・おそくまでべんきょうします, Today, I will study until late at night.
+Processing おなか
+Generated Sentence: 
+・おなか・がすいています, おなかがすいています, My stomach is hungry.
+Processing どこ
+Generated Sentence: 
+今日の授業は・どこ・で行われますか, きょうのじゅぎょうはどこでおこなわれますか, Where will today's class be held?
+Processing 暇
+Generated Sentence: 
+今日は・暇・なので、友達と遊びに行きます。, きょうは・ひま・なので、ともだちとあそびにいきます。, Today I have free time, so I'm going out to play with my friends.
+Processing 鳴く
+Generated Sentence: 
+毎朝、公園で・鳴く・鳥の声が好きです, まいあさ、こうえんで・なく・とりのこえがすきです, I like the sound of birds・鳴く・in the park every morning.
+Processing 隣
+Generated Sentence: 
+私の・隣・に座っている人は友達です, わたしのとなりにすわっているひとはともだちです, The person sitting next to me is a friend.
+Processing 先生
+Generated Sentence: 
+・先生・はとてもやさしいです, せんせいはとてもやさしいです, The teacher is very kind.
+Processing 出口
+Generated Sentence: 
+学校の・出口・はどこですか,がっこうの・でぐち・はどこですか,Where is the school's exit?
+Processing 後ろ
+Generated Sentence: 
+私の席は教室の・後ろ・にあります。, わたしのせきはきょうしつのうしろにあります。, My seat is at the back of the classroom.
+Processing 先月
+Generated Sentence: 
+・先月・のテストは難しかったです。, せんげつのてすとはむずかしかったです。, Last month's test was difficult.
+Processing お姉さん
+Generated Sentence: 
+・お姉さん・は元気です。, おねえさんはげんきです。, My older sister is energetic.
+Processing 本
+Generated Sentence: 
+私は毎日・本・を読みます, わたしはまいにちほんをよみます, I read a book every day.
+Processing 泳ぐ
+Generated Sentence: 
+私は毎朝、プールで・泳ぐ・ことが好きです。, わたしはまいあさ、ぷーるで・およぐ・ことがすきです。, I like to swim in the pool every morning.
+Processing 灰皿
+Generated Sentence: 
+先生、・灰皿・をどこに置けばいいですか？,せんせい、・はいざら・をどこにおけばいいですか？,Teacher, where should I put the ashtray?
+Processing 門
+Generated Sentence: 
+私は毎朝、・門・をくぐって学校に入ります。, わたしはまいあさ、・もん・をくぐってがっこうにいります。, I pass through the gate every morning to enter the school.
+Processing 荷物
+Generated Sentence: 
+今日、・荷物・をたくさん持って学校に行きました。, きょう、・にもつ・をたくさんもってがっこうにいきました。, Today, I carried a lot of luggage to school.
+Processing この
+Generated Sentence: 
+・この・本は面白いです。, ・この・ほんはおもしろいです。, This book is interesting.
+Processing 書く
+Generated Sentence: 
+私は毎日・書く・日記を楽しんでいます。, わたしはまいにち・かく・にっきをたのしんでいます。, I enjoy writing in my diary every day.
+Processing 毎年
+Generated Sentence: 
+・毎年・、私たちは夏休みに旅行します。, ・まいにち・、わたしたちはなつやすみにりょこうします。, Every year, we go on a trip during the summer vacation.
+Processing 明日
+Generated Sentence: 
+・明日・はテストがあります, あしたはてすとがあります, There is a test tomorrow.
+Processing 降りる
+Generated Sentence: 
+私は毎朝、バスから・降りる・ときに、いつも同じ場所で降ります。, わたしはまいあさ、ばすから・おりる・ときに、いつもおなじばしょでおります。, I get off the bus at the same place every morning when I get off.
+Processing 重い
+Generated Sentence: 
+今日は・重い・荷物を持って学校に行きました, きょうは・おもい・にもつをもってがっこうにいきました, Today I carried heavy luggage to school.
+Processing 電車
+Generated Sentence: 
+私は毎日・電車・に乗って学校に行きます。, わたしはまいにちでんしゃにのってがっこうにいきます。, I take the train to school every day.
+Processing 痛い
+Generated Sentence: 
+昨日、足をぶつけて・痛い・と思いました, きのう、 あしをぶつけて・いたい・とおもいました, Yesterday, I hit my foot and thought it was painful.
+Processing 話す
+Generated Sentence: 
+私は毎日友達と・話す・時間が楽しいです。, わたしはまいにちともだちと・はなす・じかんがたのしいです。, I enjoy the time I spend talking with my friends every day.
+Processing 嫌
+Generated Sentence: 
+私は・嫌・なものを食べるのが苦手です, わたしはきらいなものをたべるのがにがてです, I am not good at eating things I dislike.
+Processing 宿題
+Generated Sentence: 
+今日の・宿題・は数学の問題を解くことです, きょうの・しゅくだい・はすうがくのもんだいをとくことです, Today's homework is to solve math problems.
+Processing 死ぬ
+Generated Sentence: 
+彼は毎日遅くまで働いて、・死ぬ・ほど疲れているんだ。, かれはまいにちおそくまではたらいて、・しぬ・ほどつかれているんだ。, He works late every day and is tired to the point of death.
+
+(Note: The sentence uses "死ぬ" in a figurative sense, which is common in Japanese to express extreme fatigue or exhaustion. This usage is appropriate for learners at a level where they are encountering this word.)
+Processing 万
+Generated Sentence: 
+彼は・万・円を貯金しました, かれは まん えんを ちょきんしました, He saved 10,000 yen.
+Processing 映画
+Generated Sentence: 
+私は週末に・映画・を見に行きます。, わたしはしゅうまつに・えいが・をみにいきます。, I will go to see a movie on the weekend.
+Processing 遅い
+Generated Sentence: 
+今日の電車は・遅い・ですね, きょうのでんしゃはおそいですね, Today's train is slow, isn't it?
+Processing 耳
+Generated Sentence: 
+・耳・が痛いです。, みみがいたいです。, My ear hurts.
+Processing かかる
+Generated Sentence: 
+今日のテストは・かかる・時間が長かったです, きょうのてすとは・かかる・じかんがながかったです, Today's test took a long time.
+Processing 四つ
+Generated Sentence: 
+私は・四つ・のりんごを買いました, わたしは・よっつ・のりんごをかいました, I bought four apples.
+Processing 机
+Generated Sentence: 
+私の・机・の上に本があります, わたしのつくえのうえにほんがあります, There is a book on my desk.
+Processing 買う
+Generated Sentence: 
+私は毎週末に・買う・物を決めています。, わたしはまいしゅうまつに・かう・ものをきめています。, I decide what to buy every weekend.
+Processing 開く
+Generated Sentence: 
+毎朝、私は窓を・開く・前にカーテンを開けます。, まいあさ、わたしはまどを・ひらく・まえにかーてんをあけます。, Every morning, I open the curtains before opening the window.
+Processing 教室
+Generated Sentence: 
+今日は・教室・で新しい先生に会いました, きょうは・きょうしつ・であたらしいせんせいにあいました, Today I met a new teacher in the classroom.
+Processing 短い
+Generated Sentence: 
+今日の授業は・短い・休み時間でした。, きょうのじゅぎょうは・たんい・やすみじかんでした。, Today's class had a short break.
+Processing 姉
+Generated Sentence: 
+私の・姉・はとても優しいです, わたしのあねはとてもやさしいです, My older sister is very kind.
+Processing 大勢
+Generated Sentence: 
+今日のパーティーには・大勢・の人が来ました, きょうのぱーてぃーにはおおぜいのひとがきました, A lot of people came to today's party.
+Processing 開ける
+Generated Sentence: 
+窓を・開ける・とき、風が入ってきます。, まどを・あける・とき、かぜがはいってきます。, When you open the window, the wind comes in.
+Processing 忙しい
+Generated Sentence: 
+今日は・忙しい・ので、宿題ができませんでした, きょうは・いそがしい・ので、しゅくだいができませんでした, Today I was busy, so I couldn't do my homework.
+Processing 店
+Generated Sentence: 
+私はよく・店・で友達と待ち合わせます, わたしはよく・みせ・でともだちとまちあわせます, I often meet my friends at the store.
+Processing 北
+Generated Sentence: 
+私の家は・北・海道にあります。, わたしのいえはほっかいどうにあります。, My house is in Hokkaido.
+Processing 全部
+Generated Sentence: 
+今日は・全部・宿題を終わらせました, きょうは・ぜんぶ・しゅくだいをおわらせました, I finished all of my homework today.
+Processing 橋
+Generated Sentence: 
+私は毎日、学校に行くときに・橋・を渡ります。, わたしはまいにち、がっこうにいくときに・はし・をわたります。, I cross the bridge every day on my way to school.
+Processing 川
+Generated Sentence: 
+私は毎朝、・川・を眺めながら散歩します。, わたしはまいあさ、・かわ・をながめながらさんぽします。, I take a walk every morning while gazing at the river.
+Processing 河
+Generated Sentence: 
+私は毎朝、・河・を眺めながら散歩します。, わたしはまいあさ、・かわ・をながめながらさんぽします。, I take a walk every morning while gazing at the river.
+Processing 入口
+Generated Sentence: 
+・入口・はこちらです, ・いりぐち・はこちらです, The entrance is over here.
+Processing 太い
+Generated Sentence: 
+彼の腕は・太い・ので、力持ちです。, かれのうでは・ふとい・ので、ちからもちです。, His arms are thick, so he is strong.
+Processing 自動車
+Generated Sentence: 
+私は毎日・自動車・を使って学校に行きます。, わたしはまいにちじどうしゃをつかってがっこうにいきます。, I use a car every day to go to school.
+Processing 昼
+Generated Sentence: 
+今日の・昼・は何を食べますか, きょうの・ひる・はなんをたべますか, What will you eat for lunch today?
+Processing 色
+Generated Sentence: 
+私は・色・が大好きです, わたしは いろ が だいすき です, I love colors.
+Processing 黄色
+Generated Sentence: 
+私の好きな色は・黄色・です, わたしのすきないろはきいろです, My favorite color is yellow.
+Processing 左
+Generated Sentence: 
+私の・左・手は怪我をしました, わたしの・ひだり・てはけがをしました, My left hand was injured.
+Processing 野菜
+Generated Sentence: 
+私は毎日・野菜・を食べます, わたしはまいにち・やさい・をたべます, I eat vegetables every day.
+Processing 散歩
+Generated Sentence: 
+私は毎朝、公園で・散歩・をします。, わたしはまいあさ、こうえんで・さんぽ・をします。, I take a walk in the park every morning.
+Processing 消える
+Generated Sentence: 
+昨日の夢はすぐに・消える・ことが多いです, きのうのゆめはすぐに・きえる・ことがおおいです, Yesterday's dream often disappears quickly.
+Processing 映画館
+Generated Sentence: 
+昨日、友達と・映画館・に行って、新しい映画を見ました。, きのう、ともだちと・えいがかん・にいって、あたらしいえいがをみました。, Yesterday, I went to the cinema with my friend and watched a new movie.
+Processing 誕生日
+Generated Sentence: 
+今日は・誕生日・のお祝いがあります, きょうは・たんじょうび・のおいわいがあります, Today there is a celebration for a birthday.
+Processing 切る
+Generated Sentence: 
+私は包丁で野菜を・切る・ことができます, わたしはほうちょうでやさいを・きる・ことができます, I can cut vegetables with a kitchen knife.
+Processing 七日
+Generated Sentence: 
+私は来週の・七日・に友達と映画を見に行きます。, わたしはらいしゅうの・なのか・にとうだちとえいがをみにいきます。, I will go to see a movie with my friends on the 7th of next week.
+Processing 洗う
+Generated Sentence: 
+毎朝、顔を・洗う・前に歯を磨きます。, まいあさ、かおを・あらう・まえにはをみがきます。, I brush my teeth before washing my face every morning.
+Processing 習う
+Generated Sentence: 
+私は毎週、先生から・習う・日本語の授業を受けています。, わたしはまいしゅう、せんせいから・ならう・にほんごのじゅぎょうをうけています。, I take Japanese lessons from my teacher every week.
+Processing 後
+Generated Sentence: 
+今日の授業は・後・で終わります, きょうのじゅぎょうは・あと・でおわります, Today's class will end later.
+
+(Note: The word '後' in this context means 'later' and is used with the particle 'で' to indicate the timing of the action.)
+Processing 猫
+Generated Sentence: 
+私は・猫・が大好きです, わたしはねこがだいすきです, I love cats.
+Processing 図書館
+Generated Sentence: 
+私は毎週末、・図書館・で本を借ります。, わたしはまいしゅうまつ、・としょかん・でほんをかります。, I borrow books from the library every weekend.
+Processing 並べる
+Generated Sentence: 
+私は教室で机を・並べる・ように先生に頼まれた。, わたしはきょうしつでつくえを・ならべる・ようにせんせいにたのまれた。, I was asked by the teacher to arrange the desks in the classroom.
+Processing 大きい
+Generated Sentence: 
+私の学校の・大きい・犬はとても元気です, わたしのがっこうの・おおきい・いぬはとてもげんきです, My school's big dog is very energetic.
+Processing 八日
+Generated Sentence: 
+私は・八日・後にテストがあります, わたしははちにちごにてすとがあります, I have a test in eight days.
+Processing 歩く
+Generated Sentence: 
+私は毎朝・歩く・ために公園に行きます。, わたしはまいあさあるくためにこうえんにいきます。, I go to the park every morning to walk.
+Processing 九日
+Generated Sentence: 
+私は・九日・後に試験があります。, わたしは・くにち・ごにしけんがあります。, I have an exam in nine days.
+Processing 頼む
+Generated Sentence: 
+友達に・頼む・ことが多いです, ともだちにたのむことがおおいです, I often ask my friends for help.
+Processing お兄さん
+Generated Sentence: 
+・お兄さん・は毎日学校に行きます, おにいさんはまいにちがっこうにいきます, My older brother goes to school every day.
+Processing 手
+Generated Sentence: 
+私は毎朝、・手・を洗います。, わたしはまいあさ、てをあらいます。, I wash my hands every morning.
+Processing 毎日
+Generated Sentence: 
+私は・毎日・学校に行きます, わたしはまいにちがっこうにいきます, I go to school every day.
+Processing 花
+Generated Sentence: 
+私は公園で・花・を見ました, わたしはこうえんで・はな・をみました, I saw flowers in the park.
+Processing 居る
+Generated Sentence: 
+田中さんは今、家に・居る・と思います, たなかさんはいま、いえに・いる・とおもいます, I think Mr. Tanaka is at home now.
+Processing 砂糖
+Generated Sentence: 
+私は毎朝、コーヒーに・砂糖・を入れます。, わたしはまいあさ、こーひーに・さとう・をいれます。, I put sugar in my coffee every morning.
+Processing 今
+Generated Sentence: 
+今日は・今・忙しいです, きょうは・いま・いそがしいです, Today I am busy now.
+Processing 旅行
+Generated Sentence: 
+私は夏休みに・旅行・に行く予定です, わたしはなつやすみに・りょこう・にいくよていです, I plan to go on a trip during summer vacation.
+Processing 春
+Generated Sentence: 
+・春・は花が咲く季節です, ・はる・ははながさくきせつです, Spring is the season when flowers bloom.
+Processing 八つ
+Generated Sentence: 
+今日は・八つ・のリンゴを食べました, きょうは・はちつ・のりんごをたべました, I ate eight apples today.
+Processing 町
+Generated Sentence: 
+私の・町・はとても静かです, わたしのまちはとてもしずかです, My town is very quiet.
+Processing 渡す
+Generated Sentence: 
+私は友達に・渡す・プレゼントを買いました, わたしはともだちに・わたす・プレゼントをかいました, I bought a present to give to my friend.
+Processing 青
+Generated Sentence: 
+私は・青・空が好きです, わたしはあおぞらがすきです, I like the blue sky.
+Processing 白
+Generated Sentence: 
+今日は・白・い雲が空に浮かんでいます, きょうは・しろ・いくもがそらにうかんでいます, Today, white clouds are floating in the sky.
+Processing 水
+Generated Sentence: 
+私は毎朝、・水・を飲みます。, わたしはまいあさ、みずをのみます。, I drink water every morning.
+Processing 楽しい
+Generated Sentence: 
+今日のパーティーは・楽しい・だったね, きょうのぱーてぃーはたのしかったね, Today's party was fun, wasn't it?
+Processing 御飯
+Generated Sentence: 
+今日の・御飯・は何ですか, きょうの・ごはん・はなんですか, What is today's meal?
+Processing 皆さん
+Generated Sentence: 
+・皆さん・は元気です、みなさんはげんきです、Everyone is energetic.
+Processing 外
+Generated Sentence: 
+今日は・外・で遊びましょう, きょうは・そと・であそびましょう, Let's play outside today.
+Processing 前
+Generated Sentence: 
+私は・前・の席に座りました, わたしは・まえ・のせきにすわりました, I sat in the front seat.
+Processing 来る
+Generated Sentence: 
+明日、友達が・来る・ので、一緒に遊びます。, あした、ともだが・くる・ので、いっしょにあそびます。, Tomorrow, my friend will come, so we will play together.
+Processing 貸す
+Generated Sentence: 
+友達に・貸す・本を返してもらえませんか, ともだちに・かす・ほんをかえしてもらえませんか, Can you return the book that I lent to my friend?
+Processing 早い
+Generated Sentence: 
+彼は・早い・朝ごはんを食べます, かれは・はやい・あさごはんをたべます, He eats a quick breakfast.
+Processing 弱い
+Generated Sentence: 
+彼は・弱い・体を持っています, かれは・よわい・からだをもっています, He has a weak body.
+Processing 洗濯
+Generated Sentence: 
+今日は天気がいいので、・洗濯・を外でしました。, きょうはてんきがいいので、・せんたく・をそとでしました。, Today the weather was nice, so I did the laundry outside.
+Processing 九つ
+Generated Sentence: 
+私は・九つ・の誕生日を迎えたばかりです, わたしは・ここのつ・のたんじょうびをむかえたばかりです, I just celebrated my ninth birthday.
+Processing 来年
+Generated Sentence: 
+・来年・は、もっと日本語を勉強したいです。, ・らいねん・は、もっとにほんごをべんきょうしたいです。, Next year, I want to study Japanese more.
+Processing 眼鏡
+Generated Sentence: 
+私の父はいつも・眼鏡・をかけています, わたしのちちはいつもめがねをかけています, My father always wears glasses.
+Processing 背
+Generated Sentence: 
+彼の・背・がとても高いです, かれのせがとてもたかいです, His height is very tall.
+Processing 水曜日
+Generated Sentence: 
+・水曜日・はいつも英語のクラスがあります, ・すいようび・はいつもえいごのクラスがあります, There is always an English class on Wednesday.,
+Processing お金
+Generated Sentence: 
+私は・お金・をためるためにアルバイトをしています。, わたしはおかねをためるためにアルバイトをしています。, I am working a part-time job to save money.
+Processing 同じ
+Generated Sentence: 
+私たちは・同じ・学校に通っています, わたしたちは・おなじ・がっこうにつうています, We go to the same school.
+Processing 弾く
+Generated Sentence: 
+私はピアノを・弾く・のが好きです, わたしはぴあのをひくのがすきです, I like to play the piano.
+Processing 土曜日
+Generated Sentence: 
+私は・土曜日・に図書館で勉強します, わたしはどようびに としょかんでべんきょうします, I study at the library on Saturdays.
+Processing 階段
+Generated Sentence: 
+私は毎朝、・階段・を上って学校に行きます。, わたしはまいあさ、・かいだん・をのぼってがっこうにいきます。, I climb the stairs every morning to go to school.
+Processing 煩い
+Generated Sentence: 
+先生、今日の授業は・煩い・ので、少し休憩が欲しいです。, せんせい、きょうのじゅぎょうは・うるさい・ので、すこしきゅうけいがほしいです。, Teacher, today's class is noisy, so I would like a short break.
+Processing 半分
+Generated Sentence: 
+今日のお弁当は・半分・お母さんが作ってくれました, きょうのおべんとうは・はんぶん・おかあさんがつくってくれました, Today's lunch box was half made by my mother.
+Processing 背広
+Generated Sentence: 
+今日のパーティーでは、・背広・を着るのが適切だと思います。, きょうのぱーてぃーでは、せびろをきるのがてきせつだとおもいます。, I think it's appropriate to wear a suit to today's party.
+Processing 晴れ
+Generated Sentence: 
+今日は・晴れ・で、気持ちがいいですね。, きょうは・はれ・で、きもちがいいですね。, Today it's sunny, and it feels good, doesn't it?
+Processing 見せる
+Generated Sentence: 
+私は友達に新しい本を・見せる・つもりです, わたしはともだちに あたらしいほんを みせる つもりです, I plan to show my friend the new book.
+Processing 飲み物
+Generated Sentence: 
+今日のパーティーでは、いろいろな・飲み物・が用意されています, きょうのぱーてぃーでは、いろいろな・のみもの・がよういされています, Various drinks are prepared for today's party.
+Processing 雪
+Generated Sentence: 
+冬になると、・雪・が降ってきれいですね。, ふゆになると、・ゆき・がふってきれいですね。, When winter comes, the ・snow・ falls and it's beautiful, isn't it?
+Processing 買い物
+Generated Sentence: 
+今日は、・買い物・に行きます。, きょうは、・かいもの・にいきます。, Today, I will go shopping.
+Processing 交差点
+Generated Sentence: 
+私は毎日、・交差点・で友達と待ち合わせをします。, わたしはまいにち、・こうさてん・でともだちとまちあわせをします。, I meet my friends at the intersection every day.
+Processing 駅
+Generated Sentence: 
+私は毎朝、・駅・で電車に乗ります。, わたしはまいあさ、えきででんしゃにのります。, I take the train at the station every morning.
+Processing 大丈夫
+Generated Sentence: 
+今日のテストは・大丈夫・でした。, きょうのてすとは・だいじょうぶ・でした。, Today's test was okay.
+Processing 勉強
+Generated Sentence: 
+今日は・勉強・がんばります, きょうは・べんきょう・がんばります, Today I will work hard on studying.
+Processing 兄弟
+Generated Sentence: 
+私の・兄弟・は三人います, わたしのきょうだいはさんにんいます, I have three siblings.
+Processing 封筒
+Generated Sentence: 
+先生に手紙を書いて、・封筒・に入れて渡しました。, せんせいにてがみをかいて、・ふうとう・にいれてわたしました。, I wrote a letter to the teacher, put it in an envelope, and handed it to them.
+Processing 漢字
+Generated Sentence: 
+今日の宿題は・漢字・の練習です, きょうのしゅくだいはかんじのれんしゅうです, Today's homework is practicing kanji.
+Processing 喫茶店
+Generated Sentence: 
+私はよく・喫茶店・で友達と勉強します, わたしはよく・きっさてん・でともだちとべんきょうします, I often study with friends at a cafe.
+Processing 子供
+Generated Sentence: 
+私は・子供・と公園で遊びます, わたしはこどもとこうえんであそびます, I play with children at the park.
+Processing 女の子
+Generated Sentence: 
+私のクラスには元気な・女の子・がいます, わたしのかいきゅうにはげんきな・おんなのこ・がいます, There is an energetic girl in my class.
+Processing 紙
+Generated Sentence: 
+私は・紙・に絵を描きました, わたしはかみにえをかきました, I drew a picture on paper.
+Processing 字引
+Generated Sentence: 
+私は新しい・字引・を使って難しい漢字を調べました。, わたしはあたらしい・じびき・をつかってむずかしいかんじをしらべました。, I used a new dictionary to look up difficult kanji.
+Processing 嫌い
+Generated Sentence: 
+私は・嫌い・なものがたくさんあります, わたしはきらいなものがたくさんあります, I have a lot of things that I hate.
+Processing 先
+Generated Sentence: 
+・先・週のテストは難しかったです。, ・せん・しゅうのてすとはむずかしかったです。, The test last week was difficult.
+Processing 答える
+Generated Sentence: 
+先生の質問に・答える・ことができました, せんせいのしつもんに・こたえる・ことができました, I was able to answer the teacher's question.
+Processing 食堂
+Generated Sentence: 
+今日の昼ごはんは・食堂・で食べるつもりです, きょうのひるごはんは・しょくどう・でたべるつもりです, I plan to eat lunch at the cafeteria today.
+Processing 働く
+Generated Sentence: 
+私は将来、医者として・働く・ことを夢見ています。, わたしはしょうらい、いしゃとして・はたらく・ことをゆめみています。, I dream of working as a doctor in the future.
+Processing 見る
+Generated Sentence: 
+私は毎日テレビを・見る・時間があります。, わたしはまいにちテレビを・みる・じかんがあります。, I have time to watch TV every day.
+Processing 観る
+Generated Sentence: 
+私は毎週末、家族と一緒に・観る・映画を楽しんでいます。, わたしはまいしゅうまつ、かぞくといっしょに・みる・えいがをたのしんでいます。, I enjoy watching movies with my family every weekend.
+Processing 交番
+Generated Sentence: 
+私は・交番・で道を聞きました, わたしはこうばんでみちをききました, I asked for directions at the police box.
+Processing 辛い
+Generated Sentence: 
+今日の試験は・辛い・かったです。, きょうのしけんは・からい・かったです。, Today's exam was difficult.
+Processing 洋服
+Generated Sentence: 
+私は新しい・洋服・を買いたいです。, わたしはあたらしい・ようふく・をかいたいです。, I want to buy new clothes.
+Processing 晩御飯
+Generated Sentence: 
+今日の・晩御飯・は何にしますか？, きょうの・ばんごはん・はなんにしますか？, What will you have for dinner today?
+Processing 車
+Generated Sentence: 
+私の父は毎朝・車・で会社に行きます, わたしのちちはまいあさくるまでかいしゃにいきます, My father goes to work by car every morning.
+Processing もう一度
+Generated Sentence: 
+・もう一度・見せてください、・もういちど・みせてください、Please show me one more time.
+Processing 服
+Generated Sentence: 
+私は毎朝、・服・を着て学校に行きます。, わたしはまいあさ、・ふく・をきてがっこうにいきます。, I wear clothes every morning and go to school.
+Processing 半
+Generated Sentence: 
+私は毎日・半・時間、漢字を勉強しています。, わたしはまいにちはんじかん、かんじをべんきょうしています。, I study kanji for half an hour every day.
+Processing 若い
+Generated Sentence: 
+私の・若い・友達は元気です。, わたしの・わかい・ともだちはげんきです。, My young friend is energetic.
+Processing 食べる
+Generated Sentence: 
+私は毎日・食べる・おにぎりが大好きです, わたしはまいにちたべるおにぎりがだいすきです, I love to eat onigiri every day.
+Processing 四日
+Generated Sentence: 
+私は・四日・後に試験があります。, わたしはよっかごにしけんがあります。, I have an exam in four days.
+Processing 警官
+Generated Sentence: 
+・警官・は街を守るために働いています, けいかんはまちをまもるためにはたらいています, The police officer works to protect the city.
+Processing 伯父
+Generated Sentence: 
+私の・伯父・はとても元気です, わたしの・おじ・はとてもげんきです, My uncle is very energetic.
+Processing 叔父
+Generated Sentence: 
+私の・叔父・は医者です。, わたしの・おじ・はいしゃです。, My uncle is a doctor.
+Processing 鳥
+Generated Sentence: 
+・鳥・が空を飛んでいます, とりがそらをとんでいます, A bird is flying in the sky.
+Processing 方
+Generated Sentence: 
+私はその・方・を尊敬しています, わたしはそのほうをそんけいしています, I respect that person.
+Processing 少ない
+Generated Sentence: 
+私のクラスには・少ない・生徒がいます, わたしのクラスには・すくない・せいとがいます, There are few students in my class.
+Processing 白い
+Generated Sentence: 
+私の猫は・白い・毛を持っています, わたしのねこは・しろい・けをもっています, My cat has white fur.
+Processing 待つ
+Generated Sentence: 
+友達が来るまで・待つ・ことができますか？,ともだちがくるまで・まつ・ことができますか？,Can you wait until your friend comes?
+Processing 次
+Generated Sentence: 
+次の授業は何ですか？, ・次・のじゅぎょうはなんですか？, What is the next class?
+Processing 行く
+Generated Sentence: 
+私は毎日学校に・行く・よ, わたしはまいにちがっこうに・いく・よ, I go to school every day.
+Processing 角
+Generated Sentence: 
+私は・角・を曲がって学校に行きます, わたしは・かど・をまがってがっこうにいきます, I turn at the corner and go to school.
+Processing 男
+Generated Sentence: 
+・男・は元気です, おとこはげんきです, The man is energetic.
+Processing 聞く
+Generated Sentence: 
+私は毎朝、ラジオで・聞く・ニュースが好きです。, わたしはまいあさ、らじおで・きく・ニュースがすきです。, I like to listen to the news on the radio every morning.
+Processing 走る
+Generated Sentence: 
+私は毎朝、公園で・走る・習慣があります。, わたしはまいあさ、こうえんで・はしる・しゅうかんがあります。, I have a habit of running in the park every morning.
+Processing お母さん
+Generated Sentence: 
+・お母さん・は料理が上手です, おかあさんはりょうりがじょうずです, My mom is good at cooking.
+Processing 意味
+Generated Sentence: 
+今日の授業で先生が説明した・意味・がよく分かりませんでした, きょうのじゅぎょうでせんせいがせつめいした・いみ・がよくわかりませんでした, I didn't understand well the meaning that the teacher explained in today's class.
+Processing 物
+Generated Sentence: 
+これは私の・物・です, これはわたしのものです, This is my thing.
+Processing 強い
+Generated Sentence: 
+今日は・強い・風が吹いています, きょうは・つよい・かぜがふいています, Today, there is a strong wind blowing.
+Processing 魚
+Generated Sentence: 
+私は毎週末、・魚・を買いにスーパーに行きます。, わたしはまいしゅうまつ、・さかな・をかいにおすうぱーにいきます。, I go to the supermarket every weekend to buy fish.
+Processing 切手
+Generated Sentence: 
+私は・切手・を集めるのが好きです, わたしはきってをあつめるのがすきです, I like to collect stamps.
+Processing 暗い
+Generated Sentence: 
+今日の教室は・暗い・ので、先生が電気をつけました。, きょうのきょうしつは・くらい・ので、せんせいがでんきをつけました。, Today's classroom is dark, so the teacher turned on the light.
+Processing 出る
+Generated Sentence: 
+今日は試験があるので、早く家を・出る・つもりです。, きょうはしけんがあるので、はやくいえを・でる・つもりです。, I plan to leave the house early today because there is an exam.
+Processing 犬
+Generated Sentence: 
+私は毎朝、・犬・と散歩します。, わたしはまいあさ、いぬとさんぽします。, I walk with my dog every morning.
+Processing 女
+Generated Sentence: 
+彼女は・女・の先生です,かのじょはおんなのせんせいです,She is a female teacher.
+Processing 飛行機
+Generated Sentence: 
+今日、私は・飛行機・に乗って東京に行きます。, きょう、わたしは・ひこうき・にのってとうきょうにいきます。, Today, I will ride on an airplane to go to Tokyo.
+Processing 日曜日
+Generated Sentence: 
+私は・日曜日・に家族と公園に行きます。, わたしはにちようびにかぞくとこうえんにいきます。, I go to the park with my family on Sundays.
+Processing 午前
+Generated Sentence: 
+今日は・午前・10時に学校に行きます, きょうは・ごぜん・じゅうじにがっこうにいきます, Today, I will go to school at 10 AM.
+Processing 名前
+Generated Sentence: 
+私の・名前・はさくらです, わたしの・なまえ・はさくらです, My name is Sakura.
+Processing 丸い
+Generated Sentence: 
+地球は・丸い・形をしています, ちきゅうは・まるい・かたちをしています, The Earth has a round shape.
+Processing 円い
+Generated Sentence: 
+地球は・円い・形をしています, ちきゅうは・まるい・かたちをしています, The Earth has a round shape.
+Processing 曲る
+Generated Sentence: 
+私はいつもこの道で・曲る・から、迷うことがありません。, わたしはいつもこのみちで・まがる・から、まようことがありません。, I always turn at this road, so I never get lost.
+Processing 鼻
+Generated Sentence: 
+私の・鼻・がかゆいです, わたしの・はな・がかゆいです, My nose is itchy.
+Processing お弁当
+Generated Sentence: 
+今日の・お弁当・はとてもおいしかったです, きょうの・おべんとう・はとてもおいしかったです, Today's bento was very delicious.
+Processing 結婚
+Generated Sentence: 
+私の両親は20年前に・結婚・しました。, わたしのりょうしんはにじゅうねんまえに・けっこん・しました。, My parents got married twenty years ago.
+Processing 置く
+Generated Sentence: 
+机の上に本を・置く・んだよ, つくえのうえにほんをおくんだよ, I put the book on the desk.
+Processing 渡る
+Generated Sentence: 
+私は毎日、学校に行くために川を・渡る・ことがあります。, わたしはまいにち、がっこうにいくためにかわを・わたる・ことがあります。, I cross the river every day to go to school.
+Processing 伯母さん
+Generated Sentence: 
+私の・伯母さん・はとても優しい人です, わたしの・おばさん・はとてもやさしいひとです, My aunt is a very kind person.
+Processing 叔母さん
+Generated Sentence: 
+私の・叔母さん・はとても優しい人です, わたしの・おばさん・はとてもやさしいひとです, My aunt is a very kind person.
+Processing 明い
+Generated Sentence: 
+今日の教室は・明い・雰囲気で、勉強しやすいですね。, きょうのきょうしつは・あかるい・ふんいきで、べんきょうしやすいですね。, Today's classroom has a bright atmosphere, making it easy to study, doesn't it?
+Processing 家庭
+Generated Sentence: 
+私の・家庭・はとてもあたたかいです, わたしの・かてい・はとてもあたたかいです, My family is very warm and welcoming.
+Processing 靴
+Generated Sentence: 
+私は毎日・靴・を履いて学校に行きます。, わたしはまいにちくつをはいてがっこうにいきます。, I wear shoes every day to go to school.
+Processing 今月
+Generated Sentence: 
+・今月・は忙しいですね, ・こんげつ・は忙しいですね, This month is busy, isn't it?
+Processing 返す
+Generated Sentence: 
+昨日借りた本を明日・返す・つもりです, きのうかりたほんをあしたかえすつもりです, I plan to return the book I borrowed yesterday tomorrow.
+Processing 二人
+Generated Sentence: 
+・二人・で映画を見に行きました, ふたりでえいがをみにいきました, We went to see a movie together, just the two of us.
+Processing 起きる
+Generated Sentence: 
+毎朝、私は６時に・起きる・ことができます。, まいあさ、わたしはろくじに・おきる・ことができます。, Every morning, I can wake up at 6 o'clock.
+Processing 古い
+Generated Sentence: 
+私の家には・古い・本がたくさんあります, わたしのいえには・ふるい・ほんがたくさんあります, There are many old books in my house.
+Processing 黄色い
+Generated Sentence: 
+私の好きな色は・黄色い・です, わたしのすきないろは・きいろい・です, My favorite color is yellow.
+Processing 飴
+Generated Sentence: 
+今日は・飴・を買って学校に持っていきました, きょうは・あめ・をかってがっこうにもっていきました, Today I bought some candy and brought it to school.
+Processing 寝る
+Generated Sentence: 
+私は毎晩・寝る・前に本を読みます, わたしはまいばん・ねる・まえにほんをよみます, I read a book every night before I go to bed.
+Processing 質問
+Generated Sentence: 
+先生、・質問・があります。, せんせい、・しつもん・があります。, Teacher, I have a question.
+Processing 牛乳
+Generated Sentence: 
+私は毎朝、・牛乳・を飲みます。, わたしはまいあさ、・ぎゅうにゅう・をのみます。, I drink milk every morning.
+Processing 紅茶
+Generated Sentence: 
+私は毎朝、・紅茶・を飲むのが好きです。, わたしはまいあさ、・こうちゃ・をのむのがすきです。, I like to drink black tea every morning.
+Processing 出かける
+Generated Sentence: 
+今日は友達と・出かける・予定があります。, きょうはともだちと・でかける・よていがあります。, Today, I have plans to go out with my friends.
+Processing 兄
+Generated Sentence: 
+私の・兄・はサッカーが好きです, わたしの・あに・はさっかーがすきです, My older brother likes soccer.
+Processing 月曜日
+Generated Sentence: 
+・月曜日・は学校に行きます, ・げつようび・はがっこうにいきます, I go to school on Monday.
+Processing 締める
+Generated Sentence: 
+今日の会議は、私が・締める・ので、みんなが協力してくれると助かります。, きょうのかいぎは、わたしが・しめる・ので、みんながきょうりょくしてくれるとたすかります。, Today's meeting will be concluded by me, so it would be helpful if everyone could cooperate.
+Processing 熱い
+Generated Sentence: 
+今日のラーメンは・熱い・ですね, きょうのらーめんは・あつい・ですね, Today's ramen is hot, isn't it?
+Processing 郵便局
+Generated Sentence: 
+私は・郵便局・で手紙を出します, わたしはゆうびんきょくでてがみをだします, I will send a letter at the post office.
+Processing 細い
+Generated Sentence: 
+彼女の・細い・指がとても美しいです, かのじょの・ほそい・ゆびがとてもうつくしいです, Her slender fingers are very beautiful.
+Processing 本棚
+Generated Sentence: 
+私の部屋には・本棚・があって、たくさんの本を置いています。, わたしのへやには・ほんだな・があって、たくさんのほんをおいています。, I have a bookshelf in my room, and I keep a lot of books on it.
+Processing 結構
+Generated Sentence: 
+今日のテストは・結構・難しかったですね。, きょうのてすとはけっこうむずかしかったですね。, Today's test was quite difficult, wasn't it?
+Processing 絵
+Generated Sentence: 
+私は美術の授業で・絵・を描くのが好きです, わたしはびじゅつのじゅぎょうでえをかくのがすきです, I like to draw pictures in art class.
+Processing 使う
+Generated Sentence: 
+私は毎日・使う・言葉を勉強しています, わたしはまいにちつかうことばをべんきょうしています, I study words that I use every day.
+Processing 休む
+Generated Sentence: 
+今日は学校で疲れたから、家に帰って・休む・つもりです。, きょうはがっこうでつかれたから、いえにかえって・やすむ・つもりです。, I'm tired from school today, so I plan to go home and rest.
+Processing 貼る
+Generated Sentence: 
+私はポスターを壁に・貼る・ことが好きです。, わたしはぽすたーをかべに・はる・ことがすきです。, I like to put up posters on the wall.
+Processing 涼しい
+Generated Sentence: 
+今日は・涼しい・風が吹いています, きょうはすずしいかぜがふいています, Today, a cool breeze is blowing.
+Processing 昨日
+Generated Sentence: 
+昨日の天気はとても良かったです。, きのうのてんきはとてもよかったです。, The weather yesterday was very good.,
+Processing 初め
+Generated Sentence: 
+・初め・の挨拶は「こんにちは」です。, ・はじめ・のあいさつは「こんにちは」です。, The first greeting is "hello."
+Processing 始め
+Generated Sentence: 
+今日は・始め・から日本語を勉強します, きょうは・はじめ・からにほんごをべんきょうします, Today I will study Japanese from the beginning.

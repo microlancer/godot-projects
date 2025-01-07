@@ -1,5 +1,5 @@
 extends InventoryItem
 
 
-func applyEffect(): 
+func applyEffect(context): 
 	pass 

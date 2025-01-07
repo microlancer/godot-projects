@@ -1,4 +1,4 @@
-[gd_scene load_steps=458 format=3 uid="uid://p1onvqcjv8ce"]
+[gd_scene load_steps=461 format=3 uid="uid://p1onvqcjv8ce"]
 
 [ext_resource type="Script" path="res://scripts/battle.gd" id="1_vyelx"]
 [ext_resource type="PackedScene" uid="uid://bmrjl77m8kh4x" path="res://scenes/world.tscn" id="2_f0y0t"]
@@ -8,12 +8,15 @@
 [ext_resource type="FontFile" uid="uid://8tpsa602r53a" path="res://assets/fonts/KanjiStrokeOrders_v4.004.ttf" id="11_wpydr"]
 [ext_resource type="Script" path="res://scripts/vertical_text_label.gd" id="12_d4whg"]
 [ext_resource type="Script" path="res://scenes/fade.gd" id="12_uf80n"]
+[ext_resource type="PackedScene" uid="uid://rsvuo631rkcq" path="res://scenes/progress_list.tscn" id="13_50rkm"]
 [ext_resource type="Script" path="res://scripts/level_container.gd" id="13_almlr"]
 [ext_resource type="PackedScene" uid="uid://bcacnf1u1vtsx" path="res://scenes/KanjiAdUtils.tscn" id="14_uqiln"]
 [ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="79_pgljm"]
 [ext_resource type="Texture2D" uid="uid://c6582yatxxj5u" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="80_88h8b"]
+[ext_resource type="Texture2D" uid="uid://b5s4kgghcufwe" path="res://assets/graphics/playerState_UI/gold_coin_ui.png" id="81_amsgf"]
 [ext_resource type="PackedScene" uid="uid://c841tuc4putwe" path="res://scenes/kanji_progress.tscn" id="81_bh4je"]
 [ext_resource type="Texture2D" uid="uid://bdfub3rmhl8e3" path="res://assets/graphics/village.jpg" id="82_4d63p"]
+[ext_resource type="Texture2D" uid="uid://cvbxpcqycd36s" path="res://assets/graphics/playerState_UI/sword_ui.png" id="82_a0psl"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qm0hu"]
 
@@ -24,10 +27,6 @@ line_spacing = -10.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_423xv"]
 font_color = Color(0.356863, 0.356863, 0.356863, 0.243137)
-
-[sub_resource type="LabelSettings" id="LabelSettings_cyab5"]
-line_spacing = 0.0
-font_size = 5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqlou"]
 atlas = ExtResource("79_pgljm")
@@ -3076,6 +3075,9 @@ region = Rect2(224, 384, 32, 32)
 [sub_resource type="LabelSettings" id="LabelSettings_7vpyw"]
 font_size = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v21gp"]
+bg_color = Color(0, 0, 0, 0.752941)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2kio"]
 atlas = ExtResource("79_pgljm")
 region = Rect2(224, 544, 32, 32)
@@ -3285,36 +3287,38 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PlayerStats" type="Label" parent="UI2"]
+[node name="PlayerLevel" type="Label" parent="UI2"]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 50.0
-offset_right = 102.0
-offset_bottom = 97.0
-text = "Player
-Lv: 1
-HP: 20/20
-KP: 0
-Gold: 0"
-label_settings = SubResource("LabelSettings_cyab5")
+offset_left = 59.0
+offset_top = 1.0
+offset_right = 215.0
+offset_bottom = 69.0
+scale = Vector2(0.125, 0.125)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 46
+text = "level: 1"
 
-[node name="EnemyStats" type="Label" parent="UI2"]
+[node name="EnemyLevel" type="Label" parent="UI2"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 50.0
-offset_right = 146.0
-offset_bottom = 97.0
-text = "Skeleton
-Lv: 1"
-label_settings = SubResource("LabelSettings_cyab5")
-horizontal_alignment = 2
+offset_left = 82.0
+offset_top = 2.0
+offset_right = 238.0
+offset_bottom = 70.0
+scale = Vector2(0.125, 0.125)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 46
+text = "level: 1"
 
 [node name="NextBattleButton" type="Button" parent="UI2"]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 185.0
-offset_right = 126.0
-offset_bottom = 213.0
+offset_left = 27.0
+offset_top = 206.0
+offset_right = 127.0
+offset_bottom = 234.0
 text = "Next battle"
 
 [node name="LevelUpButton" type="Button" parent="UI2"]
@@ -3339,6 +3343,15 @@ offset_top = 134.0
 offset_right = 145.0
 offset_bottom = 148.0
 text = "En"
+
+[node name="Progress" type="Button" parent="UI2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 134.0
+offset_right = 33.0
+offset_bottom = 148.0
+text = "Progress"
 
 [node name="DebugButton1" type="Button" parent="UI2"]
 layout_mode = 0
@@ -3388,9 +3401,130 @@ text = "300
 label_settings = SubResource("LabelSettings_7vpyw")
 metadata/_edit_use_anchors_ = true
 
+[node name="PlayerGold_Graphic" type="TextureRect" parent="Prize"]
+offset_left = -24.0
+offset_top = 79.0
+offset_right = 52.0
+offset_bottom = 119.0
+texture = ExtResource("81_amsgf")
+
+[node name="PlayerGold" type="Label" parent="Prize/PlayerGold_Graphic"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 15.0
+offset_right = 72.0
+offset_bottom = 27.0
+text = "Gold: 0 "
+
+[node name="PlayerEXP_Graphic" type="TextureRect" parent="Prize"]
+offset_left = 104.0
+offset_top = 78.0
+offset_right = 180.0
+offset_bottom = 126.0
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("82_a0psl")
+
+[node name="Playerexperience" type="Label" parent="Prize/PlayerEXP_Graphic"]
+layout_mode = 0
+offset_left = 24.4681
+offset_top = 18.0851
+offset_right = 64.4681
+offset_bottom = 30.0851
+text = "Ex: 0 "
+
 [node name="KanjiProgress" parent="." instance=ExtResource("81_bh4je")]
 visible = false
 position = Vector2(38, 89)
+
+[node name="LabelKanjiWord" parent="KanjiProgress/Control" index="0"]
+offset_left = -3.0
+offset_top = 31.0
+offset_right = 77.0
+offset_bottom = 54.0
+
+[node name="LabelReadingKp" parent="KanjiProgress/Control" index="1"]
+offset_left = -3.0
+offset_top = 55.0
+offset_right = 77.0
+offset_bottom = 67.0
+
+[node name="LabelWritingKp" parent="KanjiProgress/Control" index="2"]
+offset_left = -3.0
+offset_top = 79.0
+offset_right = 77.0
+offset_bottom = 91.0
+
+[node name="TextureDiamondBright" parent="KanjiProgress/Control" index="3"]
+offset_left = 3.0
+offset_top = 70.0
+offset_right = 35.0
+offset_bottom = 102.0
+
+[node name="TextureDiamondDark" parent="KanjiProgress/Control" index="4"]
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 47.0
+offset_bottom = 102.0
+
+[node name="TextureRect4" parent="KanjiProgress/Control" index="5"]
+offset_left = 27.0
+offset_top = 70.0
+offset_right = 59.0
+offset_bottom = 102.0
+
+[node name="TextureRect5" parent="KanjiProgress/Control" index="6"]
+offset_left = 39.0
+offset_top = 70.0
+offset_right = 71.0
+offset_bottom = 102.0
+
+[node name="TextureRect6" parent="KanjiProgress/Control" index="7"]
+offset_left = 51.0
+offset_top = 70.0
+offset_right = 83.0
+offset_bottom = 102.0
+
+[node name="TextureRect7" parent="KanjiProgress/Control" index="8"]
+offset_left = 63.0
+offset_top = 70.0
+offset_right = 95.0
+offset_bottom = 102.0
+
+[node name="TextureRect8" parent="KanjiProgress/Control" index="9"]
+offset_left = 3.0
+offset_top = 96.0
+offset_right = 35.0
+offset_bottom = 128.0
+
+[node name="TextureRect9" parent="KanjiProgress/Control" index="10"]
+offset_left = 15.0
+offset_top = 96.0
+offset_right = 47.0
+offset_bottom = 128.0
+
+[node name="TextureRect10" parent="KanjiProgress/Control" index="11"]
+offset_left = 27.0
+offset_top = 96.0
+offset_right = 59.0
+offset_bottom = 128.0
+
+[node name="TextureRect11" parent="KanjiProgress/Control" index="12"]
+offset_left = 39.0
+offset_top = 96.0
+offset_right = 71.0
+offset_bottom = 128.0
+
+[node name="TextureRect12" parent="KanjiProgress/Control" index="13"]
+offset_left = 51.0
+offset_top = 96.0
+offset_right = 83.0
+offset_bottom = 128.0
+
+[node name="TextureRect13" parent="KanjiProgress/Control" index="14"]
+offset_left = 63.0
+offset_top = 96.0
+offset_right = 95.0
+offset_bottom = 128.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(76.2509, 150.715)
@@ -3408,12 +3542,40 @@ follow_viewport_scale = 3.0
 
 [node name="Control3" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_top = 32.0
 offset_right = 40.0
 offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="progress_list" type="PanelContainer" parent="CanvasLayer/Control3"]
+unique_name_in_owner = true
+visible = false
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v21gp")
+
+[node name="progress_list" parent="CanvasLayer/Control3/progress_list" instance=ExtResource("13_50rkm")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="close_progress_list" type="Button" parent="CanvasLayer/Control3/progress_list"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "close"
 
 [node name="MenuMenuButton" type="Button" parent="CanvasLayer/Control3"]
 z_index = 3
@@ -3446,7 +3608,9 @@ default_level = 1
 [connection signal="button_up" from="UI2/NextBattleButton" to="." method="_on_next_battle_button_button_up"]
 [connection signal="button_up" from="UI2/LevelUpButton" to="." method="_on_level_up_button_button_up"]
 [connection signal="button_up" from="UI2/TranslateButton" to="." method="_on_translate_button_button_up"]
+[connection signal="pressed" from="UI2/Progress" to="." method="_on_progress_pressed"]
 [connection signal="button_up" from="UI2/DebugButton1" to="." method="_on_debug_button_1_button_up"]
+[connection signal="pressed" from="CanvasLayer/Control3/progress_list/close_progress_list" to="." method="_on_close_progress_list_pressed"]
 [connection signal="button_up" from="CanvasLayer/Control3/MenuMenuButton" to="." method="_on_menu_menu_button_button_up"]
 
 [editable path="KanjiProgress"]

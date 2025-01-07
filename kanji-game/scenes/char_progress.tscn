@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1t7uem8eca5k"]
+
+[ext_resource type="Script" path="res://scripts/char_progress.gd" id="1_3ad4r"]
+[ext_resource type="Texture2D" uid="uid://6rig784t7vyg" path="res://assets/graphics/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="1_iehnk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqmsh"]
+atlas = ExtResource("1_iehnk")
+region = Rect2(128, 544, 32, 32)
+
+[node name="CharProgress" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_3ad4r")
+
+[node name="DiamondTemplate" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.34, 0.34, 0.34, 1)
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = SubResource("AtlasTexture_kqmsh")
+expand_mode = 1
+stretch_mode = 5
